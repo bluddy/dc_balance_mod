@@ -1,0 +1,63 @@
+
+dir Models/creatures/Ghost/
+
+skeleton	ghost.mds
+mesh		ghost.mdm
+tags		ghost.tag
+
+skin		ghost.skn
+ 
+animations
+{
+	idle ghost.mda
+	{
+	}
+
+	walk ghost_walk.mda matchMoveSpeed
+	{
+	}
+	
+	attack ghost_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			11 attackMarker
+		}
+	}
+
+	attack ghost_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+
+	dying ghost_dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Ghost/ghost_death.wav
+		}
+	}
+	
+	dead ghost_dead.mda
+	{
+		client
+		{
+			entry spawnEffect ghostDeath.eff tag_chest
+		}
+	}
+
+	idleSound ghost_idlesound.mda
+	{
+	}
+
+	taunt ghost_taunt.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Ghost/taunt.wav
+		}
+	} 
+}

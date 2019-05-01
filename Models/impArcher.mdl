@@ -1,0 +1,52 @@
+
+dir Models/creatures/Imp/
+
+skeleton	Imp.mds
+mesh		Imp.mdm
+tags		Imp.tag
+
+skin		pixie.skn
+ 
+animations
+{
+	idle Imp_idlebow.mda
+	{
+	}
+
+	walk imp_walk.mda matchMoveSpeed
+	{
+	}
+
+	attack imp_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+	}
+
+	dying imp_death.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Imp/imp_death.wav
+		}
+	}
+
+	dead imp_dead.mda
+	{
+	}
+
+	shootBolt imp_xbow.mda	matchAttackSpeed	// bal: this is the attack
+	{
+		server
+		{
+			8 skillMarker
+		}
+		client
+		{
+			7 spawnEffect impShootBolt.eff tag_bow
+			8 sound Sounds/Player/ranger_crossbow_fired.ogg
+		}
+	}
+}

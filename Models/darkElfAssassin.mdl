@@ -1,0 +1,76 @@
+
+dir Models/creatures/darkElf/
+
+skeleton	darkElf.mds
+mesh		darkElf.mdm
+skin		darkElfAssassin.skn
+tags		darkElf.tag
+
+ObjectType 	MonsterDarkElfAssassin
+
+AllowAdvancedShadows	0
+
+animations
+{
+	idle 1_handed_idle.mda
+	{
+	}
+
+ 	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack 1_attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	attack 1_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	poisonStab 1_poisonstab.mda
+	{	
+		client
+		{
+			
+			entry startEffect swingAssassin.eff tag_rightHand
+			12 spawnEffect ringexplosion.eff tag_chest
+			13 spawnEffect combatCriticalHit2.eff tag_chest
+			14 spawnEffect ringexplosion.eff tag_chest
+			exit stopEffect swingAssassin.eff tag_rightHand
+		}
+		client
+		{
+			5 startAttachedSwipe Effects/warriorSwipe.swp tag_rightHand bladeTop bladeBottom
+			13 stopAttachedSwipe Effects/warriorSwipe.swp tag_rightHand bladeTop bladeBottom
+			exit stopAttachedSwipe Effects/warriorSwipe.swp tag_rightHand bladeTop bladeBottom
+
+			3 sound Sounds/Monsters/DarkElf/darkelf_poisonstab.wav
+		}
+
+		server
+		{
+			9 skillMarker
+		}
+	}
+
+ 	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/DarkElf/dark_elf_dying.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+}

@@ -1,0 +1,57 @@
+
+dir Models/Creatures/Shadow/
+
+skeleton	ghost.mds
+mesh		ghost.mdm
+tags		ghost.tag
+
+skin		ghost.skn
+
+ObjectType	MonsterShadow
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+	}
+
+	attack attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Shadow/shadow_dying.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	bestiary attack1.mda
+	{
+		client
+		{
+			8 sound Sounds/Combat/Claw/claw_hit.wav
+		}
+	}
+}

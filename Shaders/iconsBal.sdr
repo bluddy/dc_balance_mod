@@ -1,0 +1,94 @@
+// Balance mod
+// Add missing icons for our added effects
+
+//
+// Monster Enhancements
+//
+
+// For incredible cold resistance (ice elemental)
+Textures/Icons/MonsterEnhancements/protectionCold4
+{
+	cull none
+	useMipMaps 0
+
+	{
+		texture Textures/Icons/Skills/protectionCold.tga
+		clamp clamp
+	}
+
+	{
+		texture Textures/Icons/MonsterEnhancements/incredibleVersion.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		clamp clamp
+	}
+}
+
+// For incredible lightning resistance (lighting elemental)
+Textures/Icons/MonsterEnhancements/protectionLightning4
+{
+	cull none
+	useMipMaps 0
+
+	{
+		texture Textures/Icons/Skills/protectionLightning.tga
+		clamp clamp
+	}
+
+	{
+		texture Textures/Icons/MonsterEnhancements/incredibleVersion.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		clamp clamp
+	}
+}
+
+// For magic resistances (from expansion)
+Textures/Icons/MonsterEnhancements/protectionMagic1
+{
+	cull none
+	useMipMaps 0
+
+	{
+		texture Textures/Icons/Skills/protectionMagic.tga
+		clamp clamp
+	}
+
+	{
+		texture Textures/Icons/MonsterEnhancements/minorVersion.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		clamp clamp
+	}
+}
+
+Textures/Icons/MonsterEnhancements/protectionMagic2
+{
+	cull none
+	useMipMaps 0
+
+	{
+		texture Textures/Icons/Skills/protectionMagic.tga
+		clamp clamp
+	}
+
+	{
+		texture Textures/Icons/MonsterEnhancements/normalVersion.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		clamp clamp
+	}
+}
+
+Textures/Icons/MonsterEnhancements/protectionMagic3
+{
+	cull none
+	useMipMaps 0
+
+	{
+		texture Textures/Icons/Skills/protectionMagic.tga
+		clamp clamp
+	}
+
+	{
+		texture Textures/Icons/MonsterEnhancements/majorVersion.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		clamp clamp
+	}
+}

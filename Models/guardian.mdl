@@ -1,0 +1,57 @@
+
+dir Models/creatures/Sentinel/
+
+skeleton	sentinel.mds
+mesh		sentinel.mdm
+tags		sentinel.tag
+
+skin		sentinel.skn
+ 
+animations
+{
+	idle sentinel.mda
+	{
+	}
+	walk sentinel_walk.mda matchMoveSpeed
+	{
+	}
+
+	attack sentinel_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			23 attackMarker
+		}
+	}
+	attack sentinel_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			17 attackMarker
+		}
+	}
+	dying sentinel_dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Guardian/sentinel-guardian-death.wav
+			94 spawnEffect caveIn.eff tag_chest
+		}
+	}
+
+	dead sentinel_dead.mda
+	{
+	}
+
+	idleSound sentinel_stomp.mda
+	{
+	}
+
+	bestiary sentinel_attack.mda
+	{
+		client
+		{
+			23 sound Sounds/Combat/Sword/sword_crushing.wav
+		}
+	} 
+}

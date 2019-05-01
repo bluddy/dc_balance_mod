@@ -1,0 +1,201 @@
+// Balance Mod
+
+// WeaponMaster
+ManaGenWeaponMasterDesc			"Successful hits against a foe and crushing blows\n will bolster your mana supply."
+
+// Gladiator
+ManaGenGladiatorDesc			"Gain a mana boost when hitting and when hit by an enemy."
+
+// Defender
+ManaGenDefenderDesc			"Gain extra mana each time you block,\n parry or hit an enemy."
+
+// Assassin
+ManaGenAssassinDesc			"Gain extra mana when you cause\ncritical hits, kill and hit enemies."
+
+// Trickster
+ManaGenTrickster			"Finesse"
+ManaGenTricksterDesc			"Gain mana when you kill and hit enemies."
+
+// Thief
+ManaGenThief				"Backstabber"
+ManaGenThiefDesc			"Gain mana when inflicting deep wounds and when hitting enemies."
+
+// Paladin
+ManaGenPaladinDesc			"The gods bless you with mana when you hit and kill the infidels."
+
+// Healer
+// Changes to Healer Skills
+PrayerDesc				"Renew mana faster while praying.\nYour defense is lower though\nso make sure to hit the enemy\nfirst."
+LesserHealDesc			"Heal yourself or another quickly.\nCauses momentary weakness."
+HealWeakness			"Healing Weakness"
+AreaHealDesc				"Heal yourself and any friends in the area.\nShares skill points with Greater Heal.\nCauses momentary weakness."
+GreaterHealDesc				"Heal yourself or another with the\nmost efficient use of mana.\nShares skill points with Area Heal.\nCauses weakness for a while."
+
+// Shaman
+// Clarifications to Protection spells
+FireResistanceProtectionDesc		"Increases resistance to fire damage. Protection\nskills are linked and share skill points.\nCan only have 1 protection active."
+LightningResistanceProtectionDesc	"Increases resistance to lightning damage. Protection\nskills are linked and share skill points.\nCan only have 1 protection active."
+PoisonResistanceProtectionDesc		"Increases resistance to poison damage. Protection\nskills are linked and share skill points.\nCan only have 1 protection active."
+ColdResistanceProtectionDesc		"Increases resistance to cold damage. Protection\nskills are linked and share skill points.\nCan only have 1 protection active."
+
+// Shaman Changes
+DivineInterventionDesc			"Desperate prayer to regain lots of health and mana.\nHas a 20% chance of making you invulnerable."
+
+// Fire Mage Changes
+ShieldofFireSkillDesc		"Protects you from cold damage as well\nas burning enemies who hit you for a while."
+// Grammar correction
+FireElementalSkillDesc		"Creates a Fire Elemental (can only control\none at a time)."
+// Explain reliance on resistance
+FireMasteryDesc				"Increases with fire resistance.\nEnhances the following fire skills:\n$$FieryBlast$$, $$Fireball$$, $$SweepingFlames$$,\n$$ImmolationSkillName$$, $$VolcanoSkillName$$, $$MaelstromSkillName$$,\n$$HolyFire$$ ($$SkillTreeShaman$$), $$Lifeburn$$ ($$SkillTreeShaman$$),\n$$FlamingArrowSkillName$$ ($$SkillTreeArcher$$), $$ExplodingArrowSkillName$$ ($$SkillTreeArcher$$),\nand $$ImmolationTrapSkillName$$ ($$SkillTreeHunter$$)."
+
+// Ice Mage
+// Grammar
+FrostNovaDesc				"A ring of ice blasts around you,\ndamaging multiple enemies."
+IceArmorSkillDesc			"Ice protects you like armor and increases\nyour fire resistance for a while." // cold/fire
+// change to reliance on resistance
+ColdMasteryDesc				"Increases with cold resistance.\nEnhances the following cold skills:\n$$ArcticShard$$, $$FrostNova$$, $$IceStorm$$,\n$$FrostBiteSkillName$$, $$IcePrisonSkillName$$, $$PermafrostSkillName$$,\n$$ShatterSkillName$$, $$ChargedStrike$$ ($$SkillTreeAssassin$$),\nand $$FreezingTrapSkillName$$ ($$SkillTreeHunter$$)."
+
+// Magician Changes
+TeleportDesc				"Teleports you to the selected location\n(where your mouse cursor is pointing to).\nYou remain stealthy for a little while."
+
+// Archer
+// Mana Gen
+ManaGenArcherDesc			"Mana gain for each critical hit or regular hit dealt."
+// Changes
+//
+FlamingArrowSkillName			"Flaming Arrows"
+FlamingArrowSkillDesc			"Lights up arrows with fire damage\nfor a short period of time.\nCannot be used with Poison Arrows."
+PoisonArrowSkillName			"Poison Arrows"
+PoisonArrowSkillDesc			"Dips arrows in poison for a short time.\nCannot be used with Flaming Arrows."
+ShockBoltSkillDesc			"Fires an arrow rigged with weak electricity\nto try stun the target (25% chance of stun)."
+MultiShotSkillDesc			"Magically shoot 5 arrows at once."
+
+// Hunter
+// Mana Gen
+ManaGenHunter				"Hunter's Luck"
+ManaGenHunterDesc			"Gain mana for each kill and hit you make."
+// Changes
+NetTrapSkillDesc			"Throws out an immobilizing trap which is\ntriggered when monsters get too close. Higher\nskill levels also improve the radius of the\neffect."
+
+// Warlock
+// Changes
+ChaosLordSkillDesc			"Summons a Chaos Lord for a limited amount of time."
+ScreeSkillDesc				"Summons a Scree.\nMax count increases every 2 skill levels."
+FurySkillDesc				"Summons a Fury for 2 minutes.\nMax count increases every 4 skill levels."
+CurseOfPainSkillDesc			"Hurts and slows down the target's attack for a short period.\n$$OnlyOneCurse$$"
+CurseOfVulnerabilitySkillDesc	"Makes target more susceptible to the elements\nand to physical damage.\n$$OnlyOneCurse$$"
+
+// Necromancer
+// Changes
+SkeletonArcherSkillDesc		"Raises a Skeleton Archer from a dead body.\nMax count increases every 3 skill levels."
+
+// Sorcerer
+// Changes
+LightningBlastDesc			"A blast of lighting. Has 10% chance of stun."
+ChainLightningDesc			"A blast of lightning that can chain from\none victim to the next up to 4 times.\nHas 2% chance of stun."
+BallLightningDesc			"A ball of energy shoots lightning bolts\nat your enemies for 10 seconds."
+MagneticDeflection			"Magnetic Deflection"
+MagneticDeflectionDesc		"Use magnetic manipulation to\ndefend against enemy blows."
+LightningSwarmSkillDesc		"Looses a bunch of lightning bolts that move randomly\nand have a 5% chance of stunning.\nEach skill level increases the number of bolts by 1.\nNote: the specified damage is per projectile."
+ShockWaveSkillDesc			"This powerful wave of air has a good\nchance of stunning your foes."
+// Change to using resistance
+LightningMasteryDesc			"Increases with lightning resistance.\nEnhances the following lightning skills: $$LightningBlast$$,\n$$ChainLightning$$, $$BallLightning$$, $$LightningSwarmSkillName$$,\n$$ThunderboltSkillName$$, $$HolyStrike$$ ($$SkillTreeHealer$$), and $$ShockBoltSkillName$$ ($$SkillTreeArcher$$)."
+
+// Dark Elf Totem Change
+CriticalHitsFromAura			"Extra Critical Hits (from aura)"
+
+// Evil Altar aura now gives extra HP
+ExtraStrengthAndHpFromAura			"Extra Strength and Health (from aura)"
+
+// Remove blessing limitation from hardiness and true aim
+HardinessBlessing			"Hardiness"
+HardinessBlessingDesc		"Bestows extra health for a time."
+TrueAimBlessing				"True Aim" 
+TrueAimBlessingDesc			"This blessing improves your attack for a time."
+
+
+// Basic Skills - Expanded for balance mod
+// -----------------------------------------
+BasicLeatherArmorDesc		"Can use leather or cloth armor."
+BasicMailArmorDesc			"Can use mail, leather or cloth armor."
+
+BasicSharpWeapons			"Piercing Weapons"
+BasicSharpWeaponsDesc		"Can use any daggers or one-handed swords."
+BasicSharpWeaponsBoth		"Piercing Two-Handed Weapons"
+BasicSharpWeaponsDesc		"Can use any one or two-handed daggers and swords."
+BasicBluntWeapons			"Blunt Weapons"
+BasicBluntWeaponsDesc		"Can use any staves or one-handed maces."
+BasicBluntWeaponsBoth		"Blunt Two-Handed Weapons"
+BasicBluntWeaponsBothDesc	"Can use any one or two-handed maces and staves."
+BowAndDagger				"Bow and Dagger"
+BasicBowAndDaggerDesc		"Can use both bows and daggers"
+
+// Explain limitations added to some skills
+// ------------------------------------------
+RuptureDesc				"This has extra damage\nand a high chance of deep wounds.\nRequires a sword or dagger.\n$$DeepWoundsDesc$$"
+GougeDesc				"This distracting attack lowers your\nfoe's defenses and chance to hit.\nRequires a sword or dagger."
+SliceDesc				"A powerful attack that also increases the chance of deep wounds.\nRequires a dagger.\n$$DeepWoundsDesc$$"
+ViperVenomDesc				"This attack causes poison damage over time. \nRequires a sharp weapon."
+ConcentrationPoisonDesc			"Adds tons of poison damage to all\nsuccessful melee attacks for a short\nperiod. It also enhances the\n$$PoisonArrowSkillName$$ ($$SkillTreeArcher$$) skill. Requires a sharp weapon. Can only\nuse 1 concentration skill at a time.\nConcentration skills are linked and share skill points."
+CleaveDesc				"This attack damages 2 foes at once. \nRequires a sword, dagger or axe."
+GutDesc					"An attack inflicting lots of damage over time. \nRequires a sword or dagger."
+SmiteSkillDesc			"A powerful attack with lingering damage for a moment\nCannot use a dagger."
+
+// Faction names
+// Add and split some factions
+ElementalIce			"Ice Elemental"
+ElementalFire			"Fire Elemental"
+ElementalLightning		"Lightning Elemental"
+Rylor					"Rylor"
+Vortar					"Vortar"
+
+// Resistances that were added
+IncredibleColdResistance	"Incredible Cold Resistance"
+IncredibleLightningResistance	"Incredible Lightning Resistance"
+IncrediblePoisonResistance	"Incredible Poison Resistance"
+
+// Only present in expansion
+MinorMagicResistance		"Minor Magic Resistance"
+MagicResistance				"Magic Resistance"
+MajorMagicResistance		"Major Magic Resistance"
+
+// Extra Enhancements
+Cocoon		"Cocoon"
+
+// Names of monsters
+DarkElfWizard1				"Dark Elf Apprentice Mage"
+DarkElfWizard2				"Dark Elf Ice Mage"
+DarkElfWizard3				"Dark Elf Fire Mage"
+DarkElfWizard4				"Dark Elf Sorcerer"
+DarkElfWizard5				"Dark Elf Archmage"
+
+// Status effec
+ControlledUndead			"Lich Controlled"
+
+// More quick tips
+QuickTip26				"Tip 26: Don't neglect stamina. It can allow you to outpace chasing monsters."
+QuickTip27				"Tip 27: Light boosts can allow you to see in a pitch black dungeon."
+QuickTip28				"Tip 28: Breaking doors and chests will attract monsters' attention."
+QuickTip29				"Tip 29: Remember that the undead are immune to poison but weak against magic."
+QuickTip30				"Tip 30: Most living monsters are sensitive to poison."
+QuickTip31				"Tip 31: Repair only what you need to survive -- it's not cheap."
+
+// For skills that track a stat
+XMoreStatRequired			"##1## more ##2##"
+
+// Mage SPR resistance balancers
+FireResistancePenalty		"Fire Resistance Penalty"
+FireResistancePenaltyDesc	"Spirit does not protect you from the element of fire."
+ColdResistancePenalty		"Cold Resistance Penalty"
+ColdResistancePenaltyDesc	"Spirit does not protect you from the element of cold."
+LightningResistancePenalty		"Lightning Resistance Penalty"
+LightningResistancePenaltyDesc	"Spirit does not protect you from the element of lightning."
+
+// Gaseous form new aura
+PoisonFromGaseousForm		"Gaseous Form Poison"
+
+// Definitions of special hits
+CrushingBlowExplanationBalance	"A crushing blow represents a blow so strong,\n it causes structural damage to the target,\nrepresented by hitting for the maximal damage possible.\n The percentage of crushing blows goes up with\n the attacker's strength and size, and decreases with\n the target's size and hardiness."
+CriticalHitExplanationBalance	"A critical hit is a masterfully executed\n attack, pinpointing a specific weak spot.\nThe attack's damage is doubled.\nCritical hits genereally increase\n with high intelligence, and decrease\n the more intelligent the target."
+DeepWoundsExplanationBalance	"A deep wound is one that penetrates to the inner bowels\n of the victim, causing 200% bleeding damage over time.\nSharp weapons and dexterity increase the chance of\n a deep wound, while high target dexterity and reduced\n susceptability to bleeding minimizes the chance."
+

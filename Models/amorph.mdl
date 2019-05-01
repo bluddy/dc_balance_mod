@@ -1,0 +1,62 @@
+
+dir Models/Creatures/Amorph/
+
+skeleton	Amorph.mds
+mesh		Amorph.mdm
+tags		Amorph.tag
+
+skin		Amorph.skn
+
+
+animations
+{
+	idle Amorph_idle.mda
+	{
+	}
+
+	walk amorph_walk.mda matchMoveSpeed
+	{
+	}
+
+	attack amorph_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+	attack amorph_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+	attack amorph_attack3.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+
+	dying amorph_death.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Amorph/amorph_death.wav
+		}
+	}
+
+	dead amorph_dead.mda
+	{
+	}
+
+	bestiary amorph_attack.mda
+	{
+		client
+		{
+			10 sound Sounds/Combat/Claw/claw_crushing.wav
+		}
+	}
+}

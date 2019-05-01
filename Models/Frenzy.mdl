@@ -1,0 +1,73 @@
+
+dir Models/creatures/Frenzy/
+
+skeleton	frenzy.mds
+mesh		frenzy.mdm
+tags		frenzy.tag
+
+skin		frenzy01.skn
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack melee01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+
+	attack melee02.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+
+	frenzy frenzy.mda
+	{
+		server
+		{
+			50 skillMarker
+		}
+
+		client
+		{
+			15 startEffect frenzyAttack1.eff tag_chest
+			51 spawnEffect frenzyAttack2.eff tag_chest
+			52 stopEffect frenzyAttack1.eff tag_chest
+			exit stopEffect frenzyAttack1.eff tag_chest
+
+			20 sound Sounds/Monsters/Frenzy/frenzy_mode.wav
+		}
+	}
+
+	dying death.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Frenzy/frenzy_death.wav
+		}
+	}
+
+	dead death_idle.mda
+	{
+	}
+
+	bestiary melee01.mda
+	{
+		client
+		{
+			9 sound Sounds/Combat/Claw/claw_deepwounds.wav
+		}
+	}
+}

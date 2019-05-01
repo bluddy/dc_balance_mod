@@ -1,0 +1,160 @@
+
+dir Models/Creatures/Saurian/
+
+skeleton	saurian.mds
+mesh		saurian.mdm
+tags		saurian.tag
+
+skin		DesertSaurian.skn
+
+animations
+{
+	idle saurian_idle.mda
+	{
+	}
+
+	idleSound saurian_idlesound.mda
+	{
+	}
+
+	walk saurian_walk.mda matchMoveSpeed
+	{
+	}
+
+	attack saurian_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+	attack saurian_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+	attack saurian_attack3.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+	}
+
+	dying saurian_death.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Saurian/saurian_death.wav
+		}
+	}
+
+	dead saurian_dead.mda
+	{
+	} 
+
+	startBuff saurian_idle.mda
+	{
+		client
+		{
+			entry startEffect castBuffSaurian.eff tag_rightHand
+			entry startEffect castBuffSaurian.eff tag_leftHand
+
+			exit stopEffect castBuffSaurian.eff tag_rightHand
+			exit stopEffect castBuffSaurian.eff tag_leftHand
+		}
+	}
+
+	castBuff saurian_castbuff.mda
+	{
+		server
+		{
+			15 skillMarker
+		}
+		client
+		{
+			entry startEffect castBuffSaurian.eff tag_rightHand
+			entry startEffect castBuffSaurian.eff tag_leftHand
+
+			exit stopEffect castBuffSaurian.eff tag_rightHand
+			exit stopEffect castBuffSaurian.eff tag_leftHand
+		}
+	}
+
+	startLightning saurian_idle.mda
+	{
+		client
+		{
+			entry startEffect spellLightning.eff tag_rightHand
+			entry startEffect spellLightning.eff tag_leftHand
+
+			exit stopEffect spellLightning.eff tag_rightHand
+			exit stopEffect spellLightning.eff tag_leftHand
+		}
+	}
+
+	castLightning saurian_castlit.mda
+	{
+		server
+		{
+			10 skillMarker
+		}
+		client
+		{
+			0 startEffect spellLightning.eff tag_rightHand
+			0 startEffect spellLightning.eff tag_leftHand
+			15 stopEffect spellLightning.eff tag_rightHand
+			15 stopEffect spellLightning.eff tag_leftHand
+			exit stopEffect spellLightning.eff tag_rightHand
+			exit stopEffect spellLightning.eff tag_leftHand
+
+			15 spawnEffect castLightning2.eff tag_rightHand
+		}
+	}
+
+	// bal: new spell for saurian mage boss
+	startSummonMinions saurian_idle.mda
+	{
+		client
+		{
+			entry startEffect spellScree.eff tag_rightHand
+			exit stopEffect spellScree.eff tag_rightHand
+		}
+	}
+
+	castSummonMinions saurian_castbuff.mda
+	{
+		server
+		{
+			15 skillMarker
+		}
+		client
+		{
+			// bal: might need correction
+			entry startEffect castScree.eff tag_rightHand
+			entry startEffect castScree.eff tag_leftHand
+			exit stopEffect castScree.eff tag_rightHand
+			exit stopEffect castScree.eff tag_leftHand
+
+			12 sound Sounds/Monsters/DimensionalGate/dimensional_gate_monster_in.wav
+		}
+	}
+
+	bestiary saurian_attack.mda
+	{
+		client
+		{
+			7 sound Sounds/Combat/Claw/claw_deadly.wav
+		}
+	}
+
+	bestiary2 saurian_castlit.mda
+	{
+		client
+		{
+			10 sound Sounds/Elemental/Lightning/lightningExplosion.snd
+		}
+	}
+}

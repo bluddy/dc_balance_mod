@@ -1,0 +1,90 @@
+
+dir Models/creatures/Imp/
+
+skeleton	Imp.mds
+mesh		Imp.mdm
+tags		Imp.tag
+
+skin		pixie.skn
+ 
+animations
+{
+	idle Imp_idle.mda
+
+	{
+	}
+
+	walk imp_run.mda matchMoveSpeed
+	{
+	}
+
+/*	walk imp_walk.mda matchMoveSpeed
+	{
+	} */
+
+	attack imp_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+	}
+
+	attack imp_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+	}
+
+	attack imp_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+	
+	spinAttack imp_attack3.mda
+	{
+		server
+		{
+			10 attackMarker
+		}
+		client
+		{
+			14 spawnEffect impSpinAttack.eff tag_chest
+			
+			7 sound Sounds/Player/swipe.wav
+		}
+	}
+
+	dying imp_death.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Imp/imp_death.wav
+		}
+	}
+
+	dead imp_dead.mda
+	{
+	}
+
+/*	shootBolt attack2.mda
+	{
+		server
+		{
+			9 skillMarker
+		}
+	} */
+
+	bestiary imp_attack3.mda
+	{
+		client
+		{
+			10 sound Sounds/Combat/Claw/claw_hit.wav
+		}
+	}
+}

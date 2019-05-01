@@ -1,0 +1,74 @@
+
+dir Models/Creatures/Suicide/
+
+skeleton	suicide.mds
+mesh		suicide.mdm
+tags		suicide.tag
+
+skin		suicide1.skn
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+	
+	attack melee01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+	
+	attack melee02.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			14 attackMarker
+		}
+	}
+
+	suicide charge.mda fps 15
+	{
+		server
+		{
+			40 skillMarker
+		}
+		client
+		{
+			entry startEffect suicideCharge01.eff tag_chest
+			41 spawnEffect suicideCharge02.eff tag_chest
+			exit stopEffect suicideCharge01.eff tag_chest
+
+			//entry loopSound Sounds/Monsters/Suicide/suicide_charging.wav
+			//40 stopLoopSound
+			//exit stopLoopSound
+
+			8 sound Sounds/Monsters/Suicide/suicide_explode.wav
+		}
+	}
+
+	dying death.mda
+	{
+		client
+		{
+		}
+	}
+
+	dead death_idle.mda
+	{
+	}
+
+	bestiary melee01.mda
+	{
+		client
+		{
+			9 sound Sounds/Combat/Claw/claw_deadly.wav
+		}
+	}
+}

@@ -1,0 +1,128 @@
+
+dir Models/Creatures/demon/
+
+skeleton	demon.mds
+mesh		demon.mdm
+tags		demon.tag
+
+skin		demon.skn
+
+ObjectType 	MonsterDemon
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+		client
+		{
+			10 spawnEffect dirtPuff2.eff tag_rightFoot
+			21 spawnEffect dirtPuff2.eff tag_leftFoot
+		}
+	}
+	
+	attack attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			15 attackMarker
+		}
+	}
+	
+	attack attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			14 attackMarker
+		}
+	}
+
+	earthquake earthquake.mda
+	{
+		server
+		{
+			14 skillMarker
+		}
+		client
+		{
+			15 spawnEffect dirtPuff.eff tag_rightFoot
+			31 spawnEffect dirtPuff.eff tag_leftFoot
+			49 spawnEffect dirtPuff.eff tag_rightFoot
+			15 sound Sounds/Monsters/ChaosLord/footstep.wav
+			31 sound Sounds/Monsters/ChaosLord/footstep.wav
+			49 sound Sounds/Monsters/ChaosLord/footstep.wav
+		}
+	}
+
+	throwFireball fireball.mda
+	{
+		server
+		{
+			25 skillMarker
+		}
+		client
+		{
+			0 startEffect demonThrowFireball.eff tag_rightHand
+			32 startEffect demonThrowFireball.eff tag_rightHand
+			exit stopEffect demonThrowFireball.eff tag_rightHand
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			65 sound Sounds/Monsters/ChaosLord/chaos_lord_dying.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	roar roar.mda
+	{
+		client
+		{
+			0 sound Sounds/Monsters/ChaosLord/roar.wav
+		}
+	}
+
+	bestiary roar.mda
+	{
+		client
+		{
+			0 sound Sounds/Monsters/ChaosLord/roar.wav
+		}
+	}
+
+	bestiary earthquake.mda
+	{
+		client
+		{
+			14 sound Sounds/Player/Earthquake.wav
+			15 sound Sounds/Monsters/ChaosLord/footstep.wav
+			31 sound Sounds/Monsters/ChaosLord/footstep.wav
+			49 sound Sounds/Monsters/ChaosLord/footstep.wav
+		}
+	}
+
+	bestiary attack1.mda
+	{
+		client
+		{
+			15 sound Sounds/Combat/Claw/claw_critical.wav
+		}
+	}
+	
+	bestiary attack2.mda
+	{
+		client
+		{
+			14 sound Sounds/Combat/Claw/claw_critical.wav
+		}
+	}
+}

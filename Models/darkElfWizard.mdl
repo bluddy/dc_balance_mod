@@ -1,0 +1,171 @@
+
+dir Models/creatures/DarkElf/
+
+skeleton	darkElf.mds
+mesh		darkElf.mdm
+skin		darkElfWizard.skn
+tags		darkElf.tag
+
+ObjectType 	MonsterDarkElfWizard
+
+animations
+{
+	idle 1_handed_idle.mda
+	{
+	}
+
+ 	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack 1_attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	attack 1_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	castFireball 1_castfireball.mda
+	{
+		client
+		{
+			entry startEffect castFireMage.eff tag_leftHand
+			exit stopEffect castFireMage.eff tag_leftHand
+			entry startEffect castBattleMage.eff tag_leftHand
+			exit stopEffect castBattleMage.eff tag_leftHand
+			entry startEffect castBattleMage2.eff tag_leftHand
+			exit stopEffect castBattleMage2.eff tag_leftHand
+		}
+		server
+		{
+			6 skillMarker
+		}
+	}
+
+	// bal: new spell
+	castIceBolt 1_castfireball.mda
+	{
+		server
+		{
+			6 skillMarker
+		}
+
+		client
+		{
+			entry startEffect castIceMage.eff tag_leftHand
+			exit stopEffect castIceMage.eff tag_leftHand
+			entry startEffect castBattleMage.eff tag_leftHand
+			exit stopEffect castBattleMage.eff tag_leftHand
+			entry startEffect castBattleMage2.eff tag_leftHand
+			exit stopEffect castBattleMage2.eff tag_leftHand
+		}	
+	}
+
+	//bal: new spell
+	castLightning 1_castfireball.mda 
+	{
+		server
+		{
+			6 skillMarker
+		}
+		client
+		{
+			entry startEffect castLightning.eff tag_leftHand
+			exit stopEffect castLightning.eff tag_leftHand
+			entry startEffect castLightning2.eff tag_leftHand
+			exit stopEffect castLightning2.eff tag_leftHand
+		}
+	}
+
+	castIceStorm 1_casticestorm.mda
+	{
+		client
+		{
+			entry spawnEffect castWizard3.eff origin
+			entry startEffect castWizard4.eff origin
+			exit stopEffect castWizard4.eff origin
+			entry startEffect castIceMage.eff tag_leftHand
+			exit stopEffect castIceMage.eff tag_leftHand
+			entry startEffect castIceMage2.eff tag_leftHand
+			exit stopEffect castIceMage2.eff tag_leftHand
+		}
+		server
+		{
+			8 skillMarker
+		}
+	}
+
+	// bal: new spell
+	castVolcano 1_casticestorm.mda 
+	{
+		server
+		{
+			8 skillMarker
+		}
+		client
+		{
+			entry spawnEffect castWizard3.eff origin
+			entry startEffect castWizard4.eff origin
+			exit stopEffect castWizard4.eff origin
+			entry startEffect castFireMage.eff tag_leftHand
+			exit stopEffect castFireMage.eff tag_leftHand
+			entry startEffect castBattleMage.eff tag_leftHand
+			exit stopEffect castBattleMage.eff tag_leftHand
+			entry startEffect castBattleMage2.eff tag_leftHand
+			exit stopEffect castBattleMage2.eff tag_leftHand
+		}
+	}
+	// bal: new spell
+	castBallLightning 1_casticestorm.mda 
+	{
+		server
+		{
+			8 skillMarker
+		}
+		client
+		{
+			entry spawnEffect castWizard3.eff origin
+			entry startEffect castWizard4.eff origin
+			exit stopEffect castWizard4.eff origin
+			entry startEffect castBallLightning.eff tag_head
+			exit stopEffect castBallLightning.eff tag_head
+			entry startEffect castLightning.eff tag_leftHand
+			exit stopEffect castLightning.eff tag_leftHand
+		}
+	}
+ 	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/DarkElf/dark_elf_dying.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	bestiary 1_casticestorm.mda
+	{
+		client
+		{
+			entry spawnEffect castWizard3.eff origin
+			entry startEffect castWizard4.eff origin
+			exit stopEffect castWizard4.eff origin
+			entry startEffect castIceMage.eff tag_leftHand
+			exit stopEffect castIceMage.eff tag_leftHand
+			entry startEffect castIceMage2.eff tag_leftHand
+			exit stopEffect castIceMage2.eff tag_leftHand
+			8 sound Sounds/Player/iceStorm.wav
+		}
+	}
+}

@@ -1,0 +1,128 @@
+
+dir Models/Creatures/elementalLightning/
+
+skeleton	elementalLightning.mds
+mesh		elementalLightning.mdm
+tags		elementalLightning.tag
+
+skin		elementalLightning.skn
+
+
+
+animations
+{
+	idle elementalLightning.mda
+	{
+		client
+		{
+			entry startEffect lightningelemental1.eff tag_chest
+			exit stopEffect lightningelemental1.eff tag_chest			
+		}
+
+	}
+
+	walk elementalLightning_walk.mda matchMoveSpeed
+	{
+		client
+		{
+			entry startEffect lightningelemental1.eff tag_chest
+			exit stopEffect lightningelemental1.eff tag_chest			
+		}
+	}
+
+	attack elementalLightning_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+
+		client
+		{
+			
+			entry startEffect lightningelemental2.eff tag_lhand
+			entry startEffect lightningelemental2.eff tag_rhand
+			
+			exit stopEffect lightningelemental2.eff tag_lhand
+			exit stopEffect lightningelemental2.eff tag_rhand
+			
+		}	
+	}
+	
+	attack elementalLightning_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+
+		client
+		{
+			
+			entry startEffect lightningelemental2.eff tag_lhand
+			entry startEffect lightningelemental2.eff tag_rhand
+			
+			exit stopEffect lightningelemental2.eff tag_lhand
+			exit stopEffect lightningelemental2.eff tag_rhand
+			
+		}	
+	}
+
+	dying elementalLightning_dying.mda
+	{
+		client
+		{
+			22 spawnEffect lightningElementalDeath.eff tag_chest
+			entry stopEffect lightningelemental1.eff tag_chest
+			entry sound Sounds/Monsters/Elementals/lightingelemental_death.wav
+		}
+	}
+
+	dead elementalLightning_dead.mda
+	{
+	}
+
+	castLightningBolt elementalLightning_bolt.mda
+	{
+		server
+		{
+			15 skillMarker
+		}
+
+		client
+		{
+			
+			entry startEffect lightningelemental2.eff tag_lhand
+			entry startEffect lightningelemental2.eff tag_rhand
+			
+			exit stopEffect lightningelemental2.eff tag_lhand
+			exit stopEffect lightningelemental2.eff tag_rhand
+			
+		}	
+		
+	}
+
+	idleSound elementalLightning_idleSound.mda
+	{
+		client
+		{
+			entry startEffect lightningelemental1.eff tag_chest
+			exit stopEffect lightningelemental1.eff tag_chest			
+		}
+	}
+
+	bestiary elementalLightning_bolt.mda
+	{
+		client
+		{
+			
+			entry startEffect lightningelemental2.eff tag_lhand
+			entry startEffect lightningelemental2.eff tag_rhand
+			
+			exit stopEffect lightningelemental2.eff tag_lhand
+			exit stopEffect lightningelemental2.eff tag_rhand
+
+			15 sound Sounds/Elemental/Lightning/lightningExplosion.snd		
+		}			
+	}	 
+}

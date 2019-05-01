@@ -1,0 +1,71 @@
+
+dir Models/creatures/Changeling/
+
+skeleton	mimic.mds
+mesh		mimic.mdm
+tags		mimic.tag
+
+skin		mimic.skn
+ 
+animations
+{
+	idle mimic.mda
+	{
+	}
+
+	walk mimic_walk.mda matchMoveSpeed
+	{
+	}
+	
+	attack mimic_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+
+	attack mimic_attack3.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+
+	doubleAttack mimic_attack.mda
+	{
+		server
+		{
+			6 attackMarker
+		}
+		client
+		{
+			entry startEffect spellDoubleAttack.eff tag_rightHand
+			entry startEffect spellDoubleAttack.eff tag_leftHand
+			11 spawnEffect combatCrushingBlow2.eff tag_chest
+			exit stopEffect spellDoubleAttack.eff tag_rightHand
+			exit stopEffect spellDoubleAttack.eff tag_leftHand
+		}
+	}
+
+	dying mimic_dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Changeling/changeling_death.wav
+		}
+	}
+
+	dead mimic_dead.mda
+	{
+	}
+
+	bestiary mimic_attack.mda
+	{
+		client
+		{
+			6 sound Sounds/Combat/Claw/claw_critical.wav
+		}
+	}
+}

@@ -1,0 +1,155 @@
+
+dir Models/creatures/torva/
+
+skeleton	torva.mds
+mesh		torva.mdm
+tags		torva.tag
+
+skin		torva_torture.skn
+
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	idleSound idleSound.mda
+	{
+	}
+
+ 	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+
+	attack attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			4 attackMarker
+		}
+	}
+
+	powerAttack powerattack.mda
+	{
+		server
+		{
+			10 skillMarker
+		}
+		client
+		{
+			11 spawnEffect combatCriticalHit3.eff tag_rightHand 
+
+			entry sound Sounds/Monsters/Torva/torva_power_attack.wav
+		}
+	}
+
+ 	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Torva/torva_death.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	taunt taunt.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Torva/torva_taunt.wav
+		}
+	}
+
+	startFireBolt idle.mda
+	{
+		client
+		{
+			entry startEffect castFireBolt.eff tag_rightHand 
+			exit stopEffect castFireBolt.eff tag_rightHand 
+		}
+	}
+
+	castFireBolt firebolt.mda
+	{
+		server
+		{
+			11 skillMarker
+		}
+		client
+		{
+			entry startEffect castFireBolt.eff tag_rightHand 
+			exit stopEffect castFireBolt.eff tag_rightHand 
+		}
+	}
+
+	// bal: add a fire shield for high level shamans
+	startShieldOfFire idle.mda
+	{
+		client
+		{
+			entry startEffect spellShieldofFire.eff tag_rightHand 
+			exit stopEffect spellShieldofFire.eff tag_rightHand 
+		}
+	}
+
+	castShieldOfFire firebolt.mda
+	{
+		server
+		{
+			11 skillMarker
+		}
+		client
+		{
+			entry startEffect castShieldofFire.eff tag_rightHand 
+			exit stopEffect castShieldofFire.eff tag_rightHand 
+		}
+	}
+
+	// bal: new spell for torva shaman boss
+	startSummonMinions idle.mda
+	{
+		client
+		{
+			entry startEffect spellScree.eff tag_rightHand
+			exit stopEffect spellScree.eff tag_rightHand
+		}
+	}
+
+	castSummonMinions firebolt.mda
+	{
+		server
+		{
+			11 skillMarker
+		}
+		client
+		{
+			entry startEffect spellScree.eff tag_rightHand
+			entry startEffect castScree.eff tag_rightHand
+			exit stopEffect castScree.eff tag_rightHand
+			exit stopEffect spellScree.eff tag_rightHand
+
+			11 sound Sounds/Monsters/DimensionalGate/dimensional_gate_monster_in.wav
+		}
+	}
+
+	bestiary firebolt.mda
+	{
+		client
+		{
+			entry startEffect castFireBolt.eff tag_rightHand 
+			exit stopEffect castFireBolt.eff tag_rightHand 
+			11 sound Sounds/Elemental/Fire/fireExplosion.wav
+		}
+	}
+}

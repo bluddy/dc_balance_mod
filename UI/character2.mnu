@@ -1,0 +1,615 @@
+// Balance Mod
+// Added text explanations for special hits.
+
+position 15.0 46.0
+name Character2
+pausesGame 1
+
+// Background
+
+Widget
+{
+	position -10.0 60.0
+	texture UIBlack
+	size 241.0 326.0
+	drawOrder -1.0
+	canClick 1
+	BlocksMouse 0
+}
+
+// Column borders
+
+Widget
+{
+	position -14.0 56.0
+	size 8.0 328.0
+
+	texture Columns03
+	draworder 1.0
+	TiledToFit 1
+}
+
+Widget
+{
+	position -12.0 56.0
+	size 8.0 328.0
+	color "0 0 0"
+	texture Columns03
+	draworder 0.5
+	TiledToFit 1
+}
+
+Widget
+{
+	position 221.0 56.0
+	size 8.0 328.0
+
+	texture Columns03
+	draworder 1.0
+	TiledToFit 1
+}
+
+// Row borders
+
+Widget
+{
+	position -14.0 56.0
+	size 243.0 8.0
+
+	texture Rows03
+	draworder 1.0
+	TiledToFit 1
+}
+
+Widget
+{
+	position -14.0 58.0
+	size 243.0 8.0
+	color "0 0 0"
+	texture Rows03
+	draworder 0.5
+	TiledToFit 1
+}
+
+Widget
+{
+	position -14.0 376.0
+	size 243.0 8.0
+
+	texture Rows03
+	draworder 1.0
+	TiledToFit 1
+}
+
+// Corner borders
+
+Widget
+{
+	position -16.0 54.0
+	size 12.0 12.0
+
+	texture "Textures/UI/corner_ball01.tga"
+	draworder 2.0
+}
+
+Widget
+{
+	position 219.0 54.0
+	size 12.0 12.0
+
+	texture "Textures/UI/corner_ball01.tga"
+	draworder 2.0
+}
+
+Widget
+{
+	position -16.0 374.0
+	size 12.0 12.0
+
+	texture "Textures/UI/corner_ball01.tga"
+	draworder 2.0
+}
+
+Widget
+{
+	position 219.0 374.0
+	size 12.0 12.0
+
+	texture "Textures/UI/corner_ball01.tga"
+	draworder 2.0
+}
+
+//Background
+
+Widget
+{
+	position -7.0 60.0
+	size 230.0 320.0
+
+	texture Textures/UI/borders/m_CenterTiler02.tga
+	color "0.6 0.4 0.4"
+	alpha 0.6
+	draworder -0.01
+}
+
+// Close
+
+Widget
+{
+	position 219.0 54.0
+	texture "Textures/UI/close.tga"
+	size 12.0 12.0
+	canClick 1
+	addCommand "menuCommand hide"
+	highlightText $$Close$$
+	hotkey Escape
+	draworder 3.0
+}
+
+// Name
+
+Widget
+{
+	position -14.0 65.0
+	size 243.0 15.0
+	font Default
+	textSource PlayerName
+	textAlignment center
+
+}
+
+widget
+{
+	position -14.0 85.0
+	size 243.0 15.0
+	font SmallDefault
+	textsource PlayerTitle	// bal: typo
+	textAlignment center
+
+	hideCondition UserVarSet
+	userVar build_showLevelLimit
+}
+
+widget
+{
+	position -14.0 85.0
+	size 243.0 15.0
+	font SmallDefault
+	textsource PlayerTitle Text " (Max Lvl 5 in demo)"	// bal: typo
+	textAlignment center
+
+	showCondition UserVarSet
+	userVar build_showLevelLimit
+}
+
+// Perception
+
+StatValue
+{
+	position 4.0 112.0
+	entityType PlayerClient
+	stat Normal Perception
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+}
+
+StatValue
+{
+	position 120.0 112.0
+	entityType PlayerClient
+	stat Normal Perception
+	size 50.0 15.0
+	font SmallDefault
+	highlightBackgroundAlpha 1.0
+}
+
+// DisarmTrap
+
+StatValue
+{
+	position 4.0 125.0
+	entityType PlayerClient
+	stat Normal DisarmTrap
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+}
+
+StatValue
+{
+	position 120.0 125.0
+	entityType PlayerClient
+	stat Normal DisarmTrap
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+}
+
+// LockPicking
+
+StatValue
+{
+	position 4.0 138.0
+	entityType PlayerClient
+	stat Normal LockPicking
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+}
+
+StatValue
+{
+	position 120.0 138.0
+	entityType PlayerClient
+	stat Normal LockPicking
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+}
+
+// ArmorPiercing
+
+StatValue
+{
+	position 4.0 151.0
+	entityType PlayerClient
+	stat Normal ArmorPiercing
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+}
+
+StatValue
+{
+	position 120.0 151.0
+	entityType PlayerClient
+	stat Normal ArmorPiercing
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+}
+
+// LightIntensity
+
+StatValue
+{
+	position 4.0 164.0
+	entityType PlayerClient
+	stat Normal LightIntensity
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+}
+
+StatValue
+{
+	position 120.0 164.0
+	entityType PlayerClient
+	stat Normal LightIntensity
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+}
+
+// ExtraMoney
+
+StatValue
+{
+	position 4.0 182.0
+	entityType PlayerClient
+	stat Normal ExtraMoney
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType SimplePlusAndPercent
+}
+
+StatValue
+{
+	position 120.0 182.0
+	entityType PlayerClient
+	stat Normal ExtraMoney
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType SimplePlusAndPercent
+}
+
+// ItemsChance
+
+StatValue
+{
+	position 4.0 195.0
+	entityType PlayerClient
+	stat Normal ItemsChance
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType SimplePlusAndPercent
+}
+
+StatValue
+{
+	position 120.0 195.0
+	entityType PlayerClient
+	stat Normal ItemsChance
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType SimplePlusAndPercent
+}
+
+// MagicChance
+
+StatValue
+{
+	position 4.0 208.0
+	entityType PlayerClient
+	stat Normal MagicChance
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType SimplePlusAndPercent
+}
+
+StatValue
+{
+	position 120.0 208.0
+	entityType PlayerClient
+	stat Normal MagicChance
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType SimplePlusAndPercent
+}
+
+// TempCriticalHit
+
+StatValue
+{
+	position 4.0 226.0
+	entityType PlayerClient
+	stat Normal TempCriticalHit
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	// highlightBackgroundAlpha 1.0 bal
+	highlightText	$$CriticalHitExplanationBalance$$
+	conversionType FloatPercent
+}
+
+StatValue
+{
+	position 120.0 226.0
+	entityType PlayerClient
+	stat Normal TempCriticalHit
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+// TempCrushingBlow
+// bal: name
+
+StatValue
+{
+	position 4.0 239.0
+	entityType PlayerClient
+	stat Normal TempCrushingBlow
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	//highlightBackgroundAlpha 1.0 bal
+	conversionType FloatPercent
+	highlightText	$$CrushingBlowExplanationBalance$$
+}
+
+// bal: value
+StatValue
+{
+	position 120.0 239.0
+	entityType PlayerClient
+	stat Normal TempCrushingBlow
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+// TempStunningBlow
+
+StatValue
+{
+	position 4.0 252.0
+	entityType PlayerClient
+	stat Normal TempStunningBlow
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+StatValue
+{
+	position 120.0 252.0
+	entityType PlayerClient
+	stat Normal TempStunningBlow
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+// TempDeepWounds
+
+StatValue
+{
+	position 4.0 265.0
+	entityType PlayerClient
+	stat Normal TempDeepWounds
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	//highlightBackgroundAlpha 1.0 bal
+	highlightText	$$DeepWoundsExplanationBalance$$
+	conversionType FloatPercent
+}
+
+StatValue
+{
+	position 120.0 265.0
+	entityType PlayerClient
+	stat Normal TempDeepWounds
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+// TempCriticalHeal
+
+StatValue
+{
+	position 4.0 283.0
+	entityType PlayerClient
+	stat Normal TempCriticalHeal
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+StatValue
+{
+	position 120.0 283.0
+	entityType PlayerClient
+	stat Normal TempCriticalHeal
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+// TempMagicCriticalHit
+
+StatValue
+{
+	position 4.0 296.0
+	entityType PlayerClient
+	stat Normal TempMagicCriticalHit
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+StatValue
+{
+	position 120.0 296.0
+	entityType PlayerClient
+	stat Normal TempMagicCriticalHit
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+// TempMagicCrushingBlow
+
+StatValue
+{
+	position 4.0 309.0
+	entityType PlayerClient
+	stat Normal TempMagicCrushingBlow
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+StatValue
+{
+	position 120.0 309.0
+	entityType PlayerClient
+	stat Normal TempMagicCrushingBlow
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType FloatPercent
+}
+
+// TempHealthRegen
+
+StatValue
+{
+	position 4.0 327.0
+	entityType PlayerClient
+	stat Normal TempHealthRegen
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType Float
+}
+
+StatValue
+{
+	position 120.0 327.0
+	entityType PlayerClient
+	stat Normal TempHealthRegen
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType Float
+}
+
+// TempPowerRegen
+
+StatValue
+{
+	position 4.0 340.0
+	entityType PlayerClient
+	stat Normal TempPowerRegen
+	font SmallDefault
+	showName 1
+	size 90.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType Float
+}
+
+StatValue
+{
+	position 120.0 340.0
+	entityType PlayerClient
+	stat Normal TempPowerRegen
+	font SmallDefault
+	size 50.0 15.0
+	highlightBackgroundAlpha 1.0
+	conversionType Float
+}
+
+Button
+{
+	position 58.0 360.0
+	text $$CharacterMenu1$$
+	textAlignment center
+	size 100.0 15.0
+	font SmallDefault
+	canClick 1
+	addCommand "menuCommand hide"
+	addCommand "pushPopMenu Character"
+}

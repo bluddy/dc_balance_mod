@@ -1,0 +1,131 @@
+
+dir Models/Creatures/elementalFire/
+
+skeleton	elementalFire.mds
+mesh		elementalFire.mdm
+tags		elementalFire.tag
+
+skin		elementalFire.skn
+
+ObjectType 	MonsterFireElemental
+
+animations
+{
+	idle elementalFire.mda
+	{
+		client
+		{
+			entry startEffect fireelemental1.eff tag_chest
+			entry startEffect fireelemental1.eff tag_lelbow
+			entry startEffect fireelemental1.eff tag_relbow
+			entry startEffect firesparkle.eff tag_chest
+					
+			exit stopEffect fireelemental1.eff tag_chest
+			exit stopEffect fireelemental1.eff tag_lelbow
+			exit stopEffect fireelemental1.eff tag_relbow
+			exit stopEffect firesparkle.eff tag_chest
+		}
+	}
+
+	walk elementalFire_walk.mda matchMoveSpeed
+	{
+		client
+		{
+			entry startEffect fireelemental1.eff tag_chest
+			entry startEffect fireelemental1.eff tag_lelbow
+			entry startEffect fireelemental1.eff tag_relbow
+			entry startEffect firesparkle.eff tag_chest
+					
+			exit stopEffect fireelemental1.eff tag_chest
+			exit stopEffect fireelemental1.eff tag_lelbow
+			exit stopEffect fireelemental1.eff tag_relbow
+			exit stopEffect firesparkle.eff tag_chest
+		}
+	}
+
+	attack elementalFire_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			11 attackMarker
+		}
+
+		client
+		{		
+			entry startEffect fireelemental3.eff tag_lhand
+			entry startEffect fireelemental3.eff tag_rhand
+			exit stopEffect fireelemental3.eff tag_lhand
+			exit stopEffect fireelemental3.eff tag_rhand			
+		}
+	}
+
+	attack elementalFire_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+
+		client
+		{		
+			entry startEffect fireelemental3.eff tag_lhand
+			entry startEffect fireelemental3.eff tag_rhand
+			exit stopEffect fireelemental3.eff tag_lhand
+			exit stopEffect fireelemental3.eff tag_rhand			
+		}
+	}
+
+	castFireBolt elementalFire_cast.mda
+	{
+		server
+		{
+			11 skillMarker
+		}
+	
+		client
+		{		
+			entry startEffect fireelemental2.eff tag_lhand
+			entry startEffect fireelemental2.eff tag_rhand
+			exit stopEffect fireelemental2.eff tag_lhand
+			exit stopEffect fireelemental2.eff tag_rhand			
+		}
+	}
+
+	dying elementalFire_dying.mda
+	{
+		client
+		{
+			exit stopEffect fireelemental1.eff tag_chest
+			
+			exit stopEffect firesparkle.eff tag_chest
+			exit stopEffect fireelemental1.eff tag_lelbow
+			exit stopEffect fireelemental1.eff tag_relbow
+			entry sound Sounds/Monsters/Elementals/fireelemental_death.wav
+		}
+	}
+
+	dead elementalFire_dead.mda
+	{
+		client
+		{
+			entry spawnEffect elementalFireDeath.eff tag_chest
+		}	
+	}
+
+	idleSound elementalFire_idlesound.mda
+	{
+	}
+
+	bestiary elementalFire_attack.mda
+	{
+		client
+		{		
+			entry startEffect fireelemental3.eff tag_lhand
+			entry startEffect fireelemental3.eff tag_rhand
+			exit stopEffect fireelemental3.eff tag_lhand
+			exit stopEffect fireelemental3.eff tag_rhand			
+			11 sound Sounds/Combat/Claw/claw_deadly.wav
+		}
+	}
+ 
+}

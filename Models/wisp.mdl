@@ -1,0 +1,96 @@
+
+dir Models/creatures/wisp/
+
+skeleton	wisp.mds
+mesh		wisp.mdm
+skin		wisp.skn
+tags		wisp.tag
+ 
+animations
+{
+	idle wisp.mda
+	{
+		client
+		{
+			entry startEffect wispsparkle.eff tag_body
+			exit stopEffect wispsparkle.eff tag_body
+		}
+	}
+
+
+	walk wisp_walk.mda matchMoveSpeed
+	{
+		client
+		{
+			entry startEffect wispsparkle.eff tag_body
+			exit stopEffect wispsparkle.eff tag_body
+		}
+	}
+		
+	idleSound wisp_idlesound.mda
+	{
+		client
+		{
+			entry startEffect wispsparkle.eff tag_body
+			exit stopEffect wispsparkle.eff tag_body
+		}
+	}
+
+	attack wisp_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+
+		client
+		{
+			entry startEffect wispsparkle.eff tag_body
+			exit stopEffect wispsparkle.eff tag_body
+		}
+	}
+
+	shootLightning wisp_shoot.mda
+	{
+		client
+		{
+			entry startEffect wispshoot.eff tag_body
+			exit stopEffect wispshoot.eff tag_body			
+		}
+
+		server
+		{
+		
+			6 skillMarker
+		}
+	}
+
+	dying wisp_dying.mda
+	{
+		client
+		{
+			entry stopEffect wispsparkle.eff tag_body
+			entry sound Sounds/Monsters/Wisp/wisp_death.wav
+
+			entry startEffect wispsparkledying.eff tag_body
+			entry startEffect wispdyingblast.eff tag_body
+			exit stopEffect wispdyingblast.eff tag_body
+			exit stopEffect wispsparkledying.eff tag_body
+	
+		}
+	}
+
+	dead wisp_dead.mda
+	{
+	}
+
+	bestiary wisp_shoot.mda
+	{
+		client
+		{
+			entry startEffect wispshoot.eff tag_body
+			exit stopEffect wispshoot.eff tag_body	
+			6 sound Sounds/Elemental/Lightning/lightningExplosion.snd	
+		}
+	}
+}

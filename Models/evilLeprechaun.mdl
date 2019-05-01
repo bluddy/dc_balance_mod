@@ -1,0 +1,74 @@
+
+dir Models/Creatures/evilleprechaun/
+
+skeleton	leprechaun.mds
+mesh		leprechaun.mdm
+tags		leprechaun.tag
+
+skin		evilleprechaun.skn
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+		client
+		{
+		}
+	}
+	
+	attack melee01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+	}
+	
+	attack melee02.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+	}
+
+	steal steal.mda
+	{
+		server
+		{
+			14 skillMarker
+		}
+	}
+
+	pickup pickup.mda
+	{
+		server
+		{
+			10 skillMarker
+		}
+	}
+
+	dying death.mda
+	{
+		client
+		{
+			0 sound Sounds/Monsters/Leprechaun/death.snd
+		}
+	}
+
+	dead death_idle.mda
+	{
+	}
+
+	bestiary melee02.mda
+	{
+		client
+		{
+			8 sound Sounds/Combat/Claw/claw_parry.wav
+		}
+	}
+}

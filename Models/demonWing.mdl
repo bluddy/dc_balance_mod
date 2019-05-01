@@ -1,0 +1,123 @@
+
+dir Models/Creatures/DemonWing/
+
+skeleton	demonWing.mds
+mesh		demonWing.mdm
+tags		demonWing.tag
+
+skin		demonWing.skn
+
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+		client
+		{
+		}
+	}
+	
+	attack melee01.mda matchAttackSpeed // bal: make correspond to attack speed
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+	
+	attack melee02.mda matchAttackSpeed // bal: make correspond to attack speed
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			0 sound Sounds/Monsters/Rylor/rylordeath.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	headButt special.mda
+	{
+		server
+		{
+			14 skillMarker
+		}
+	}
+
+	block block.mda matchSkillSpeed
+	{
+		client
+		{
+			6 sound Sounds/Monsters/Rylor/rylorwingblock.wav
+		}
+
+		server
+		{
+			0 skillMarker
+		}
+	}
+
+	bomb bomb.mda
+	{
+		server
+		{
+			14 skillMarker
+		}
+		client
+		{
+			0 sound Sounds/Monsters/Rylor/rylorbombthrow.wav
+
+			0 startEffect rylorBombStart.eff tag_rightHand
+			10 stopEffect rylorBombStart.eff tag_rightHand
+			exit stopEffect rylorBombStart.eff tag_rightHand
+			0 startEffect rylorBombStart.eff tag_leftHand
+			10 stopEffect rylorBombStart.eff tag_leftHand
+			exit stopEffect rylorBombStart.eff tag_leftHand
+			//28 sound Sounds/Player/rogue_slice.wav
+		}
+	}
+
+	awing awing.mda
+	{
+		server
+		{
+			23 skillMarker
+		}
+		client
+		{
+			0 startEffect demonWingAwing1.eff tag_rightHand
+			50 stopEffect demonWingAwing1.eff tag_rightHand
+			exit stopEffect demonWingAwing1.eff tag_rightHand
+			0 startEffect demonWingAwing1.eff tag_leftHand
+			50 stopEffect demonWingAwing1.eff tag_leftHand
+			exit stopEffect demonWingAwing1.eff tag_leftHand
+			
+		}
+	}
+
+	taunt taunt.mda
+	{
+		client
+		{
+			0 sound Sounds/Monsters/Rylor/rylortaunt.wav
+		}
+
+		server
+		{
+			14 skillMarker
+		}
+		
+	}
+}

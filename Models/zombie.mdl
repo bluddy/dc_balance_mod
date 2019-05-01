@@ -1,0 +1,95 @@
+// Balance Mod
+
+dir Models/Creatures/Zombie/
+
+skeleton	Zombie.mds
+mesh		Zombie.mdm
+tags		Zombie.tag
+skin		Zombie.skn
+
+ObjectType 	MonsterZombie
+
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack attack.mda matchAttackSpeed
+	{
+		server
+		{
+			13 attackMarker
+		}
+	}
+
+	attack attack.mda matchAttackSpeed
+	{
+		server
+		{
+			13 attackMarker
+		}
+	}
+
+	attack attack2.mda matchAttackSpeed
+	{
+		server
+		{
+			11 attackMarker
+		}
+	}
+
+	attack attack3.mda matchAttackSpeed
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+
+	useTrigger attack.mda
+	{
+	}
+
+	dying death02.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Zombie/zombie_death.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	unhide rise.mda fps 20 // 40 bal: make unhide more natural
+	{
+		server
+		{
+			last skillMarker
+		}
+
+		client
+		{
+			entry startEffect undeadrise.eff tag_chest
+			exit stopEffect undeadrise.eff tag_chest
+		}
+	}
+
+	idleHiding buried.mda
+	{
+	}
+
+	bestiary attack.mda
+	{
+		client
+		{
+			11 sound Sounds/Combat/Claw/claw_miss.wav
+		}
+	}
+}

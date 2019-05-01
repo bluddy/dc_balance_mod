@@ -1,0 +1,68 @@
+
+dir Models/creatures/morale/
+
+skeleton	morale.mds
+mesh		morale.mdm
+skin		morale.skn
+tags		morale.tag
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack melee01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+
+	attack melee02.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+
+	moraleCall hornofmorale.mda
+	{
+		server
+		{
+			10 skillMarker
+		}
+
+		client
+		{
+			24 sound Sounds/Monsters/Morale/morale_call.wav
+		}
+	}
+
+	dying death.mda
+	{
+		client
+		{
+			0 sound Sounds/Monsters/Morale/morale_death.wav
+		}
+	}
+
+	dead death_idle.mda
+	{
+	}
+
+	bestiary melee01.mda
+	{
+		client
+		{
+			10 sound Sounds/Combat/Claw/claw_deepwounds.wav
+		}
+	}
+}

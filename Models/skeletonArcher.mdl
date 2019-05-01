@@ -1,0 +1,92 @@
+// Balance Mod
+
+dir Models/Creatures/Skeleton/
+
+skeleton	skeleton.mds
+mesh		skeleton.mdm
+tags		skeleton.tag
+skin		skeleton_gen.skn
+
+ObjectType 	MonsterSkeletonArcher
+
+animations
+{
+ 	idle bow_idle.mda
+	{
+	}
+
+	walk bow_walk.mda matchMoveSpeed
+	{
+
+	}
+
+	dying bow_dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Skeleton/skeleton_death.wav
+		}
+	}
+
+	dead bow_dead.mda
+	{
+	} 
+
+	shootArrow bow_attack1.mda	matchAttackSpeed	// bal: this is the attack
+	{
+		server
+		{
+			13 skillMarker
+		}
+		client
+		{
+			0 startEffect skeletonArrowStart.eff tag_rightHand
+			18 stopEffect skeletonArrowStart.eff tag_rightHand
+			exit stopEffect skeletonArrowStart.eff tag_rightHand
+		}
+	}
+
+	shootArrow bow_attack2.mda	matchAttackSpeed	// bal: this is the attack
+	{
+		server
+		{
+			16 skillMarker
+		}
+		client
+		{
+			0 startEffect skeletonArrowStart.eff tag_rightHand
+			18 stopEffect skeletonArrowStart.eff tag_rightHand
+			exit stopEffect skeletonArrowStart.eff tag_rightHand
+		}
+	}
+
+	unhide bow_raise.mda fps 20 // bal: 40 was too fast
+	{
+		server
+		{
+			last skillMarker
+		}
+
+		client
+		{
+			entry startEffect undeadrise.eff tag_chest
+			exit stopEffect undeadrise.eff tag_chest
+		}
+	}
+
+	idleHiding buried_idle.mda
+	{
+	}
+
+	bestiary bow_attack2.mda
+	{
+		client
+		{
+			0 startEffect skeletonArrowStart.eff tag_rightHand
+			18 stopEffect skeletonArrowStart.eff tag_rightHand
+			exit stopEffect skeletonArrowStart.eff tag_rightHand
+			16 sound Sounds/Monsters/Skeleton/arrow.wav
+		}
+	}
+}
+

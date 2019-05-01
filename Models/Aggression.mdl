@@ -1,0 +1,55 @@
+
+dir Models/creatures/aggression/
+
+skeleton	aggression.mds
+mesh		aggression.mdm
+tags		aggression.tag
+
+skin		aggression.skn
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack melee01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+
+	attack melee02.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+
+	dying death.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Invisible/invisible_death.wav
+		}
+	}
+
+	dead death_idle.mda
+	{
+	}
+
+	bestiary melee02.mda
+	{
+		client
+		{
+			9 sound Sounds/Combat/Claw/claw_crushing.wav
+		}
+	}
+}

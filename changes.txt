@@ -1,0 +1,678 @@
+Bluddy's Balance Mod
+
+ver 0.802
+- Adjusted for patch 1.025
+- Removed extraneous mod files for drinks and foods.
+- Fixed 2 web objects that seemed to be blocking sight in the dungeon.
+
+ver 0.801
+- Increased cooldown of fire strike. It's a super-skill.
+- Decreased fire strike damage.
+- Increased frost shader a little.
+- Switched Horror to ClassMonsterGeneric.
+- Increased monster HP per level.
+- Changed weapon damage: Staves and bows are 90%, daggers are 95%
+- Weapon masteries now reduce your maximum mana to balance out their strength.
+- Moved some attackPerDex bonus points from thief and trickster to assassin.
+- Decreased passive special hit boosts.
+- Changed basic weapon skills to multiply percentages of special hits.
+- Fixed missing override in BaseQuestSuperBoss. 
+- Changed Gaseous Form to end when you use a skill, so you have complete control.
+- Increased Gaseous Form time per level.
+- Reduced attack speed increase from stalker.
+- Made Ice Armor and Shield of Fire cancel each other out.
+- Try to make suicide monsters' suicide skill work again.
+- Made suicide monster bosses only suicide on death.
+- Reduced boosts to special hits from jewelry. These modifiers are usually only on weapons themselves. Putting high values on unique jewels makes it easy to get overly high special hits.
+- Increased monster health in Champion and Elite levels, making their health curve more smooth.
+
+ver 0.800
+- Change version to 3 decimal places.
+- Fixed fire mastery description and changed other mastery descriptions to be less specific about amounts.
+- Added definitions to special attacks.
+- Changed ice armor/shield of fire descriptions to match new resistances gained (Castruccio)
+- Modify amorph infrastructure to use archetypes and fewer skills. This will help with redoing their levels later.
+- Modify plaguebringer spawn skill to use just one skill rather than many.
+- Lowered monster density some more.
+- Reduced staff damage output. There should be an incentive not to use staves, and this is it.
+- Made ranges for weapons closer to 2.5x between min and max.
+- Reduced amount of damage boost for all passive damage masteries.
+- Reduced regeneration slightly again.
+- Changed the way potions work so they use individual status effects for different levels. 
+
+ver 0.79
+- Increase regen rate for mages and priests.
+- Modified mana regen modifier for items to be higher at base level and go up a little more slowly.
+- Reduce status effect wet's fire resistance.
+
+ver 0.78
+- Changed resistance potions to be in effect for 2 minutes. You choose to either stack them or use them sequentially. (desophos)
+- Made elemental protection spells negate the opposite element.
+- Made SPR not give extra fire, cold, lightning resistances to fire, ice mages, sorcerer.
+- Extended cooldown for protection spells since they are now very powerful when combined with mages.
+- Changed ice armor to have fire resistance and shield of fire to have cold resistance. This makes things quite interesting, because it allows for a cool cold-fire combo when those elements normally don't coexist.
+- Reduced ice armor and shield of fire resistances drastically so it's not easy to build up resistance that way. (desophos)
+- Made gaseous form unable to attack or use skills as in vanilla.
+- Added poison aura to gaseous form to attack enemies. Gaseous form wasn't fully worked out until now.
+- Strengthen stone skin powerup.
+- Capped masteries at a maximum level so that you can't keep increasing your damage forever.
+- Added to the giant powerup so it modifies crushing blow and defense.
+- Added to shrunk curse so it modifies crushing blow and defense.
+- Modified wet status effect to only increase fire resistance by a little.
+- Modified Inferno to change fire resistance rather than multiply it.
+
+ver 0.77
+- Changed lightning, fire, cold mastery to use resistance levels.
+- Added resistance reliance explanation to mastery descriptions.
+- Increased chances of vendors being able to repair.
+
+ver 0.76
+- Added negative opposite elements to resistance modifiers.
+- Replaced 'repair all' button.
+- Made it so that smiths are randomly given the ability to repair items.
+- Modified repair prices slightly.
+
+ver 0.75
+- Reduce player lighting some more.
+- Adjusted damage of monster skills with set damage values.
+- Moved dark elf area skills to use the dark elf damage values.
+- Adjusted damage of monster skills with status effects.
+- Increase attack slowdown from frost
+- Added immunity to being 'on fire' (not regular fire damage) to ice/fire elemental
+- Added a little bit of blue lighting to ice elemental.
+- Made fiend and imp bosses not afraid.
+- Lowered new regeneration enhancement values to more reasonable levels.
+- Made lightning elemental light white, not yellow (and brighter).
+- Typo in controlled undead text.
+- Reduced controlled undead speed boost slightly.
+- Added some new quick tips to help with things emphasized in the mod.
+- Prevented lich from being follower of other liches (no controlled boost)
+- Restored price of magic and item find stuff (desophos)
+- Switched treasure finding potions to 50 levels instead of 75.
+- Fixed treasure finding potions: they couldn't handle fractions (desophos).
+- Reduced percentage of monster sprinting (Castruccio). 
+- Increased frost slowdown to -0.33 after adjustment again (Castruccio)
+- Increased base magic chance for simple chests.
+- Increased amount of money from advanced gold chests now that money is more under control.
+- Raised magic drop numbers slightly due to reports of too few magical items spawning. 
+- Made ball lightning brighter and changed light color to white rather than blue.
+- Changed monsterskills2Bal.gdb for monsterSkills.gdb
+- Decreased usage of rylor head butt some more.
+- Try: make rylor bomb hurt monsters too
+- Increased vortar slam range slightly.
+
+ver 0.74
+- Improved shader effect transparencies for frost, undead, bark skin and stone skin.
+- Increased radius for imp archer's alert skill to make it more effective.
+- Changed monsterSkillBal.gdb to monsters/skills.gdb
+- Reduced durability increase per level -- there really doesn't need to be much of an increase.
+- Added downside to bark skin: reduces fire resistance.
+- Reduced regeneration enhancement even further.
+- Increased rate of attack for imp archer: it was too weak.
+- Increased attack for imp archer and skeleton archer: hard to dodge arrows.
+- Reduced monsters per block a little more.
+- Made unhide animations for zombies, skeletons not as rushed.
+- Fixed animation for orc shaman armor melt spell.
+- Added summon minion spells and animations for saurian mage, lich, orc shaman and torva shaman.
+- Orc shaman and torva shaman bosses now can melee as well.
+- Added casting component to quickness enhancement.
+- Made regeneration more reasonable by making it a set amount of health per second. This was a big problem with bosses, where every percentage was too much health/sec. 
+- Made extra strength enhancement affect all damage types so it's useful for all monsters.
+- Tried to make ice elemental a little transparent.
+- Made skeleton archer, imp archer attack animations linked to attack speed.
+- Made lich monster use melee as well.
+- Increase light intensity for fire projectiles, volcano, ball lightning.
+- Reduced base player light intensity.
+- Increased lamp light intensity and radius.
+- Being on fire now affects light intensity
+- Clarified text for undead that's controlled by lich.
+- Fixed up some animations for dark elf priest and wizard.
+
+ver 0.73
+- Added casting animations for dark elf wizards, dark elf priests and orc shamans.
+- Changed dark elf wizard apprentices to fire only fire bolts.
+- Reduced time of the armor melt effect -- it's too annoying to be there the whole time.
+- Increased cooldown for multiple target attack skills.
+- Increased range for noise when bashing chests and doors.
+- Increased time of surprise penalty from hitting doors and chests.
+- Raised repair prices to make constant repair less feasible.
+- Increased visibility range for ranged monsters like shamans. They need to see you before you hit them.
+- Decreased visibility range for lich. You want to be able to avoid this badass.
+- Added shield of fire animation to torva shaman.
+- Added shield of fire as a skill to high level torva shaman.
+- Changed dark elf priest special spell to bark skin (from champion).
+- Added missing fire damage commands to fire shield powerup and enchantment
+- Allow Saurian Strength Buff effect to stack.
+- Made events (flux, fog) always be normal rarity.
+- Fixed typo in health increase modification for gargoyle.
+- Changed all monster attacks to respond to attack speeds
+- Adjusted attack speeds for all monsters.
+- Modified damage output of all monsters to match new attack speeds.
+- Made amorphs cocoon only when they split upon death.
+- Reduced prices of food and mana/health potions so they're more affordable.
+- Reduced spawn density of monsters a little more.
+- Now that the new temporal flux spawns, make it spawn with a temporal flux machine.
+- Make new temporal flux types also affect casting time and projectile motion.
+- Change temporal flux descriptions.
+- Switched monsterTypes2bal.gdb for monsterTypes2.gdb
+- Increase reuse time for super-skill ravage
+
+ver 0.72
+- Finally made new temporal flux types spawn properly.
+- Increase item magic from treasure maps now that they're rare.
+- Fixed shaman status modification by moving shaman status effect modification to proper place.
+- Fixed problem with file naming (monsterSkillsBal.gdb) conflict with expansion mod.
+- Make effect of slow-down and speedup of temporal flux much more pronounced.
+
+ver 0.71
+- Increased resistance enhancement levels.
+- Increased undead poison resistance and element resistance.
+- Reduced health multipliers for rarity multipliers slightly.
+- Scavenger loses movement speed and defense with eating.
+- Added closing animations for doors (activate using ALT key).
+- Turned most doors into non-wood (don't burn) while some do burn.
+- Added ability to use dagger for Impale (thanks alstein).
+- Modified many monsters and their stats.
+- Created new spells for orc shamans: armor melt.
+- Created new spells for dark elf priests: magic shield and champion.
+- Fixed dark elf icestorm not being marked as a spell.
+- Reduced chance of money spawns when killing monsters.
+- Tweaked spawn system to increase good item drops.
+- Increased HP of gargoyle.
+- Increased HP of trap.
+- Increase item stamina modifier to make it worthwhile.
+- Increase PC stamina slightly.
+- Lower % chance of item proc modifiers.
+- Switched monsterArchetypes to use full file rather than mod file.
+
+ver 0.70
+- Raised begining vitality of monsters.
+- Modified vitality per level of monsters to be higher for normal difficulty.
+- Modified difficulty health multipliers to compensate.
+- Fixed bug in hidden conjurer skill tree name.
+- Reduce synchronization of NPC starvation by reducing debt chance.
+- Reduce death penalty from semi-hardcore so it's less harsh.
+- Make NPC view of other NPC's activities extend further (more realistic).
+- Trying to make temporal flux types spawn. world2bal.gdb, worldmodifiers.gdb
+- Modified descriptions for semi-hardcore and only hope.
+- Sped up monsters slightly.
+- Increased default monster sprint amount and sprint speed.
+- Reduced PC speed when out of stamina so monsters almost catch you.
+- Fixed fire and ice elemental not having factions.
+
+ver 0.69
+- Reduce money drop per level to reduce needed price inflation.
+- Reduced price inflation.
+- Incorporated changes from extra mod:
+	- Chest balancing
+	- Reduced treasure map spawning
+	- Reduced items from mobs
+- Adjusted item prices per modifier as per all changes until now.
+- Made dark ritual much stronger but for a short period of time.
+- Increased reuse time for strong attack spells like maelstrom so they're more tactical.
+- Decreased reuse time for skeleton archer and skeleton spells.
+- Added pet special effect to raised monsters.
+- Increased reuse time for multi-target attack skills (whirlwind, cleave etc)
+- Reduced effect of frost on movement and made it a percentage chance.
+- Turned off monster morale drop from no-enemy attacks. It doesn't work as is.
+- Reduced money and XP reward from many quests -- especially boss quests.
+- Increased effect of things that change food/item/drink pricing: weather machine etc.
+- Made monsters not attack cave-ins.
+- Made totems always spawn at normal rarity level.
+
+ver 0.68
+- Fixed cold resistance4 and lighting resistance4 icons.
+- Removed poison gas imbue skill taken from DoP since it's already in DC.
+- Fixed possible bug with monster skill changes not appearing due to file name (monsterSkills.gdb).
+- Modified set modifiers to match item modifier levels.
+- Increased defense and attack per dex bonuses to make thieves more viable.
+- Restored hunter's defense bonus by compressing skills.
+- Boosted blur skill.
+
+ver 0.67
+- Creatures now have armor that more closely mirrors their looks.
+- Dog types are now immune to blinding attacks.
+- Elementals now react to being hit by different elements.
+- Live creatures are usually vulnerable to poison. 
+- Mages and priests have very high magic resistance.
+- Undead are now highly resistant to poison but sensitive to magic.
+- Guardian now hates all big creatures in the dungeon. (An automaton gone awry)
+- Amorph children now give you time to run away if you want.
+- Changed starving quest to give you more time on average before an NPC dies.
+- Changed debt quest to give less XP so you can't just go up in levels from paying debts.
+- Modified almost all monster enhancements to make them more appropriate.
+- Evened out Fleet of Foot enhancement values slightly.
+- Raised monster armor to be more leather-like.
+- Raised monster resistance to elements to allow room for vulnerabilities.
+- Reduced monster health slightly because of higher armor.
+- Reduced difficulty resistance multipliers to keep base resistances more constant.
+
+ver 0.66
+- Stopped making elemental auras apply only to friends. Monsters weren't getting aura effects from totems.
+- Added more faction hatreds. 
+- Split demon faction in expansion back to component factions so they can fight.
+- Split elemental factions so fire and ice hate each other.
+- Made fire aura of torva shaman not affect enemies, while keeping the regular effect of fire aura.
+- Fixed elemental morale bonus/penalty so it actually affects them.
+
+ver 0.65
+- Fixed temporal flux implementation (it wasn't spawning)
+- Fixed missing fiend spawns (will be fixed in next patch)
+- Tweaked monster attack difficulty multipliers.
+- Added base attack and defense to PCs to prevent attack formula distortion in low levels.
+- Adjusted monster DEX to match the new PC attack/defense base values.
+- Adjusted armor formula slightly.
+- Tweaked monster armor values to be more consistent around leather values.
+- Tweaked armor difficulty multipliers to match.
+
+ver 0.64
+- Adjusted mob defense levels down to vanilla, and raised slightly with difficulty levels. Mob defense is very sensitive.
+- Replaced missing basic skill in Healer tree causing incompatibility with vanilla.
+- Modified wizard, mage mana refill times to be constant over mana levels.
+- Added hidden trees to all default classes to reduce extra bonuses. This means that the default classes only have 2 times the bonuses that single classes do, not 3 times.
+- Modified expansion class bonuses to match (I missed them previously).
+- Demon Hunter had wrong tree name (fixed).
+
+ver 0.63
+- Reduced rare monster attack/defense boosts.
+- Restored missing elemental imbue effects.
+- Increased crystal/obsidian bonuses some more.
+- Reduced monster spawning per area slightly.
+- Modified mob armor values to make armor more consistent at around leather values -- most critters have leather.
+- Modified player armor values to allow for good % levels.
+- Modified armor formula to allow higher % values.
+- Fixed bug in strength requirement for helmets not being modified.
+- Raised attack and defense of the monsters. Trying to find the best balance point.
+- Modified attack/defense multipliers for monsters.
+- Modified rogue monster attack and defense.
+- Reduced defense bonuses for all player classes.
+- Modified speeds of fastest monsters
+- Reduced multipliers for mob movement speed
+- Added 2 new types of temporal flux, hopefully making this effect more enjoyable.
+- Added missing enhancements to Krall Worker.
+- Corrected typo bug in NPC activities.
+- Adjusted monster base resistance to be more consistent throughout the levels.
+- Adjusted resistance formula to allow reaching higher percentages at high levels more easily.
+- Set max resistance and armor absorption at 100%. The formulas don't allow getting there and it's useful for setting max resistances.
+- Fixed typo in factions.gdb: in monsterFaction, reputationFactionObject
+- Fixed bug: change of attack/defense difficulty multipliers was overridden by expansion.
+- Reduced defense per DEX bonuses for classes.
+- Added immunities to lightning, cold status effects to ice elemental, lightning elemental, wisp.
+
+ver 0.62
+- Raised min mob damage a little -- I accidentally lowered it too much
+- Changed values for mob defense/attack
+- Added missing entry in classes.gdb for rogue monsters.
+- Modified skill bonuses to defensePerDex/attackPerDex
+- Modified difficulty multipliers for defense and attack. Defense is particularly lethal to toons with low attack.
+- Reduced stamina/VIT to keep stamina a factor in the game
+- Increased frequency of passive mana gain upgrades to 1 ever 5 mana points.
+- Attempted to limit weapon speed modifier which abuses badly calculated weapon speed.
+- Modified skills that decrease by large multipliers -- they become ineffective too fast.
+- Modified slice and rupture skills.
+- Modifying defense and attack is very powerful. Decreased effects such as Concentration Blur.
+- Made armor have same durability as weapons for easy comparison. It gets damage faster as in vanilla.
+
+ver 0.61
+- Corrected bug in basic mace skills
+- Fixed bug in totem aura modifications
+
+ver 0.60
+- Changed armor formula again to make a less drastic change.
+
+ver 0.59
+- Changed armor spawning formula to favor higher armor types.
+- Adjusted some skills that gave flat mana or HP to new game levels.
+- Increased power of devastating blow because of lower mana in the game.
+- Reduced cooldown time for archer/hunter skills since bows are weaker.
+- Reduced stat potion stacking to 2.
+- Reduced stat requirements for weapons and armor to match lower stats in the game.
+- Some more weapon limitations to skills.
+- Changed durability variables to make durability a factor throughout the game.
+- Balanced durability between weapons based on speed.
+- Raised starting XP and reputation per level to 10,000 to make first levels take a little longer.
+
+ver 0.58
+- Reduced difficulty level multipliers to health to match lower player damage stat.
+- Reduced monster vit/level (relatively) to try match lower player damage stat.
+- Halved mob HP/vit to allow smaller resolution HP changes.
+- Removed food and quality food fix as it was causing problems switching back to vanilla game.
+- Reduced monster damage/level to match lower player HP.
+- Possibly corrected bug that applied axe and mace masteries only to single-handed weapons.
+- Reduced all base stat boosts from items.
+- Placed cooldowns for every attack.
+- Increased cooldowns on healing spells.
+- Limited some attack skills to specific weapons.
+- Fixed issue with reputation level adjustments.
+
+ver 0.57
+- Unarmed characters cannot cause deep wounds.
+- Deep wounds, crit, crushing blow % affected by weapon type.
+- Added character level constraints to Hardiness and True Aim.
+- Removed long cooldown from Ice Prison.
+- Gave hardiness longer cooldown (150).
+- Changed Hardiness to be in different group than True Aim.
+- Fixed typo in True Aim that didn't count attack multiplier.
+- Removed quality food items and spread out food levels more evenly.
+
+ver 0.56
+- Fixed up skills so no adjustments are needed when transitioning to and from vanilla.
+- Increased some basic skills mainly for warrior sub-classes.
+
+ver 0.55
+- Reduced mana per INT and SPR for all classes.
+- Reduced mana costs to match for all skills.
+- Added extra starting mana to all players using a hidden skill tree.
+- Changed the way passive skills increase in strength. Instead of increasing with skills, it increases every 50 mana points.
+
+ver 0.54
+- Changed all skills that modify attack percentages to add rather than multiply.
+
+ver 0.53
+- Reduced chaining in holy strike to just 1.
+- Reduced chaining in chain lightning to default (3).
+- Reduced rylor bomb damage and changed it to fire.
+- Changed stalker and kodiak to fully modify crushing blow and crits.
+
+ver 0.52
+- Reduced radius of rylor bomb.
+- Reduce natural tornado life to 20 secs.
+- Boosted evil altar effect so it increases HP as well.
+- Increase skeleton and zombie speed slightly.
+- Increased trap HP and made them impossible to stun/deep wound.
+- Fixed some other objects that could be stunned.
+- Made imps harder to hit.
+- Made edged vendor have bows as well.
+- Made ego friend weapons have a damage boost so they're more worthwhile.
+
+ver 0.51
+- Increased armor difficulty multipliers for end game.
+- Increased health difficulty multiplier for end game.
+- Decreased damage difficulty multiplier for end game.
+- Reduce dark elf wizard attack strength (fast attack).
+- Made passives go up in skill cost very quickly.
+- Reduced all attack skill physical damage.
+- Reduced base damage/STR.
+- Reduced bonus damage/STR for specific trees.
+- Fixed problem with potion modifications.
+- Increased cooldown of rylor bull's headbutt.
+
+ver 0.50
+- Reduced HP of mobs
+- Increased HP difficulty multipliers to maintain mob HP at high levels.
+- Reduced range of lightning elemental to make it more vulnerable.
+- Reduced XP reward for quests that involved almost no work: finding evidence.
+- Reduced lich damage since the lich attacks very fast.
+- Increased dmg per STR slightly for warriors and assassin.
+- Reduced max armor multiplier
+- Increased armor and damage on ego, obsidian and crystal items
+- Reduced armor and damage multipliers on unique items
+- Modified armor formula to match new armor values
+- Modified many skills (mostly buffs).
+	
+ver 0.49
+- Reduced effect of mana regen item modifier
+- Reduced damage from single target non-scaling spells.
+
+ver 0.48
+- Increased armor difficulty multipliers.
+- Adjusted non-scaling damage to match mob HP.
+- Increased multipliers for masteries.
+
+ver 0.47
+- Adjusted NPCs to match slowed down movement speeds of everything else.
+- Changed all passive skills affecting crits/crushes/bleeds to affect them directly.
+
+ver 0.46
+- Reduced stamina pause time until recharge to 0.5 sec.
+- Reduced weapon modifiers for damage mult, increased for damage added.
+- Shifted low level bows in levels to match other weapons.
+- Made potion effects stick around after death.
+- Changed potion values to vary less.
+- Allowed potions to stack up to 4.
+- Made Enchanter enchantments stick around after death
+- Allowed more than one enchantment at a time.
+- Increased Enchanter stock of enchantments.
+- Movement speed armor modifier reduced.
+- Reduced radius of Vortar Guardian's slam
+- Reduced HP gain per level of monsters
+- Increased initial damage of multishot and reduced per level damage.
+- Increased initial damage of flaming arrow and poison arrow.
+
+ver 0.45
+- Flaming arrow was missing cooldown
+- Changed mana regen item modifier to give percentages.
+- Reduced base mana regen per INT and per SPR from 0.03 to 0.02.
+- Moved stronger mages from Extra Balance mod to this mod.
+- Increased strength per level of multishot.
+
+ver 0.44
+- Modified Archer skills:
+	- Poison Arrow, Flaming Arrow: changed to short buffs
+	- Shock Bolt: changed to physical damage
+	- Multishot: changed to physical bolts 
+- Reduced mana costs of all scaling skills.
+- Made shuriken stand still to cast. 
+- Reduced elite and legendary difficulties' mob health multiplier.
+- Reduced DEX requirement for bows.
+- Reduced time to use Rupture Armor.
+
+ver 0.43
+- Reduced speed of everything by 20%: PC, NPCs, monsters
+- Teleport now has cooldown of 6 seconds rather than long use time
+
+ver 0.42
+- Reduced passive mana abilities slightly.
+- Made fire arrow, poison arrow, and shock bolt faster.
+
+ver 0.41
+- Moved XP changes from Extra Balance mod to this mod.
+- Reduced sprint of many mobs.
+- Made multishot even weaker, and labelled it as a spell. 
+- Reduced the initial strength of the archer's other elemental arrow skills, since monsters are much more sensitive to elemental damage. 
+
+ver 0.40
+- Reverted stamina drain to 20
+- Changed many item magic modifiers
+- Made wisps' boost longer
+- Increased mana costs on archer arrow skills.
+- Decreased strength of multishot.
+- Decreased strength of shuriken.
+- Fix slowdown from stealth during stealth surprise.
+- Added cooldown times to necromancer summons now that corpses stick around.
+
+ver 0.39
+- Increased time before monsters fade away
+- Reduced leprechaun money from stealing
+- Increased leprechaun speed after stealing
+- Made monster undeads and lich undeads more dangerous.
+
+ver 0.38
+- Changed totem auras so they stack
+- Followed Caal's suggestion and reduced size of translation files
+
+ver 0.37
+- Small fixes to faction file bugs. Once they're patched they'll be removed.
+- Changed dark elf totem to give extra critical hits rather than elemental resistance
+
+ver 0.36
+- Added 2 projectiles to multishot to make it decent
+- Weakened stealth's damage component slightly.
+- Increased starting monster HP slightly.
+
+ver 0.35
+- Made changes to Stealth and Marked For Death.
+- Increased 1st level damage of single target non-scaling skills.
+- Reduced 1st level mana costs of non-scaling skills.
+- Made first levels harder (similar to DoP).
+- Reduced scavenger movement speed
+- Reduced difficulty multipliers for movement speed.
+- Reduced stamina drain.
+
+ver 0.34
+- Changed mod to use modding SDK. This should mean that there'd be little need to update it for every new patch.
+
+ver 0.33
+- Cast time items: increase a little
+- Reduced difficulty multipliers for damage
+- Minor change to shield of fire
+
+ver 0.32
+- Changed the way many non-scaling skills work to try make more of them more useful, particularly the sorcerer's spells.
+- Reduced the power of frost nova.
+- Reduced the strength of some monster enhancements, such as mana drain and fleet of foot.
+
+ver 0.31
+- Missed a strengthTime removal in Smoke Screen in 0.29
+- Changed the way demon summons work (Scree, Fury) to have a long cooldown.
+
+ver 0.30
+- Balance work on some non-scaling skills, specifically the basic single target spells.
+- Increased effect of masteries.
+- Changed the way teleport works to make it a worthwhile spell.
+- Added Escape Notice boost to fog. It's now a good strategy to walk in fog to sneak up on monsters (or to avoid them).
+
+ver 0.29
+- Removed strengthTimes.
+
+ver 0.28
+- Modifies some reuse times.
+- Modified starting mana costs for skills that are good with just 1 level, so that they'll still consume a fair amount of mana.
+- Made stealth use mana (just as in Kivi's Underworld).
+
+ver 0.27
+- More balance changes to scaling skill. Made cooldowns shorter on lower skill levels.
+- Swapped Precise Strike and Feint in the Assassin/Trickster trees.
+- Moved Blood Lust to the Defender tree.
+- Adjusted passive mana abilities as they were too strong.
+
+ver 0.26
+- Increased all passive mana abilities. 
+- Added an 'on hit' mana ability to all fighting classes. Other abilities are a bonus.
+
+ver 0.25
+- Changed warlock summons to be on a timer and not to cancel each other.
+- Adjusted many scaling skills, mostly to be shorter with a shorter cooldown.
+- Changed Blood Sacrifice to be toggleable.
+- Increased mana costs for healer, shaman and druid.
+
+ver 0.24
+- Reduced crushing blows, bleeds and crit rates to 0.04% per stat.
+- Reduced items giving crushing blow, bleeds and crits even more.
+
+ver 0.23
+- Reduced base mana regen to 0.
+- Min character level requirements added to non-scaling skills
+- Mana gain abilities scale up with skill investment
+
+ver 0.22
+- Updated to work with patch 1.024
+
+ver 0.21
+- Balanced all skills for all classes
+- Renumbered versions
+- Added assetsExpBal.zip for expansion
+- Readme.txt now documents latest version's changes more precisely
+
+ver 0.20
+- Some more mana cost tweaking for spells
+
+ver 0.19
+- Removed combat mana slowdown.
+- Added minimal STR and DEX requirements to all cloth and leather armor. This is to prevent mages from just stocking up on INT and VIT, thus making the game trivial. May need to cover the option of jewelry as well, but this is it for now.
+- Resistances were off. Adjusted them properly for the new resistance gains, and adjusted monster resistances too.
+- Changed spell damage to be less spread out. A ratio of 3 between min and max is the highest it goes now.
+- Updated some missing text from the 1.023 patch.
+
+ver 0.18
+- Rebalanced skills and mana costs. I'd rather err on the side of mana costs too high and slowly adjust them down than the other way around.
+- Reduced effect of mana regen items
+
+ver 0.17
+- Balanced healer
+- Linked greater heal and area heal. Area heal is mostly for multiplayer, and there are too many
+  heal spell choices anyway.
+- Now greater heal is slow and not that useful during combat. Lesser heal is perfect for combat.
+- Some general tweaking, particularly of DoT spells.
+
+ver 0.16
+- Balanced warlock
+- Linked demons together. This was the only way of making this skill really worthwhile, since demons
+  can't co-exist. Otherwise you're trying to convince players to throw points away.
+- Re-did all mana costs. I'm really happy with this idea (though I have to test it):
+	- Scalable skills can be left at low levels. Therefore their mana costs should shoot up the more levels you buy.
+	  You can expect to use those skills less as you level them.
+	- Non-scalable skills must be taken to the maximum. Therefore their mana costs should rise in such a way
+	  that you can use those skills as much or more at higher levels.
+- Made dark sacrifice's cooldown shorter, and also used damage inflation(deflation) to decrease health cost per level. 
+	This means that you can either use it several times to get a bigger mana boost, or invest more in it to get a better deal.
+	  
+ver 0.15
+- Balanced necromancer
+- Tweaked all single target offensive spells to be stronger in the end game
+- Skeletons are now always 2 levels less than the player, skeleton archers 1 level. This helps with not needing to pour points into skeletons just to keep their level up to the player's.
+- Really adjusted mana regen rate in combat -- I adjusted the wrong thing before.
+- All necromancer creatures now increase in number every 2 levels. 4 levels is too long to wait. Adjusted skill points so that it still works out.
+- First time I'm adjusting passive mana bonus with every skill. Not sure 6 was a good enough starting number though.
+
+ver 0.14
+- Balanced sorcerer skills
+- Changed mana regen rate in combat to 50% instead of 25%. 25% was killing regen rates completely.
+  I'm trying 50% for now. May change it to 75% or more.
+- There's a problem with the arcane drain's weakness aura. I hope to fix it soon.
+  
+ver 0.13
+- Balanced magician skills
+- Added shrink chance to arcane blast -- magic should have cool effects.
+- Made arcane drain cause a weakness aura that decreases physical dmg.
+- Made gas explosions use fire explosions
+
+ver 0.12
+- Updated to patch 1.023
+- Resistance still uses my formula, tweaked for higher resistances
+- Removed resistance per spell :( to match main game more
+- Changed masteries to give small damage bonus (2-3% instead of 10% per level)
+
+ver 0.11
+- Added shrink as a 2% chance to arcane blast
+- Switched several powers to use percentages (ice armor, magic shield)
+- Tweaked possibly OP ice mage powers: Concentration and Permafrost.
+
+ver 0.10
+- Made fire elemental hang about for a shorter time and be 2 levels weaker
+- Fixed typo in magician skills
+- Tried to prevent fire stacking
+
+ver 0.09
+- Tweaked fire mage spells AGAIN.
+- Balanced ice mage spells -- remember this is a first try.
+
+ver 0.08
+- Reduced requirements for daggers, maces and bows.
+
+ver 0.07
+- Tweaked fire mage spells yet again (according to forum feedback)
+- Trying for now to have fire mage spells increase fire resistance, decrease cold resistance.
+- Capped some really powerful skills.
+
+ver 0.06
+- Tweaked fire mage spells some more.
+- Stopped using curves for mana growth. Linear functions are good enough.
+
+ver 0.05
+- Balanced fire mage skills only
+- Fire mastery affects mana costs
+- Reverted to NOT use DEX for mana regen. I figure I'm making enough changes as is.
+
+ver 0.04
+- Tweak mana regen and mana rates per INT and per SPR for different classes. This won't be felt until the spells are adjusted, since currently mana balance is off for mages.
+- Extra mana regen for DEX for mages/priests. This should give a real boost in regen for these classes. DEX should now be worth investing in even for mages that just want to use mana. This is an experimental feature, since it doesn't display properly when you hover over DEX.
+
+ver 0.03
+- Change items' critical hit, crushing blow, stunning blow, cast time, deep wounds percentages to be more reasonable.
+- Change stealth skill not to give INSANE critical hit bonus per level, but still be effective.
+
+ver 0.02
+- Resistance formula tweaks to make it more reasonable
+- Resistance of monsters (in general, not specific monsters) changed to fit new formula
+- Damage bonus for warriors decreased from 0.2% per tree to 0.15% per tree

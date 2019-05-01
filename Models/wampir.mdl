@@ -1,0 +1,61 @@
+
+dir Models/creatures/Wampir/
+
+skeleton	wampir.mds
+mesh		wampir.mdm
+skin		wampir.skn
+tags		wampir.tag
+
+ObjectType 	MonsterWampir
+
+animations
+{
+ 	idle idle.mda
+	{
+	}
+
+	walk fly.mda matchMoveSpeed
+	{
+
+	}
+
+	attack attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+	attack attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Wampir/wampir_dying.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	poisonAttack poison_attack.mda
+	{
+		server
+		{
+			6 skillMarker
+		}
+		client
+		{
+			10 spawnEffect wampirPoisonAttack.eff tag_chest
+			3 sound Sounds/Monsters/Wampir/wampir_poison_attack.wav
+		}
+	}
+}

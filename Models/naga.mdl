@@ -1,0 +1,114 @@
+
+dir Models/creatures/Naga/
+
+skeleton	naga.mds
+mesh		naga.mdm
+skin		naga4.skn
+tags		naga.tag
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	idleSound idlesound.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack melee01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+
+	attack melee02.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+
+	startAcidBolt idle.mda
+	{
+		client
+		{
+			entry startEffect castPoisonBolt2.eff tag_head
+			exit stopEffect castPoisonBolt2.eff tag_head
+		}
+	}
+
+	castAcidBolt castpoisonbolt.mda
+	{
+		server
+		{
+			8 skillMarker
+		}
+		client
+		{
+			entry startEffect castPoisonBolt2.eff tag_head
+			13 spawnEffect castPoisonBolt3.eff tag_rightHand
+			exit stopEffect castPoisonBolt2.eff tag_head
+		}
+	}
+
+	startHeal idle.mda
+	{
+		client
+		{
+			entry startEffect spellHeal.eff tag_head
+			exit stopEffect spellHeal.eff tag_head
+		}
+	}
+
+	castHeal castheal.mda
+	{
+		server
+		{
+			8 skillMarker
+		}
+		client
+		{
+			entry startEffect spellHeal.eff tag_head
+			13 spawnEffect castHeal3.eff tag_rightHand
+			exit stopEffect spellHeal.eff tag_head
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Naga/naga_death.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	bestiary melee01.mda
+	{
+		client
+		{
+			9 sound Sounds/Combat/Claw/claw_deepwounds.wav
+		}
+	}
+
+	bestiary2 castpoisonbolt.mda
+	{
+		client
+		{
+			entry startEffect castPoisonBolt.eff tag_head
+			exit stopEffect castPoisonBolt.eff tag_head
+			8 sound Sounds/Elemental/Poison/poison.wav
+		}
+	}
+}

@@ -1,0 +1,68 @@
+
+dir Models/Creatures/Ragnar/
+
+skeleton	Ragnar.mds
+mesh		Ragnar.mdm
+tags		Ragnar.tag
+skin 		Ragnar.skn
+
+ObjectType	MonsterDemonDog
+
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	idleSound idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			5 attackMarker
+		}
+	}
+
+	attack attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Ragnar/ragnar_dying.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	taunt taunt.mda
+	{
+		client
+		{
+			0 sound Sounds/Monsters/Ragnar/ragnar_taunt.wav
+		}
+	}
+
+ 	alert alert.mda
+	{
+		client
+		{
+			0 sound Sounds/Monsters/Ragnar/ragnar_alert.wav
+		}
+	}
+}

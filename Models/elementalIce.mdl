@@ -1,0 +1,122 @@
+
+dir Models/creatures/ElementalIce/
+
+skeleton	ice_elem.mds
+mesh		ice_elem.mdm
+tags		ice_elem.tag
+
+skin 		minion.skn
+ 
+animations
+{
+	idle ice_elem_idle.mda
+	{
+		client
+		{
+			entry startEffect iceelemental1.eff tag_chest
+			exit stopEffect iceelemental1.eff tag_chest
+		}
+	}
+
+	walk ice_elem_walk.mda matchMoveSpeed
+	{
+		client
+		{
+			entry startEffect iceelemental1.eff tag_chest
+			exit stopEffect iceelemental1.eff tag_chest
+		}
+	}
+
+	attack ice_elem_atk.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+
+		client
+		{
+			entry startEffect iceelemental1.eff tag_chest
+			exit stopEffect iceelemental1.eff tag_chest
+		}
+	}
+
+	attack ice_elem_atk.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+
+		client
+		{
+			entry startEffect iceelemental1.eff tag_chest
+			exit stopEffect iceelemental1.eff tag_chest
+		}
+	}
+	
+	attack ice_elem_atk2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+
+		client
+		{
+			entry startEffect iceelemental1.eff tag_chest
+			exit stopEffect iceelemental1.eff tag_chest
+		}
+	}
+	
+	castIceBolt ice_elem_casticebolt.mda
+	{
+		server
+		{
+			11 skillMarker
+		}
+
+		client
+		{
+			
+			entry startEffect iceelemental2.eff tag_lhand
+			entry startEffect iceelemental2.eff tag_rhand
+			
+			exit stopEffect iceelemental2.eff tag_lhand
+			exit stopEffect iceelemental2.eff tag_rhand
+			
+		}	
+	}
+
+	dying ice_elem_death.mda
+	{
+		client
+		{
+			entry stopEffect iceelemental1.eff tag_chest
+			entry sound Sounds/Monsters/Elementals/iceelemental_death.wav
+		}
+	}
+
+	dead ice_elem_dead.mda
+	{
+		client
+		{
+			entry spawnEffect elementalIceDeath.eff tag_chest
+		}
+	} 
+
+	bestiary ice_elem_casticebolt.mda
+	{
+		client
+		{
+			
+			entry startEffect iceelemental2.eff tag_lhand
+			entry startEffect iceelemental2.eff tag_rhand
+			
+			exit stopEffect iceelemental2.eff tag_lhand
+			exit stopEffect iceelemental2.eff tag_rhand
+
+			11 sound Sounds/Elemental/Cold/iceExplosion.wav
+		}	
+	}
+}

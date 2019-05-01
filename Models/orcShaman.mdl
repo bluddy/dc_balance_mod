@@ -1,0 +1,184 @@
+// Balance Mod
+
+dir Models/creatures/Orc/
+
+skeleton	orc.mds
+mesh		orc.mdm
+skin		Orcshaman.skn
+tags		orc.tag
+
+ObjectType 	MonsterOrcShaman
+
+animations
+{
+	idle orc_idle.mda
+	{
+	}
+
+ 	walk orc_walk.mda matchMoveSpeed
+	{
+	}
+
+	attack orc_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	attack orc_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+	attack orc_attack3.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	startWeakness orc_idle.mda
+	{
+		client
+		{
+			entry startEffect spellWeakness.eff tag_rightHand
+			exit stopEffect spellWeakness.eff tag_rightHand
+		}
+	}
+
+	castWeakness castWeakness.mda
+	{
+		server
+		{
+			11 skillMarker
+		}
+		client
+		{
+			0 startEffect spellWeakness.eff tag_rightHand
+			12 stopEffect spellWeakness.eff tag_rightHand
+			12 spawnEffect castWeakness.eff tag_rightHand
+			exit stopEffect spellWeakness.eff tag_rightHand
+
+			12 sound Sounds/Player/weakness.wav
+		}
+	}
+
+	// bal: add the armor melt spell
+	startArmorMelt orc_idle.mda
+	{
+		client
+		{
+			entry startEffect spellArmorMelt.eff tag_rightHand
+			exit stopEffect spellArmorMelt.eff tag_rightHand
+		}
+	}
+
+	castArmorMelt castWeakness.mda
+	{
+		server
+		{
+			11 skillMarker
+		}
+		client
+		{
+			0 startEffect spellArmorMelt.eff tag_rightHand
+			12 stopEffect spellArmorMelt.eff tag_rightHand
+			12 spawnEffect castArmorMelt.eff tag_rightHand
+			exit stopEffect spellArmorMelt.eff tag_rightHand
+
+			12 sound Sounds/Player/ArmorMelt.wav
+		}
+	}
+
+	// bal: new spell for orc shaman boss
+	startSummonMinions orc_idle.mda
+	{
+		client
+		{
+			entry startEffect spellScree.eff tag_rightHand
+			exit stopEffect spellScree.eff tag_rightHand
+		}
+	}
+
+	castSummonMinions castWeakness.mda
+	{
+		server
+		{
+			11 skillMarker
+		}
+		client
+		{
+			0 startEffect spellScree.eff tag_rightHand
+			12 stopEffect spellScree.eff tag_rightHand
+			12 spawnEffect castScree.eff tag_rightHand
+			exit stopEffect spellScree.eff tag_rightHand
+
+			12 sound Sounds/Monsters/DimensionalGate/dimensional_gate_monster_in.wav
+		}
+	}
+
+	startPoisonBolt orc_idle.mda
+	{
+		client
+		{
+			entry startEffect spellOrcPoisonBolt.eff tag_rightHand
+			exit stopEffect spellOrcPoisonBolt.eff tag_rightHand
+		}
+	}
+
+	castPoisonBolt castPoisonBolt.mda
+	{	
+		client
+		{
+			0 startEffect spellOrcPoisonBolt.eff tag_rightHand
+			12 stopEffect spellOrcPoisonBolt.eff tag_rightHand		
+			12 spawnEffect castOrcPoisonBolt.eff tag_rightHand
+			exit stopEffect spellOrcPoisonBolt.eff tag_rightHand
+		}
+		server
+		{
+			11 skillMarker
+		}
+	}
+
+ 	dying orc_death.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Orc/orc_death.wav
+		}
+	}
+
+	dead orc_dead.mda
+	{
+	}
+
+	taunt orc_taunt1.mda
+	{
+		client
+		{
+//			entry sound Sounds/Monsters/Torva/torva_taunt.wav
+		}
+	}
+
+	taunt orc_taunt2.mda
+	{
+		client
+		{
+//			entry sound Sounds/Monsters/Torva/taunt.wav
+		}
+	}
+
+	bestiary castWeakness.mda
+	{
+		client
+		{
+			11 sound Sounds/Player/weakness.wav
+		}
+	}
+}

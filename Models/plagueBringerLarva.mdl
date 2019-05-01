@@ -1,0 +1,47 @@
+
+dir Models/creatures/PlaguebringerLarva/
+
+skeleton	plaguespawnling1.mds
+mesh		plaguespawnling1.mdm
+skin		plaguebringerA.skn
+tags		plaguespawnling.tag
+ 
+animations
+{
+	idle plaguespawnling1.mda
+	{
+	}
+	walk plaguespawnling_walk.mda
+	{
+	}
+
+	attack plaguespawnling_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			11 attackMarker
+		}
+	}
+	attack plaguespawnling_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+	idleSound plaguespawnling_idlesound.mda
+	{
+	}	
+
+	dying plaguespawnling_dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/PlagueBringerLarva/plaguebringer_larva_death.wav
+		}
+	}
+
+	dead plaguespawnling_dead.mda
+	{
+	}
+}

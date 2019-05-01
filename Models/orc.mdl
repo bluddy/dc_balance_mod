@@ -1,0 +1,87 @@
+
+dir Models/creatures/Orc/
+
+skeleton	orc.mds
+mesh		orc.mdm
+skin		orcGreen.skn
+tags		orc.tag
+
+ObjectType 	MonsterOrc
+
+animations
+{
+	idle orc_idle.mda
+	{
+	}
+
+ 	walk orc_walk.mda matchMoveSpeed
+	{
+	}
+
+	attack orc_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	attack orc_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+	attack orc_attack3.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	caltrops orc_attack3.mda
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+ 	dying orc_death.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Orc/orc_death.wav
+		}
+	}
+
+	dead orc_dead.mda
+	{
+	}
+
+	taunt orc_taunt1.mda
+	{
+		client
+		{
+//			entry sound Sounds/Monsters/Torva/torva_taunt.wav
+		}
+	}
+
+	taunt orc_taunt2.mda
+	{
+		client
+		{
+//			entry sound Sounds/Monsters/Torva/taunt.wav
+		}
+	}
+
+	bestiary orc_attack.mda
+	{
+		client
+		{
+			7 sound Sounds/Combat/Sword/sword_deadly.wav
+		}
+	}
+}

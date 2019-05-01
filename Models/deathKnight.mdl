@@ -1,0 +1,71 @@
+
+dir Models/creatures/DeathKnight/
+
+skeleton	deathKnight.mds
+mesh		deathKnight.mdm
+tags		deathknight.tag
+
+skin		deathknight.skn
+
+animations
+{
+	idle deathKnight.mda
+	{
+	}
+
+	walk run.mda matchMoveSpeed
+	{
+	}
+
+	attack attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			11 attackMarker
+		}
+	}
+
+	attack2 attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			12 attackMarker
+		}
+	}
+
+	drainAttack attack2.mda
+	{
+		server
+		{
+			12 skillMarker
+		}
+		client
+		{
+			entry startEffect spellDrainAttack.eff tag_rightHand
+			14 spawnEffect combatCrushingBlow2.eff tag_chest
+			15 spawnEffect drainAttack.eff tag_chest
+			15 stopEffect spellDrainAttack.eff tag_rightHand
+			exit stopEffect spellDrainAttack.eff tag_rightHand
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/DeathKnight/deathknight_death.wav
+		}
+	}
+	
+	dead dead.mda
+	{
+	}
+
+	bestiary attack1.mda
+	{
+		client
+		{
+			11 sound Sounds/Combat/Sword/sword_deepwounds.wav
+		}
+	}	
+}

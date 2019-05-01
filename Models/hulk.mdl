@@ -1,0 +1,66 @@
+
+dir Models/Creatures/Hulk/
+
+skeleton	Hulk.mds
+mesh		Hulk.mdm
+tags		Hulk.tag
+
+skin		Hulk.skn
+ 
+animations
+{
+	idle Hulk.mda
+	{
+	}
+
+	walk hulk_walk.mda matchMoveSpeed
+	{
+	}
+	
+	attack hulk_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			9 attackMarker
+		}
+	}
+	
+	attack hulk_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}		
+
+	dying hulk_dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Hulk/hulk_death.wav
+		}
+	}
+
+	dead hulk_dead.mda
+	{
+	}
+
+	stunningHit hulk_stun.mda
+	{
+		server
+		{
+			31 skillMarker
+		}
+
+		client
+		{
+			30 spawnEffect combatCrushingBlow.eff tag_neck
+			32 spawnEffect combatCrushingBlow2.eff tag_neck
+			entry sound Sounds/Monsters/Hulk/hulk_stunning_hit.wav
+		}
+	}
+	
+	idleSound hulk_idlesound.mda
+	{
+	}	 
+}

@@ -1,0 +1,76 @@
+
+dir Models/creatures/Spider/
+
+skeleton	spider.mds
+mesh		spider.mdm
+tags		spider.tag
+
+skin		black_widow.skn
+ 
+animations
+{
+	idle spider.mda
+	{
+	}
+	
+	walk spider_walk.mda matchMoveSpeed
+	{
+	}
+
+	attack spider_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+	attack spider_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+	}
+
+	shootWeb spider_web.mda
+	{
+		server
+		{
+			8 skillMarker
+		}
+		client
+		{
+			entry sound Sounds/Monsters/Spider/spider_shootweb.wav
+		}
+	}
+
+	dying spider_dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Spider/giantspider_death.wav
+		}
+	}
+
+	dead spider_dead.mda
+	{
+	}
+
+	idleSound spider_idlesound.mda
+	{
+	}
+
+
+	jump spider_jump.mda fps 40
+	{
+		server
+		{
+			8 startMarker
+			24 endMarker
+		}
+		client
+		{
+			4 sound Sounds/Player/Blur.wav
+		}
+	}	 
+}

@@ -1,0 +1,59 @@
+// Balance Mod
+
+dir Models/Objects/Dungeon/Data/
+
+skeleton	woodnstone_door1_closed.mds
+mesh		woodnstone_door1_closed.mdm
+dir Models/Objects/Geometry/Caves/
+skin		goreholecombo1.skn
+
+dir Models/Objects/Dungeon/Data/
+	
+BlocksSight 1
+
+offset 48.0  24.0
+
+InWayAlphaType South
+
+// Make this door wooden
+ObjectType ObjectDoorWooden
+
+animations
+{
+	closed woodnstone_door1_closed.mda
+	{
+	}
+
+	open woodnstone_door1_open.mda
+	{
+	}
+
+	opening woodnstone_door1_opening.mda
+	{
+		client
+		{
+			entry sound Sounds/Objects/wood_door_open.wav
+		}
+	}
+
+	closing woodnstone_door1_closing.mda
+	{
+		client
+		{
+			entry sound Sounds/Objects/wood_door_close.wav
+		}
+	}
+
+	breaking woodnstone_door1_opening.mda
+	{
+		client
+		{
+			entry spawnEffect smokebam1.eff origin		
+			entry sound Sounds/Objects/barrel_break.wav
+		}
+	}
+
+	broken woodnstone_door1_open.mda
+	{
+	}
+}

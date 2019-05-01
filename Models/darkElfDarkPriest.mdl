@@ -1,0 +1,108 @@
+// Balance Mod
+
+dir Models/creatures/DarkElf/
+
+skeleton	DarkElf.mds
+mesh		DarkElf.mdm
+skin		DarkElfPriest.skn
+tags		DarkElf.tag
+
+ObjectType 	MonsterDarkElfDarkPriest
+
+animations
+{
+	idle 1_handed_idle.mda
+	{
+	}
+
+ 	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack 1_attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	attack 1_attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	castBolt 1_castbolt.mda
+	{	
+		client
+		{
+			
+			entry startEffect castPriest1.eff tag_rightHand
+			exit stopEffect castPriest1.eff tag_rightHand	
+			
+		}
+		server
+		{
+			8 skillMarker
+		}
+	}
+
+	// bal: added spells
+	castBarkSkin 1_castbuff.mda 
+	{
+		server
+		{
+			8 skillMarker
+		}
+
+		client
+		{
+			entry startEffect castWarlock.eff tag_leftHand
+			exit stopEffect castWarlock.eff tag_leftHand
+
+			9 sound Sounds/Player/barkskin.wav
+		}
+	}
+
+	// bal: added spells
+	castMagicShield 1_castholyshield.mda
+	{
+		server
+		{
+			8 skillMarker
+		}
+		client
+		{
+			entry startEffect castMagicArmor.eff tag_head
+			exit stopEffect castMagicArmor.eff tag_head
+
+			9 sound Sounds/Player/magic_shield.wav
+		}
+	}
+
+ 	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/DarkElf/dark_elf_dying.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	bestiary 1_castbolt.mda
+	{	
+		client
+		{
+			
+			entry startEffect castPriest1.eff tag_rightHand
+			exit stopEffect castPriest1.eff tag_rightHand	
+			8 sound Sounds/Monsters/Lich/necroBolt.wav			
+		}
+	}
+}

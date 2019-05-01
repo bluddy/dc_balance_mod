@@ -1,0 +1,79 @@
+
+dir Models/Creatures/DemonWalker/
+
+skeleton	demonWalker.mds
+mesh		demonWalker.mdm
+tags		demonWalker.tag
+
+skin		demonWalker1.skn
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+		client
+		{
+		}
+	}
+	
+	attack melee01.mda matchAttackSpeed // bal: make correspond to attack speed
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+	
+	attack melee02.mda matchAttackSpeed // bal: make correspond to attack speed
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			0 sound Sounds/Monsters/Krall/kralldeath.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	flameBlast special.mda
+	{
+		server
+		{
+			18 skillMarker
+		}
+	}
+
+	alert alert.mda
+	{
+		server
+		{
+			12 skillMarker
+		}
+
+		client
+		{
+			0 sound Sounds/Monsters/Krall/krallalert.wav
+		}
+	}
+
+	slam slam.mda
+	{
+		server
+		{
+			10 skillMarker
+		}
+	}
+}

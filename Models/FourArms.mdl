@@ -1,0 +1,85 @@
+
+dir Models/Creatures/Fury/
+
+skeleton	Fury.mds
+mesh		Fury.mdm
+tags		Fury.tag
+
+skin		Fury.skn
+
+ObjectType 	MonsterFourArms
+ 
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+	
+	attack melee01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+	
+	attack melee02.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}		
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Fury/fury_dying.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	specialAttack1 special01.mda
+	{
+		server
+		{
+			7 skillMarker
+		}
+		client
+		{
+			entry startEffect swingFury2.eff tag_rightHand
+			exit stopEffect swingFury2.eff tag_rightHand	
+			entry startEffect swingFury2.eff tag_leftHand
+			exit stopEffect swingFury2.eff tag_leftHand	
+
+			7 sound Sounds/Monsters/Fury/fury_special_attack1.wav
+		}
+	}
+	
+	specialAttack2 special02.mda
+	{
+		server
+		{
+			9 skillMarker
+		}
+		client
+		{
+			entry startEffect swingFury.eff tag_rightHand
+			exit stopEffect swingFury.eff tag_rightHand	
+			entry startEffect swingFury.eff tag_leftHand
+			exit stopEffect swingFury.eff tag_leftHand		
+
+			0 sound Sounds/Monsters/Fury/fury_special_attack2.wav
+		}
+	} 
+}
+
+

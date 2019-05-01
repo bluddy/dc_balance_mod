@@ -1,0 +1,25 @@
+
+dir Models/Objects/Grasslands/Data/
+
+skeleton	alphagrass3.mds
+mesh		alphagrass3.mdm
+tags		hfweb.tag
+skin		hfweb2.skn
+
+collision
+{
+0
+}
+
+InWayAlphaType Never
+BlocksSight 0	// Bal: shouldn't block sight
+
+randomScale 0.9 1.1
+
+
+animations
+{
+	idle alphagrass3.mda
+	{
+	}
+}

@@ -1,0 +1,66 @@
+
+dir Models/creatures/hellhound/
+
+skeleton	hellhound.mds
+mesh		hellhound.mdm
+tags		hellhound.tag
+skin 		hellhound_hellhound.skn
+
+animations
+{
+	idle idle.mda
+	{
+	}
+
+	idleSound idleSound.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack melee01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+
+	attack2 melee02.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			5 attackMarker
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/HellHound/hellhound_death.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	taunt taunt.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/HellHound/taunt.wav
+		}
+	}
+
+ 	alert idleSound.mda //alert.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/HellHound/alert.wav
+		}
+	}
+}

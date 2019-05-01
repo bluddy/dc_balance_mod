@@ -1,0 +1,72 @@
+
+dir Models/creatures/Fiend/
+
+skeleton	fiend.mds
+mesh		fiend.mdm
+tags		fiend.tag
+
+skin		fiend.skn
+
+ObjectType	MonsterFiend
+
+animations
+{
+	idle idle.mda
+
+	{
+	}
+
+	walk run.mda matchMoveSpeed
+	{
+	}
+
+	attack attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+
+	attack attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+	
+	specialAttack special.mda
+	{	
+		client
+		{
+			
+			entry startEffect swingPaladin.eff tag_rightHand
+			exit stopEffect swingPaladin.eff tag_rightHand	
+			entry sound Sounds/Player/powerStrike.wav
+		}
+		client
+		{
+			6 startAttachedSwipe Effects/warriorSwipe.swp tag_rightHand bladeTop bladeBottom
+			12 stopAttachedSwipe Effects/warriorSwipe.swp tag_rightHand bladeTop bladeBottom
+			exit stopAttachedSwipe Effects/warriorSwipe.swp tag_rightHand bladeTop bladeBottom
+		}
+
+		server
+		{
+			8 attackMarker
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/scree/fiend_dying.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+}

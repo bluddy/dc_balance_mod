@@ -1,0 +1,79 @@
+// Balance Mod
+
+// Reaver
+ManaGenReaver				"Insanity"
+ManaGenReaverDesc			"Gain mana from each crushing blow and hit."
+
+// Warden
+ManaGenWarden				"Devour"
+ManaGenWardenDesc			"Gain mana from hitting and killing enemies."
+
+SpiritStrikeDesc			"This damaging attack leaves the victim weaker."
+ShieldSweepDesc				"A shield attack that harms and interrupts up to 5 victims."
+
+// Demonologist
+BloodSacrificeDesc			"A big boost to your damage for a short time but\nalso drains your health while active.\nCan toggle on and off."
+CircleOfPowerDesc			"Increases power (physical damage 10%, critical hits 8%,\ncrushing blows 8%, magic critical hits 8%,\nand magic crushing blows 8% per skill\nlevel) to all friendlies within the circle.\nCircle skills are linked and share skill points."
+
+// Attacks that received weapon restrictions
+ImpaleDesc				"An attack with a high chance of critical hits.\nRequires a sword or dagger."
+BloodSacrificeDesc		"A big boost to your damage for a short time but\nalso drains your health while active.\nRequires a sharp weapon."
+
+// bal: Update fire mastery description
+FireMasteryDescExp1			"Increases with fire resistance.\nEnhances the following fire skills:\n$$FieryBlast$$, $$Fireball$$, $$SweepingFlames$$,\n$$ImmolationSkillName$$, $$VolcanoSkillName$$, $$MaelstromSkillName$$,\n$$HolyFire$$ ($$SkillTreeShaman$$), $$Lifeburn$$ ($$SkillTreeShaman$$),\n$$FlamingArrowSkillName$$ ($$SkillTreeArcher$$), $$ExplodingArrowSkillName$$ ($$SkillTreeArcher$$),\n$$ImmolationTrapSkillName$$ ($$SkillTreeHunter$$), $$FireStrikeSkill$$ ($$SkillTreeReaver$$),\nand $$InfernoSkill$$ ($$SkillTreeDemonologist$$)."
+
+// ---- Difficulty options -----------
+
+// Semi-hardcore loses less VIT
+SemiHardcoreDesc			"Semi-Hardcore is a difficulty option only for advanced players.\n\nIn Semi-Hardcore, each death is very painful, but not necessarily\nthe end. Each time you die, you lose 2 base vitality. If your base\nvitality ever gets to 0 or below, then you are dead forever.\n\nCan you save the world when death is actually dangerous?"
+
+// Explain only hope better
+OnlyHopeDesc				"Only Hope is a difficulty option only for advanced players.\n\nWith Only Hope set, towns are completely relying on you\nand if you die, the town is lost.\nThis is a good way to play as if the character is hardcore,\nbut without losing the actual character when you die.\n\nCan you save a town when you only have one life?"
+
+// Temporal flux changes -------------
+WorldModifierTemporalFluxDesc		"Temporal Flux: More pockets of Temporal Flux than normal.\nA temporal flux affects the flow of time."
+
+MachineTemporalFluxDesc			"Temporal Flux Machine: There is a machine in the dungeon creating Temporal Fluxes.\nThese fluxes alter the flow of time."
+
+// Added NPC status effects
+Argument	"Had an argument"
+ArgumentDesc	"A vicious argument darkened the mood of\nthis person and another participants."
+
+Conversation	"Had a conversation"
+ConversationDesc	"This person had a conversation with someone,\n making both people happier."
+
+Gamble "Gambled"
+GambleDesc "This person took a risk and gambled some money."
+
+Pray "Prayed"
+PrayDesc	"This person prayed to a god and\nreceived a gift of inner calm."
+
+Shopping "Went Shopping"
+ShoppingDesc "This person recently bought something."
+
+Work "Worked"
+WorkDesc "This person recently earned a living."
+
+Donate	"Donated"
+DonateDesc	"This person just showed a gesture of good will,\nbecoming happier in the process." 
+
+DwellOnMoney "Dwelled On Money"
+DwellOnMoneyDesc "This person has been consumed by thoughts of money."
+
+Jealous "Was Jealous"
+JealousDesc "This person recently felt jealous of someone better off."
+
+Gossip "Told gossip"
+GossipDesc	"This person told gossip about another,\ngaining happiness at the cost of the\n other person's reputation."
+
+Praise "Praised another"
+PraiseDesc "This person became happier from praising\nthe deeds and good name of a fellow townsman."
+
+Marriage	"Recently Married"
+MarriageDesc	"This person is experiencing the joys\nof being recently married."
+
+Divorce		"Recently Divorced"
+DivorceDesc	"This person suffers from having just\ngone through a divorce."
+
+Flirt	"Flirted"
+FlirtDesc	"This person just recently flirted with someone,\nmaking himself and his target happy,\n but possibly making someone else upset."

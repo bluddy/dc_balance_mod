@@ -1,0 +1,63 @@
+
+dir Models/Creatures/Scavenger
+
+skeleton	scavenger.mds
+mesh		scavenger.mdm
+tags		scavenger.tag
+
+skin		scavenger.skn
+
+ObjectType 	MonsterScavenger
+
+animations
+{
+ 	idle idle.mda
+	{
+	}
+
+	walk run.mda matchMoveSpeed
+	{
+	}
+
+	attack attack_01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Scavenger/scavenger_Death.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	eat eat.mda fps 15
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Scavenger/eat2.wav
+			entry spawnEffect scavengerEat2.eff tag_mouth
+			entry startEffect scavengerEat.eff tag_mouth
+			exit stopEffect scavengerEat.eff tag_mouth
+		}
+	}
+
+	eat eat2.mda fps 15
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Scavenger/eat.wav
+			entry spawnEffect scavengerEat2.eff tag_mouth
+			entry startEffect scavengerEat.eff tag_mouth
+			exit stopEffect scavengerEat.eff tag_mouth
+		}
+	}
+}

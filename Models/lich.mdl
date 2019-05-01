@@ -1,0 +1,127 @@
+
+dir Models/creatures/Lich/
+
+skeleton	liche.mds
+mesh		liche.mdm
+skin		liche1.skn
+tags		liche.tag
+
+ObjectType 	MonsterLich
+
+animations
+{
+	idle idle.mda fps 15
+	{
+		client
+		{
+			entry startEffect idleLich.eff origin
+			exit stopEffect idleLich.eff origin			
+		}
+	
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+		client
+		{
+			entry startEffect idleLich.eff origin
+			exit stopEffect idleLich.eff origin			
+		}
+	}
+
+	attack melee01.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+
+	attack melee02.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			8 attackMarker
+		}
+	}
+
+	castBolt castbolt.mda
+	{
+		server
+		{
+			14 skillMarker
+		}
+		client
+		{
+			entry startEffect castNecroBolt.eff tag_lhand
+			exit stopEffect castNecroBolt.eff tag_lhand
+		}
+	}
+
+	raise raisedead.mda
+	{
+		server
+		{
+			5 skillMarker
+		}
+		client
+		{	
+			entry startEffect castRaisedead2.eff tag_lhand
+			exit stopEffect castRaisedead2.eff tag_lhand
+
+			entry startEffect castRaisedead2.eff tag_rhand
+			exit stopEffect castRaisedead2.eff tag_rhand
+			entry spawnEffect castRaiseDead.eff tag_chest			
+		}
+	}
+
+	spawn raisedead.mda
+	{
+		server
+		{
+			5 skillMarker
+		}
+
+		client
+		{	
+			entry startEffect castRaisedead2.eff tag_lhand
+			exit stopEffect castRaisedead2.eff tag_lhand
+
+			entry startEffect castRaisedead2.eff tag_rhand
+			exit stopEffect castRaisedead2.eff tag_rhand
+			entry spawnEffect castRaiseDead.eff tag_chest			
+		}
+	}
+
+	dying dying.mda fps 15
+	{
+		client
+		{	
+			exit stopEffect idleLich.eff origin
+			entry sound Sounds/Monsters/Lich/necromancer_death.wav
+		}
+	}
+
+	dead dead.mda
+	{
+		client
+		{
+			entry spawnEffect elementalFireDeath.eff tag_chest
+		}
+	}
+
+	bestiary raisedead.mda
+	{
+		client
+		{	
+			entry startEffect castRaisedead2.eff tag_lhand
+			exit stopEffect castRaisedead2.eff tag_lhand
+
+			entry startEffect castRaisedead2.eff tag_rhand
+			exit stopEffect castRaisedead2.eff tag_rhand
+			entry spawnEffect castRaiseDead.eff tag_chest	
+
+			5 sound Sounds/Monsters/Lich/raiseDead.wav		
+		}
+	}
+}

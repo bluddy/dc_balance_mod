@@ -1,0 +1,113 @@
+// Balance Mod
+// Fix up some effects
+
+EffectFrost
+{
+	sort Transparent
+	deformVerts Wave 0.0 0.1 0.0 0.0
+
+	{
+		texture Textures/Effects/frost.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		colorGen Sphere
+		alphaGen Constant 0.6 // 0.7 bal
+		clamp Repeat
+	}
+}
+
+EffectStoneSkin
+{
+	sort Transparent
+	deformVerts Wave 0.0 0.1 0.0 0.0
+
+	{
+		texture Textures/Effects/stoneskin.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		colorGen Sphere
+		alphaGen Constant 0.5 // 0.6 bal: shows the original monster better
+		clamp Repeat
+	}
+}
+
+EffectPetrify
+{
+	sort Transparent
+	deformVerts Wave 0.0 0.1 0.0 0.0
+
+	{
+		texture Textures/Effects/petrify.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		colorGen Sphere
+		alphaGen Constant 0.7 // 0.90 bal: haven't seen but guessing 0.9 is too much
+		clamp Repeat
+	}
+}
+
+EffectBarkskin
+{
+	sort Transparent
+	deformVerts Wave 0.0 0.1 0.0 0.0
+
+	{
+		texture Models/Objects/Forest/Data/treebark1.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		colorGen Sphere
+		alphaGen Constant 0.60 //  bal: good because need to see bark texture
+	}
+}
+
+EffectUndead
+{
+	sort Transparent
+	deformVerts Wave 0.0 0.1 0.0 0.0
+
+	{
+		texture Textures/Areas/Cave/caveground29.tga 
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		colorGen Sphere
+		alphaGen Constant 0.5 // 0.60 bal: new value shows original texture better
+		clamp Repeat
+	}
+}
+
+EffectLich
+{
+	sort Transparent
+	deformVerts Wave 0.0 0.1 0.0 0.0
+
+	{
+		texture Models/Creatures/Lich/Liche.tga 
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		colorGen SphereAndConstant Red
+		alphaGen Constant 0.30
+		clamp Repeat
+	}
+}
+
+EffectGargoyle
+{
+	sort Transparent
+	deformVerts Wave 0.0 0.1 0.0 0.0
+
+	{
+		texture Textures/Effects/gargoyle.tga
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		colorGen Sphere
+		alphaGen Constant 0.70
+		clamp Repeat
+	}
+}
+
+EffectPossessed
+{
+	sort Transparent
+	deformVerts Wave 0.0 0.1 0.0 0.0
+
+	{
+		texture Textures/Areas/grasslands/Ground_GreenGrass.tga 
+		blendFunc SrcAlpha OneMinusSrcAlpha
+		colorGen Sphere
+		alphaGen Constant 0.50
+	}
+}
+

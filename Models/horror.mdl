@@ -1,0 +1,122 @@
+
+dir Models/creatures/Horror/
+
+skeleton	Horror.mds
+mesh		Horror.mdm
+tags		Horror.tag
+
+skin		Horror.skn
+
+animations
+{
+	idle Horror.mda
+	{
+	}
+
+	walk horror_walk.mda matchMoveSpeed
+	{
+	}
+
+	attack horror_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+	
+	dying horror_dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Horror/horror_death.wav
+		}
+	}
+
+	dead horror_dead.mda
+	{
+	}
+
+	blink horror_blink.mda
+	{	
+		server
+		{
+			12 skillMarker
+		}
+
+		client
+		{
+			entry sound Sounds/Monsters/Horror/horror_blink.wav
+			entry startEffect horror_Teleport.eff tag_rooter
+			entry startEffect spellCastTeleport2.eff tag_rooter
+			exit stopEffect horror_Teleport.eff tag_rooter
+			exit stopEffect spellCastTeleport2.eff tag_rooter	
+		}
+	}
+
+	castFire horror_fire.mda
+	{
+		server
+		{
+			25 skillMarker
+		}
+
+		client
+		{
+			entry startEffect horror_fire.eff tag_lhand
+			entry startEffect horror_fire.eff tag_rhand
+			exit stopEffect horror_fire.eff tag_lhand
+			exit stopEffect horror_fire.eff tag_rhand	
+		}
+	}
+
+	castLightning horror_lightning.mda
+	{
+		server
+		{
+			25 skillMarker
+		}
+
+		client
+		{
+			entry startEffect lightningelemental2.eff tag_rhand	
+			exit stopEffect lightningelemental2.eff tag_rhand
+		}	
+	}
+
+	castIce horror_ice.mda
+	{
+		server
+		{
+			25 skillMarker
+		}
+
+		client
+		{
+			entry startEffect horror_ice.eff tag_lhand
+			entry startEffect horror_ice.eff tag_rhand
+			exit stopEffect horror_ice.eff tag_lhand
+			exit stopEffect horror_ice.eff tag_rhand	
+		}
+	}
+
+	castPoison horror_poison.mda
+	{
+		server
+		{
+			25 skillMarker
+		}
+
+		client
+		{
+			entry startEffect horror_poison.eff tag_lhand
+			entry startEffect horror_poison.eff tag_rhand
+			exit stopEffect horror_poison.eff tag_lhand
+			exit stopEffect horror_poison.eff tag_rhand	
+		}
+	}
+
+	idleSound horror_idlesound.mda
+	{
+	}
+}

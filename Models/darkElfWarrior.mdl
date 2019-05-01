@@ -1,0 +1,72 @@
+
+dir Models/creatures/DarkElf/
+
+skeleton	DarkElf.mds
+mesh		DarkElf.mdm
+skin		DarkElfWarrior.skn
+tags		DarkElf.tag
+
+ObjectType 	MonsterDarkElfWarrior
+
+animations
+{
+	idle 2_handed_idle.mda // 1_handed_idle.mda
+	{
+	}
+
+ 	walk walk.mda matchMoveSpeed
+	{
+	}
+
+	attack 2_attack1.mda matchAttackSpeed // bal// 1_attack1.mda
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	attack 2_attack2.mda matchAttackSpeed // bal// 1_attack2.mda
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+
+	sliceAttack 1_sliceattack.mda // 1_attack2.mda
+	{	
+		client
+		{
+			
+			entry startEffect swingWarrior.eff tag_rightHand
+			exit stopEffect swingWarrior.eff tag_rightHand	
+			entry sound Sounds/Player/powerStrike.wav
+		}
+		client
+		{
+			4 startAttachedSwipe Effects/warriorSwipe.swp tag_rightHand bladeTop bladeBottom
+			12 stopAttachedSwipe Effects/warriorSwipe.swp tag_rightHand bladeTop bladeBottom
+			exit stopAttachedSwipe Effects/warriorSwipe.swp tag_rightHand bladeTop bladeBottom
+
+			7 sound Sounds/Monsters/DarkElf/darkelf_sliceattack.wav
+		}
+
+		server
+		{
+			7 skillMarker
+		}
+	}
+
+ 	dying dying.mda // 2_handed_dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/DarkElf/dark_elf_dying.wav
+		}
+	}
+
+	dead dead.mda // 2_handed_death.mda
+	{
+	}
+}

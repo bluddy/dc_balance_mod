@@ -1,0 +1,74 @@
+
+dir Models/Creatures/Skeleton/
+
+skeleton	skeleton.mds
+mesh		skeleton.mdm
+tags		skeleton.tag
+skin		skeleton_gen.skn
+
+ObjectType 	MonsterSkeleton
+
+animations
+{
+ 	idle idle.mda
+	{
+	}
+
+	walk walk.mda matchMoveSpeed
+	{
+
+	}
+
+	attack attack1.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			7 attackMarker
+		}
+	}
+	attack attack2.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			6 attackMarker
+		}
+	}
+
+	dying dying.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/Skeleton/skeleton_death.wav
+		}
+	}
+
+	dead dead.mda
+	{
+	}
+
+	unhide raise.mda fps 20 // 40 bal: make unhide look better
+	{
+		server
+		{
+			last skillMarker
+		}
+
+		client
+		{
+			entry startEffect undeadrise.eff tag_chest
+			exit stopEffect undeadrise.eff tag_chest
+		}
+	}
+
+	idleHiding buried_idle.mda
+	{
+	}
+
+	bestiary attack1.mda
+	{
+		client
+		{
+			7 sound Sounds/Combat/Mace/mace_hit.wav
+		}
+	}
+}

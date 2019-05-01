@@ -1,0 +1,71 @@
+
+dir Models/creatures/Plaguebringer/
+
+skeleton	plaguebearer1.mds
+mesh		plaguebearer1.mdm
+skin		plaguebringerA.skn
+tags		plaguebearer.tag
+ 
+animations
+{
+	idle plaguebearer1.mda
+	{
+	}
+	
+	walk plaguebearer_walk.mda
+	{
+	}
+
+	attack plaguebearer_attack.mda matchAttackSpeed // bal
+	{
+		server
+		{
+			10 attackMarker
+		}
+	}
+	
+	spitPlagueBolt plaguebearer_attack.mda
+	{
+		server
+		{
+			10 skillMarker
+		}
+		client
+		{
+			10 spawnEffect spitPlagueBolt.eff tag_mouth
+		}
+	}
+
+
+	spawn plaguebearer_spawn.mda
+	{
+		server
+		{
+			10 skillMarker
+		}
+		client
+		{
+			entry startEffect plagueExplosion.eff tag_chest
+			exit stopEffect plagueExplosion.eff tag_chest	
+
+			10 sound Sounds/Monsters/PlagueBringer/Plaguebearer-SpawnLarva.wav
+		}
+	}
+	
+	dying plaguebearer_death.mda
+	{
+		client
+		{
+			entry sound Sounds/Monsters/PlagueBringer/plaguebringer_Death.wav
+		}
+	}
+
+	
+	dead plaguebearer_dead.mda
+	{
+	}
+	
+	idleSound plaguebearer_idlesound.mda
+	{
+	}
+}

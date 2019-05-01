@@ -1,0 +1,59 @@
+// Balance Mod
+
+dir Models/Objects/Dungeon/Data/
+
+skeleton	ruinset6_door1_closed.mds
+mesh		ruinset6_door1_closed.mdm
+dir Models/Objects/Geometry/Ruins/
+skin		ruinswall06a.skn
+
+dir Models/Objects/Dungeon/Data/
+	
+BlocksSight 1
+
+offset 48.0  24.0
+
+InWayAlphaType South
+
+// Make wooden door
+ObjectType ObjectDoorWooden
+
+animations
+{
+	closed ruinset6_door1_closed.mda
+	{
+	}
+
+	open ruinset6_door1_open.mda
+	{
+	}
+
+	opening ruinset6_door1_opening.mda
+	{
+		client
+		{
+			entry sound Sounds/Objects/wood_door_open.wav
+		}
+	}
+
+	closing ruinset6_door1_closing.mda
+	{
+		client
+		{
+			entry sound Sounds/Objects/wood_door_close.wav
+		}
+	}
+
+	breaking ruinset6_door1_opening.mda
+	{
+		client
+		{
+			entry spawnEffect smokebam1.eff origin		
+			entry sound Sounds/Objects/barrel_break.wav
+		}
+	}
+
+	broken ruinset6_door1_open.mda
+	{
+	}
+}
