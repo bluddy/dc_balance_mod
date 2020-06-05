@@ -38,6 +38,8 @@ BaseSkill
 	WaitForAnim	1
 
 	ShowSkillHint	1
+
+	MaxUserRarity	Boss
 }
 
 BaseSkillOffense
@@ -60,7 +62,7 @@ BaseSkillFriendDefense
 	Base		BaseSkillDefense
 	BaseOnly	1
 	NeedsFriend	1
-	
+
 	MaxRange	250.0
 }
 
@@ -79,7 +81,7 @@ BaseSkillPassive
 	Passive		1
 
 	// Increase so passives don't flood the end game
-	CostIncreasePerLevel	2
+	CostIncreasePerLevel	2 // bal 0
 }
 
 BaseSkillPerLevel
@@ -189,7 +191,7 @@ BaseSkillMaceStatsBal
 	Base		BaseSkillBasic
 
 	DynamicStatMultCrushingBlow 0.3
-	//DynamicStatMultCriticalHit 0 
+	//DynamicStatMultCriticalHit 0
 	DynamicStatMultDeepWounds -1.0 // -50%
 	DynamicStatMultStunningBlow	0.2
 
@@ -203,7 +205,7 @@ BaseSkillSwordStatsBal
 	Base		BaseSkillBasic
 
 	DynamicStatMultCrushingBlow -0.3 // -20%
-	DynamicStatMultCriticalHit 0.1 
+	DynamicStatMultCriticalHit 0.1
 	DynamicStatMultDeepWounds 0.1
 
 	DynamicStatMultDefense	0.02
@@ -228,7 +230,7 @@ BaseSkillDaggerStatsBal
 	WeaponType	WeaponDagger
 }
 
-// Staff 
+// Staff
 BaseSkillStaffStatsBal
 {
 	Base		BaseSkillBasic
@@ -246,19 +248,19 @@ BaseSkillBowStatsBal
 	Base		BaseSkillBasic
 
 	DynamicStatMultCrushingBlow -1.0 // -50%
-	DynamicStatMultCriticalHit 0.2 
+	DynamicStatMultCriticalHit 0.2
 	DynamicStatMultDeepWounds 0.1
 
 	WeaponType	WeaponBow
 }
 
-// Shield gives extra 1% crush and 1% stun 
+// Shield gives extra 1% crush and 1% stun
 BaseSkillShieldStatsBal
 {
 	Base		BaseSkillBasic
 
-	DynamicStatChangeCrushingBlow	0.5 
-	DynamicStatChangeStunningBlow	0.5 
+	DynamicStatChangeCrushingBlow	0.5
+	DynamicStatChangeStunningBlow	0.5
 
 	RequiresShield	1
 }
@@ -277,11 +279,11 @@ SkillPowerGainBonusBal
 {
 	Base	BaseSkillPassive
 
-	StatReq		MaxPower		
+	StatReq		MaxPower
 	PointsReq	105
 
 	DynamicStatMultPowerGainMult	0.05
-	
+
 	MaxSkillLevel	40 // Stop for 200 power to prevent mages feeding off of this
 
 	PerLevel	SkillPowerGainBonusPerLevelBal
@@ -294,7 +296,7 @@ SkillBasicClothArmor
 	BaseName	$$ClothArmor$$
 	Desc		$$BasicClothArmorDesc$$
 
-	TextureName	Textures/icons/items/chest_cloth_cloth.tga
+	TextureName	Textures/Icons/Items/chest_cloth_cloth.tga
 
 	ItemRequirement		ArmorCloth
 }
@@ -306,9 +308,9 @@ SkillBasicLeatherArmor
 	BaseName	$$LeatherArmor$$
 	Desc		$$BasicLeatherArmorDesc$$
 
-	TextureName	Textures/icons/items/chest_leather_soft.tga
+	TextureName	Textures/Icons/Items/chest_leather_soft.tga
 
-	// Cloth is automatically supported
+	// bal:Cloth is automatically supported
 	ItemRequirement		ArmorLeather
 }
 
@@ -319,9 +321,9 @@ SkillBasicMailArmor
 	BaseName	$$MailArmor$$
 	Desc		$$BasicMailArmorDesc$$
 
-	TextureName	Textures/icons/items/chest_mail_chain.tga
+	TextureName	Textures/Icons/Items/chest_mail_chain.tga
 
-	ItemRequirement		ArmorLeather
+	ItemRequirement		ArmorLeather // bal
 	ItemRequirement		ArmorMail
 }
 
@@ -332,7 +334,7 @@ SkillBasicShield
 	BaseName	$$Shield$$
 	Desc		$$BasicShieldDesc$$
 
-	TextureName	Textures/icons/items/shield_buckler.tga
+	TextureName	Textures/Icons/Items/shield_buckler.tga
 
 	ItemRequirement		Shield
 }
@@ -344,11 +346,12 @@ SkillBasicCape
 	BaseName	$$Cape$$
 	Desc		$$BasicCapeDesc$$
 
-	TextureName	Textures/icons/items/capes_knitted_cape.tga
+	TextureName	Textures/Icons/Items/capes_knitted_cape.tga
 
 	ItemRequirement		Cape
 }
 
+// bal
 SkillBasicSharpWeapons
 {
 	Base		BaseSkillBasic
@@ -356,12 +359,13 @@ SkillBasicSharpWeapons
 	BaseName	$$BasicSharpWeapons$$
 	Desc		$$BasicSharpWeaponsDesc$$
 
-	TextureName	Textures/icons/items/dagger_dagger.tga
+	TextureName	Textures/Icons/Items/dagger_dagger.tga
 
 	ItemRequirement		WeaponDagger
 	ItemRequirement		WeaponSword
 }
 
+// bal
 SkillBasicSharpWeaponsBoth
 {
 	Base		BaseSkillBasic
@@ -369,13 +373,14 @@ SkillBasicSharpWeaponsBoth
 	BaseName	$$BasicSharpWeaponsBoth$$
 	Desc		$$BasicSharpWeaponsBothDesc$$
 
-	TextureName	Textures/icons/items/sword2_bastardsword.tga
+	TextureName	Textures/Icons/Items/sword2_bastardsword.tga
 
 	ItemRequirement		WeaponDagger
 	ItemRequirement		WeaponSword
 	ItemRequirement		WeaponSwordTwoHanded
 }
 
+// bal
 SkillBasicBluntWeapons
 {
 	Base		BaseSkillBasic
@@ -383,12 +388,13 @@ SkillBasicBluntWeapons
 	BaseName	$$BasicBluntWeapons$$
 	Desc		$$BasicBluntWeaponsDesc$$
 
-	TextureName	Textures/icons/items/maces2_maul.tga
+	TextureName	Textures/Icons/Items/maces2_maul.tga
 
 	ItemRequirement		WeaponMace
 	ItemRequirement		WeaponStaff
 }
 
+// bal
 SkillBasicBluntWeaponsBoth
 {
 	Base		BaseSkillBasic
@@ -396,7 +402,7 @@ SkillBasicBluntWeaponsBoth
 	BaseName	$$BasicBluntWeaponsBoth$$
 	Desc		$$BasicBluntWeaponsBothDesc$$
 
-	TextureName	Textures/icons/items/maces2_maul.tga
+	TextureName	Textures/Icons/Items/maces2_maul.tga
 
 	ItemRequirement		WeaponMace
 	ItemRequirement		WeaponMaceTwoHanded
@@ -410,7 +416,7 @@ SkillBasicDagger
 	BaseName	$$Dagger$$
 	Desc		$$BasicDaggerDesc$$
 
-	TextureName	Textures/icons/items/dagger_dagger.tga
+	TextureName	Textures/Icons/Items/dagger_dagger.tga
 
 	ItemRequirement		WeaponDagger
 }
@@ -422,7 +428,7 @@ SkillBasicAxe
 	BaseName	$$Axe$$
 	Desc		$$BasicAxeDesc$$
 
-	TextureName	Textures/icons/items/axes1_tomahawk.tga
+	TextureName	Textures/Icons/Items/axes1_tomahawk.tga
 
 	ItemRequirement		WeaponAxe
 }
@@ -434,7 +440,7 @@ SkillBasicAxeBoth
 	BaseName	$$Axe$$
 	Desc		$$BasicAxeBothDesc$$
 
-	TextureName	Textures/icons/items/axes2_greataxe.tga
+	TextureName	Textures/Icons/Items/axes2_greataxe.tga
 
 	ItemRequirement		WeaponAxe
 	ItemRequirement		WeaponAxeTwoHanded
@@ -447,7 +453,7 @@ SkillBasicSword
 	BaseName	$$Sword$$
 	Desc		$$BasicSwordDesc$$
 
-	TextureName	Textures/icons/items/sword1_scimitar.tga
+	TextureName	Textures/Icons/Items/sword1_scimitar.tga
 
 	ItemRequirement		WeaponSword
 }
@@ -459,7 +465,7 @@ SkillBasicSwordBoth
 	BaseName	$$Sword$$
 	Desc		$$BasicSwordBothDesc$$
 
-	TextureName	Textures/icons/items/sword2_bastardsword.tga
+	TextureName	Textures/Icons/Items/sword2_bastardsword.tga
 
 	ItemRequirement		WeaponSword
 	ItemRequirement		WeaponSwordTwoHanded
@@ -472,7 +478,7 @@ SkillBasicMace
 	BaseName	$$Mace$$
 	Desc		$$BasicMaceDesc$$
 
-	TextureName	Textures/icons/items/maces2_maul.tga
+	TextureName	Textures/Icons/Items/maces2_maul.tga
 
 	ItemRequirement		WeaponMace
 }
@@ -484,7 +490,7 @@ SkillBasicMaceBoth
 	BaseName	$$Mace$$
 	Desc		$$BasicMaceBothDesc$$
 
-	TextureName	Textures/icons/items/maces2_maul.tga
+	TextureName	Textures/Icons/Items/maces2_maul.tga
 
 	ItemRequirement		WeaponMace
 	ItemRequirement		WeaponMaceTwoHanded
@@ -497,7 +503,7 @@ SkillBasicStaff
 	BaseName	$$Staff$$
 	Desc		$$BasicStaffDesc$$
 
-	TextureName	Textures/icons/items/staves2_battlestaff.tga
+	TextureName	Textures/Icons/Items/staves2_battlestaff.tga
 
 	ItemRequirement		WeaponStaff
 }
@@ -509,7 +515,7 @@ SkillBasicBow
 	BaseName	$$Bow$$
 	Desc		$$BasicBowDesc$$
 
-	TextureName	Textures/icons/items/bow_reflex.tga
+	TextureName	Textures/Icons/Items/bow_reflex.tga
 
 	ItemRequirement		WeaponBow
 }
@@ -522,7 +528,7 @@ SkillBasicBowAndDagger
 	BaseName	$$BowAndDagger$$
 	Desc		$$BasicBowAndDaggerDesc$$
 
-	TextureName	Textures/icons/items/bow_reflex.tga
+	TextureName	Textures/Icons/Items/bow_reflex.tga
 
 	ItemRequirement		WeaponBow
 	ItemRequirement		WeaponDagger
@@ -679,14 +685,14 @@ SkillBonusAttackPerDexWeaponMaster
 {
 	Base		SkillBonusAttackPerDex
 
-	StatChangePerAttributeChange	0.15 // 1.0
+	StatChangePerAttributeChange	0.15 // bal 1.0
 }
 
 SkillBonusDamageMultPerStrWeaponMaster
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.001 // 0.002
+	StatChangePerAttributeChange	0.001 // bal 0.002
 }
 
 SkillManaGenWeaponMaster
@@ -698,8 +704,8 @@ SkillManaGenWeaponMaster
 
 	TextureName	Textures/Icons/Skills/manaGenOnHit.tga
 
-	PowerGainOnHit		1.0
-	PowerGainOnCrushingBlow		2.0
+	PowerGainOnHit		1.0 // bal 1.5
+	PowerGainOnCrushingBlow		2.0 // bal 0
 }
 
 SkillPowerStrikePerLevel
@@ -707,8 +713,8 @@ SkillPowerStrikePerLevel
 	Base		BaseSkillPerLevel
 
 //	DynamicStatChangeExtraDamage	4
-	DamageMultPhysical	0.08
-	
+	DamageMultPhysical	0.08 // bal 0.2
+
 	Power		1
 }
 
@@ -719,7 +725,7 @@ SkillPowerStrike
 	BaseName	$$PowerStrike$$
 	Desc		$$PowerStrikeDesc$$
 
-	TextureName	Textures/Icons/Skills/powerstrike.tga
+	TextureName	Textures/Icons/Skills/Powerstrike.tga
 
 	Animation		powerstrike
 
@@ -729,10 +735,10 @@ SkillPowerStrike
 	MinRange	0
 	MaxRange	100
 
-	Power		15
+	Power		15 // bal 5
 	TotalTime	1.5
-	ReuseTime	5.5
-	
+	ReuseTime	5.5 // bal 0
+
 	DamageMultPhysical	0.2
 //	DynamicStatChangeExtraDamage	5
 
@@ -748,9 +754,8 @@ SkillWhirlwindPerLevel
 	Base		BaseSkillPerLevel
 
 //	DynamicStatChangeExtraDamage	10
-	DamageMultPhysical	0.08
-	
-	Power		2
+	DamageMultPhysical	0.08 // bal 0.1
+	Power		2 // bal 1
 }
 
 SkillWhirlwind
@@ -760,7 +765,7 @@ SkillWhirlwind
 	BaseName	$$Whirlwind$$
 	Desc		$$WhirlwindDesc$$
 
-	TextureName	Textures/Icons/Skills/whirlwind.tga
+	TextureName	Textures/Icons/Skills/Whirlwind.tga
 
 	Animation		whirlwind
 
@@ -772,11 +777,11 @@ SkillWhirlwind
 
 	ExtraEnemies	4
 
-	Power		20
+	Power		20 // bal 10
 	TotalTime	1.5
 	ReuseTime	40 // bal: super skill
-	
-	DamageMultPhysical	-1.00
+
+	DamageMultPhysical	-1.00 // -0.29999
 //	DynamicStatChangeExtraDamage	10
 
 	TargetEffect	Models/Effects/warriorSkillHit.mdl
@@ -793,9 +798,8 @@ SkillDevastatingBlowPerLevel
 	Base		BaseSkillPerLevel
 
 	DamagePerExtraRage	0.5
-	DamageMultPhysical	0.04
-	
-	Power	2
+	DamageMultPhysical	0.04 // bal 0.1
+	Power	2 // bal 1
 }
 
 SkillDevastatingBlow
@@ -809,10 +813,10 @@ SkillDevastatingBlow
 
 	Animation		devastatingblow
 
-	Power		18
+	Power		18 // bal 5
 	TotalTime	1.5
-	ReuseTime	5.5
-	
+	ReuseTime	5.5 // bal 0
+
 	Attack		1
 	CanAutoAttack	1
 
@@ -820,6 +824,7 @@ SkillDevastatingBlow
 	MaxRange	100
 
 	DamageMultPhysical	0.1
+
 	DamagePerExtraRage	1.0
 	UseAllRage		1
 
@@ -838,9 +843,8 @@ SkillDevastatingBlow
 SkillAdrenalinePerLevel
 {
 	Base		BaseSkillPerLevel
-	ReuseTime	3
-	
-	Power	2
+	ReuseTime	3 // bal 2.0
+	Power	2 // bal 1
 }
 
 SkillAdrenaline
@@ -856,9 +860,9 @@ SkillAdrenaline
 
 //	SoundName		Sounds/Player/Warrior/FocusArmor.wav
 
-	Power		25
+	Power		25 // bal 20
 	TotalTime	1.3
-	ReuseTime	30
+	ReuseTime	30 // bal 120
 
 	StatusEffect	StatusEffectAdrenaline
 
@@ -871,9 +875,9 @@ SkillPerfectStrikePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.06
-	DynamicStatMultAttack	0.05
-	
+	DamageMultPhysical	0.06 // bal 0.2
+	DynamicStatMultAttack	0.05 // bal 0
+
 	Power		1
 }
 
@@ -894,12 +898,12 @@ SkillPerfectStrike
 	MinRange	0
 	MaxRange	100
 
-	Power		18
+	Power		18 // bal 10
 	TotalTime	1.5
-	ReuseTime	5.5
-	
-	DamageMultPhysical	0.15
-	DynamicStatMultAttack	0.05
+	ReuseTime	5.5 // bal 0
+
+	DamageMultPhysical	0.15 // bal 0.2
+	DynamicStatMultAttack	0.05 // bal 2.0
 
 	PerLevel	SkillPerfectStrikePerLevel
 
@@ -913,8 +917,8 @@ SkillArmsMasteryPerLevel
 	Base		BaseSkillPerLevel
 
 	StatChangeAttack	10.0
-	StatMultMinDamage	0.02 // bal
-	StatMultMaxDamage	0.02 // bal
+	StatMultMinDamage	0.02 // bal 0.04
+	StatMultMaxDamage	0.02 // bal 0.04
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 }
 
@@ -925,11 +929,11 @@ SkillArmsMastery
 	BaseName	$$ArmsMastery$$
 	Desc		$$ArmsMasteryDesc$$
 
-	TextureName	Textures/Icons/Skills/armsMastery.tga
+	TextureName	Textures/Icons/Skills/ArmsMastery.tga
 
 	StatChangeAttack	10.0
-	StatMultMinDamage	0.02 // bal
-	StatMultMaxDamage	0.02 // bal
+	StatMultMinDamage	0.02 // bal 0.04
+	StatMultMaxDamage	0.02 // bal 0.04
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 
 	PerLevel	SkillArmsMasteryPerLevel
@@ -942,13 +946,15 @@ SkillSwordMasteryPerLevel
 	Base		BaseSkillPerLevel
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.04 // bal
-	StatMultMaxDamage	0.04 // bal
+	StatMultMinDamage	0.04 // bal 0.08
+	StatMultMaxDamage	0.04 // bal 0.08
 
 	StatChangeParry		10
 	StatChangeDefense	10
 
-	DynamicStatChangeDeepWounds	0.16	
+	WeaponType	WeaponSword
+
+	DynamicStatChangeDeepWounds	0.16	// bal
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 }
 
@@ -959,20 +965,20 @@ SkillSwordMastery
 	BaseName	$$SwordMastery$$
 	Desc		$$SwordMasteryDesc$$
 
-	TextureName	Textures/Icons/Skills/swordMastery.tga
+	TextureName	Textures/Icons/Skills/SwordMastery.tga
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.04 // bal
-	StatMultMaxDamage	0.04 // bal
+	StatMultMinDamage	0.04 // bal 0.08
+	StatMultMaxDamage	0.04 // bal 0.08
 
 	StatChangeParry		10
 	StatChangeDefense	10
 
-	DynamicStatChangeDeepWounds	0.16		
+	DynamicStatChangeDeepWounds	0.16	// bal
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
-	
+
 	WeaponType	WeaponSword
-	WeaponType	WeaponSwordTwoHanded
+	WeaponType2	WeaponSwordTwoHanded
 
 	PerLevel	SkillSwordMasteryPerLevel
 
@@ -984,10 +990,10 @@ SkillAxeMasteryPerLevel
 	Base		BaseSkillPerLevel
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.04 // bal
-	StatMultMaxDamage	0.04 // bal
+	StatMultMinDamage	0.04 // bal 0.08
+	StatMultMaxDamage	0.04 // bal 0.08
 
-	DynamicStatChangeCriticalHit	0.15
+	DynamicStatChangeCriticalHit	0.15 // bal mult 0.04
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 }
 
@@ -998,17 +1004,17 @@ SkillAxeMastery
 	BaseName	$$AxeMastery$$
 	Desc		$$AxeMasteryDesc$$
 
-	TextureName	Textures/Icons/Skills/axeMastery.tga
+	TextureName	Textures/Icons/Skills/AxeMastery.tga
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.04 // bal
-	StatMultMaxDamage	0.04 // bal
+	StatMultMinDamage	0.04 // bal 0.08
+	StatMultMaxDamage	0.04 // bal 0.08
 
-	DynamicStatChangeCriticalHit	0.15
+	DynamicStatChangeCriticalHit	0.15 // bal 0.04 mult
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 
 	WeaponType	WeaponAxe
-	WeaponType	WeaponAxeTwoHanded
+	WeaponType	WeaponAxeTwoHanded // bal
 
 	PerLevel	SkillAxeMasteryPerLevel
 
@@ -1020,11 +1026,13 @@ SkillMaceMasteryPerLevel
 	Base		BaseSkillPerLevel
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.04 // bal
-	StatMultMaxDamage	0.04 // bal
+	StatMultMinDamage	0.04 // bal 0.08
+	StatMultMaxDamage	0.04 // bal 0.08
 
-	DynamicStatChangeCrushingBlow	0.15
+	DynamicStatChangeCrushingBlow	0.15 // bal 0.05 mult
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
+
+	WeaponType	WeaponMace
 }
 
 SkillMaceMastery
@@ -1034,13 +1042,13 @@ SkillMaceMastery
 	BaseName	$$MaceMastery$$
 	Desc		$$MaceMasteryDesc$$
 
-	TextureName	Textures/Icons/Skills/maceMastery.tga
+	TextureName	Textures/Icons/Skills/MaceMastery.tga
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.04 // bal
-	StatMultMaxDamage	0.04 // bal
+	StatMultMinDamage	0.04 // bal 0.08
+	StatMultMaxDamage	0.04 // bal 0.08
 
-	DynamicStatChangeCrushingBlow	0.15
+	DynamicStatChangeCrushingBlow	0.15 // bal 0.05 mult
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 
 	WeaponType	WeaponMace
@@ -1055,7 +1063,7 @@ SkillBleedPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeDeepWounds	0.5
+	DynamicStatChangeDeepWounds	0.5 // bal mult 0.15
 }
 
 SkillBleed
@@ -1065,9 +1073,9 @@ SkillBleed
 	BaseName	$$Bleed$$
 	Desc		$$BleedDesc$$
 
-	TextureName	Textures/Icons/Skills/bleed.tga
+	TextureName	Textures/Icons/Skills/Bleed.tga
 
-	DynamicStatChangeDeepWounds	0.5
+	DynamicStatChangeDeepWounds	0.5 // bal mult 0.15
 
 	PerLevel	SkillBleedPerLevel
 
@@ -1089,7 +1097,7 @@ SkillBonusAttackPerDexGladiator
 {
 	Base		SkillBonusAttackPerDex
 
-	StatChangePerAttributeChange	0.15 // 1.0
+	StatChangePerAttributeChange	0.15 // bal 1.0
 }
 
 SkillBonusHealthPerVitGladiator
@@ -1103,7 +1111,7 @@ SkillBonusDamageMultPerStrGladiator
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.001
+	StatChangePerAttributeChange	0.001 // bal 0.002
 }
 
 SkillManaGenGladiator
@@ -1115,15 +1123,15 @@ SkillManaGenGladiator
 
 	TextureName	Textures/Icons/Skills/manaGenWhenHit.tga
 
-	PowerGainWhenHit	1.5
-	PowerGainOnHit		0.75
+	PowerGainWhenHit	1.5   // bal 1.0
+	PowerGainOnHit		0.75  // bal 0
 }
 
 SkillFocusArmorPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power	 1
+	Power	 1 // bal 0
 }
 
 SkillFocusArmor
@@ -1133,28 +1141,28 @@ SkillFocusArmor
 	BaseName	$$FocusArmor$$
 	Desc		$$FocusArmorDesc$$
 
-	TextureName	Textures/Icons/Skills/focusArmor.tga
+	TextureName	Textures/Icons/Skills/FocusArmor.tga
 
 //	Animation		attack2
 
 	SoundName		Sounds/Player/FocusArmor.wav
 
-	Power	 20
+	Power	 20 // bal 0
 
 	StatusEffect	StatusEffectFocusArmor
 
 	PerLevel	SkillFocusArmorPerLevel
 
 	BaseCost		2
-	
-	CostIncreasePerLevel	2	// Like a passive
+
+	CostIncreasePerLevel	2	// bal 0 Like a passive
 }
 
 SkillFocusDamagePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power	1
+	Power	1 // bal 0
 }
 
 SkillFocusDamage
@@ -1164,12 +1172,12 @@ SkillFocusDamage
 	BaseName	$$FocusDamage$$
 	Desc		$$FocusDamageDesc$$
 
-	TextureName	Textures/Icons/Skills/focusDamage.tga
+	TextureName	Textures/Icons/Skills/FocusDamage.tga
 
 //	Animation		attack2
 	SoundName		Sounds/Player/FocusDamage.wav
 
-	Power		20
+	Power		20 // bal 0
 
 	StatusEffect	StatusEffectFocusDamage
 
@@ -1179,14 +1187,14 @@ SkillFocusDamage
 
 	BaseCost		2
 
-	CostIncreasePerLevel	2	// Like a passive	
+	CostIncreasePerLevel	2	// bal Like a passive
 }
 
 SkillFocusRagePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power	1
+	Power	1 // bal
 }
 
 SkillFocusRage
@@ -1196,12 +1204,12 @@ SkillFocusRage
 	BaseName	$$FocusRage$$
 	Desc		$$FocusRageDesc$$
 
-	TextureName	Textures/Icons/Skills/focusRage.tga
+	TextureName	Textures/Icons/Skills/FocusRage.tga
 
 //	Animation		attack2
 	SoundName		Sounds/Player/FocusRage.wav
 
-	Power		20
+	Power		20 // bal 0
 
 	StatusEffect	StatusEffectFocusRage
 
@@ -1212,16 +1220,16 @@ SkillFocusRage
 
 	BaseCost		2
 
-	CostIncreasePerLevel	2	// Like a passive	
+	CostIncreasePerLevel	2	// bal Like a passive
 }
 
 SkillSavageStrikePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeCrushingBlow	2.0 // 0.2
-	DamageMultPhysical	0.22
-	
+	DynamicStatChangeCrushingBlow	2.0 // bal 0.3 mult
+	DamageMultPhysical	0.22 // bal 0.2
+
 	Power		1
 }
 
@@ -1242,12 +1250,12 @@ SkillSavageStrike
 	MinRange	0
 	MaxRange	100
 
-	Power		15
+	Power		15 // bal 10
 	TotalTime	1.5
-	ReuseTime	5.5
-	
-	DynamicStatChangeCrushingBlow	5.0 // 0.2
-	DamageMultPhysical	0.088
+	ReuseTime	5.5 // bal
+
+	DynamicStatChangeCrushingBlow	5.0 // bal 0.3 mult
+	DamageMultPhysical	0.088 // bal 0.6
 
 	TargetEffect	Models/Effects/warriorSkillHit.mdl
 
@@ -1263,10 +1271,9 @@ SkillEnragePerLevel
 	Base		BaseSkillPerLevel
 
 	HateChange	40
-	
-	Power		2
 
-	ReuseTime	2
+	Power		2 // bal
+	ReuseTime	2 // bal
 }
 
 SkillEnrage
@@ -1276,7 +1283,7 @@ SkillEnrage
 	BaseName	$$Enrage$$
 	Desc		$$EnrageDesc$$
 
-	TextureName	Textures/Icons/Skills/enrage.tga
+	TextureName	Textures/Icons/Skills/Enrage.tga
 
 	Animation	enrage
 
@@ -1286,7 +1293,7 @@ SkillEnrage
 	AllEnemies	1
 	AlwaysWorks	1
 
-	Power		25
+	Power		25 // bal 0
 	TotalTime	1.25
 	ReuseTime	15.0
 
@@ -1307,9 +1314,8 @@ SkillCleavePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.08
-	
-	Power		2
+	DamageMultPhysical	0.08 // bal 0.135
+	Power		2 // bal 1
 }
 
 SkillCleave
@@ -1319,7 +1325,7 @@ SkillCleave
 	BaseName	$$Cleave$$
 	Desc		$$CleaveDesc$$
 
-	TextureName	Textures/Icons/Skills/cleave.tga
+	TextureName	Textures/Icons/Skills/Cleave.tga
 
 	Animation	cleave
 
@@ -1327,15 +1333,14 @@ SkillCleave
 	CanAutoAttack	1
 
 	MinRange	0
-	MaxRange	100
+	MaxRange	100 // bal 125
 
 	ExtraEnemies	1
 
-	Power		18
+	Power		18 // bal 8
 	TotalTime	1.5
 	ReuseTime	15 // bal: super skill
-	
-	DamageMultPhysical	-0.4
+	DamageMultPhysical	-0.4 // bal -0.1349999
 
 	TargetEffect	Models/Effects/warriorSkillHit.mdl
 
@@ -1357,7 +1362,7 @@ SkillCrushingBlowPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeCrushingBlow	0.45
+	DynamicStatChangeCrushingBlow	0.45 // bal 0.2 mult
 }
 
 SkillCrushingBlow
@@ -1367,9 +1372,9 @@ SkillCrushingBlow
 	BaseName	$$Crushingblow$$
 	Desc		$$CrushingblowDesc$$
 
-	TextureName	Textures/Icons/Skills/crushingBlow.tga
+	TextureName	Textures/Icons/Skills/CrushingBlow.tga
 
-	DynamicStatChangeCrushingBlow	0.45
+	DynamicStatChangeCrushingBlow	0.45 // bal 0.2 mult
 
 	PerLevel	SkillCrushingBlowPerLevel
 
@@ -1380,10 +1385,9 @@ SkillBerserkPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.1
-	DynamicStatMultAttack	0.08
-	
-	Power		1
+	DamageMultPhysical	0.1 // bal 0.15
+	DynamicStatMultAttack	0.08 // bal 0.15
+	Power		1 // bal 0.5
 }
 
 SkillBerserk
@@ -1407,45 +1411,47 @@ SkillBerserk
 	MinRange	0
 	MaxRange	100
 
-	Power		15
+	Power		15 // bal 4
 	TotalTime	0.65
 	ShowSkillHint	1
-	ReuseTime	3.8
+	ReuseTime	3.8 // bal 0
 
 	DamageMultPhysical	0.25
-	DynamicStatMultAttack	0.08
+	DynamicStatMultAttack	0.08 // bal 0.25
 
 	PerLevel	SkillBerserkPerLevel
 
 	TargetEffect	Models/Effects/skillHitBerserk.mdl
-	
-	BaseCost	1
+
+	BaseCost	1 // bal
 }
 
 SkillBloodLustPerLevel
 {
 	Base		BaseSkillPerLevel
-		
-	ReuseTime	4
+
+	ReuseTime	4 // bal
 }
 
 SkillBloodLust
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefense // bal
 
 	BaseName	$$BloodLustSkillName$$
 	Desc		$$BloodLustSkillDesc$$
 
 	TextureName	Textures/Icons/Skills/zeal.tga
 
+  // bal ---
 	Power		0
 	TotalTime	1.0
 	ReuseTime	60
 
 	SoundName		Sounds/Player/FocusRage.wav
-	
+
 	SkillType	Buff
-	
+  // bal ---
+
 	StatusEffect	StatusEffectBloodLust
 
 	PerLevel	SkillBloodLustPerLevel
@@ -1456,7 +1462,7 @@ SkillBloodLust
 SkillRuptureArmorPerLevel
 {
 	Base		BaseSkillPerLevel
-	
+
 	Power		1
 }
 
@@ -1469,11 +1475,12 @@ SkillRuptureArmor
 
 	TextureName	Textures/Icons/Skills/ruptureArmor.tga
 
-	Power		15
-	TotalTime	1.0
-	
+	Power		15 // bal 10
+	TotalTime	1.0 // bal 1.15
+
 	Animation	ruptureArmor
 
+  // bal Remove double
 	SkillType	Debuff
 
 	StatusEffect	StatusEffectRuptureArmor
@@ -1505,7 +1512,7 @@ SkillBonusDamageMultPerStrDefender
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.001
+	StatChangePerAttributeChange	0.001 // bal 0.002
 }
 
 SkillManaGenDefender
@@ -1517,19 +1524,19 @@ SkillManaGenDefender
 
 	TextureName	Textures/Icons/Skills/manaGenOnParry.tga
 
-	PowerGainWhenBlock	2.5
-	PowerGainWhenParry	2.5
-	PowerGainOnHit	0.75
+	PowerGainWhenBlock	2.5 // bal 2.0
+	PowerGainWhenParry	2.5 // bal 2.0
+	PowerGainOnHit	0.75 // bal
 }
 
 SkillRevengePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical		0.12
-	DynamicStatChangeCriticalHit	2.0 // 0.2
-	
-	Power	2
+	DamageMultPhysical		0.12 // bal 0.3
+	DynamicStatChangeCriticalHit	2.0 // bal 0.6 mult
+
+	Power	2 // bal
 }
 
 SkillRevenge
@@ -1543,9 +1550,10 @@ SkillRevenge
 
 	Animation	revenge
 
-	Power		18
+	Power		18 // bal 3
 	TotalTime	1.3
-	ReuseTime	5.1
+
+	ReuseTime	5.1 // bal 2.0
 
 	Attack		1
 
@@ -1553,7 +1561,7 @@ SkillRevenge
 	MaxRange	100
 
 	DamageMultPhysical		0.3
-	DynamicStatChangeCriticalHit	5.0 // 0.2
+	DynamicStatChangeCriticalHit	5.0 // bal 0.6 mult
 	DynamicStatMultAttack		0.25
 
 	RequiredEntityState-One	CriticalHit
@@ -1573,12 +1581,11 @@ SkillRipostePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical		0.08
-	DynamicStatChangeCriticalHit	2.5 // 0.25
-	
-	Power	2
-	
-	ReuseTime	0.4
+	DamageMultPhysical		0.08 // bal 0.5 mult
+	DynamicStatChangeCriticalHit	2.5 // bal 0.4 mult
+
+	Power	2 // bal
+	ReuseTime	0.4 // bal
 }
 
 SkillRiposte
@@ -1592,10 +1599,10 @@ SkillRiposte
 
 	Animation	riposte
 
-	Power		20
+	Power		20 // bal 3
 	TotalTime	1.45
 
-	ReuseTime	5.0
+	ReuseTime	5.0 // bal 2.0
 
 	Attack		1
 
@@ -1604,8 +1611,8 @@ SkillRiposte
 	MinRange	0
 	MaxRange	100
 
-	DamageMultPhysical		0.2
-	DynamicStatChangeCriticalHit	6.25 // 0.25
+	DamageMultPhysical		0.2 // bal 0.5
+	DynamicStatChangeCriticalHit	6.25 // bal 0.4 mul
 
 	RequiredEntityState-One	Parry
 	RequiredEntityState-One	Block
@@ -1623,11 +1630,11 @@ SkillRetaliationPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical		0.112
-	DynamicStatChangeCriticalHit	1.0 // 0.1
+	DamageMultPhysical		0.112 // bal 0.25
+	DynamicStatChangeCriticalHit	1.0 // 0.05 mult
 
-	//PowerAdded	2
-	Power	2
+	//PowerAdded	2 // bal
+	Power	2 // bal
 }
 
 SkillRetaliation
@@ -1641,20 +1648,20 @@ SkillRetaliation
 
 	Animation	retaliation
 
-	//Power		0
-	Power		18
+	//Power		0 // bal
+	Power		18 // bal
 	TotalTime	1.9
-	//PowerAdded	10
+	//PowerAdded	10 // bal
 
-	ReuseTime	6.3
+	ReuseTime	6.3 // bal
 
 	Attack		1
 
 	MinRange	0
 	MaxRange	100
 
-	DamageMultPhysical		0.28
-	DynamicStatChangeCriticalHit	2.5 // 0.1
+	DamageMultPhysical		0.28 // bal
+	DynamicStatChangeCriticalHit	2.5 // bal 0.05 mult
 
 	RequiredEntityState-One	Hit
 
@@ -1671,9 +1678,8 @@ SkillShieldBashDefenderPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.072
+	DamageMultPhysical	0.072 // bal 0.3
 	DynamicStatMultAttack	0.05
-	
 	Power	1
 }
 
@@ -1688,9 +1694,9 @@ SkillShieldBashDefender
 
 	Animation	shieldBash
 
-	Power		18
-	TotalTime	1.3
-	ReuseTime	6.1
+	Power		18 // bal 5
+	TotalTime	1.3 // bal 1.0
+	ReuseTime	6.1 // bal 10.0
 
 	Attack		1
 	CanAutoAttack	1
@@ -1698,7 +1704,7 @@ SkillShieldBashDefender
 	MinRange	0
 	MaxRange	100
 
-	DamageMultPhysical	0.18
+	DamageMultPhysical	0.18 // bal 0.3
 	DynamicStatMultAttack	0.05
 
 	Interrupt	1
@@ -1716,10 +1722,10 @@ SkillShieldBashDefender
 SkillGutPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	MinCharLevel	5
-	
-	Power		2
+
+	Power		2 // bal 1
+	MinCharLevel	5 // bal
+
 }
 
 SkillGut
@@ -1729,15 +1735,15 @@ SkillGut
 	BaseName	$$Gut$$
 	Desc		$$GutDesc$$
 
-	TextureName	Textures/icons/Skills/gut.tga
+	TextureName	Textures/Icons/Skills/Gut.tga
 	SoundName	Sounds/Combat/Sword/sword_deepwounds.wav
 
 	Animation	gut
 
 	CanAutoAttack	1
 
-	Power		18
-	TotalTime	0.7
+	Power		18 // bal 10
+	TotalTime	0.7 // bal 1.45
 
 	MinRange	0
 	MaxRange	100
@@ -1753,11 +1759,12 @@ SkillGut
 
 	ShowSkillHint	1
 
+  // bal
 	WeaponType	WeaponDagger
 	WeaponType	WeaponSword
 	WeaponType	WeaponSwordTwoHanded
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillBlockingPerLevel
@@ -1800,7 +1807,7 @@ SkillParry
 	BaseName	$$ParrySkillName$$
 	Desc		$$ParrySkillDesc$$
 
-	TextureName	Textures/Icons/Skills/parry.tga
+	TextureName	Textures/Icons/Skills/Parry.tga
 
 	StatChangeParry		15
 	StatChangeDefense	15
@@ -1814,7 +1821,7 @@ SkillPlateArmorPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatMultArmor		0.1
+	StatMultArmor		0.1 // bal 0.05
 }
 
 SkillPlateArmor
@@ -1824,7 +1831,7 @@ SkillPlateArmor
 	BaseName	$$PlateArmor$$
 	Desc		$$PlateArmorDesc$$
 
-	TextureName	Textures/icons/items/chest_plate_light.tga
+	TextureName	Textures/Icons/Items/chest_plate_light.tga
 
 	ItemRequirement		ArmorPlate
 
@@ -1832,7 +1839,7 @@ SkillPlateArmor
 
 	ComparePointsMult	0.5
 
-	StatMultArmor		0.1
+	StatMultArmor		0.1 // bal 0.05
 
 	PerLevel	SkillPlateArmorPerLevel
 }
@@ -1840,9 +1847,9 @@ SkillPlateArmor
 SkillBlockPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2
-	ReuseTime	-0.3
+
+	Power		2 // bal 1
+	ReuseTime	-0.3 // bal
 }
 
 SkillBlock
@@ -1852,11 +1859,11 @@ SkillBlock
 	BaseName	$$BlockSkillName$$
 	Desc		$$BlockSkillDesc$$
 
-	TextureName	Textures/Icons/Skills/block.tga
+	TextureName	Textures/Icons/Skills/Block.tga
 
-	Power		25
+	Power		25 // bal 15
 	TotalTime	1.5
-	ReuseTime	12.0
+	ReuseTime	12.0 // bal 6.0
 	ShowSkillHint	1
 
 	StatusEffect	StatusEffectSkillBlock
@@ -1864,8 +1871,8 @@ SkillBlock
 	Animation	block
 
 	PerLevel	SkillBlockPerLevel
-	
-	BaseCost	1
+
+	BaseCost	1 // bal
 }
 
 SkillBlockStun
@@ -1943,7 +1950,7 @@ SkillBonusAttackPerDexAssassin
 {
 	Base		SkillBonusAttackPerDex
 
-	StatChangePerAttributeChange	1.5 // 1.25
+	StatChangePerAttributeChange	1.5 // bal 1.25
 }
 
 SkillBonusHealthPerVitAssassin
@@ -1957,7 +1964,7 @@ SkillBonusDamageMultPerStrAssassin
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.0006 // 0.002
+	StatChangePerAttributeChange	0.0006 // bal 0.002
 }
 
 SkillManaGenAssassin
@@ -1969,18 +1976,17 @@ SkillManaGenAssassin
 
 	TextureName	Textures/Icons/Skills/manaGenOnCriticalHit.tga
 
-	PowerGainOnHit		0.5
-	PowerGainOnKill		3.0
-	PowerGainOnCriticalHit	2.0
+	PowerGainOnCriticalHit	2.0 // bal 3.0
+	PowerGainOnKill		3.0 // bal 6.0
+	PowerGainOnHit		0.5 // bal
 }
 
 SkillRupturePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeDeepWounds		1.5 // 0.24
-	DamageMultPhysical		0.06
-	
+	DynamicStatChangeDeepWounds		1.5 // bal 0.25
+	DamageMultPhysical		0.06 // bal 0.15
 	Power	1
 }
 
@@ -2001,12 +2007,12 @@ SkillRupture
 	MinRange	0
 	MaxRange	100
 
-	Power		15
-	TotalTime	1.4
-	ReuseTime	5.3
+	Power		15 // bal 10
+	TotalTime	1.4 // bal 1.15
+	ReuseTime	5.3 // bal
 
-	DynamicStatChangeDeepWounds	3.75 // 0.24
-	DamageMultPhysical		0.15
+	DynamicStatChangeDeepWounds	3.75 // bal 0.4 mult
+	DamageMultPhysical		0.15 // bal 0.25
 
 	TargetEffect	Models/Effects/rogueSkillHit.mdl
 
@@ -2016,7 +2022,7 @@ SkillRupture
 
 	ShowSkillHint	1
 
-	// Only sword-like weapons
+	// bal Only sword-like weapons
 	WeaponType	WeaponDagger
 	WeaponType	WeaponSword
 	WeaponType	WeaponSwordTwoHanded
@@ -2026,9 +2032,9 @@ SkillLethalBlowPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical		0.072
-	DynamicStatChangeCriticalHit	1.1 // 0.11
-	
+	DamageMultPhysical		0.072 // bal 0.15
+	DynamicStatChangeCriticalHit	1.1 // bal 0.1 mult
+
 	Power		1
 }
 
@@ -2051,10 +2057,10 @@ SkillLethalBlow
 
 	Power		20
 	TotalTime	1.9
-	ReuseTime	6.3
-	
-	DamageMultPhysical		0.18
-	DynamicStatChangeCriticalHit	2.75 // 0.11
+	ReuseTime	6.3 // bal
+
+	DamageMultPhysical		0.18 // bal 0.5
+	DynamicStatChangeCriticalHit	2.75 // bal 0.3 mult
 	DynamicStatMultAttack		0.25
 
 	TargetEffect	Models/Effects/rogueSkillHit.mdl
@@ -2070,10 +2076,10 @@ SkillPreciseStrikePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeCriticalHit	0.8 // 0.08
-	DamageMultPhysical		0.1
-	
-	Power	2
+	DynamicStatChangeCriticalHit	0.8 // bal 0.08 mult
+	DamageMultPhysical		0.1 // bal 0.25
+
+	Power	2 // bal
 }
 
 SkillPreciseStrike
@@ -2093,18 +2099,18 @@ SkillPreciseStrike
 	MinRange	0
 	MaxRange	100
 
-	Power	25
+	Power	25 // bal 0
 	TotalTime	1.8
-	ReuseTime	6.1
-	
+	ReuseTime	6.1 // bal
+
 	// Disable until regen is worked out
 	// Power		0
-	// PowerAdded	5	
-	
+	// PowerAdded	5	// bal
+
 	ReuseTime	1.0
 
-	DynamicStatChangeCriticalHit	2.0 // 0.08
-	DamageMultPhysical		0.25
+	DynamicStatChangeCriticalHit	2.0 // bal 0.2 mult
+	DamageMultPhysical		0.25 // bal 0.4
 
 	RequiredEntityState-One	Stealthed
 	RequiredEntityState-One	EnemyBlock
@@ -2126,9 +2132,9 @@ SkillPreciseStrike
 SkillViperVenomPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	MinCharLevel	5
-	
+
+	MinCharLevel	5 // bal
+
 	Power		1
 }
 
@@ -2149,8 +2155,8 @@ SkillViperVenom
 	MinRange	0
 	MaxRange	100
 
-	Power		18
-	TotalTime	0.5
+	Power		18 // bal 15
+	TotalTime	0.5 // bal 1.35
 
 	StatusEffect	StatusEffectViperVenom
 
@@ -2159,10 +2165,10 @@ SkillViperVenom
 	BaseCost		2
 
 	ShowSkillHint	1
-	
-	MinCharLevel	0
 
-	// Sharp weapons
+	MinCharLevel	0 // bal
+
+	// bal: Sharp weapons
 	WeaponType	WeaponSword
 	WeaponType	WeaponSwordTwoHanded
 	WeaponType	WeaponAxe
@@ -2175,7 +2181,7 @@ SkillSpotVulnerabilityPerLevel
 	Base		BaseSkillPerLevel
 
 	StatChangeArmorPiercing		35
-	DynamicStatChangeDeepWounds	0.4
+	DynamicStatChangeDeepWounds	0.4 // bal 0.03 mult
 }
 
 SkillSpotVulnerability
@@ -2188,7 +2194,7 @@ SkillSpotVulnerability
 	TextureName	Textures/Icons/Skills/spotvulnerability.tga
 
 	StatChangeArmorPiercing		35
-	DynamicStatChangeDeepWounds	0.4
+	DynamicStatChangeDeepWounds	0.4 // bal 0.03 mult
 
 	PerLevel	SkillSpotVulnerabilityPerLevel
 
@@ -2199,16 +2205,16 @@ SkillDeathBlowPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical		0.08
-	DynamicStatChangeCriticalHit	0.6 // 0.055
+	DamageMultPhysical		0.08 // bal 0.25
+	DynamicStatChangeCriticalHit	0.6 // bal 0.05 mult
 
-	ProjMinDamage	8
+	ProjMinDamage	8 // bal 15
 	ProjMaxDamage	20
-	ProjDamageInflation		0.2
-	
-	MinCharLevel	5
-	
-	Power	2
+	ProjDamageInflation	0.2 // bal 0.05
+
+	MinCharLevel	5 // bal
+
+	Power	2 // bal
 }
 
 SkillDeathBlow
@@ -2230,20 +2236,20 @@ SkillDeathBlow
 
 	Power		20
 	TotalTime	2.15
-	ReuseTime	6.8
-	
-	// This needs work once regen is worked out
+	ReuseTime	6.8 // bal
+
+	// bal: This needs work once regen is worked out
 	PowerAdded		10
 	PowerAddedOnKill	1
 
-	DamageMultPhysical		0.2
-	DynamicStatChangeCriticalHit	1.5 // 0.055
+	DamageMultPhysical		0.2 // bal 0.5
+	DynamicStatChangeCriticalHit	1.5 // 0.1 mult
 	DynamicStatMultAttack		0.25
 
 	ProjectileOnKill	1
 	Projectile	ProjSharedPoisonGas
-	ProjMinDamage	10
-	ProjMaxDamage	30
+	ProjMinDamage	10 // bal 30
+	ProjMaxDamage	30 // bal 40
 	ProjDamageType	Poison
 
 	PerLevel	SkillDeathBlowPerLevel
@@ -2251,18 +2257,18 @@ SkillDeathBlow
 	BaseCost		8
 
 	ShowSkillHint	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillCriticalStrikePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.12
-	DynamicStatMultStunningBlow	0.15
-	
-	Power		2
+	DamageMultPhysical	0.12 // bal 0.25
+	DynamicStatMultStunningBlow	0.15 // bal
+
+	Power		2 // bal
 }
 
 SkillCriticalStrike
@@ -2282,15 +2288,15 @@ SkillCriticalStrike
 	MinRange	0
 	MaxRange	100
 
-	Power		25
-	
+	Power		25 // bal 0
+
 	// Disable until power regen is worked out
 	// Power		0
 	TotalTime	1.8
-	ReuseTime	6.1
+	ReuseTime	6.1 // bal 1.0
 
-	DamageMultPhysical	0.3
-	DynamicStatMultStunningBlow	0.15
+	DamageMultPhysical	0.3 // bal 0.75
+	DynamicStatMultStunningBlow	0.15 // bal
 	DynamicStatMultAttack	0.25
 
 	RequiredEntityState-One	CriticalHit
@@ -2315,12 +2321,11 @@ SkillChargedStrikePerLevel
 //	DynamicStatMultCrushingBlow	0.1
 
 	ProjMinDamage	5
-	ProjMaxDamage	13
-	ProjDamageInflation		0.1
-	
-	MinCharLevel	5
-	
-	Power	2
+	ProjMaxDamage	13 // bal 10
+	ProjDamageInflation		0.1 // bal 0.04
+	Power	  2 // bal 1
+
+	MinCharLevel	5 // bal
 }
 
 SkillChargedStrike
@@ -2338,8 +2343,8 @@ SkillChargedStrike
 	CanAutoAttack	1
 
 	Projectile	ProjFrostNova
-	ProjMinDamage	10
-	ProjMaxDamage	20
+	ProjMinDamage	10 // bal 15
+	ProjMaxDamage	20 // bal 25
 	ProjDamageType	Cold
 	ProjStatusEffect	1
 
@@ -2349,10 +2354,10 @@ SkillChargedStrike
 	MinRange	0
 	MaxRange	100
 
-	Power		30
-	TotalTime	1.3
-	
-	ReuseTime	5.5
+	Power		30 // bal 20
+	TotalTime	1.3 // bal 1.5
+
+	ReuseTime	5.5 // bal
 
 //	DamageMultPhysical		0.5
 //	DynamicStatMultCriticalHit	0.2
@@ -2363,15 +2368,15 @@ SkillChargedStrike
 	BaseCost		6
 
 	ShowSkillHint	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillDeadlyAimPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeCriticalHit	0.5
+	DynamicStatChangeCriticalHit	0.5 // bal 0.06
 }
 
 SkillDeadlyAim
@@ -2383,7 +2388,7 @@ SkillDeadlyAim
 
 	TextureName	Textures/Icons/Skills/deadlyaim.tga
 
-	DynamicStatChangeCriticalHit	0.5
+	DynamicStatChangeCriticalHit	0.5 // bal 0.06
 
 	PerLevel	SkillDeadlyAimPerLevel
 
@@ -2394,10 +2399,10 @@ SkillRoquePrecisionPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatMultAttack	0.05
+	StatMultAttack	0.05 // bal 0.07
 
-	DynamicStatChangeCriticalHit	0.2
-	DynamicStatChangeDeepWounds	0.3
+	DynamicStatChangeCriticalHit	0.2 // bal mult 0.02
+	DynamicStatChangeDeepWounds	0.3 // bal 0.04 mult
 }
 
 SkillRoquePrecision
@@ -2409,10 +2414,10 @@ SkillRoquePrecision
 
 	TextureName	Textures/Icons/Skills/precisionRogue.tga
 
-	StatMultAttack	0.05
+	StatMultAttack	0.05 // bal 0.07
 
-	DynamicStatChangeCriticalHit	0.2
-	DynamicStatChangeDeepWounds	0.3
+	DynamicStatChangeCriticalHit	0.2 // bal 0.02 mult
+	DynamicStatChangeDeepWounds	0.3 // bal 0.04 mult
 
 	PerLevel	SkillRoquePrecisionPerLevel
 
@@ -2434,14 +2439,14 @@ SkillBonusAttackPerDexTrickster
 {
 	Base		SkillBonusAttackPerDex
 
-	StatChangePerAttributeChange	0.75 // 0.5
+	StatChangePerAttributeChange	0.75 // bal 0.5
 }
 
 SkillBonusDefensePerDexTrickster
 {
 	Base		SkillBonusDefensePerDex
 
-	StatChangePerAttributeChange	1.0 // 0.75
+	StatChangePerAttributeChange	1.0 // bal 0.75
 }
 
 SkillManaGenTrickster
@@ -2453,19 +2458,19 @@ SkillManaGenTrickster
 
 	TextureName	Textures/Icons/Skills/manaGenEnergy.tga
 
-	PowerGainOnHit		0.5
-	PowerGainOnKill		3.0
+	// DynamicStatChangeInCombatPowerGainMult	0.5 // bal
+	PowerGainOnHit		0.5 // bal
+	PowerGainOnKill		3.0 // bal
 }
 
 SkillJabPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.05
-	DynamicStatChangeCriticalHit	0.8 // 0.08
+	DamageMultPhysical	0.05 // bal 0.125
+	DynamicStatChangeCriticalHit	0.8 // bal 0.05 mult
 	HateChange	-35
 	ReduceAllHate	0.035
-	
 	Power		1
 }
 
@@ -2486,14 +2491,14 @@ SkillJab
 	MinRange	0
 	MaxRange	100
 
-	Power		12
+	Power		12 // bal 15
 	TotalTime	1.15
-	ReuseTime	4.5
+	ReuseTime	4.5 // bal
 //	PowerAdded	6
 
 //	ReuseTime	8
 
-	DynamicStatChangeCriticalHit	2.0 // 0.08
+	DynamicStatChangeCriticalHit	2.0 // 0.1 mult
 	DamageMultPhysical	0.125
 	HateChange	-35
 	ReduceAllHate	0.035
@@ -2511,9 +2516,8 @@ SkillGougePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.1
-	
-	Power		2
+	DamageMultPhysical	0.1 // bal 0.05 mult
+	Power		2 // bal 1
 }
 
 SkillGouge
@@ -2529,14 +2533,14 @@ SkillGouge
 
 	Attack		1
 
-	DamageMultPhysical	0.04
+	DamageMultPhysical	0.04 // bal 0.05
 
 	MinRange	0
 	MaxRange	100
 
-	ReuseTime	4.5
+	ReuseTime	4.5 // bal 0
 
-	Power		15
+	Power		15 // bal 10
 	TotalTime	1.0
 
 	StatusEffect	StatusEffectGouge
@@ -2549,7 +2553,7 @@ SkillGouge
 
 	ShowSkillHint	1
 
-	// Only sword-like weapons
+	// bal: Only sword-like weapons
 	WeaponType	WeaponDagger
 	WeaponType	WeaponSword
 	WeaponType	WeaponSwordTwoHanded
@@ -2558,8 +2562,8 @@ SkillGouge
 SkillDazePerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2
+
+	Power		2 // bal 1
 }
 
 SkillDaze
@@ -2576,7 +2580,7 @@ SkillDaze
 	MinRange	0
 	MaxRange	100
 
-	Power		20
+	Power		20 // bal 10
 	TotalTime	1.15
 	ReuseTime	10.0
 
@@ -2595,8 +2599,7 @@ SkillDaze
 SkillFeintPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2
+	Power		2 // bal 1
 }
 
 SkillFeint
@@ -2615,7 +2618,7 @@ SkillFeint
 
 	ReuseTime	5.0
 
-	Power		20
+	Power		20 // bal 15
 	TotalTime	1.65
 
 	StatusEffect	StatusEffectFeint
@@ -2630,8 +2633,8 @@ SkillFeint
 SkillStealthPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2
+
+	Power		2 // bal 0
 }
 
 SkillStealth
@@ -2645,7 +2648,7 @@ SkillStealth
 
 	Animation	stealthIn
 
-	Power		30
+	Power		30 // bal 0
 	TotalTime	2.0
 //	NoAttackers	1
 	TryToDisappear	1
@@ -2667,7 +2670,6 @@ SkillSleightofHandPerLevel
 	Base		BaseSkillPerLevel
 
 	HateChange	125
-	
 	Power	1
 }
 
@@ -2682,7 +2684,7 @@ SkillSleightofHand
 
 	Animation	sleightofhand
 
-	Power		10
+	Power		10 // bal 5
 	TotalTime	1.15
 	ReuseTime	5.0
 
@@ -2702,10 +2704,8 @@ SkillSleightofHand
 SkillSmokeScreenPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		3
-	
-	EffectTime	1.5
+	Power		3 // bal 1
+	EffectTime	1.5 // bal
 }
 
 SkillSmokeScreen
@@ -2725,14 +2725,14 @@ SkillSmokeScreen
 	AllEnemies	1
 	AlwaysWorks	1
 
-	Power		25
+	Power		25 // bal 10
 	TotalTime	1.65
 	ReuseTime	60
 
 	AreaEffect	Models/Effects/smokeScreen.mdl
 
 	StatusEffect	StatusEffectSmokeScreen
-	EffectTime	5.0
+	EffectTime	5.0 // bal 15.0
 
 	PerLevel	SkillSmokeScreenPerLevel
 
@@ -2770,8 +2770,8 @@ SkillEvasionPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatChangeEvade		20
-	StatChangeDefense	20
+	StatChangeEvade		20 // bal 25
+	StatChangeDefense	20 // bal 25
 }
 
 SkillEvasion
@@ -2783,8 +2783,8 @@ SkillEvasion
 
 	TextureName	Textures/Icons/Skills/evasion.tga
 
-	StatChangeEvade		20
-	StatChangeDefense	20
+	StatChangeEvade		20 // bal 25
+	StatChangeDefense	20 // bal 25
 
 	PerLevel	SkillEvasionPerLevel
 
@@ -2795,10 +2795,12 @@ SkillShurikenPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeDeepWounds		1.0 // 0.1	
-	DamageMultPhysical		0.05
+//	ProjMinDamage	2
+//	ProjMaxDamage	4
 
-	Power		2
+	DamageMultPhysical		0.05
+	DynamicStatChangeDeepWounds		1.0 // bal 0.1 mult
+	Power		2 // bal 1
 }
 
 SkillShuriken
@@ -2810,7 +2812,7 @@ SkillShuriken
 
 	TextureName	Textures/Icons/Skills/shirken.tga
 
-	Power		18
+	Power		18 // bal 11
 	TotalTime	1.45
 	ShowSkillHint	1
 
@@ -2819,17 +2821,20 @@ SkillShuriken
 	ProjectileDamage	1
 	ProjNormalAttack	1
 
+//	ProjMinDamage	4
+//	ProjMaxDamage	8
 //	ProjRadius		100
-	DamageMultPhysical		-0.3999
-	DynamicStatChangeDeepWounds		2.5 // 0.1
+
+	DamageMultPhysical		-0.3999 // bal 0.05
+	DynamicStatChangeDeepWounds		2.5 // bal 0.2 mult
 
 	Animation	throwShuriken
 	WaitForAnim	1
 
 	PerLevel	SkillShurikenPerLevel
 
-	StandStillToCast	1
-	
+	StandStillToCast	1 // bal
+
 	BaseCost		1
 }
 
@@ -2848,21 +2853,21 @@ SkillBonusAttackPerDexThief
 {
 	Base		SkillBonusAttackPerDex
 
-	StatChangePerAttributeChange	0.75 // 0.5
+	StatChangePerAttributeChange	0.75 // bal 0.5
 }
 
 SkillBonusDefensePerDexThief
 {
 	Base		SkillBonusDefensePerDex
 
-	StatChangePerAttributeChange	1.0 // 1.25
+	StatChangePerAttributeChange	1.0 // bal 1.25
 }
 
 SkillBonusDamageMultPerStrThief
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.0004 // 0.001
+	StatChangePerAttributeChange	0.0004 // bal 0.001
 }
 
 SkillManaGenThief
@@ -2874,17 +2879,17 @@ SkillManaGenThief
 
 	TextureName	Textures/Icons/Skills/manaGenEnergy.tga
 
-	PowerGainOnDeepWounds	3.0
-	PowerGainOnHit	0.5
+	//DynamicStatChangeInCombatPowerGainMult	0.5 // bal
+	PowerGainOnDeepWounds	3.0 // bal
+	PowerGainOnHit	0.5 // bal
 }
 
 SkillSlicePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.068
-	DynamicStatChangeDeepWounds	1.7 // 0.15
-	
+	DamageMultPhysical	0.068 // bal 0.15
+	DynamicStatChangeDeepWounds	1.7 // bal 0.2 mult
 	Power	1
 }
 
@@ -2905,12 +2910,11 @@ SkillSlice
 	MinRange	0
 	MaxRange	100
 
-	Power		15
-	TotalTime	1.1
-	ReuseTime	4.7
-	
-	DamageMultPhysical	0.17
-	DynamicStatChangeDeepWounds		4.25 // 0.15
+	Power		15 // bal 10
+	TotalTime	1.1 // bal 1.3
+	ReuseTime	4.7 // bal
+	DamageMultPhysical	0.17 // bal 0.15
+	DynamicStatChangeDeepWounds		4.25 // bal0.15 mult
 
 	PerLevel	SkillSlicePerLevel
 
@@ -2918,7 +2922,7 @@ SkillSlice
 
 	ShowSkillHint	1
 
-	// Only dagger
+	// bal Only dagger
 	WeaponType	WeaponDagger
 }
 
@@ -2950,8 +2954,8 @@ SkillDisarmTrap
 SkillApplyPoisonPerLevel
 {
 	Base		BaseSkillPerLevel
-	Power		3
-	ReuseTime	1
+	Power		3 // bal
+	ReuseTime	1 // bal
 }
 
 SkillApplyPoison
@@ -2963,8 +2967,8 @@ SkillApplyPoison
 
 	TextureName	Textures/Icons/Skills/applyPoison.tga
 
-	Power		30
-	ReuseTime	60
+	Power		30 // bal 0
+	ReuseTime	60 // bal 240
 
 	SaveForToughEnemies	1
 
@@ -2992,9 +2996,9 @@ SkillApplyPoison
 SkillBurstOfSpeedPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		3
-	ReuseTime	1
+
+	Power		3 // bal
+	ReuseTime	1 // bal
 }
 
 SkillBurstOfSpeed
@@ -3004,10 +3008,10 @@ SkillBurstOfSpeed
 	BaseName	$$ConcentrationSpeed$$
 	Desc		$$ConcentrationSpeedDesc$$
 
-	TextureName	Textures/Icons/Skills/burstofspeed.tga
+	TextureName	Textures/Icons/Skills/burstOfSpeed.tga
 
-	Power		30
-	ReuseTime	60
+	Power		30 // bal 0
+	ReuseTime	60 // bal 240
 
 	SaveForToughEnemies	1
 
@@ -3027,9 +3031,9 @@ SkillBurstOfSpeed
 SkillBlurPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		3
-	ReuseTime	1
+
+	Power		3 // bal
+	ReuseTime	1 // bal
 }
 
 SkillBlur
@@ -3041,8 +3045,8 @@ SkillBlur
 
 	TextureName	Textures/Icons/Skills/blur.tga
 
-	Power		30
-	ReuseTime	60
+	Power		30 // bal 0
+	ReuseTime	60 // bal 240
 
 	SaveForToughEnemies	1
 
@@ -3063,8 +3067,9 @@ SkillBlur
 SkillCaltropsPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2
+
+  // bal ReuseTime -1.0
+	Power		2 / bal
 }
 
 SkillCaltrops
@@ -3078,9 +3083,9 @@ SkillCaltrops
 
 	Animation	caltrops
 
-	Power		25
+	Power		25 // bal 0
 	TotalTime	1.8
-	ReuseTime	60
+	ReuseTime	60 // bal 45
 
 	MinRange	0
 	MaxRange	300
@@ -3130,10 +3135,12 @@ SkillDaggerMasteryPerLevel
 	Base		BaseSkillPerLevel
 
 	StatChangeAttack	20.0
-	StatMultMinDamage	0.05 // bal
-	StatMultMaxDamage	0.05 // bal
+	StatMultMinDamage	0.05 // bal 0.1
+	StatMultMaxDamage	0.05 // bal 0.1
 
-	DynamicStatChangeDeepWounds	0.25
+
+	// bal DynamicStatMultCriticalHit	0.03
+	DynamicStatChangeDeepWounds	0.25 // bal
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 }
 
@@ -3147,10 +3154,10 @@ SkillDaggerMastery
 	TextureName	Textures/Icons/Skills/daggermastery.tga
 
 	StatChangeAttack	20.0
-	StatMultMinDamage	0.05 // bal
-	StatMultMaxDamage	0.05 // bal
+	StatMultMinDamage	0.05 // bal 0.1
+	StatMultMaxDamage	0.05 // bal 0.1
 
-	DynamicStatChangeDeepWounds	0.25
+	DynamicStatChangeDeepWounds	0.25 // bal 0.03 mult crit
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 
 	WeaponType	WeaponDagger
@@ -3166,7 +3173,6 @@ SkillLockPickPerLevel
 
 	StatChangePerception	20
 	StatChangeLockPicking	5
-	
 	Power	1
 }
 
@@ -3181,7 +3187,7 @@ SkillLockPick
 
 	Animation	pickLock
 
-	Power		15
+	Power		15 // bal 10
 	TotalTime	1.5
 	MaxRange	100
 
@@ -3250,19 +3256,23 @@ SkillBonusHealthPerVitPaladin
 SkillBonusPowerPerSprPaladin
 {
 	Base		SkillBonusPowerPerSpr
+
+	// bal StatChangePerAttributeChange	1.0
 }
 
 SkillBonusDamageMultPerStrPaladin
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.001	// 0.001
+	StatChangePerAttributeChange	0.001
 }
 
 // Cancel skill
 SkillBonusPowerRegenPerSprPaladin
 {
 	Base		SkillBonusPowerRegenPerSpr
+
+	// bal StatChangePerAttributeChange	0.01
 }
 
 // Change paladin to be a pure fighting character, which he is
@@ -3273,6 +3283,7 @@ SkillManaGenPaladin
 	BaseName	$$ManaGenPaladin$$
 	Desc		$$ManaGenPaladinDesc$$
 
+  // bal: block/parry -> hit/kill
 	TextureName	Textures/Icons/Skills/manaGenOnHit.tga
 
 	PowerGainOnHit		0.75
@@ -3283,8 +3294,8 @@ SkillZealPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeCrushingBlow	1.8 // 0.18
-	DamageMultPhysical	0.08
+	DynamicStatChangeCrushingBlow	1.8 // bal 0.25 mult
+	DamageMultPhysical	0.08 // bal 0.2
 	Power		1
 }
 
@@ -3305,12 +3316,12 @@ SkillZeal
 	MinRange	0
 	MaxRange	100
 
-	Power		15
+	Power		15 // bal 6
 	TotalTime	1.5
-	ReuseTime	5.5
+	ReuseTime	5.5 // bal
 
-	DynamicStatChangeCrushingBlow	4.5 // 0.18
-	DamageMultPhysical	0.2
+	DynamicStatChangeCrushingBlow	4.5 // 0.18 bal mult
+	DamageMultPhysical	0.2 // bal 0.6
 
 //	TargetEffect	Models/Effects/priestSkillHit.mdl
 
@@ -3350,9 +3361,8 @@ SkillShieldBashPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.072
+	DamageMultPhysical	0.072 // bal 0.3
 	DynamicStatMultAttack	0.05
-	
 	Power	1
 }
 
@@ -3367,9 +3377,9 @@ SkillShieldBash
 
 	Animation		shieldBash
 
-	Power		18
-	TotalTime	1.3
-	ReuseTime	6.1
+	Power		18 // bal 5
+	ReuseTime	6.1 // bal 10
+	TotalTime	1.3 // bal
 
 	Attack		1
 	CanAutoAttack	1
@@ -3377,7 +3387,7 @@ SkillShieldBash
 	MinRange	0
 	MaxRange	100
 
-	DamageMultPhysical	0.18
+	DamageMultPhysical	0.18 // bal 0.3
 	DynamicStatMultAttack	0.05
 
 	Interrupt	1
@@ -3388,7 +3398,7 @@ SkillShieldBash
 	PerLevel	SkillShieldBashPerLevel
 
 	BaseCost		1
-	
+
 	ShowSkillHint	1
 }
 
@@ -3397,11 +3407,14 @@ SkillPriestMaceMasteryPerLevel
 	Base		BaseSkillPerLevel
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.04 // bal
-	StatMultMaxDamage	0.04 // bal
+	StatMultMinDamage	0.04 // bal 0.04
+	StatMultMaxDamage	0.04 // bal 0.04
 
-	DynamicStatChangeCrushingBlow	0.15
+	DynamicStatChangeCrushingBlow	0.15 // bal 0.05 mult
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
+
+	WeaponType	WeaponMace
+	WeaponType	WeaponMaceTwoHanded // bal
 }
 
 SkillPriestMaceMastery
@@ -3411,14 +3424,14 @@ SkillPriestMaceMastery
 	BaseName	$$MaceMastery$$
 	Desc		$$MaceMasteryDesc$$
 
-	TextureName	Textures/Icons/Skills/maceMastery.tga
+	TextureName	Textures/Icons/Skills/MaceMastery.tga
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.04 // bal
-	StatMultMaxDamage	0.04 // bal
+	StatMultMinDamage	0.04 // bal 0.08
+	StatMultMaxDamage	0.04 // bal 0.08
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 
-	DynamicStatChangeCrushingBlow	0.15
+	DynamicStatChangeCrushingBlow	0.15 // bal 0.05
 
 	WeaponType	WeaponMace
 	WeaponType	WeaponMaceTwoHanded
@@ -3432,7 +3445,7 @@ SkillMailArmorPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatMultArmor		0.07
+	StatMultArmor		0.07 // bal 0.025
 }
 
 SkillMailArmor
@@ -3442,7 +3455,7 @@ SkillMailArmor
 	BaseName	$$MailArmorSkillName$$
 	Desc		$$MailArmorSkillDesc$$
 
-	TextureName	Textures/icons/items/chest_mail_chain.tga
+	TextureName	Textures/Icons/Items/chest_mail_chain.tga
 
 	ItemRequirement		ArmorMail
 
@@ -3450,7 +3463,7 @@ SkillMailArmor
 
 	ComparePointsMult	0.5
 
-	StatMultArmor		0.07
+	StatMultArmor		0.07 // bal 0.025
 
 	PerLevel	SkillMailArmorPerLevel
 }
@@ -3461,7 +3474,7 @@ SkillRegenerationPerLevel
 
 	SilentHateChange	10.0
 
-	Power		2
+	Power		2 // bal 5
 }
 
 SkillRegeneration
@@ -3471,12 +3484,12 @@ SkillRegeneration
 	BaseName	$$RegenerationSkillName$$
 	Desc		$$RegenerationSkillDesc$$
 
-	TextureName	Textures/icons/Skills/regen.tga
+	TextureName	Textures/Icons/Skills/regen.tga
 
-	Power		30
+	Power		30 // bal 15
 	TotalTime	1.6
 	Spell		1
-	ReuseTime	150
+	ReuseTime	150 // bal
 
 	SkillType	Buff
 
@@ -3496,7 +3509,7 @@ SkillStunningBlowPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeStunningBlow	0.3
+	DynamicStatChangeStunningBlow	0.3 // bal 0.1 mult
 }
 
 SkillStunningBlow
@@ -3509,7 +3522,7 @@ SkillStunningBlow
 	TextureName	Textures/Icons/Skills/stunChance.tga
 
 	// Higher than crushing blow because few things boost this
-	DynamicStatChangeStunningBlow	0.3
+	DynamicStatChangeStunningBlow	0.3 // bal 0.1 mult XXX
 
 	PerLevel	SkillStunningBlowPerLevel
 }
@@ -3518,7 +3531,7 @@ SkillPriestCrushingBlowPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatChangeCrushingBlow	0.9
+	DynamicStatChangeCrushingBlow	0.9 // bal 0.1
 }
 
 SkillPriestCrushingBlow
@@ -3528,9 +3541,9 @@ SkillPriestCrushingBlow
 	BaseName	$$CrushingBlowSkillName$$
 	Desc		$$CrushingBlowSkillDesc$$
 
-	TextureName	Textures/Icons/Skills/crushingBlow.tga
+	TextureName	Textures/Icons/Skills/CrushingBlow.tga
 
-	DynamicStatChangeCrushingBlow	0.9
+	DynamicStatChangeCrushingBlow	0.9 // bal 0.1 mult
 
 	PerLevel	SkillPriestCrushingBlowPerLevel
 
@@ -3541,10 +3554,10 @@ SkillSmitePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.048
-	
-	MinCharLevel	4
-	
+	DamageMultPhysical	0.048 // bal 0.1
+
+	MinCharLevel	4 // bal
+
 	Power		1
 }
 
@@ -3565,12 +3578,12 @@ SkillSmite
 	Attack		1
 	CanAutoAttack	1
 
-	DamageMultPhysical	0.12
+	DamageMultPhysical	0.12 // bal 0.1
 	DynamicStatMultAttack	0.5
 
 	Power		15
 	TotalTime	2.0
-	ReuseTime	6.5
+	ReuseTime	6.5 // bal
 	ShowSkillHint	1
 
 	MinRange	0
@@ -3581,10 +3594,10 @@ SkillSmite
 	PerLevel	SkillSmitePerLevel
 
 	TargetEffect	Models/Effects/skillHitSmite.mdl
-	
-	BaseCost	1
 
-	// No dagger
+	BaseCost	1 // bal
+
+	// bal No dagger
 	WeaponType	WeaponAxe
 	WeaponType	WeaponAxeTwoHanded
 	WeaponType	WeaponSword
@@ -3593,15 +3606,14 @@ SkillSmite
 	WeaponType	WeaponMaceTwoHanded
 	WeaponType	WeaponStaff
 
-	MinCharLevel	0
+	MinCharLevel	0 // bal
 }
 
 SkillBraveryPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2	
-	ReuseTime	2
+	Power		2	 // bal 1
+	ReuseTime	2 // bal
 }
 
 SkillBravery
@@ -3613,12 +3625,11 @@ SkillBravery
 
 	TextureName	Textures/Icons/Skills/bravery.tga
 
-	Power		30
+	Power		30 // bal 10
 	TotalTime	2.0
 	Spell		1
 
-	ReuseTime	60
-	
+	ReuseTime	60 // bal
 	MinRange	0
 	MaxRange	500
 
@@ -3649,7 +3660,7 @@ SkillBonusPowerPerSprHealer
 {
 	Base		SkillBonusPowerPerSpr
 
-	StatChangePerAttributeChange	0.375
+	StatChangePerAttributeChange	0.375 // bal 0.2
 }
 
 // Supposed to get extra regen from prayer
@@ -3658,7 +3669,7 @@ SkillBonusPowerRegenPerSprHealer
 {
 	Base		SkillBonusPowerRegenPerSpr
 
-	//StatChangePerAttributeChange	0.003
+	//bal StatChangePerAttributeChange	0.003
 }
 
 SkillHolyBoltPerLevel
@@ -3666,12 +3677,12 @@ SkillHolyBoltPerLevel
 	Base		BaseSkillPerLevel
 
 	ProjMinDamage	5
-	ProjMaxDamage	15
-	ProjDamageInflation	0.2
+	ProjMaxDamage	15 // bal 13
+	ProjDamageInflation	0.2 // bal 0.05
 
 	Power		3
-	
-	MinCharLevel	5
+
+	MinCharLevel	5 // bal
 }
 
 SkillHolyBolt
@@ -3683,14 +3694,14 @@ SkillHolyBolt
 
 	TextureName	Textures/Icons/Skills/holybolt.tga
 
-	Power		10
+	Power		10 // bal 6
 	TotalTime	1.3
 	Spell		1
 
 	Projectile	ProjHolyBolt
 
-	ProjMinDamage	11
-	ProjMaxDamage	21
+	ProjMinDamage	11 // bal 5
+	ProjMaxDamage	21 // bal 13
 	ProjDamageType	Magic
 
 	CastingAnimation	startHolyBolt
@@ -3701,8 +3712,8 @@ SkillHolyBolt
 	BaseCost		1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillPrayerPerLevel
@@ -3733,7 +3744,7 @@ SkillLesserHealPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Heal		25
+	Heal		25 // bal 16
 	Power		4
 }
 
@@ -3744,13 +3755,13 @@ SkillLesserHeal
 	BaseName	$$LesserHeal$$
 	Desc		$$LesserHealDesc$$
 
-	TextureName	Textures/icons/Skills/healLesser.tga
+	TextureName	Textures/Icons/Skills/healLesser.tga
 
-	Power		18
-	TotalTime	1.2
+	Power		18 // bal 5
+	TotalTime	1.2 // bal 2.0
 	Spell		1
-	
-	ReuseTime	5
+
+	ReuseTime	5 // bal
 
 	Heal		25
 
@@ -3766,9 +3777,9 @@ SkillLesserHeal
 	Animation		castHeal
 
 	TargetEffect	Models/Effects/heal.mdl
-	
-	StatusEffectOnSelf	1
-	StatusEffect		StatusEffectLesserHealWeakness
+
+	StatusEffectOnSelf	1 // bal
+	StatusEffect		StatusEffectLesserHealWeakness // bal
 }
 
 SkillCurePoisonPerLevel
@@ -3778,7 +3789,7 @@ SkillCurePoisonPerLevel
 	CureEffectStrength	3.0
 
 	SilentHateChange	10.0
-	Power		3
+	Power		3 // bal 2
 }
 
 SkillCurePoison
@@ -3790,8 +3801,8 @@ SkillCurePoison
 
 	TextureName	Textures/Icons/Skills/curepoison.tga
 
-	Power		15
-	TotalTime	0.8
+	Power		15 // bal 20
+	TotalTime	0.8 // bal 4.0
 	Spell		1
 
 //	CureEffectName	BasicPoison
@@ -3815,9 +3826,9 @@ SkillPriestPrecisionPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatMultAttack	0.03
-	DynamicStatChangeCriticalHit	0.2
-	DynamicStatChangeDeepWounds	0.3
+	StatMultAttack	0.03 // bal 0.04
+	DynamicStatChangeCriticalHit	0.2 // bal
+	DynamicStatChangeDeepWounds	0.3 // bal
 }
 
 SkillPriestPrecision
@@ -3827,15 +3838,15 @@ SkillPriestPrecision
 	BaseName	$$Precision$$
 	Desc		$$PrecisionDesc$$
 
-	TextureName	Textures/Icons/Skills/precision.tga
+	TextureName	Textures/Icons/Skills/Precision.tga
 
-	StatMultAttack	0.03
-	DynamicStatChangeCriticalHit	0.2
-	DynamicStatChangeDeepWounds	0.3
+	StatMultAttack	0.03 // 0.04
+	DynamicStatChangeCriticalHit	0.2 // bal
+	DynamicStatChangeDeepWounds	0.3 // bal
 
 	PerLevel	SkillPriestPrecisionPerLevel
 
-	BaseCost	2	
+	BaseCost	2
 }
 
 SkillAreaHealPerLevel
@@ -3844,7 +3855,7 @@ SkillAreaHealPerLevel
 
 	Heal		20
 
-	Power		6
+	Power		6 // bal 8
 }
 
 SkillAreaHeal
@@ -3854,24 +3865,24 @@ SkillAreaHeal
 	BaseName	$$AreaHeal$$
 	Desc		$$AreaHealDesc$$
 
-	TextureName	Textures/icons/Skills/healArea.tga
+	TextureName	Textures/Icons/Skills/healArea.tga
 
-	Power		30
+	Power		30 // bal 20
 	TotalTime	2.0
 	Spell		1
-	
-	ReuseTime	15
 
 	MinRange	0
 	MaxRange	500
 
-	Heal		20
+	Heal		20 // bal 50
+
+	ReuseTime	15 // bal 8
 
 	AllAllies	1
 
 	PerLevel	SkillAreaHealPerLevel
 
-	BaseCost	4
+	BaseCost	4 // bal 6
 
 	CastingAnimation	startAreaHeal
 	Animation		castAreaHeal
@@ -3879,15 +3890,15 @@ SkillAreaHeal
 	ShowSkillHint	1
 
 	TargetEffect	Models/Effects/heal.mdl
-	
-	StatusEffect		StatusEffectLesserHealWeakness
+
+	StatusEffect		StatusEffectLesserHealWeakness // bal
 }
 
 SkillGreaterHealPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Heal		100
+	Heal		100 // bal 28
 	Power		5
 }
 
@@ -3898,15 +3909,14 @@ SkillGreaterHeal
 	BaseName	$$GreaterHeal$$
 	Desc		$$GreaterHealDesc$$
 
-	TextureName	Textures/icons/Skills/heal.tga
+	TextureName	Textures/Icons/Skills/heal.tga
 
-	Power		25
-	TotalTime	3.0
+	Power		25 // bal 15
+	TotalTime	3.0 // bal 2.5
 	Spell		1
-	
-	ReuseTime	10
-	
-	Heal		100
+
+	Heal		100 // bal 90
+	ReuseTime	10 // bal
 
 	SkillType	Heal
 
@@ -3920,12 +3930,12 @@ SkillGreaterHeal
 	Animation		castHeal
 
 	TargetEffect	Models/Effects/heal.mdl
-	
-	// Link to Area Heal since it's not worth buying
+
+	// bal Link to Area Heal since it's not worth buying
 	Linked		SkillAreaHeal
 	LinkedEnd	1
-	
-	StatusEffect		StatusEffectGreaterHealWeakness
+
+	StatusEffect		StatusEffectGreaterHealWeakness // bal
 }
 
 SkillHolyStrikePerLevel
@@ -3934,10 +3944,10 @@ SkillHolyStrikePerLevel
 
 	ProjMinDamage	5
 	ProjMaxDamage	15
-	ProjDamageInflation	0.1
-	Power	5
-	
-	MinCharLevel	5
+	ProjDamageInflation	0.1 // bal 0.04
+	Power	5 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillHolyStrike
@@ -3947,15 +3957,15 @@ SkillHolyStrike
 	BaseName	$$HolyStrike$$
 	Desc		$$HolyStrikeDesc$$
 
-	TextureName	Textures/icons/Skills/holystrike.tga
+	TextureName	Textures/Icons/Skills/holystrike.tga
 
-	Power		20
-	TotalTime	2.0
+	Power		20 // bal 12
+	TotalTime	2.0 // bal 1.8
 	Spell		1
 
 	Projectile	ProjHolyStrike
-	ProjMinDamage	11
-	ProjMaxDamage	22
+	ProjMinDamage	11 // bal 25
+	ProjMaxDamage	22 // bal 35
 	ProjDamageType	Lightning
 
 	CastingAnimation	startHolyStrike
@@ -3966,21 +3976,21 @@ SkillHolyStrike
 	BaseCost	6
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillHolySymbolPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	MinDamage	6
-	MaxDamage	14
-	DamageInflation	0.2
+	MinDamage	6 // bal 5
+	MaxDamage	14 // bal 10
+	DamageInflation	0.2 // bal 0.05
 
-	Power		6
-	
-	MinCharLevel	5
+	Power		6 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillHolySymbol
@@ -3990,10 +4000,10 @@ SkillHolySymbol
 	BaseName	$$HolySymbol$$
 	Desc		$$HolySymbolDesc$$
 
-	TextureName	Textures/icons/Skills/holySymbol.tga
+	TextureName	Textures/Icons/Skills/holySymbol.tga
 
-	Power		30
-	TotalTime	1.0
+	Power		30 // bal 20
+	TotalTime	1.0 // bal 2
 	Spell		1
 
 	CastingAnimation	startHolySymbol
@@ -4005,9 +4015,9 @@ SkillHolySymbol
 	AllEnemies	1
 	AlwaysWorks	1
 
-	ReuseTime	5.0
+	ReuseTime	5.0 // bal 10
 
-	MinDamage	15
+	MinDamage	15 // bal 20
 	MaxDamage	30
 	DamageType	Magic
 
@@ -4020,8 +4030,8 @@ SkillHolySymbol
 	ShowSkillHint	1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillHolyShieldPerLevel
@@ -4029,10 +4039,9 @@ SkillHolyShieldPerLevel
 	Base		BaseSkillPerLevel
 
 	SilentHateChange	10.0
-	
-	Power	8
-	
-	MinCharLevel	5
+	Power	8 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillHolyShield
@@ -4044,7 +4053,7 @@ SkillHolyShield
 
 	TextureName	Textures/Icons/Skills/holyShield.tga
 
-	Power		40
+	Power		40 // bal 10
 	TotalTime	3.0
 	Spell		1
 
@@ -4064,8 +4073,8 @@ SkillHolyShield
 	Animation	castHolyShield
 
 	ShowSkillHint	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 //
@@ -4090,15 +4099,15 @@ SkillBonusPowerPerSprShaman
 {
 	Base		SkillBonusPowerPerSpr
 
-	StatChangePerAttributeChange	0.375
+	StatChangePerAttributeChange	0.375 // bal 0.2
 }
 
 SkillBonusPowerRegenPerSprShaman
 {
 	Base		SkillBonusPowerRegenPerSpr
 
-	StatChangePerAttributeChange	0.0075  // bal
-	DynamicStatChangePowerRegen		0.16875	// offset for regen
+	StatChangePerAttributeChange	0.0075  // bal 0.01
+	DynamicStatChangePowerRegen		0.16875	// bal offset for regen
 }
 
 SkillLifeburnPerLevel
@@ -4107,11 +4116,11 @@ SkillLifeburnPerLevel
 
 	ProjMinDamage	2
 	ProjMaxDamage	6
-	ProjDamageInflation	0.2
+	ProjDamageInflation	0.2 // bal 0.04
 
 	Power		4
-	
-	MinCharLevel	5
+
+	MinCharLevel	5 // bal
 }
 
 SkillLifeburn
@@ -4121,16 +4130,16 @@ SkillLifeburn
 	BaseName	$$Lifeburn$$
 	Desc		$$LifeburnDesc$$
 
-	TextureName	Textures/Icons/Skills/lifeburn.tga
+	TextureName	Textures/Icons/Skills/Lifeburn.tga
 
 	Power		15
-	TotalTime	1.0
+	TotalTime	1.0 // bal 2.15
 	Spell		1
 
 	Projectile		ProjLifeburn
 
-	ProjMinDamage	13
-	ProjMaxDamage	17
+	ProjMinDamage	13 // bal 8
+	ProjMaxDamage	17 // bal 12
 	ProjDamageType		Fire
 	ProjStatusEffect	1
 
@@ -4146,8 +4155,8 @@ SkillLifeburn
 	BaseCost	4
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillHardinessPerLevel
@@ -4155,9 +4164,9 @@ SkillHardinessPerLevel
 	Base		BaseSkillPerLevel
 
 	SilentHateChange	10.0
-	MinCharLevel	3
-	Power		6
-	
+	Power		6 // bal 5
+	MinCharLevel	3 // bal
+
 }
 
 SkillHardiness
@@ -4167,13 +4176,13 @@ SkillHardiness
 	BaseName	$$HardinessBlessing$$
 	Desc		$$HardinessBlessingDesc$$
 
-	TextureName	Textures/icons/Skills/hardiness.tga
+	TextureName	Textures/Icons/Skills/hardiness.tga
 
-	Power		30
+	Power		30 // bal 25
 	TotalTime	2.0
 	Spell		1
-	
-	ReuseTime	210 // 120 + 90
+
+	ReuseTime	210 // bal 120 + 90
 
 	SkillType	Buff
 
@@ -4183,12 +4192,12 @@ SkillHardiness
 
 	PerLevel	SkillHardinessPerLevel
 
-	BaseCost		6
+	BaseCost		6 // bal 1
 
 	CastingAnimation	startHardiness
 	Animation		castHardiness
 
-	MinCharLevel	4
+	MinCharLevel	4 // bal
 
 	TargetEffect	Models/Effects/buff.mdl
 }
@@ -4200,7 +4209,7 @@ SkillTrueAimPerLevel
 	SilentHateChange	10.0
 	Power		5
 
-	ReuseTime	1.5
+	ReuseTime	1.5 // bal
 }
 
 SkillTrueAim
@@ -4212,11 +4221,11 @@ SkillTrueAim
 
 	TextureName	Textures/Icons/Skills/trueaim.tga
 
-	Power		30
+	Power		30 // bal 25
 	TotalTime	2.0
 	Spell		1
-	
-	ReuseTime	45.0
+
+	ReuseTime	45.0 // bal
 
 	SkillType	Buff
 
@@ -4238,13 +4247,13 @@ SkillHolyFirePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjRadiusMinDamage	5
-	ProjRadiusMaxDamage	19
-	ProjRadiusDamageInflation	0.1
+	ProjRadiusMinDamage	5 // bal 4
+	ProjRadiusMaxDamage	19 // bal 10
+	ProjRadiusDamageInflation	0.1 // bal 0.04
 
-	Power	6
-	
-	MinCharLevel	5
+	Power	6 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillHolyFire
@@ -4256,17 +4265,17 @@ SkillHolyFire
 
 	TextureName	Textures/Icons/Skills/holyfire.tga
 
-	Power		25
+	Power		25 // bal 10
 	TotalTime	1.3
 	Spell		1
 
 	Projectile		ProjHolyFire
 
-	ProjRadiusMinDamage	11
-	ProjRadiusMaxDamage	15
+	ProjRadiusMinDamage	11 // bal 8
+	ProjRadiusMaxDamage	15 // bal 12
 	ProjRadius		100
 	ProjDamageType		Fire
-	ProjEarthquake		100.0
+	ProjEarthquake		100.0 // bal 50
 
 //	ProjStatusEffect	1
 
@@ -4278,8 +4287,8 @@ SkillHolyFire
 	BaseCost		4
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillProtectionFirePerLevel
@@ -4299,11 +4308,11 @@ SkillProtectionFire
 
 	TextureName	Textures/Icons/Skills/protectionFire.tga
 
-	Power		30
+	Power		30 // bal 20
 	TotalTime	3.0
 	Spell		1
-	
-	ReuseTime	150
+
+	ReuseTime	150 // bal
 
 	SkillType	Buff
 
@@ -4338,11 +4347,11 @@ SkillProtectionLightning
 
 	TextureName	Textures/Icons/Skills/protectionLightning.tga
 
-	Power		30
+	Power		30 // bal 20
 	TotalTime	3.0
 	Spell		1
-	
-	ReuseTime	120
+
+	ReuseTime	120 // bal
 
 	SkillType	Buff
 
@@ -4379,12 +4388,12 @@ SkillProtectionPoison
 
 	TextureName	Textures/Icons/Skills/protectionPoison.tga
 
-	Power		30
+	Power		30 // bal 20
 	TotalTime	3.0
 	Spell		1
 
-	ReuseTime	120
-	
+	ReuseTime	120 // bal
+
 	SkillType	Buff
 
 	StatusEffect	StatusEffectProtectionPoison
@@ -4420,12 +4429,12 @@ SkillProtectionCold
 
 	TextureName	Textures/Icons/Skills/protectionCold.tga
 
-	Power		30
+	Power		30 // bal 20
 	TotalTime	3.0
 	Spell		1
 
-	ReuseTime	120
-	
+	ReuseTime	120 // bal
+
 	SkillType	Buff
 
 	StatusEffect	StatusEffectProtectionCold
@@ -4448,9 +4457,10 @@ SkillProtectionCold
 SkillDivineInterventionPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	ReuseTime	-15
-	HealPercent	0.05
+
+	ReuseTime	-15 // bal
+	HealPercent	0.05 // bal heal 75
+  //PowerAdded 75 // bal
 }
 
 SkillDivineIntervention
@@ -4466,15 +4476,15 @@ SkillDivineIntervention
 	TotalTime	1.0
 	Spell		1
 
-	HealPercent	0.5
-	PowerAdded	2500
-	
-	ReuseTime	360
+	HealPercent	0.5 // bal heal 75
+	PowerAdded	2500 // bal 75
 
-	// Chance of going invulnerable
+	ReuseTime	360 // bal
+
+	// bal Chance of going invulnerable
 	StatusEffectChance	0.2
 	StatusEffect	StatusEffectDivineInterventionHolyShield
-	
+
 	PerLevel	SkillDivineInterventionPerLevel
 
 	BaseCost		6
@@ -4490,9 +4500,9 @@ SkillChampionPerLevel
 	Base		BaseSkillPerLevel
 
 	SilentHateChange	10.0
-	Power		6
-	
-	ReuseTime	0.5
+	Power		6 // bal 3
+
+	ReuseTime	0.5 // bal
 }
 
 SkillChampion
@@ -4502,13 +4512,13 @@ SkillChampion
 	BaseName	$$ChampionSkillName$$
 	Desc		$$ChampionSkillDesc$$
 
-	TextureName	Textures/ui/ui_icons/iconslot_rank1_champ.tga
+	TextureName	Textures/UI/ui_icons/iconslot_rank1_champ.tga
 
-	Power		40
+	Power		40 // bal 20
 	Spell		1
 
 	TotalTime	2.0
-	ReuseTime	50
+	ReuseTime	50 // bal 90
 
 	SkillType	Buff
 
@@ -4583,14 +4593,14 @@ SkillBonusPowerPerIntFireMage
 {
 	Base		SkillBonusPowerPerInt
 
-	StatChangePerAttributeChange	0.375
+	StatChangePerAttributeChange	0.375 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntFireMage
 {
 	Base		SkillBonusPowerRegenPerInt
 
-	StatChangePerAttributeChange	0.0075
+	StatChangePerAttributeChange	0.0075 // bal 0.01
 	DynamicStatChangePowerRegen		0.16875	// bal: Create offset for power regen
 }
 
@@ -4606,7 +4616,7 @@ SkillManaGenFireMage
 	DynamicStatMultItemPowerGainMult	0.5 // 0.3 bal
 }
 
-// bal: make resistance not come from SPR
+// bal: make resistance not come from SPR (XXX for fire resistance -> magic system)
 SkillPenaltyFireResistancePerSprFireMageBalance
 {
 	Base		BaseSkillBasic
@@ -4625,13 +4635,13 @@ SkillFieryBlastPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	4
+	ProjMinDamage	4 // bal 5
 	ProjMaxDamage	15
-	ProjDamageInflation 	0.2
+	ProjDamageInflation 	0.2 // bal 0.02
 
-	Power		3
-	
-	MinCharLevel	5
+	Power		3 // bal 2
+
+	MinCharLevel	5 // bal
 }
 
 SkillFieryBlast
@@ -4641,15 +4651,15 @@ SkillFieryBlast
 	BaseName	$$FieryBlast$$
 	Desc		$$FieryBlastDesc$$
 
-	TextureName	Textures/Icons/Skills/fieryBlast.tga
+	TextureName	Textures/Icons/Skills/fieryblast.tga
 
-	Power		10
+	Power		10 // bal 8
 	TotalTime	1.1
 	Spell		1
 
 	Projectile	ProjFireBolt
-	ProjMinDamage	10
-	ProjMaxDamage	20
+	ProjMinDamage	10 // bal 5
+	ProjMaxDamage	20 // bal 15
 	ProjDamageType	Fire
 
 	CastingAnimation	startFieryBlast
@@ -4662,8 +4672,8 @@ SkillFieryBlast
 	BaseCost	1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillFireBallPerLevel
@@ -4671,12 +4681,12 @@ SkillFireBallPerLevel
 	Base		BaseSkillPerLevel
 
 	ProjRadiusMinDamage	5
-	ProjRadiusMaxDamage	19
-	ProjRadiusDamageInflation 0.1
+	ProjRadiusMaxDamage	19 // bal 10
+	ProjRadiusDamageInflation 0.1 // bal 0.02
 
-	MinCharLevel	5
-	
-	Power	6
+	MinCharLevel	5 // bal
+
+	Power	6 // bal 3
 }
 
 SkillFireBall
@@ -4688,8 +4698,8 @@ SkillFireBall
 
 	TextureName	Textures/Icons/Skills/fireball.tga
 
-	Power		25
-	TotalTime	1.3
+	Power		25 // bal 12
+	TotalTime	1.3 // bal 1.1
 	Spell		1
 
 	Projectile	ProjFireball
@@ -4707,25 +4717,25 @@ SkillFireBall
 	WaitForAnim	1
 
 	PerLevel	SkillFireBallPerLevel
-	
+
 	BaseCost	6
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillSweepingFlamesPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	5
-	ProjMaxDamage	14
-	ProjDamageInflation 0.1
+	ProjMinDamage	5 // bal 1
+	ProjMaxDamage	14 // bal 5
+	ProjDamageInflation 0.1 // bal 0.02
 
-	Power	5
-	
-	MinCharLevel	5
+	Power	5 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillSweepingFlames
@@ -4737,7 +4747,7 @@ SkillSweepingFlames
 
 	TextureName	Textures/Icons/Skills/sweepingFlames01.tga
 
-	Power		20
+	Power		20 // bal 12
 	TotalTime	1.1
 	Spell		1
 
@@ -4748,25 +4758,25 @@ SkillSweepingFlames
 	ProjMinDamage	5
 	ProjMaxDamage	15
 	ProjDamageType	Fire
-	ProjEarthquake	70.0
+	ProjEarthquake	70.0 // bal XXX
 
 	AlwaysWorks	1
 
 	PerLevel	SkillSweepingFlamesPerLevel
 
-	BaseCost	4	
+	BaseCost	4
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillImmolationPerLevel
 {
 	Base		BaseSkillPerLevel
-	Power		3
-	
-	MinCharLevel	5
+	Power		3 // bal 4
+
+	MinCharLevel	5 // bal
 }
 
 SkillImmolation
@@ -4778,8 +4788,8 @@ SkillImmolation
 
 	TextureName	Textures/Icons/Skills/spontaneousCombustion01.tga
 
-	Power		15
-	TotalTime	0.6
+	Power		15 // bal 20
+	TotalTime	0.6 // bal 1.1
 	Spell		1
 
 	StatusEffect	StatusEffectImmolation
@@ -4790,6 +4800,7 @@ SkillImmolation
 	MinRange	0
 	MaxRange	1000
 
+  ReuseTime 10.0 // XXX
 	PerLevel	SkillImmolationPerLevel
 
 	BaseCost	6
@@ -4801,8 +4812,8 @@ SkillImmolation
 	ShowSkillHint	1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillShieldOfFirePerLevel
@@ -4810,9 +4821,9 @@ SkillShieldOfFirePerLevel
 	Base		BaseSkillPerLevel
 
 	SilentHateChange	10.0
-	Power		6
-	
-	MinCharLevel	5
+	Power		6 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillShieldOfFire
@@ -4824,12 +4835,12 @@ SkillShieldOfFire
 
 	TextureName	Textures/Icons/Skills/shieldOfFire.tga
 
-	Power		25
-	TotalTime	1.5
+	Power		25 // bal 10
+	TotalTime	1.5 // bal 2
 	Spell		1
 
-	ReuseTime	60.0
-	
+	ReuseTime	60.0 // bal
+
 	SkillType	Buff
 
 	StatusEffect	StatusEffectShieldofFire
@@ -4838,14 +4849,14 @@ SkillShieldOfFire
 
 	PerLevel	SkillShieldOfFirePerLevel
 
-	BaseCost	2	
+	BaseCost	2
 
 	CastingAnimation	startShieldOfFire
 	Animation		castShieldOfFire
 
 	TargetEffect	Models/Effects/buff.mdl
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillFlameBladePerLevel
@@ -4853,9 +4864,9 @@ SkillFlameBladePerLevel
 	Base		BaseSkillPerLevel
 
 	SilentHateChange	10.0
-	Power	5
+	Power	5 // bal
 
-	ReuseTime	0.5
+	ReuseTime	0.5 // bal 3
 }
 
 // Make very expensive mana wise so non-full-mages can't abuse this
@@ -4868,11 +4879,11 @@ SkillFlameBlade
 
 	TextureName	Textures/Icons/Powerups/fireweapon.tga
 
-	Power		40
+	Power		40 // bal 20
 	TotalTime	2.0
 	Spell		1
 
-	ReuseTime	60.0
+	ReuseTime	60.0 // bal 90
 
 	SkillType	Buff
 
@@ -4893,8 +4904,8 @@ SkillFlameBlade
 SkillFireElementalPerLevel
 {
 	Base		BaseSkillPerLevel
-	//MonsterLevel	0.2
-	Power	9
+	//MonsterLevel	0.2 // bal
+	Power	9 // bal
 }
 
 SkillFireElemental
@@ -4907,7 +4918,7 @@ SkillFireElemental
 	TextureName	Textures/Icons/Monsters/elementalFire.tga
 
 	Power		40
-    TotalTime   3.0
+  TotalTime 3.0
 	Spell		1
 
 	ReuseTime	120.0
@@ -4925,12 +4936,12 @@ SkillFireElemental
 	MonsterNoSave	1
 	MonsterAddAsFollower	1
 	MonsterTimeLimit	30.0
-	MonsterLevel		-1.0
+	MonsterLevel		-1.0 // bal 3.0
 	MonsterMaxCount		1
 	MarkAsPet	1
 	MaxMonsterRarity	VeryRare
 
-	MonsterLevelPerUserLevel	1.0
+	MonsterLevelPerUserLevel	1.0 // bal 0.5
 
 	StandStillToCast	1
 }
@@ -4939,13 +4950,13 @@ SkillVolcanoPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	8
-	ProjMaxDamage	18
-	ProjDamageInflation 0.2
+	ProjMinDamage	8 // bal 9
+	ProjMaxDamage	18 // bal 25
+	ProjDamageInflation 0.2 // bal 0.02
 
-	Power	7
-	
-	MinCharLevel	5
+	Power	7 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillVolcano
@@ -4958,44 +4969,44 @@ SkillVolcano
 	TextureName	Textures/Icons/Skills/volcano.tga
 
 	Projectile	ProjVolcano
-	ProjMinDamage	20
-	ProjMaxDamage	40
+	ProjMinDamage	20 // bal 40
+	ProjMaxDamage	40 // bal 80
 	ProjDamageType	Fire
 
 	AlwaysWorks	1
 	CheckMousePosition	1
 
-	Earthquake	100.0
-	
-	Power		30
-	TotalTime	1.1
+	Earthquake	100.0 // XXX
+
+	Power		30 // bal 12
+	TotalTime	1.1 // bal 1
 	Spell		1
 
 	CastingAnimation	startVolcano
 	Animation		castVolcano
 
-	ReuseTime	7.0
+	ReuseTime	7.0 // bal 5
 
 	PerLevel	SkillVolcanoPerLevel
 
 	BaseCost	6
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillMaelstromPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	8
-	ProjMaxDamage	18
-	ProjDamageInflation 0.2
+	ProjMinDamage	8 // bal 9
+	ProjMaxDamage	18 // bal 25
+	ProjDamageInflation 0.2 // bal 0.02
 
-	Power	7
-	
-	MinCharLevel	5
+	Power	7 // 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillMaelstrom
@@ -5008,8 +5019,8 @@ SkillMaelstrom
 	TextureName	Textures/Icons/Skills/maelstrom.tga
 
 	Projectile	ProjMaelstrom
-	ProjMinDamage	10
-	ProjMaxDamage	40
+	ProjMinDamage	10 // bal 40
+	ProjMaxDamage	40 // bal 80
 	ProjDamageType	Fire
 	ProjStatusEffect	1
 
@@ -5023,33 +5034,33 @@ SkillMaelstrom
 
 	Earthquake	200.0
 
-	Power		35
-	TotalTime	1.1
+	Power		35 // bal 12
+	TotalTime	1.1 // bal 1
 	Spell		1
 
 	CastingAnimation	startMaelstrom
 	Animation		castMaelstrom
 
-	ReuseTime	30.0
+	ReuseTime	30.0 // bal 10
 
 	PerLevel	SkillMaelstromPerLevel
 
 	BaseCost	8
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
-// bal: make based on resistance
+// bal: make based on resistance XXX
 SkillFireMasteryPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatMultSkillDamage      0.05
-	//StatChangeResistanceFire		20
+	DynamicStatMultSkillDamage      0.05 // bal 0.1
+	//StatChangeResistanceFire		20 bal XXX
 
-	PointsReq	30	
+	PointsReq	30 // bal XXX
 }
 
 SkillFireMastery
@@ -5061,7 +5072,7 @@ SkillFireMastery
 
 	TextureName	Textures/Icons/Skills/fireMastery01.tga
 
-	StatReq		ResistanceFire
+	StatReq		ResistanceFire // bal XXX
 	PointsReq	30
 	MaxLevel	30	// bal: prevent insane boosts
 
@@ -5076,15 +5087,15 @@ SkillFireMastery
 	Skill		SkillMaelstrom
 
 	Skill		SkillHolyFire
-	EnhanceStatusEffect StatusEffectLifeburn
+	EnhanceStatusEffect StatusEffectLifeburn // bal
 	Skill		SkillLifeburn
-	EnhanceStatusEffect StatusEffectFlamingArrow
+	EnhanceStatusEffect StatusEffectFlamingArrow // bal
 	Skill		SkillExplodingArrow
 	Skill		SkillImmolationTrap
 
 	PerLevel	SkillFireMasteryPerLevel
 
-	BaseCost	4	
+	BaseCost	4
 }
 
 //
@@ -5109,15 +5120,15 @@ SkillBonusPowerPerIntIceMage
 {
 	Base		SkillBonusPowerPerInt
 
-	StatChangePerAttributeChange	0.375
+	StatChangePerAttributeChange	0.375 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntIceMage
 {
 	Base		SkillBonusPowerRegenPerInt
 
-	StatChangePerAttributeChange	0.0075
-	DynamicStatChangePowerRegen		0.16875	// Create offset for power regen
+	StatChangePerAttributeChange	0.0075 // bal 0.01
+	DynamicStatChangePowerRegen		0.16875	// bal Create offset for power regen
 }
 
 SkillManaGenIceMage
@@ -5129,10 +5140,10 @@ SkillManaGenIceMage
 
 	TextureName	Textures/Icons/Items/potions_mana_flask.tga
 
-	DynamicStatMultItemPowerGainMult	0.5 // 0.3
+	DynamicStatMultItemPowerGainMult	0.5 // 0.3 bal mult
 }
 
-// bal: make resistance not come from SPR
+// bal: make resistance not come from SPR XXX
 SkillPenaltyColdResistancePerSprIceMageBalance
 {
 	Base		BaseSkillBasic
@@ -5151,13 +5162,13 @@ SkillArticShardPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	5
-	ProjMaxDamage	13
-	ProjDamageInflation 0.2
+	ProjMinDamage	5 // bal 4
+	ProjMaxDamage	13 // bal 12
+	ProjDamageInflation 0.2 // bal 0.02
 
 	Power		3
-	
-	MinCharLevel	5
+
+	MinCharLevel	5 // bal
 }
 
 SkillArticShard
@@ -5170,12 +5181,12 @@ SkillArticShard
 	TextureName	Textures/Icons/Skills/arcticShard.tga
 
 	Power		10
-	TotalTime	1.2
+	TotalTime	1.2 // bal 1.0
 	Spell		1
 
 	Projectile	ProjFrostShard
-	ProjMinDamage	8
-	ProjMaxDamage	18
+	ProjMinDamage	8 // bal 5
+	ProjMaxDamage	18 // bal 15
 	ProjDamageType	Cold
 	ProjStatusEffect	1
 
@@ -5184,7 +5195,7 @@ SkillArticShard
 
 	ShowSkillHint	1
 
-	ProjStatusEffectChance	0.33 // Added: cold has a slow effect
+	ProjStatusEffectChance	0.33 // bal Added: cold has a slow effect
 	StatusEffect	StatusEffectFrost
 
 	PerLevel	SkillArticShardPerLevel
@@ -5192,21 +5203,21 @@ SkillArticShard
 	BaseCost		1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillFrostNovaPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	5
-	ProjMaxDamage	12	
-	ProjDamageInflation 0.2
+	ProjMinDamage	5 // bal 3
+	ProjMaxDamage	12 // bal 9
+	ProjDamageInflation 0.2 // bal 0.02
 
-	Power	6
-	
-	MinCharLevel	5
+	Power	6 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillFrostNova
@@ -5218,25 +5229,26 @@ SkillFrostNova
 
 	TextureName	Textures/Icons/Skills/frostNova.tga
 
-	MinRange	0
-	MaxRange	300	
-	
-	Power		30
-	TotalTime	2.0
+	Power		30 // 15
+	TotalTime	2.0 // 1
+
+	MinRange	0 // bal
+	MaxRange	300 // bal
+
 	Spell		1
-	
+
 	CastingAnimation	startFrostNova
 	Animation		castFrostNova
 
 	Projectile	ProjFrostNova
-	ProjMinDamage	10
-	ProjMaxDamage	20
+	ProjMinDamage	10 // bal 15
+	ProjMaxDamage	20 // bal 30
 	ProjDamageType	Cold
 	ProjStatusEffect	1
 
 	AlwaysWorks	1
 
-	ProjStatusEffectChance	0.33 // Added: cold has a slow effect
+	ProjStatusEffectChance	0.33 // bal Added: cold has a slow effect
 	StatusEffect	StatusEffectFrost
 
 	PerLevel	SkillFrostNovaPerLevel
@@ -5244,8 +5256,8 @@ SkillFrostNova
 	BaseCost		8
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillIceStormPerLevel
@@ -5253,12 +5265,12 @@ SkillIceStormPerLevel
 	Base		BaseSkillPerLevel
 
 	ProjMinDamage	5
-	ProjMaxDamage	14
-	ProjDamageInflation 0.2
+	ProjMaxDamage	14 // bal 15
+	ProjDamageInflation 0.2 // bal 0.02
 
-	Power	6
-	
-	MinCharLevel	5
+	Power	6 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillIceStorm
@@ -5279,8 +5291,8 @@ SkillIceStorm
 	AlwaysWorks	1
 	CheckMousePosition	1
 
-	Power		30
-	TotalTime	1.2
+	Power		30 // bal 15
+	TotalTime	1.2 // bal 1
 	Spell		1
 
 	CastingAnimation	startIceStorm
@@ -5288,22 +5300,22 @@ SkillIceStorm
 
 	StatusEffect	StatusEffectFrost
 
-	ReuseTime	15.0
+	ReuseTime	15.0 // bal 5
 
 	PerLevel	SkillIceStormPerLevel
 
 	BaseCost	6
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillConcentrationPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatMultPowerRegen	0.06
+	DynamicStatMultPowerRegen	0.06 // bal 0.1
 }
 
 SkillConcentration
@@ -5315,7 +5327,7 @@ SkillConcentration
 
 	TextureName	Textures/Icons/Skills/concentration01.tga
 
-	DynamicStatMultPowerRegen	0.06
+	DynamicStatMultPowerRegen	0.06 // bal 0.1
 
 	PerLevel	SkillConcentrationPerLevel
 
@@ -5326,10 +5338,10 @@ SkillIceArmorPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		7
-	ReuseTime	2
-	
-	MinCharLevel	5
+	Power		7 // bal 10
+	ReuseTime	2 // bal
+
+	MinCharLevel	5 // bal
 }
 
 SkillIceArmor
@@ -5341,14 +5353,14 @@ SkillIceArmor
 
 	TextureName	Textures/Icons/Skills/iceArmor.tga
 
-	Power		40
+	Power		40 // bal 50
 	TotalTime	3.0
 	Spell		1
 
 	CastingAnimation	startIceArmor
 	Animation		castIceArmor
 
-	ReuseTime	150
+	ReuseTime	150 // bal 300
 
 	SkillType	Buff
 
@@ -5359,15 +5371,14 @@ SkillIceArmor
 	BaseCost		4
 
 	ShowSkillHint	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillFrostBitePerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power 		5
+	Power 		5 // bal 3
 }
 
 SkillFrostBite
@@ -5379,10 +5390,10 @@ SkillFrostBite
 
 	TextureName	Textures/Icons/Skills/frostBite.tga
 
-	Power		35
-	TotalTime	0.6
+	Power		35 // bal 10
+	TotalTime	0.6 // bal 1.0
 	Spell		1
-	
+
 	CastingAnimation	startFrostBite
 	Animation		castFrostBite
 
@@ -5400,8 +5411,7 @@ SkillFrostBite
 SkillIcePrisonPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		5
+	Power		5 // bal 3
 }
 
 SkillIcePrison
@@ -5413,11 +5423,11 @@ SkillIcePrison
 
 	TextureName	Textures/Icons/Skills/icePrison.tga
 
-	Power		30
+	Power		30 // bal 10
 	TotalTime	1.0
 	Spell		1
-	
-	ReuseTime	2
+
+	ReuseTime	2 // bal
 
 	CastingAnimation	startIcePrison
 	Animation	castIcePrison
@@ -5435,9 +5445,9 @@ SkillPermafrostPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		6
+	Power		6 // bal 3
 
-	ReuseTime	3
+	ReuseTime	3 // bal
 }
 
 SkillPermafrost
@@ -5449,10 +5459,10 @@ SkillPermafrost
 
 	TextureName	Textures/Icons/Skills/permafrost.tga
 
-	Power		40
-	TotalTime	1.5
+	Power		40 // bal 20
+	TotalTime	1.5 // bal 1.0
 	Spell		1
-	ReuseTime	30
+	ReuseTime	30 // bal
 
 //	CastingAnimation	startPermafrost
 	Animation		castPermafrost
@@ -5477,17 +5487,17 @@ SkillShatterPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	MinDamage	6
-	MaxDamage	14
-	DamageInflation 0.2   // Too powerful?
-	
-	ProjMinDamage	7
-	ProjMaxDamage	17
-	ProjDamageInflation 0.2   // Too powerful already?
-	
-	Power		4
-	
-	MinCharLevel	5
+	MinDamage	6 // bal 5
+	MaxDamage	14 // bal 15
+	DamageInflation	0.00	// Already too powerful
+
+	ProjMinDamage	7 // bal 5
+	ProjMaxDamage	17 // bal 10
+	ProjDamageInflation	0.00	// Already too powerful
+
+	Power		4 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillShatter
@@ -5503,13 +5513,13 @@ SkillShatter
 	Animation		castShatter
 
 	Power		20
-	TotalTime	1.5
+	TotalTime	1.5 // bal 1.0
 	Spell		1
-	
+
 	//MagicAttack	1
-	MinDamage	15
-	MaxDamage	25
-	DamageType	Cold
+	MinDamage	15 // bal 10
+	MaxDamage	25 // bal 20
+	DamageType	Cold // bal
 
 	ProjectileOnKill	1
 	Projectile	ProjShatter
@@ -5526,19 +5536,19 @@ SkillShatter
 	ShowSkillHint	1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
-// bal: switch to using resistance
+// bal: switch to using resistance XXX
 SkillColdMasteryPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatMultSkillDamage	0.04
-	DynamicStatMultTotalTime	0.03
+	DynamicStatMultSkillDamage	0.04 // bal 0.075
+	DynamicStatMultTotalTime	0.03 // bal 0.04
 
-	//StatChangeResistanceCold	20
+	//StatChangeResistanceCold	20 // bal 4
 
 	PointsReq	30 // bal
 }
@@ -5552,18 +5562,18 @@ SkillColdMastery
 
 	TextureName	Textures/Icons/Skills/coldMastery01.tga
 
-	DynamicStatMultSkillDamage	0.04
-	DynamicStatMultTotalTime	0.03
-	//StatChangeResistanceCold	20
+	DynamicStatMultSkillDamage	0.04 // bal 0.075
+	DynamicStatMultTotalTime	0.03 // bal 0.04
+	//StatChangeResistanceCold	20 // bal 4
 
-	StatReq		ResistanceCold
+	StatReq		ResistanceCold // bal XXX
 	PointsReq	30
 	MaxLevel	30	// bal: prevent insane boosts
 
 	EnhanceStatusEffect	StatusEffectFrost
 	EnhanceStatusEffect	StatusEffectIcePrison
-	EnhanceStatusEffect	StatusEffectFrostBite
-	EnhanceStatusEffect	StatusEffectPermafrost
+	EnhanceStatusEffect	StatusEffectFrostBite // bal
+	EnhanceStatusEffect	StatusEffectPermafrost // bal
 	Skill			SkillArticShard
 	Skill			SkillFrostNova
 	Skill			SkillIceStorm
@@ -5595,15 +5605,15 @@ SkillBonusPowerPerIntMagician
 {
 	Base		SkillBonusPowerPerInt
 
-	StatChangePerAttributeChange	0.375
+	StatChangePerAttributeChange	0.375 // bal 1.0
 }
 
 SkillBonusPowerRegenPerIntMagician
 {
 	Base		SkillBonusPowerRegenPerInt
 
-	StatChangePerAttributeChange	0.0075
-	DynamicStatChangePowerRegen		0.16875	// Create offset for power regen
+	StatChangePerAttributeChange	0.0075 // bal 0.01
+	DynamicStatChangePowerRegen		0.16875	// bal Create offset for power regen
 }
 
 SkillManaGenMagician
@@ -5615,14 +5625,14 @@ SkillManaGenMagician
 
 	TextureName	Textures/Icons/Items/potions_mana_flask.tga
 
-	DynamicStatMultItemPowerGainMult	0.625 // 0.4
+	DynamicStatMultItemPowerGainMult	0.625 // bal 0.4
 }
 
 SkillBlindingFlashPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		10
+	Power		10 // bal 3
 }
 
 SkillBlindingFlash
@@ -5634,14 +5644,14 @@ SkillBlindingFlash
 
 	TextureName	Textures/Icons/Skills/blindingFlash01.tga
 
-	Power		40
-	TotalTime	1.2
+	Power		40 // bal 10
+	TotalTime	1.2 // bal 1.0
 	Spell		1
 
 	CastingAnimation	startBlindingFlash
 	Animation		castBlindingFlash
 
-	ReuseTime	20
+	ReuseTime	20 // bal 15
 	UseCheckTime	1.0
 	UseCheckChance	0.25
 
@@ -5671,9 +5681,9 @@ SkillArmorMeltPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		4
+	Power		4 // bal 3
 
-	MinCharLevel	4
+	MinCharLevel	4 // bal
 }
 
 SkillArmorMelt
@@ -5685,8 +5695,8 @@ SkillArmorMelt
 
 	TextureName	Textures/Icons/Skills/armorMelt01.tga
 
-	Power		25
-	TotalTime	2.0
+	Power		25 // bal 10
+	TotalTime	2.0 // bal 1
 	Spell		1
 
 	CastingAnimation	startArmorMelt
@@ -5699,18 +5709,18 @@ SkillArmorMelt
 
 	PerLevel	SkillArmorMeltPerLevel
 
-	BaseCost	2	
+	BaseCost	2
 
-	MinCharLevel	0
+	MinCharLevel	0 // bal
 }
 
 SkillMagicShieldPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		7
-	
-	MinCharLevel	5
+	Power		7 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillMagicShield
@@ -5722,11 +5732,11 @@ SkillMagicShield
 
 	TextureName	Textures/Icons/Skills/magicShield01.tga
 
-	Power		40
+	Power		40 // bal 20
 	TotalTime	2.0
 	Spell		1
 
-	ReuseTime	90.0
+	ReuseTime	90.0 // 120
 
 	CastingAnimation	startMagicShield
 	Animation		castMagicShield
@@ -5737,19 +5747,19 @@ SkillMagicShield
 
 	PerLevel	SkillMagicShieldPerLevel
 
-	BaseCost	2	
+	BaseCost	2
 
 	ShowSkillHint	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillDeepThoughtPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatMultMaxPower	0.05
-	StatChangeResistanceMagic	12
+	StatMultMaxPower	0.05 // bal 40 change
+	StatChangeResistanceMagic	12 // bal 4
 }
 
 SkillDeepThought
@@ -5761,7 +5771,7 @@ SkillDeepThought
 
 	TextureName	Textures/Icons/Skills/deepThought01.tga
 
-	StatMultMaxPower	0.05
+	StatMultMaxPower	0.05 // bal 40 change
 	StatChangeResistanceMagic	12
 
 	PerLevel	SkillDeepThoughtPerLevel
@@ -5797,9 +5807,10 @@ SkillMageEvasion
 SkillArcaneFocusPerLevel
 {
 	Base		BaseSkillPerLevel
-	Power		6
-	
-	ReuseTime	1
+
+	Power		6 // bal 3
+
+	ReuseTime	1 // bal
 }
 
 SkillArcaneFocus
@@ -5811,11 +5822,11 @@ SkillArcaneFocus
 
 	TextureName	Textures/Icons/Skills/arcaneFocus01.tga
 
-	Power		40
+	Power		40 // bal 10
 	TotalTime	0.5
 	Spell		1
 
-	ReuseTime	45
+	ReuseTime	45 // bal 120
 
 	SkillType	Buff
 
@@ -5835,8 +5846,8 @@ SkillTeleportPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ReuseTime	-1.2
-	Power		20
+	ReuseTime	-1.2 // bal -10
+	Power		20 // bal 3
 }
 
 SkillTeleport
@@ -5848,11 +5859,11 @@ SkillTeleport
 
 	TextureName	Textures/Icons/Skills/teleport01.tga
 
-	Power		40
+	Power		40 // bal 10
 	TotalTime	0.5
 	Spell		1
 
-	ReuseTime	6.0
+	ReuseTime	6.0 // bal 60
 
 	Teleport	1
 
@@ -5862,12 +5873,13 @@ SkillTeleport
 	PerLevel	SkillTeleportPerLevel
 
 	TargetEffect	Models/Effects/teleport.mdl
-	
-	StatusEffect	StatusEffectTeleportStealth
 
-	BaseCost	10
-	CostIncreasePerLevel	4
-	
+	BaseCost	10 // bal 4
+
+	StatusEffect	StatusEffectTeleportStealth // bal
+
+	CostIncreasePerLevel	4 // bal
+
 	MaxSkillLevel	6
 
 	ShowSkillHint	1
@@ -5877,13 +5889,13 @@ SkillArcaneBlastPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	6
-	ProjMaxDamage	16
-	ProjDamageInflation 0.2
+	ProjMinDamage	6 // bal 3
+	ProjMaxDamage	16 // bal 10
+	ProjDamageInflation 0.2 // bal 0.05
 
 	Power		3
-	
-	MinCharLevel	5
+
+	MinCharLevel	5 // bal
 }
 
 SkillArcaneBlast
@@ -5895,13 +5907,13 @@ SkillArcaneBlast
 
 	TextureName	Textures/Icons/Skills/arcaneBlast.tga
 
-	Power		10
+	Power		10 // bal 8
 	TotalTime	1.0
 	Spell		1
 
 	Projectile	ProjArcaneBlast
-	ProjMinDamage	15
-	ProjMaxDamage	25
+	ProjMinDamage	15 // bal 3
+	ProjMaxDamage	25 // bal 10
 	ProjDamageType	Magic
 
 	CastingAnimation	startArcaneBlast
@@ -5912,21 +5924,21 @@ SkillArcaneBlast
 	BaseCost	1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillArcaneSwarmPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	5
-	ProjMaxDamage	16
+	ProjMinDamage	5 // bal 3
+	ProjMaxDamage	16 // bal 8
+	ProjDamageInflation 0.1 // bal 0.05
 
-	ProjDamageInflation 0.1
-	Power		6
-	
-	MinCharLevel	5
+	Power		6 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillArcaneSwarm
@@ -5938,34 +5950,34 @@ SkillArcaneSwarm
 
 	TextureName	Textures/Icons/Skills/arcaneSwarm.tga
 
-	Power		25
-	TotalTime	1.2
+	Power		25 // bal 20
+	TotalTime	1.2 // bal 1
 	Spell		1
 
 	Projectile	ProjArcaneSwarm
-	ProjMinDamage	8
-	ProjMaxDamage	17
+	ProjMinDamage	8 // bal 3
+	ProjMaxDamage	17 // bal 8
 	ProjDamageType	Magic
 	ProjExtras	4
 
 	CastingAnimation	startArcaneBlast
 	Animation		castArcaneBlast
-	
+
 	PerLevel	SkillArcaneSwarmPerLevel
 
 	BaseCost	6
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillArcaneDrainPerLevel
 {
 	Base	BaseSkillPerLevel
 	Power	3
-	
-	MinCharLevel	5
+
+	MinCharLevel	5 // bal
 }
 
 SkillArcaneDrain
@@ -5980,11 +5992,13 @@ SkillArcaneDrain
 	CastingAnimation	startArcaneDrain
 	Animation	castArcaneDrain
 
-	MinRange	0
-	MaxRange	500
+  // bal ReuseTime 10.0
 
-	Power		15
-	TotalTime	0.5
+	MinRange	0
+	MaxRange	500 // bal 300
+
+	Power		15 // bal 10
+	TotalTime	0.5 // bal 1
 	Spell		1
 
 	StatusEffect	StatusEffectArcaneDrain
@@ -5994,8 +6008,8 @@ SkillArcaneDrain
 	BaseCost	4
 
 	ShowSkillHint	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 //
@@ -6026,21 +6040,21 @@ SkillBonusAttackPerDexArcher
 {
 	Base		SkillBonusAttackPerDex
 
-	StatChangePerAttributeChange	0.75 // 1.25
+	StatChangePerAttributeChange	0.75 // bal 1.25
 }
 
 SkillBonusDefensePerDexArcher
 {
 	Base		SkillBonusDefensePerDex
 
-	StatChangePerAttributeChange	0.75
+	StatChangePerAttributeChange	0.75 // bal 0.5
 }
 
 SkillBonusDamageMultPerStrArcher
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.0005
+	StatChangePerAttributeChange	0.0005 // bal 0.001
 }
 
 SkillManaGenArcher
@@ -6053,50 +6067,64 @@ SkillManaGenArcher
 	TextureName	Textures/Icons/Skills/manaGenOnCriticalHit.tga
 
 	PowerGainOnCriticalHit	3.0
-	PowerGainOnHit	0.5
+	PowerGainOnHit	0.5 // bal
 }
 
 SkillFlamingArrowPerLevel
 {
 	Base		BaseSkillPerLevel
 
+  // bal DamageMultAll 0.2
 	Power	1
 }
 
-// Turn flaming arrow into a buff
+// Turn flaming arrow into a debuff XXX
 //
 SkillFlamingArrow
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefense // bal Offense
 
 	BaseName	$$FlamingArrowSkillName$$
 	Desc		$$FlamingArrowSkillDesc$$
 
 	TextureName	Textures/Icons/Skills/fireShot.tga
 
-	Power		20
-	TotalTime	0.5
+	Power		20 // bal 8
+	TotalTime	0.5 // bal 1.3
 	ShowSkillHint	1
 
-	ReuseTime	8
-	
+	ReuseTime	8 // bal
+
+  // bal: change to status effect
+	//Projectile	ProjFlamingArrow
+	//ProjDamageType	Fire
+  //ProjectileDamage	1
+	//ProjPhysicalAttack	1
+
+	//DamageMultAll	0.2
+
+	Animation	shootFlamingArrow
+	WaitForAnim	1
+
 	PerLevel	SkillFlamingArrowPerLevel
 
 	WeaponType	WeaponBow
 
-	StatusEffect	StatusEffectFlamingArrow
+	StandStillToCast	1
 
-	SoundName		Sounds/Player/ApplyPoison.wav
-	
-	BaseCost	1
+	StatusEffect	StatusEffectFlamingArrow // bal
+
+	SoundName		Sounds/Player/ApplyPoison.wav // bal
+
+	BaseCost	1 // bal
 }
 
 SkillEagleEyePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatMultAttack		0.04
-	DynamicStatChangeCriticalHit	0.4
+	StatMultAttack		0.04 // bal 20 change
+	DynamicStatChangeCriticalHit	0.4 // bal 0.04 mult
 }
 
 SkillEagleEye
@@ -6108,56 +6136,71 @@ SkillEagleEye
 
 	TextureName	Textures/Icons/Skills/eagleEye.tga
 
-	StatMultAttack		0.04
-	DynamicStatChangeCriticalHit	0.4
+	StatMultAttack		0.04 // bal 20 change
+	DynamicStatChangeCriticalHit	0.4 // bal 0.04 mult
 
 	PerLevel	SkillEagleEyePerLevel
 
 	BaseCost		4
 }
 
-// Poison Arrow is also now a buff
+// bal Poison Arrow is also now a buff
 //
 SkillPoisonArrowPerLevel
 {
 	Base		BaseSkillPerLevel
-	
+
+	// bal DamageMultAll	0.05
 	Power		1
 }
 
 SkillPoisonArrow
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefense // bal Offense
 
 	BaseName	$$PoisonArrowSkillName$$
 	Desc		$$PoisonArrowSkillDesc$$
 
 	TextureName	Textures/Icons/Skills/poisonArrow.tga
 
-	Power		20
-	TotalTime	0.5
-	ReuseTime	8
+	Power		20 // bal 8
+	TotalTime	0.5 // bal 1.3
+	ReuseTime	8 // bal
 	ShowSkillHint	1
 
+  // bal: change to status effect only
+	//Projectile	ProjPoisonBolt
+	//ProjDamageType	Physical
+	//ProjectileDamage	1
+	//ProjPhysicalAttack	1
+	//ProjStatusEffect	1
+
+	//DamageMultAll	0.05
+
 	StatusEffect	StatusEffectPoisonArrow
+
+	Animation	shootPoisonArrow
+	WaitForAnim	1
 
 	PerLevel	SkillPoisonArrowPerLevel
 
 	WeaponType	WeaponBow
 
 	BaseCost		2
-	
-	SoundName		Sounds/Player/ApplyPoison.wav
+
+	SoundName		Sounds/Player/ApplyPoison.wav // bal
+
+	StandStillToCast	1
 }
 
-// Shock bolt is a regular arrow with stun
+// bal Shock bolt is a regular arrow with stun (XXX why?)
 //
 SkillShockBoltPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.032
-	
+	DamageMultAll	0.032 // bal 0.2
+
 	Power		1
 }
 
@@ -6170,22 +6213,22 @@ SkillShockBolt
 
 	TextureName	Textures/Icons/Skills/shockBolt.tga
 
-	Power		18
-	TotalTime	1.1
-	ReuseTime	3.7 // 4.7
+	Power		18 // bal 8
+	TotalTime	1.1 // bal 1.3
+	ReuseTime	3.7 // bal 4.7
 	ShowSkillHint	1
-	
-	Projectile	ProjShockBolt
-	//ProjDamageType	Lightning
-	ProjNormalAttack	1	// is needed?
-	
-	ProjectileDamage	1
-//	ProjPhysicalAttack	1
-	
-	ProjStatusEffect	1
-	ProjStatusEffectChance	0.5
 
-	DamageMultPhysical	0.08
+	Projectile	ProjShockBolt
+	//ProjDamageType	Lightning // bal
+	ProjNormalAttack	1	// is needed?
+
+	ProjectileDamage	1
+  //ProjPhysicalAttack 1 // bal
+
+	ProjStatusEffect	1
+	ProjStatusEffectChance	0.5 // bal 0.2
+
+	DamageMultAll	0.08 // bal 0.2
 
 	StatusEffect	StatusEffectShockBoltStun
 
@@ -6205,9 +6248,8 @@ SkillMultiShotPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.06
-	
-	Power		2
+	DamageMultPhysical	0.06 // bal All 0.15
+	Power		2 // bal 1
 }
 
 SkillMultiShot
@@ -6219,25 +6261,25 @@ SkillMultiShot
 
 	TextureName	Textures/Icons/Skills/multiShot.tga
 
-	Power		25
-	TotalTime	1.1	// 1.65
-	ReuseTime	3.7 // 4.7
+	Power		25 // bal 8
+	TotalTime	1.1	// bal 1.65
+	ReuseTime	3.7 // bal
 	ShowSkillHint	1
 
-	Projectile	ProjArrow
-	//ProjDamageType	Physical
+	Projectile	ProjArrow // bal ProjShockBolt
+	//ProjDamageType	Physical // bal Magic XXX
 	ProjectileDamage	1
-	ProjNormalAttack	1	// is needed?
+	ProjNormalAttack	1	// XXX is needed?
 	//Attack	1	// is needed?
 
-	ProjectileExtra	ProjArrowStraightBalance
-	// Added more projectiles
-	ProjAdditionalDir	-2
+	ProjectileExtra	ProjArrowStraightBalance // bal ProjShockBoltStraight
+	// bal Added more projectiles to make AOE useful
+	ProjAdditionalDir	-2 // bal
 	ProjAdditionalDir	-1
 	ProjAdditionalDir	1
-	ProjAdditionalDir	2
+	ProjAdditionalDir	2 // bal
 
-	DamageMultPhysical	-0.399999
+	DamageMultPhysical	-0.399999 // bal All 0.15
 
 	Animation	shootShockBlot
 	WaitForAnim	1
@@ -6249,15 +6291,15 @@ SkillMultiShot
 	BaseCost		4
 
 	StandStillToCast	1
-	Spell		1
+	Spell		1 // bal XXX
 }
 
 SkillBowMasteryPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatMultMinDamage	0.08 // bal
-	StatMultMaxDamage	0.08 // bal
+	StatMultMinDamage	0.08 // bal 0.1
+	StatMultMaxDamage	0.08 // bal 0.1
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 }
 
@@ -6270,8 +6312,8 @@ SkillBowMastery
 
 	TextureName	Textures/Icons/Skills/bowMastery.tga
 
-	StatMultMinDamage	0.08 // bal
-	StatMultMaxDamage	0.08 // bal
+	StatMultMinDamage	0.08 // bal 0.1
+	StatMultMaxDamage	0.08 // bal 0.1
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 
 	WeaponType	WeaponBow
@@ -6286,12 +6328,11 @@ SkillExplodingArrowPerLevel
 	Base		BaseSkillPerLevel
 
 	ProjRadiusMinDamage	5
-	ProjRadiusMaxDamage	17
-	ProjRadiusDamageInflation	0.1
-	
-	Power	2
-	
-	MinCharLevel	5
+	ProjRadiusMaxDamage	17 // bal 10
+	ProjRadiusDamageInflation	0.1 // bal 0.04
+	Power	2 // bal 1
+
+	MinCharLevel	5 // bal
 }
 
 SkillExplodingArrow
@@ -6303,9 +6344,9 @@ SkillExplodingArrow
 
 	TextureName	Textures/Icons/Skills/explodingArrow.tga
 
-	Power		22
+	Power		22 // bal 8
 	TotalTime	1.3
-	ReuseTime	5.1
+	ReuseTime	5.1 // bal
 
 	ShowSkillHint	1
 
@@ -6327,8 +6368,8 @@ SkillExplodingArrow
 	BaseCost		6
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillDodgeArcherPerLevel
@@ -6359,10 +6400,10 @@ SkillDodgeArcher
 SkillFastDrawPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		3
-	
-	ReuseTime	2
+
+	Power		3 // bal
+
+	ReuseTime	2 // bal
 }
 
 SkillFastDraw
@@ -6374,8 +6415,8 @@ SkillFastDraw
 
 	TextureName	Textures/Icons/Skills/fastDraw.tga
 
-	Power		30
-	ReuseTime	30
+	Power		30 // bal 0
+	ReuseTime	30 // bal 240
 
 	SaveForToughEnemies	1
 
@@ -6393,8 +6434,7 @@ SkillFastDraw
 SkillMarkedForDeathPerLevel
 {
 	Base		BaseSkillPerLevel
-
-	Power		2
+	Power		2 // bal 1
 }
 
 SkillMarkedForDeath
@@ -6406,8 +6446,8 @@ SkillMarkedForDeath
 
 	TextureName	Textures/Icons/Skills/markedForDeath.tga
 
-	Power		20
-	TotalTime	0.5
+	Power		20 // bal 10
+	TotalTime	0.5 // bal 1.0
 	Spell		1
 
 	Animation	markForDeath
@@ -6443,14 +6483,14 @@ SkillBonusAttackPerDexHunter
 {
 	Base		SkillBonusAttackPerDex
 
-	StatChangePerAttributeChange	0.75 // 1.25
+	StatChangePerAttributeChange	0.75 // bal 1.25
 }
 
 SkillBonusDefensePerDexHunter
 {
 	Base		SkillBonusDefensePerDex
 
-	StatChangePerAttributeChange	0.75 // 1.0
+	StatChangePerAttributeChange	0.75 // bal 1.0
 }
 
 SkillBonusHealthPerVitHunter
@@ -6464,10 +6504,10 @@ SkillBonusDamageMultPerStrHunter
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.0005
+	StatChangePerAttributeChange	0.0005 // bal 0.001
 }
 
-// Low mana regen because he has Infused Energy
+// bal Low mana regen because he has Infused Energy
 //
 SkillManaGenHunter
 {
@@ -6487,11 +6527,10 @@ SkillSerratedArrowPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical		0.06
-	DynamicStatChangeCriticalHit	1.2 // 0.11
-	DynamicStatChangeDeepWounds		1.2 // 0.11
-	
-	Power	2
+	DamageMultPhysical		0.06 // bal 0.15
+	DynamicStatChangeCriticalHit	1.2 // bal 0.2 mult
+	DynamicStatChangeDeepWounds		1.2 // bal 0.2 mult
+	Power	2 // bal
 }
 
 SkillSerratedArrow
@@ -6503,9 +6542,9 @@ SkillSerratedArrow
 
 	TextureName	Textures/Icons/Skills/serratedArrow.tga
 
-	Power		18
-	TotalTime	1.1 // 1.3
-	ReuseTime	3.7 // 5.1
+	Power		18 // bal 8
+	TotalTime	1.1 // bal 1.3
+	ReuseTime	3.7 // bal
 	ShowSkillHint	1
 
 	Projectile	ProjSerratedArrow
@@ -6514,8 +6553,8 @@ SkillSerratedArrow
 	ProjNormalAttack	1
 
 	DamageMultPhysical		0.15
-	DynamicStatChangeCriticalHit	3.0 // 0.12
-	DynamicStatChangeDeepWounds		3.0 // 0.12
+	DynamicStatChangeCriticalHit	3.0 // bal 0.2 mult
+	DynamicStatChangeDeepWounds		3.0 // bal 0.2 mult
 
 	Animation	shootSerratedArrow
 	WaitForAnim	1
@@ -6533,13 +6572,12 @@ SkillImmolationTrapPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjRadiusMinDamage	6
-	ProjRadiusMaxDamage	14
-	ProjRadiusDamageInflation	0.2
-	
-	Power 	2
-	
-	MinCharLevel	5
+	ProjRadiusMinDamage	6 // bal 5
+	ProjRadiusMaxDamage	14 // bal 15
+	ProjRadiusDamageInflation	0.2 // bal 0.04
+	Power 	2 // bal 1
+
+	MinCharLevel	5 // bal
 }
 
 SkillImmolationTrap
@@ -6551,8 +6589,8 @@ SkillImmolationTrap
 
 	TextureName	Textures/Icons/Skills/immolationTrap.tga
 
-	Power		25
-	TotalTime	2.0
+	Power		25 // bal 8
+	TotalTime	2.0 // bal 1.0
 	ShowSkillHint	1
 
 	Projectile	ProjThrowImmolationTrap
@@ -6572,21 +6610,20 @@ SkillImmolationTrap
 	PerLevel	SkillImmolationTrapPerLevel
 
 	BaseCost	2
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillFreezingTrapPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjRadiusMinDamage	5
-	ProjRadiusMaxDamage	12
-	ProjRadiusDamageInflation	0.2
-	
-	Power	2
-	
-	MinCharLevel	5
+	ProjRadiusMinDamage	5 // bal 3
+	ProjRadiusMaxDamage	12 // bal 8
+	ProjRadiusDamageInflation	0.2 // bal 0.04
+	Power	2 // bal 1
+
+	MinCharLevel	5 // bal
 }
 
 SkillFreezingTrap
@@ -6598,19 +6635,19 @@ SkillFreezingTrap
 
 	TextureName	Textures/Icons/Skills/freezingTrap.tga
 
-	Power		25
-	TotalTime	2.0
+	Power		25 // bal 8
+	TotalTime	2.0 // bal 1
 	ShowSkillHint	1
 
 	Projectile	ProjThrowFreezingTrap
 
-	ProjRadiusMinDamage	15
-	ProjRadiusMaxDamage	25
+	ProjRadiusMinDamage	15 // bal 10
+	ProjRadiusMaxDamage	25 // bal 15
 	ProjRadius		200
 	ProjDamageType		Cold
 	ProjStatusEffect	1
 
-	ProjStatusEffectChance	0.33 // Added: cold has a slow effect
+	ProjStatusEffectChance	0.33 // bal: cold has a slow effect
 	StatusEffect	StatusEffectFrost
 
 	Animation	throwTrap
@@ -6623,8 +6660,8 @@ SkillFreezingTrap
 	PerLevel	SkillFreezingTrapPerLevel
 
 	BaseCost	2
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillNetTrapPerLevel
@@ -6632,9 +6669,9 @@ SkillNetTrapPerLevel
 	Base		BaseSkillPerLevel
 
 	ProjRadius	25
-	
-	ReuseTime	0.5
-	Power		3
+	Power		3 // bal 1
+
+	ReuseTime	0.5 // bal
 }
 
 SkillNetTrap
@@ -6646,7 +6683,7 @@ SkillNetTrap
 
 	TextureName	Textures/Icons/Skills/netTrap.tga
 
-	Power		30
+	Power		30 // bal 8
 	TotalTime	1.0
 	ShowSkillHint	1
 
@@ -6666,7 +6703,7 @@ SkillNetTrap
 
 	AlwaysWorks	1
 
-	ReuseTime	8.0
+	ReuseTime	8.0 // bal 5
 
 	PerLevel	SkillNetTrapPerLevel
 
@@ -6678,7 +6715,7 @@ SkillInfusedEnergyPerLevel
 	Base		BaseSkillPerLevel
 
 	Stamina			20
-	PowerAdded		20
+	PowerAdded		20 // bal 40
 }
 
 SkillInfusedEnergy
@@ -6691,11 +6728,11 @@ SkillInfusedEnergy
 	TextureName	Textures/Icons/Skills/infusedEnergy.tga
 
 	Power		0
-	ReuseTime	20
+	ReuseTime	20 // bal 60
 	Spell		1
 
-	Stamina			50
-	PowerAdded		20
+	Stamina			50 // bal 20
+	PowerAdded		20 // bal 40
 
 	SaveForToughEnemies	1
 
@@ -6733,9 +6770,9 @@ SkillSprintPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		3
-	
-	ReuseTime	0.5
+	Power		3 // bal
+
+	ReuseTime	0.5 // bal
 }
 
 SkillSprint
@@ -6747,8 +6784,8 @@ SkillSprint
 
 	TextureName	Textures/Icons/Skills/sprint.tga
 
-	Power		30
-	ReuseTime	30
+	Power		30 // bal 0
+	ReuseTime	30 // bal 120
 
 	SaveForToughEnemies	1
 
@@ -6767,10 +6804,10 @@ SkillTrapMasteryPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatMultSkillDamage	0.03
-	DynamicStatMultPowerNeeded	-0.02
-	
-	StatChangeDisarmTrap	2	
+	DynamicStatMultSkillDamage	0.03 // bal 0.1
+	DynamicStatMultPowerNeeded	-0.02 // bal -0.08
+
+	StatChangeDisarmTrap	2
 	StatChangePerception	5
 }
 
@@ -6783,31 +6820,31 @@ SkillTrapMastery
 
 	TextureName	Textures/Icons/Skills/trapMastery.tga
 
-	DynamicStatMultSkillDamage	0.03
-	DynamicStatMultPowerNeeded	-0.02
-	
+	DynamicStatMultSkillDamage	0.03 // bal 0.1
+	DynamicStatMultPowerNeeded	-0.02 // bal -0.08
+
 	StatChangeDisarmTrap	2
 	StatChangePerception	5
-	
-	EnhanceStatusEffect	StatusEffectNet
+
+	EnhanceStatusEffect	StatusEffectNet // bal
 	Skill		SkillImmolationTrap
 	Skill		SkillFreezingTrap
 	Skill		SkillNetTrap
 
 	PerLevel	SkillTrapMasteryPerLevel
 
-	BaseCost	2
+	BaseCost	2 // bal
 }
 
 SkillCookingPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	SuccessChance	0.04
-	
-	TotalTime	-0.35
-	
-	Power		4
+	SuccessChance	0.04 // bal 0.05
+	Power		4 // bal 1
+
+	TotalTime	-0.35 // bal
+
 }
 
 SkillCooking
@@ -6819,14 +6856,14 @@ SkillCooking
 
 	TextureName	Textures/Icons/Items/food_roastedBoar.tga
 
-	Power		25
-	TotalTime	4.0
+	Power		25 // bal 10
+	TotalTime	4.0 // bal 1.0
 
 	NeedsDeadBody		1
 	DestroysBody		1
 	TargetMustBeEdible	1
 
-	SuccessChance	0.2
+	SuccessChance	0.2 // bal 0.1
 
 	SpawnFromBaseItemType	BaseFood
 
@@ -6845,8 +6882,7 @@ SkillLurePerLevel
 	Base		BaseSkillPerLevel
 
 	MonsterLevel		4.0
-	
-	Power	2
+	Power	2 // bal 1
 }
 
 SkillLure
@@ -6858,7 +6894,7 @@ SkillLure
 
 	TextureName	Textures/Icons/Skills/lure.tga
 
-	Power		25
+	Power		25 // bal 8
 	TotalTime	1.0
 	Spell		1
 	ShowSkillHint	1
@@ -6897,15 +6933,15 @@ SkillBonusPowerPerSprDruid
 {
 	Base		SkillBonusPowerPerSpr
 
-	StatChangePerAttributeChange	0.4	 // higher than normal
+	StatChangePerAttributeChange	0.4	 // bal higher than normal 2.0
 }
 
 SkillBonusPowerRegenPerSprDruid
 {
 	Base		SkillBonusPowerRegenPerSpr
 
-	StatChangePerAttributeChange	0.005
-	DynamicStatChangePowerRegen		0.075	
+	StatChangePerAttributeChange	0.005 // bal 0.01
+	DynamicStatChangePowerRegen		0.075 // bal
 }
 
 SkillWeaknessPerLevel
@@ -6914,7 +6950,7 @@ SkillWeaknessPerLevel
 
 	SilentHateChange	10.0
 
-	Power		5
+	Power		5 // bal 3
 }
 
 SkillWeakness
@@ -6926,8 +6962,8 @@ SkillWeakness
 
 	TextureName	Textures/Icons/Skills/weakness01.tga
 
-	Power		25
-	TotalTime	0.6
+	Power		25 // bal 10
+	TotalTime	0.6 // bal 1
 	Spell		1
 
 	CastingAnimation	startWeakness
@@ -6951,9 +6987,9 @@ SkillBarkskinPerLevel
 
 	SilentHateChange	10.0
 
-	Power		6
-	
-	MinCharLevel	5
+	Power		6 // bal 5
+
+	MinCharLevel	5 // bal
 }
 
 SkillBarkskin
@@ -6965,14 +7001,14 @@ SkillBarkskin
 
 	TextureName	Textures/Icons/Skills/barkskin.tga
 
-	Power		30
-	TotalTime	2.0
+	Power		30 // bal 40
+	TotalTime	2.0 // bal 3
 	Spell		1
 
 	CastingAnimation	startBarkskin
 	Animation		castBarkskin
 
-	ReuseTime	150
+	ReuseTime	150 // bal 300
 
 	SkillType	Buff
 
@@ -6985,21 +7021,21 @@ SkillBarkskin
 	BaseCost		3
 
 	ShowSkillHint	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillEarthquakePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	MinDamage	6
-	MaxDamage	14
-	DamageInflation	0.2
+	MinDamage	6 // bal 4
+	MaxDamage	14 // bal 8
+	DamageInflation	0.2 // bal 0.02
 
-	Power		6
-	
-	MinCharLevel	5
+	Power		6 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillEarthquake
@@ -7011,15 +7047,15 @@ SkillEarthquake
 
 	TextureName	Textures/Icons/Skills/earthquake01.tga
 
-	Power		30
+	Power		30 // bal 20
 	TotalTime	1.0
 	Spell		1
-	ReuseTime	25.0
+	ReuseTime	25.0 // bal
 
 	CastingAnimation	startEarthquake
 	Animation		castEarthquake
 
-	MinDamage	15
+	MinDamage	15 // bal 10
 	MaxDamage	30
 	DamageType	Physical
 
@@ -7041,8 +7077,8 @@ SkillEarthquake
 	BaseCost	8
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillManaRegenPerLevel
@@ -7050,7 +7086,7 @@ SkillManaRegenPerLevel
 	Base		BaseSkillPerLevel
 
 	SilentHateChange	10.0
-	Power		1
+	Power		1 // bal 5
 }
 
 SkillManaRegen
@@ -7062,11 +7098,11 @@ SkillManaRegen
 
 	TextureName	Textures/Icons/Skills/manaRegen.tga
 
-	Power		5
+	Power		5 // bal 15
 	TotalTime	1.5
 	Spell		1
 
-	ReuseTime	100
+	ReuseTime	100 // bal 300
 
 	CastingAnimation	startManaRegen
 	Animation		castManaRegen
@@ -7090,11 +7126,11 @@ SkillStrengthOfStonePerLevel
 
 	SilentHateChange	10.0
 
-	MinCharLevel	3
+	Power		6 // bal 10
 
-	Power		6
-	
-	ReuseTime	1.5
+	MinCharLevel	3 // bal
+
+	ReuseTime	1.5 // bal
 }
 
 SkillStrengthOfStone
@@ -7106,14 +7142,14 @@ SkillStrengthOfStone
 
 	TextureName	Textures/Icons/Skills/strengthOfStone.tga
 
-	Power		30
-	TotalTime	2.0
+	Power		30 // bal 50
+	TotalTime	2.0 // bal 3
 	Spell		1
 
 	CastingAnimation	startStrengthOfStone
 	Animation		castStrengthOfStone
 
-	ReuseTime	60
+	ReuseTime	60 // bal 300
 
 	SkillType	Buff
 
@@ -7123,7 +7159,7 @@ SkillStrengthOfStone
 
 	PerLevel	SkillStrengthOfStonePerLevel
 
-	MinCharLevel	3
+	MinCharLevel	3 // bal
 
 	BaseCost		4
 
@@ -7134,9 +7170,8 @@ SkillEarthLinkPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	//StatChangeMaxHealth		10
-	StatMultMaxHealth			0.05
-	StatChangeResistancePoison	12
+	StatMultMaxHealth			0.05 // bal Change 10
+	StatChangeResistancePoison	12 // bal 10
 }
 
 SkillEarthLink
@@ -7148,22 +7183,20 @@ SkillEarthLink
 
 	TextureName	Textures/Icons/Skills/earthLink.tga
 
-	//StatChangeMaxHealth		10
-	StatMultMaxHealth			0.05
-	StatChangeResistancePoison	12
+	StatMultMaxHealth			0.05 // bal change 10
+	StatChangeResistancePoison	12 // bal 10
 
 	PerLevel	SkillEarthLinkPerLevel
-	
-	BaseCost	1
+
+	BaseCost	1 // bal
 }
 
 SkillNaturesRevengePerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2
-	
-	MinCharLevel	5
+	Power		2 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillNaturesRevenge
@@ -7178,8 +7211,8 @@ SkillNaturesRevenge
 	CastingAnimation	startNaturesRevenge
 	Animation		castNaturesRevenge
 
-	Power		18
-	TotalTime	0.6
+	Power		18 // bal 15
+	TotalTime	0.6 // bal 1.1
 	Spell		1
 
 	StatusEffect	StatusEffectNaturesRevenge
@@ -7191,17 +7224,17 @@ SkillNaturesRevenge
 	ShowSkillHint	1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillKodiakPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		8
-	
-	ReuseTime	-5
+	Power		8 // bal 10
+
+	ReuseTime	-5 // bal
 }
 
 SkillKodiak
@@ -7220,7 +7253,7 @@ SkillKodiak
 	CastingAnimation	startKodiak
 	Animation		castKodiak
 
-	ReuseTime	80
+	ReuseTime	80 // bal 120
 
 	SkillType	Buff
 
@@ -7230,7 +7263,7 @@ SkillKodiak
 
 	PerLevel	SkillKodiakPerLevel
 
-	BaseCost		6
+	BaseCost		6 // bal 4
 
 	ShowSkillHint	1
 }
@@ -7239,9 +7272,9 @@ SkillStalkerPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		8
-	
-	ReuseTime	-5
+	Power		8 // bal 10
+
+	ReuseTime	-5 // bal
 }
 
 SkillStalker
@@ -7260,7 +7293,7 @@ SkillStalker
 	CastingAnimation	startStalker
 	Animation		castStalker
 
-	ReuseTime	80
+	ReuseTime	80 // bal 0
 
 	SkillType	Buff
 
@@ -7270,7 +7303,7 @@ SkillStalker
 
 	PerLevel	SkillStalkerPerLevel
 
-	BaseCost		6
+	BaseCost		6 // bal 4
 
 	ShowSkillHint	1
 }
@@ -7279,9 +7312,10 @@ SkillEarthMasteryPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatMultSkillDamage	0.04
-	DynamicStatMultTotalTime	0.03
-    StatChangeResistancePoison	15
+	DynamicStatMultSkillDamage	0.04 // bal 0.1
+	// bal XXX DynamicStatMultPowerNeeded	-0.08
+	DynamicStatMultTotalTime	0.03 // bal
+  StatChangeResistancePoison	15 // bal
 }
 
 SkillEarthMastery
@@ -7293,19 +7327,20 @@ SkillEarthMastery
 
 	TextureName	Textures/Icons/Skills/earthMastery01.tga
 
-	DynamicStatMultSkillDamage	0.04
-	DynamicStatMultTotalTime	0.03
-	StatChangeResistancePoison	15
+	DynamicStatMultSkillDamage	0.04 // bal 0.1
+	// bal XXX DynamicStatMultPowerNeeded	-0.08
+	DynamicStatMultTotalTime	0.03 // bal
+	StatChangeResistancePoison	15 // bal
 
 	Skill		SkillBarkskin
 	Skill		SkillStrengthOfStone
 	Skill		SkillEarthquake
 	Skill		SkillWeakness
 	Skill		SkillNaturesRevenge
-	EnhanceStatusEffect		StatusEffectBarkskin
-	EnhanceStatusEffect		StatusEffectStrengthOfStone
-	EnhanceStatusEffect		StatusEffectWeakness
 	EnhanceStatusEffect		StatusEffectNaturesRevenge
+	EnhanceStatusEffect		StatusEffectBarkskin // bal
+	EnhanceStatusEffect		StatusEffectStrengthOfStone // bal
+	EnhanceStatusEffect		StatusEffectWeakness // bal
 
 	PerLevel	SkillEarthMasteryPerLevel
 
@@ -7356,14 +7391,14 @@ SkillBonusPowerPerIntWarlock
 {
 	Base		SkillBonusPowerPerInt
 
-	StatChangePerAttributeChange	0.375
+	StatChangePerAttributeChange	0.375 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntWarlock
 {
 	Base		SkillBonusPowerRegenPerInt
 
-	StatChangePerAttributeChange	0.0075
+	StatChangePerAttributeChange	0.0075 // bal 0.01
 	DynamicStatChangePowerRegen		0.16875 // bal: new base regen
 }
 
@@ -7372,12 +7407,12 @@ SkillShadowBoltPerLevel
 	Base		BaseSkillPerLevel
 
 	ProjMinDamage	5
-	ProjMaxDamage	13
-	ProjDamageInflation	0.2
+	ProjMaxDamage	13 // bal 15
+	ProjDamageInflation	0.2 // bal 0.05
 
 	Power		3
-	
-	MinCharLevel	5
+
+	MinCharLevel	5 // bal
 }
 
 SkillShadowBolt
@@ -7389,13 +7424,13 @@ SkillShadowBolt
 
 	TextureName	Textures/Icons/Skills/shadowBolt.tga
 
-	Power		10
-	TotalTime	1.2
+	Power		10 // bal 8
+	TotalTime	1.2 // bal 1
 	Spell		1
 
 	Projectile	ProjShadowBolt
-	ProjMinDamage	5
-	ProjMaxDamage	18
+	ProjMinDamage	5	// Not more damage, because no monsters with magic resist enhancements
+	ProjMaxDamage	18 // bal 15
 	ProjDamageType	Magic
 
 	CastingAnimation	startShadowBolt
@@ -7406,18 +7441,18 @@ SkillShadowBolt
 	BaseCost	1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillChaosLordPerLevel
 {
 	Base		BaseSkillPerLevel
-	//MonsterLevel		2.0
-	Power		13
-	MonsterTimeLimit	2.0
-	
-	ReuseTime	2
+	//bal MonsterLevel		2.0
+	Power		13 // bal 3
+	MonsterTimeLimit	2.0 // bal XXX
+
+	ReuseTime	2 // bal
 }
 
 SkillChaosLord
@@ -7429,16 +7464,16 @@ SkillChaosLord
 
 	TextureName	Textures/Icons/Monsters/demon.tga
 
-	Power		50
+	Power		50 // bal 40
 	TotalTime	2.0
 	Spell		1
-	
-	ReuseTime	60
+
+	ReuseTime	60 // bal
 
 	PerLevel	SkillChaosLordPerLevel
 
-	BaseCost	8	
-	
+	BaseCost	8
+
 	CastingAnimation	startChaosLord
 	Animation		castChaosLord
 
@@ -7447,15 +7482,15 @@ SkillChaosLord
 	MonsterStatusEffect	StatusEffectPlayerSummonedChaosLord
 	MonsterNoSave		1
 	MonsterAddAsFollower	1
-	MonsterLevel		-3.0
+	MonsterLevel		-3.0 // bal 3
 	MonsterMaxCount		1
 	MarkAsPet		1
-	//DespawnMonsterType	MonsterFiendPet
-	//DespawnMonsterType	MonsterFourArmsPet
+	//bal DespawnMonsterType	MonsterFiendPet
+	//bal DespawnMonsterType	MonsterFourArmsPet
 	MaxMonsterRarity	VeryRare
-	MonsterTimeLimit	15.0
-	
-	MonsterLevelPerUserLevel	1.0
+	MonsterTimeLimit	15.0 // bal XXX
+
+	MonsterLevelPerUserLevel	1.0 // bal 0.5
 
 	StandStillToCast	1
 }
@@ -7463,10 +7498,9 @@ SkillChaosLord
 SkillScreePerLevel
 {
 	Base		BaseSkillPerLevel
-	// MonsterLevel		1.5
+	// bal MonsterLevel		1.5
 	MonsterMaxCount		0.5
-	
-	Power	7
+	Power	7 // bal 3
 }
 
 SkillScree
@@ -7478,11 +7512,11 @@ SkillScree
 
 	TextureName	Textures/Icons/Monsters/fiend.tga
 
-	Power		30
+	Power		30 // bal 40
 	TotalTime	2.0
 	Spell		1
-	
-	ReuseTime	60
+
+	ReuseTime	60 // bal
 
 	PerLevel	SkillScreePerLevel
 
@@ -7496,24 +7530,24 @@ SkillScree
 	MonsterStatusEffect	StatusEffectPlayerSummonedScree
 	MonsterNoSave		1
 	MonsterAddAsFollower	1
-	MonsterLevel		0.0
+	MonsterLevel		0.0 // bal 2
 	MonsterMaxCount		1
 	MarkAsPet		1
-	//DespawnMonsterType	MonsterDemonPet
-	//DespawnMonsterType	MonsterFourArmsPet
+	//bal DespawnMonsterType	MonsterDemonPet
+	//bal DespawnMonsterType	MonsterFourArmsPet
 	MaxMonsterRarity	VeryRare
 
-	MonsterLevelPerUserLevel	1.0
+	MonsterLevelPerUserLevel	1.0 // bal 0.5
 
-	StandStillToCast	1	
+	StandStillToCast	1
 }
 
 SkillFuryPerLevel
 {
 	Base		BaseSkillPerLevel
-	//MonsterLevel		2.0
+	//bal MonsterLevel		2.0
 	MonsterMaxCount		0.25
-	Power	8
+	Power	8 // bal 3
 }
 
 SkillFury
@@ -7528,13 +7562,13 @@ SkillFury
 	Power		40
 	TotalTime	2.0
 	Spell		1
-	
-	ReuseTime	120
+
+	ReuseTime	120 // bal XXX
 
 	PerLevel	SkillFuryPerLevel
 
 	BaseCost	6
-	
+
 	CastingAnimation	startFury
 	Animation		castFury
 
@@ -7543,14 +7577,14 @@ SkillFury
 	MonsterStatusEffect	StatusEffectPlayerSummonedFury
 	MonsterNoSave		1
 	MonsterAddAsFollower	1
-	MonsterLevel		-1.0
+	MonsterLevel		-1.0 // bal 2
 	MonsterMaxCount		1
 	MarkAsPet		1
-	//DespawnMonsterType	MonsterDemonPet
-	//DespawnMonsterType	MonsterFiendPet
+	//bal DespawnMonsterType	MonsterDemonPet
+	//bal DespawnMonsterType	MonsterFiendPet
 	MaxMonsterRarity	VeryRare
-	
-	MonsterLevelPerUserLevel	1.0
+
+	MonsterLevelPerUserLevel	1.0 // bal 0.5
 
 	StandStillToCast	1
 }
@@ -7583,7 +7617,7 @@ SkillDemonMastery
 SkillCurseOfEnfeeblementPerLevel
 {
 	Base		BaseSkillPerLevel
-	Power		5
+	Power		5 // bal 3
 }
 
 SkillCurseOfEnfeeblement
@@ -7595,8 +7629,8 @@ SkillCurseOfEnfeeblement
 
 	TextureName	Textures/Icons/Skills/curseOfEnfeeblement.tga
 
-	Power		30
-	TotalTime	0.7
+	Power		30 // bal 10
+	TotalTime	0.7 // bal 1
 	Spell		1
 
 	UseMousePosition	1
@@ -7621,9 +7655,9 @@ SkillCurseOfEnfeeblement
 SkillCurseOfPainPerLevel
 {
 	Base		BaseSkillPerLevel
-	Power		5
-	
-	MinCharLevel	5
+	Power		5 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillCurseOfPain
@@ -7635,10 +7669,9 @@ SkillCurseOfPain
 
 	TextureName	Textures/Icons/Skills/curseOfPain.tga
 
-	Power		20	
-	TotalTime	0.7
+	Power		20 // bal 10
+	TotalTime	0.7 // bal 1
 	Spell		1
-//	ReuseTime   2.0
 
 	UseMousePosition	1
 	AllEnemies	1
@@ -7657,14 +7690,14 @@ SkillCurseOfPain
 	PerLevel	SkillCurseOfPainPerLevel
 
 	BaseCost	2
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillCurseOfVulnerabilityPerLevel
 {
 	Base		BaseSkillPerLevel
-	Power		5
+	Power		5 // bal 3
 }
 
 SkillCurseOfVulnerability
@@ -7676,8 +7709,8 @@ SkillCurseOfVulnerability
 
 	TextureName	Textures/Icons/Skills/curseOfVulnerability.tga
 
-	Power		30
-	TotalTime	0.7
+	Power		30 // bal 10
+	TotalTime	0.7 // bal 1
 	Spell		1
 
 	UseMousePosition	1
@@ -7702,7 +7735,7 @@ SkillCurseOfVulnerability
 SkillCurseOfStammerPerLevel
 {
 	Base		BaseSkillPerLevel
-	Power		5
+	Power		5 // bal 3
 }
 
 SkillCurseOfStammer
@@ -7714,8 +7747,8 @@ SkillCurseOfStammer
 
 	TextureName	Textures/Icons/Skills/curseOfStammer.tga
 
-	Power		30
-	TotalTime	0.7
+	Power		30 // bal 10
+	TotalTime	0.7 // bal 1
 	Spell		1
 
 	UseMousePosition	1
@@ -7741,12 +7774,12 @@ SkillDarkSacrificePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	PowerAdded		30
+	PowerAdded		30 // bal 50
 
 	MinDamage	5
 	MaxDamage	15
-	
-	DamageInflation		-0.015
+
+	DamageInflation		-0.015 // bal
 }
 
 SkillDarkSacrifice
@@ -7760,10 +7793,10 @@ SkillDarkSacrifice
 
 	Power		0
 	TotalTime	0.5
-	ReuseTime	5
+	ReuseTime	5 // bal 60
 	Spell		1
 
-	PowerAdded		30
+	PowerAdded		30 // bal 50
 
 	Animation	castDarkSacrifice
 
@@ -7794,14 +7827,14 @@ SkillBonusPowerPerIntNecromancer
 {
 	Base		SkillBonusPowerPerInt
 
-	StatChangePerAttributeChange	0.375
+	StatChangePerAttributeChange	0.375 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntNecromancer
 {
 	Base		SkillBonusPowerRegenPerInt
 
-	StatChangePerAttributeChange	0.0075  // bal
+	StatChangePerAttributeChange	0.0075  // bal 0.01
 	DynamicStatChangePowerRegen		0.16875	// bal: offset for power regen
 }
 
@@ -7822,12 +7855,12 @@ SkillBoltOfGloomPerLevel
 	Base		BaseSkillPerLevel
 
 	ProjMinDamage	5
-	ProjMaxDamage	13
-	ProjDamageInflation	0.2
+	ProjMaxDamage	13 // bal 15
+	ProjDamageInflation	0.2 // bal 0.05
 
 	Power	3
 
-	MinCharLevel	5
+	MinCharLevel	5 // bal
 }
 
 SkillBoltOfGloom
@@ -7839,13 +7872,13 @@ SkillBoltOfGloom
 
 	TextureName	Textures/Icons/Skills/boltOfGloom.tga
 
-	Power		10
-	TotalTime	1.3
+	Power		10 // bal 8
+	TotalTime	1.3 // bal 1
 	Spell		1
 
 	Projectile	ProjBoltOfGloom
-	ProjMinDamage	8
-	ProjMaxDamage	18
+	ProjMinDamage	8 // bal 5
+	ProjMaxDamage	18 // bal 15
 	ProjDamageType	Fire
 	ProjStatusEffect	1
 
@@ -7860,7 +7893,7 @@ SkillBoltOfGloom
 
 	StandStillToCast	1
 
-	MinCharLevel	0
+	MinCharLevel	0 // bal
 }
 
 SkillBoneShatterPerLevel
@@ -7868,16 +7901,15 @@ SkillBoneShatterPerLevel
 	Base		BaseSkillPerLevel
 
 	MinDamage	5
-	MaxDamage	17
-	DamageInflation	0.1
-	
-	ProjMinDamage	6
-	ProjMaxDamage	16
-	ProjDamageInflation	0.2
-	
-	Power 	5
-	
-	MinCharLevel	5
+	MaxDamage	17 // bal 15
+	DamageInflation	0.1 // bal 0.05
+
+	ProjMinDamage	6 // bal 5
+	ProjMaxDamage	16 // bal 10
+	ProjDamageInflation	0.2 // bal 0.05
+	Power 	5 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillBoneShatter
@@ -7893,14 +7925,14 @@ SkillBoneShatter
 	Animation		castBoneShatter
 
 	Power		20
-	TotalTime	1.2
+	TotalTime	1.2 // bal 1
 
 	Spell		1
 
 	//MagicAttack	1
-	MinDamage	15
-	MaxDamage	25
-	DamageType	Magic
+	MinDamage	15 // bal 10
+	MaxDamage	25 // bal 20
+	DamageType	Magic // bal
 
 	ProjectileOnKill	1
 	Projectile	ProjShatter
@@ -7920,15 +7952,14 @@ SkillBoneShatter
 	ShowSkillHint	1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillDiseaseCloudPerLevel
 {
 	Base	BaseSkillPerLevel
-
-	Power 	6
+	Power 	6 // bal 3
 }
 
 SkillDiseaseCloud
@@ -7942,11 +7973,11 @@ SkillDiseaseCloud
 
 	StatusEffect	StatusEffectDiseaseCloud
 
-	Power		40
+	Power		40 // bal 25
 	TotalTime	1.0
 
-	ReuseTime	60.0
-	
+	ReuseTime	60.0 // bal
+
 	Spell		1
 	ShowSkillHint	1
 
@@ -7964,14 +7995,13 @@ SkillDiseaseCloud
 
 	PerLevel	SkillDiseaseCloudPerLevel
 
-	BaseCost	6
+	BaseCost	6 // bal 4
 }
 
 SkillDespairPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		4
+	Power		4 // bal 3
 }
 
 SkillDespair
@@ -7983,9 +8013,9 @@ SkillDespair
 
 	TextureName	Textures/Icons/Skills/despair.tga
 
-	Power		30
-	TotalTime	0.6
-	
+	Power		30 // bal 10
+	TotalTime	0.6 // bal 1
+
 	Spell		1
 
 	CastingAnimation	startDespair
@@ -8004,9 +8034,9 @@ SkillBlightPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		5
+	Power		5 // bal 3
 
-	MinCharLevel	5
+	MinCharLevel	5 // bal
 }
 
 SkillBlight
@@ -8020,11 +8050,10 @@ SkillBlight
 
 	StatusEffect	StatusEffectBlight
 
-	Power		22
-	TotalTime	1.0
+	Power		22 // bal 25
+	TotalTime	1.0 // bal 0.75
 	Spell		1
 	ShowSkillHint	1
-	//ReuseTime	3.0
 
 	MinRange	0
 	MaxRange	400
@@ -8040,16 +8069,15 @@ SkillBlight
 
 	PerLevel	SkillBlightPerLevel
 
-	BaseCost	4
-	
-	MinCharLevel	0
+	BaseCost	4 // bal
+	MinCharLevel	0 // bal
 }
 
 SkillDarkRitualPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		5
+	Power		5 // bal 3
 }
 
 SkillDarkRitual
@@ -8061,10 +8089,10 @@ SkillDarkRitual
 
 	TextureName	Textures/Icons/Skills/darkRitual.tga
 
-	Power		40
-	TotalTime	3.0
-	ReuseTime   60.0
-	
+	Power		40 // bal 20
+	TotalTime	3.0 // bal 4
+	ReuseTime   60.0 // bal
+
 	Spell		1
 
 	AlwaysWorks	1
@@ -8084,9 +8112,9 @@ SkillDarkRitual
 SkillSkeletonPerLevel
 {
 	Base		BaseSkillPerLevel
-	//MonsterLevel		0.2
+	//bal MonsterLevel		1.5
 	MonsterMaxCount		0.5
-	Power	8
+	Power	8 // bal 3
 }
 
 SkillSkeleton
@@ -8098,15 +8126,15 @@ SkillSkeleton
 
 	TextureName	Textures/Icons/Monsters/skeleton.tga
 
-	Power		35
+	Power		35 // bal 40
 	TotalTime	2.0
 	Spell		1
-	
-	ReuseTime	20.0	// you can't just keep raising
+
+	ReuseTime	20.0	// bal you can't just keep raising
 
 	PerLevel	SkillSkeletonPerLevel
 
-	BaseCost	2	
+	BaseCost	2
 
 	CastingAnimation	startRaiseSkeleton
 	Animation		castRaiseSkeleton
@@ -8116,14 +8144,14 @@ SkillSkeleton
 	MonsterStatusEffect	StatusEffectPlayerSummonedSkeleton
 	MonsterNoSave		1
 	MonsterAddAsFollower	1
-	MonsterLevel		-1
+	MonsterLevel		-1 // bal 1
 	MonsterMaxCount		1
 	NeedsDeadBody		1
 	DestroysBody		1
 	MarkAsPet			1
 	MaxMonsterRarity	VeryRare
 
-	MonsterLevelPerUserLevel	1.0
+	MonsterLevelPerUserLevel	1.0 // bal 0.5
 
 	StandStillToCast	1
 }
@@ -8131,10 +8159,10 @@ SkillSkeleton
 SkillSkeletonArcherPerLevel
 {
 	Base		BaseSkillPerLevel
-	//MonsterLevel		0.1
-	MonsterMaxCount		0.334
-	
-	Power	7
+	//bal MonsterLevel		1.5
+	MonsterMaxCount		0.334 // bal 0.25
+
+	Power	7 // bal 3
 }
 
 SkillSkeletonArcher
@@ -8146,15 +8174,15 @@ SkillSkeletonArcher
 
 	TextureName	Textures/Icons/Monsters/skeletonArcher.tga
 
-	Power		30
+	Power		30 // bal 40
 	TotalTime	2.0
 	Spell		1
-	
-	ReuseTime	15.0	// you can't just keep raising
+
+	ReuseTime	15.0	// bal: you can't just keep raising
 
 	PerLevel	SkillSkeletonArcherPerLevel
 
-	BaseCost	4		
+	BaseCost	4
 
 	CastingAnimation	startRaiseSkeleton
 	Animation	castRaiseSkeleton
@@ -8164,14 +8192,14 @@ SkillSkeletonArcher
 	MonsterStatusEffect	StatusEffectPlayerSummonedSkeleton
 	MonsterNoSave	1
 	MonsterAddAsFollower	1
-	MonsterLevel		0.0
+	MonsterLevel		0.0 // bal 2
 	MonsterMaxCount		1
 	NeedsDeadBody		1
 	DestroysBody		1
 	MarkAsPet		1
 	MaxMonsterRarity	VeryRare
 
-	MonsterLevelPerUserLevel	1.0
+	MonsterLevelPerUserLevel	1.0 // bal 0.5
 
 	StandStillToCast	1
 }
@@ -8180,8 +8208,7 @@ SkillRaiseDeadPerLevel
 {
 	Base		BaseSkillPerLevel
 	MonsterMaxCount		0.25
-	
-	Power	9
+	Power	9 // bal 3
 }
 
 SkillRaiseDead
@@ -8193,15 +8220,15 @@ SkillRaiseDead
 
 	TextureName	Textures/Icons/Monsters/zombie.tga
 
-	Power		45
+	Power		45 // bal 40
 	TotalTime	2.0
 	Spell		1
-	
-	ReuseTime	60.0	// you can't just keep raising
+
+	ReuseTime	60.0	// bal: you can't just keep raising
 
 	PerLevel	SkillRaiseDeadPerLevel
 
-	BaseCost	6	
+	BaseCost	6
 
 	CastingAnimation	startRaiseSkeleton
 	Animation	castRaiseSkeleton
@@ -8266,18 +8293,18 @@ SkillBonusPowerPerIntSorcerer
 {
 	Base		SkillBonusPowerPerInt
 
-	StatChangePerAttributeChange	0.375
+	StatChangePerAttributeChange	0.375 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntSorcerer
 {
 	Base		SkillBonusPowerRegenPerInt
 
-	StatChangePerAttributeChange	0.0075	// bal
+	StatChangePerAttributeChange	0.0075	// bal 0.01
 	DynamicStatChangePowerRegen		0.16875	// bal: offset for power regen
 }
 
-// bal: make resistance not come from SPR
+// bal: make resistance not come from SPR XXX
 SkillPenaltyLightningResistancePerSprSorcererBalance
 {
 	Base		BaseSkillBasic
@@ -8297,12 +8324,12 @@ SkillLightningPerLevel
 	Base		BaseSkillPerLevel
 
 	MinDamage	5
-	MaxDamage	13
-	DamageInflation		0.2
+	MaxDamage	13 // bal 12
+	DamageInflation		0.2 // bal 0.02
 
 	Power		3
-	
-	MinCharLevel	5
+
+	MinCharLevel	5 // bal
 }
 
 SkillLightning
@@ -8314,46 +8341,46 @@ SkillLightning
 
 	TextureName	Textures/Icons/Skills/lightning.tga
 
-	Power		10
-	TotalTime	1.3
+	Power		10 // bal 8
+	TotalTime	1.3 // bal 1.25
 	Spell		1
 
 	Projectile	ProjLightningBolt
 
-	MinDamage	10
-	MaxDamage	20
+	MinDamage	10 // bal 5
+	MaxDamage	20 // bal 15
 	DamageType	Lightning
 
-	Earthquake	10.0	
-	
+	Earthquake	10.0 // bal XXX
+
 	CastingAnimation	startLightning
 	Animation	castLightning
 
 	PerLevel	SkillLightningPerLevel
 
-	// Moved from thunderbolt
-	StatusEffectChance	0.1
-
-	StatusEffect	StatusEffectThunderboltStun
-		
 	BaseCost	1
 
+	// bal Moved from thunderbolt
+	StatusEffectChance	0.1
+	StatusEffect	StatusEffectThunderboltStun
+
+
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillChainLightningPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	5
-	ProjMaxDamage	15
-	ProjDamageInflation	0.1
+	ProjMinDamage	5 // bal 3
+	ProjMaxDamage	15 // bal 10
+	ProjDamageInflation	0.1 // bal 0.02
 
-	Power		4
-	
-	MinCharLevel	5
+	Power		4 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillChainLightning
@@ -8365,45 +8392,47 @@ SkillChainLightning
 
 	TextureName	Textures/Icons/Skills/chainLightning.tga
 
-	Power		20
+	Power		20 // bal 12
 	TotalTime	1.5
 	Spell		1
 
 	Projectile	ProjChainLightningBolt
-	ProjMinDamage	6
-	ProjMaxDamage	16
+	ProjMinDamage	6 // bal 5
+	ProjMaxDamage	16 // bal 10
 	ProjDamageType	Lightning
 
 	CastingAnimation	startLightning
 	Animation		castLightning
 
-	Earthquake	25.0	
-	
+	Earthquake	25.0 // bal
+
 	PerLevel	SkillChainLightningPerLevel
 
-	ProjStatusEffect	1
-	ProjStatusEffectChance	0.02
-
-	StatusEffect	StatusEffectThunderboltStun	
-	
 	BaseCost	2
 
+  // bal: add status effect
+	ProjStatusEffect	1
+	ProjStatusEffectChance	0.02 // bal: lower than single targer
+
+	StatusEffect	StatusEffectThunderboltStun // bal
+
+
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillBallLightningPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	8
-	ProjMaxDamage	19
+	ProjMinDamage	8 // bal 25
+	ProjMaxDamage	19 // bal 35
 	ProjDamageInflation	0.2
 
-	Power		6
-	
-	MinCharLevel	5
+	Power		6 // bal 4
+
+	MinCharLevel	5 // bal
 }
 
 SkillBallLightning
@@ -8415,50 +8444,51 @@ SkillBallLightning
 
 	TextureName	Textures/Icons/Skills/ballLightning01.tga
 
-	Power		30
-	TotalTime	1.0
+	Power		30 // bal 20
+	TotalTime	1.0 // bal 2
 	Spell		1
-	
-	ReuseTime	30.0
 
 	Projectile	ProjBallLightning
-	ProjMinDamage	20
-	ProjMaxDamage	40
+	ProjMinDamage	20 // bal 40
+	ProjMaxDamage	40 // bal 70
 	ProjDamageType	Lightning
 
-	Earthquake	70.0
-	
+	Earthquake	70.0 // bal
+
 	AlwaysWorks	1
 	CheckMousePosition	1
 
 	CastingAnimation	startBallLightning
 	Animation		castBallLightning
 
+	ReuseTime	30.0 // bal 15
+
 	PerLevel	SkillBallLightningPerLevel
-	
+
 	BaseCost	6
 
 	ShowSkillHint	1
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
-// Removed. Too similar to lightning
+// bal REMOVED. Too similar to lightning
 SkillThunderboltPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	MinDamage	3
-	MaxDamage	11
-	DamageInflation		0.3
+	MinDamage	3 // bal 4
+	MaxDamage	11 // bal 9
+	DamageInflation		0.3 // bal 0.02
 
-	Power		10
-	
-	MinCharLevel	5
+	Power		10 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
+// bal REMOVED
 SkillThunderbolt
 {
 	Base		BaseSkillOffense
@@ -8468,8 +8498,8 @@ SkillThunderbolt
 
 	TextureName	Textures/Icons/Skills/thunderbolt.tga
 
-	Power		12
-	TotalTime	1.4
+	Power		12 // bal 10
+	TotalTime	1.4 // bal 1
 	Spell		1
 
 	Projectile	ProjThunderBolt
@@ -8478,8 +8508,8 @@ SkillThunderbolt
 	MaxDamage	20
 	DamageType	Lightning
 
-	Earthquake	10.0	
-	
+	Earthquake	10.0 // bal
+
 	StatusEffectChance	0.1
 
 	StatusEffect	StatusEffectThunderboltStun
@@ -8492,10 +8522,11 @@ SkillThunderbolt
 	BaseCost	4
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
+// bal: Added
 SkillMagneticDeflectionPerLevel
 {
 	Base		BaseSkillPerLevel
@@ -8504,6 +8535,7 @@ SkillMagneticDeflectionPerLevel
 	StatChangeDefense	20
 }
 
+// bal: Added
 SkillMagneticDeflection
 {
 	Base		BaseSkillPassive
@@ -8525,15 +8557,15 @@ SkillLightningSwarmPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	7
-	ProjMaxDamage	21
-	ProjDamageInflation	0.1
+	ProjMinDamage	7 // bal 5
+	ProjMaxDamage	21 // bal 15
+	ProjDamageInflation	0.1 // bal 0.02
 
 	ProjExtras	1.0
 
-	Power	5
-	
-	MinCharLevel	5
+	Power	5 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillLightningSwarm
@@ -8546,47 +8578,48 @@ SkillLightningSwarm
 	TextureName	Textures/Icons/Skills/lightningSwarm.tga
 
 	Projectile	ProjLightningSwarm
-	ProjMinDamage	10
-	ProjMaxDamage	30
+	ProjMinDamage	10 // bal 5
+	ProjMaxDamage	30 // bal 15
 	ProjDamageType	Lightning
 
 	ProjExtras	1.0
 
 	AlwaysWorks	1
 
-	Power		25
-	TotalTime	1.2
+	Power		25 // bal 20
+	TotalTime	1.2 // bal 1
 	Spell		1
 
-	ReuseTime	2.0
+	ReuseTime	2.0 // bal 5
 
 	CastingAnimation	startLightningSwarm
 	Animation		castLightningSwarm
 
 	BaseCost	8
 
+  // bal added
 	ProjStatusEffect	1
 	ProjStatusEffectChance	0.05
-	StatusEffect	StatusEffectThunderboltStun	
-	
+	StatusEffect	StatusEffectThunderboltStun
+
 	PerLevel	SkillLightningSwarmPerLevel
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillShockWavePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	6
-	ProjMaxDamage	12
-	ProjDamageInflation	0.2
+	ProjMinDamage	6 // bal 3
+	ProjMaxDamage	12 // bal 9
+	ProjDamageInflation	0.2 // bal 0.05
 
-	Power	6
-	
-	MinCharLevel	5
+	Power	6 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillShockWave
@@ -8598,18 +8631,18 @@ SkillShockWave
 
 	TextureName	Textures/Icons/Skills/shockWave.tga
 
-	Power		25
-	TotalTime	1.3
-	Spell		1	
+	Power		25 // bal 10
+	TotalTime	1.3 // bal 2
+	Spell		1
 
 	AlwaysWorks	1
 
-	MinRange	0
-	MaxRange	300		
-	
+	MinRange	0 // bal
+	MaxRange	300 // bal
+
 	Projectile	ProjShockWave
-	ProjMinDamage	12
-	ProjMaxDamage	25
+	ProjMinDamage	12 // bal 3
+	ProjMaxDamage	25 // bal 9
 	DamageType	Lightning
 
 	ProjStatusEffect	1
@@ -8617,8 +8650,8 @@ SkillShockWave
 
 	StatusEffect	StatusEffectThunderboltStun
 
-	Earthquake	50.0
-	
+	Earthquake	50.0 // bal
+
 	WindDistance	250.0
 	WindPower	250.0
 
@@ -8627,24 +8660,24 @@ SkillShockWave
 
 	PerLevel	SkillShockWavePerLevel
 
-	BaseCost	4
+	BaseCost	4 // bal 2
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillTornadoPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ProjMinDamage	8
-	ProjMaxDamage	18
-	ProjDamageInflation	0.2
+	ProjMinDamage	8 // bal 9
+	ProjMaxDamage	18 // bal 25
+	ProjDamageInflation	0.2 // bal 0.05
 
-	Power	6
-	
-	MinCharLevel	5
+	Power	6 // bal 3
+
+	MinCharLevel	5 // bal
 }
 
 SkillTornado
@@ -8657,8 +8690,8 @@ SkillTornado
 	TextureName	Textures/Icons/Skills/tornado.tga
 
 	Projectile	ProjTornado
-	ProjMinDamage	15
-	ProjMaxDamage	40
+	ProjMinDamage	15 // bal 40
+	ProjMaxDamage	40 // bal 80
 	ProjDamageType	Cold
 	ProjStatusEffect	1
 
@@ -8675,31 +8708,31 @@ SkillTornado
 	WindDistance	200.0
 	WindPower	250.0
 
-	Power		30
-	TotalTime	1.6
+	Power		30 // bal 15
+	TotalTime	1.6 // bal 1
 	Spell		1
 
 	CastingAnimation	startTornado
 	Animation		castTornado
 
-	ReuseTime	20.0
+	ReuseTime	20.0 // bal 10
 
 	PerLevel	SkillTornadoPerLevel
 
 	BaseCost	6
 
 	StandStillToCast	1
-	
-	MinCharLevel	0
+
+	MinCharLevel	0 // bal
 }
 
 SkillGaseousFormPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		5
-	
-	ReuseTime	1.0
+	Power		5 // bal
+
+	ReuseTime	1.0 // bal
 }
 
 SkillGaseousForm
@@ -8711,14 +8744,14 @@ SkillGaseousForm
 
 	TextureName	Textures/Icons/Skills/gaseousForm.tga
 
-	Power		40
-	TotalTime	2.0
+	Power		40 // bal 0
+	TotalTime	2.0 // bal 1
 	Spell		1
 
 	CastingAnimation	startGaseousForm
 	Animation		castGaseousForm
 
-	ReuseTime	30.0
+	ReuseTime	30.0 // bal 120
 
 	SkillType	Buff
 
@@ -8726,7 +8759,7 @@ SkillGaseousForm
 
 	PerLevel	SkillGaseousFormPerLevel
 
-	BaseCost	4	
+	BaseCost	4
 
 	ShowSkillHint	1
 }
@@ -8748,7 +8781,7 @@ SkillStoredLightning
 	TextureName	Textures/Icons/Skills/storedLightning.tga
 
 //	Power		12
-	TotalTime	2.0
+	TotalTime	2.0 // bal 1
 	Spell		1
 
 	ReuseTime	60
@@ -8768,16 +8801,18 @@ SkillStoredLightning
 	ShowSkillHint	1
 }
 
-// bal: switch to using resistance
+// bal: switch to using resistance XXX
 SkillLightningMasteryPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DynamicStatMultSkillDamage	0.035
-	DynamicStatMultPowerNeeded	-0.03
-	//StatChangeResistanceLightning	20
+	DynamicStatMultSkillDamage	0.035 // bal 0.05
+	DynamicStatMultPowerNeeded	-0.03 // bal
 
-	PointsReq	30
+	//bal DynamicStatMultCriticalHit	0.1
+	//StatChangeResistanceLightning	20 // bal 4
+
+	PointsReq	30 // bal XXX
 }
 
 SkillLightningMastery
@@ -8789,13 +8824,13 @@ SkillLightningMastery
 
 	TextureName	Textures/Icons/Skills/lightningMastery01.tga
 
-	StatReq		ResistanceLightning
+	StatReq		ResistanceLightning // bal XXX
 	PointsReq	30
 	MaxLevel	30	// bal: prevent insane boosts
 
-	DynamicStatMultSkillDamage	0.035
-	DynamicStatMultPowerNeeded	-0.03
-	//StatChangeResistanceLightning	20
+	DynamicStatMultSkillDamage	0.035 // 0.05
+	DynamicStatMultPowerNeeded	-0.03 // bal
+	//StatChangeResistanceLightning	20 // bal 4
 
 	Skill		SkillLightning
 	Skill		SkillChainLightning
@@ -8855,7 +8890,7 @@ SkillItemProcArcticShard
 	ProjDamageType	Cold
 	ProjStatusEffect	1
 
-	ProjStatusEffectChance	0.33 // Added: cold has a slow effect
+	ProjStatusEffectChance	0.33 // bal: cold has a slow effect
 	StatusEffect	StatusEffectFrost
 
 	PerLevel	SkillItemProcArcticShard
@@ -9055,7 +9090,7 @@ SkillItemProcFrostNova
 
 	AlwaysWorks	1
 
-	ProjStatusEffectChance	0.33 // Added: cold has a slow effect
+	ProjStatusEffectChance	0.33 // bal: cold has a slow effect
 	StatusEffect	StatusEffectFrost
 
 	PerLevel	SkillItemProcFrostNovaPerLevel
