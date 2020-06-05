@@ -8828,7 +8828,7 @@ SkillLightningMastery
 	PointsReq	30
 	MaxLevel	30	// bal: prevent insane boosts
 
-	DynamicStatMultSkillDamage	0.035 // 0.05
+	DynamicStatMultSkillDamage	0.035 // bal 0.05
 	DynamicStatMultPowerNeeded	-0.03 // bal
 	//StatChangeResistanceLightning	20 // bal 4
 
@@ -9605,7 +9605,7 @@ SkillPowerupIceBlast
 
 	AlwaysWorks	1
 
-	ProjStatusEffectChance	0.33 // Added: cold has a slow effect
+	ProjStatusEffectChance	0.33 // bal: cold has a slow effect
 	StatusEffect	StatusEffectFrost
 
 	BasicSkill	1
@@ -9728,7 +9728,7 @@ SkillPowerupIceWeapon
 	MinRange	0
 	MaxRange	100
 
-	StatusEffectChance	0.33 // Added: cold has a slow effect
+	StatusEffectChance	0.33 // bal: cold has a slow effect
 	StatusEffect	StatusEffectFrost
 
 	BasicSkill	1

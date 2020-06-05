@@ -15,14 +15,14 @@ SkillBonusAttackPerDexReaver
 {
 	Base		SkillBonusAttackPerDex
 
-	StatChangePerAttributeChange	0.15 // 1.0
+	StatChangePerAttributeChange	0.15 // bal 1.0
 }
 
 SkillBonusDamageMultPerStrReaver
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.001 // 0.002
+	StatChangePerAttributeChange	0.001 // bal 0.002
 }
 
 SkillManaGenReaver
@@ -34,15 +34,15 @@ SkillManaGenReaver
 
 	TextureName	Textures/Icons/Skills/Overpower.tga
 
-	PowerGainOnCrushingBlow		2.0
-	PowerGainOnHit	0.5
+	PowerGainOnCrushingBlow		2.0 // bal 6 OnKill
+	PowerGainOnHit	0.5 // bal
 }
 
 SkillPlateArmorReaverPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatMultArmor		0.09
+	StatMultArmor		0.09 // bal 0.04
 }
 
 SkillPlateArmorReaver
@@ -52,7 +52,7 @@ SkillPlateArmorReaver
 	BaseName	$$PlateArmor$$
 	Desc		$$PlateArmorDesc$$
 
-	TextureName	Textures/icons/items/chest_plate_light.tga
+	TextureName	Textures/Icons/Items/chest_plate_light.tga
 
 	ItemRequirement		ArmorPlate
 
@@ -60,7 +60,7 @@ SkillPlateArmorReaver
 
 	ComparePointsMult	0.5
 
-	StatMultArmor		0.09
+	StatMultArmor		0.09 // bal 0.04
 
 	PerLevel	SkillPlateArmorReaverPerLevel
 }
@@ -70,11 +70,11 @@ SkillTwoHandedMasteryPerLevel
 	Base		BaseSkillPerLevel
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.04
-	StatMultMaxDamage	0.04
+	StatMultMinDamage	0.04 // bal 0.08
+	StatMultMaxDamage	0.04 // bal 0.08
 
-	DynamicStatChangeCriticalHit	0.17
-	DynamicStatChangeCrushingBlow	0.15
+	DynamicStatChangeCriticalHit	0.17 // bal 0.02 mult
+	DynamicStatChangeCrushingBlow	0.15 // bal 0.025 mult
 	StatChangeMaxPower	-3	// bal: balance out strength of mastery
 }
 
@@ -88,11 +88,11 @@ SkillTwoHandedMastery
 	TextureName	Textures/Icons/Skills/twohandedmastery.tga
 
 	StatChangeAttack	15.0
-	StatMultMinDamage	0.05
-	StatMultMaxDamage	0.05
+	StatMultMinDamage	0.05 // bal 0.08
+	StatMultMaxDamage	0.05 // bal 0.08
 
-	DynamicStatChangeCriticalHit	0.17
-	DynamicStatChangeCrushingBlow	0.15
+	DynamicStatChangeCriticalHit	0.17 // bal 0.02 mult
+	DynamicStatChangeCrushingBlow	0.15 // bal 0.025 mult
 	StatChangeMaxPower	-2	// bal: balance out strength of mastery
 
 	WeaponType	WeaponAxeTwoHanded
@@ -110,7 +110,7 @@ SkillUnholyStrikePerLevel
 	Base		BaseSkillPerLevel
 
 	DamageMultPhysical	0.06
-	
+
 	Power		1
 }
 
@@ -131,10 +131,10 @@ SkillUnholyStrike
 	MinRange	0
 	MaxRange	100
 
-	Power		15
+	Power		15 // bal 5
 	TotalTime	1.5
-	ReuseTime	5
-	
+	ReuseTime	5 // bal
+
 	StatusEffect	StatusEffectFrost
 
 	DamageMultPhysical	0.15
@@ -144,17 +144,16 @@ SkillUnholyStrike
 	BaseCost		1
 
 	ShowSkillHint	1
-	
 }
 
 SkillFireStrikePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.02 // bal: reduce greatly since it's fire damage
+	DamageMultPhysical	0.02 // bal 0.1: reduce greatly since it's fire damage XXX
 
 	Power		2
-	
+
 }
 
 SkillFireStrike
@@ -168,15 +167,15 @@ SkillFireStrike
 
 	Animation	firestrike
 
-	Power		20
+	Power		20 // bal 12
 	TotalTime	1.1
 	Spell		1
 
-	ReuseTime	15 // 5 bal: it's a super spell, attacking multiple targets
+	ReuseTime	15 // bal: it's a super spell, attacking multiple targets
 
 	Projectile	ProjFireStrike
 	ProjDamageType	Fire
-	DamageMultPhysical	0.05 // bal: reduce greatly since it's fire damage
+	DamageMultPhysical	0.05 // bal 0.1: reduce greatly since it's fire damage
 	ProjectileDamage	1
 
 	AlwaysWorks	1
@@ -186,15 +185,14 @@ SkillFireStrike
 	BaseCost		4
 
 	StandStillToCast	1
-	
 }
 
 SkillBreechPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatChangeArmorPiercing		20
-	DynamicStatChangeDeepWounds	0.4
+	StatChangeArmorPiercing		20 // bal 10
+	DynamicStatChangeDeepWounds	0.4 // bal 0.1 mult
 }
 
 SkillBreech
@@ -206,8 +204,8 @@ SkillBreech
 
 	TextureName	Textures/Icons/Skills/breech.tga
 
-	StatChangeArmorPiercing		20
-	DynamicStatChangeDeepWounds	0.4
+	StatChangeArmorPiercing		20 // bal 10
+	DynamicStatChangeDeepWounds	0.4 // bal 0.1 mult
 
 	PerLevel	SkillBreechPerLevel
 
@@ -217,9 +215,10 @@ SkillBreech
 SkillChargePerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2
-	
+
+  // bal ReuseTime -1.5
+	Power		2 // bal 1
+
 }
 
 SkillCharge
@@ -233,8 +232,8 @@ SkillCharge
 
 	Animation	charge
 
-	Power		25
-	ReuseTime	40.0
+	Power		25 // bal 10
+	ReuseTime	40 // bal 45
 
 	SaveForToughEnemies	1
 
@@ -245,17 +244,16 @@ SkillCharge
 	BaseCost		3
 
 	ShowSkillHint	1
-	
+
 }
 
 SkillRavagePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.08
-	
-	Power		2
-	
+	DamageMultPhysical	0.08 // bal 0.115
+	Power		2 // bal 1
+
 }
 
 SkillRavage
@@ -277,31 +275,30 @@ SkillRavage
 
 	ExtraEnemies	2
 
-	Power		20
+	Power		20 // bal 12
 	TotalTime	1.5
 
 	ReuseTime	25	// bal: super skill
-	
-	DamageMultPhysical	-0.8
+
+	DamageMultPhysical	-0.8 // bal -0.224999
 
 	TargetEffect	Models/Effects/warriorSkillHit.mdl
 
 	PerLevel	SkillRavagePerLevel
 
 	BaseCost		4
-	
+
 }
 
 SkillTerrorizePerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		3
-	
-	EffectTime	1.0
-	
-	ReuseTime	1
 
+	Power		3 // bal 1
+
+	EffectTime	1.0 // bal
+
+	ReuseTime	1 // bal
 }
 
 SkillTerrorize
@@ -321,30 +318,28 @@ SkillTerrorize
 	AllEnemies	1
 	AlwaysWorks	1
 
-	Power		30
+	Power		30 // bal 10
 	TotalTime	1.25
-	
-	ReuseTime	60
+
+	ReuseTime	60 // bal
 
 	AreaEffect	Models/Effects/smokeScreen.mdl
-	EffectTime	8.0
+	EffectTime	8.0 // bal 15
 
 	StatusEffect	StatusEffectSkillTerrorize
 
 	PerLevel	SkillTerrorizePerLevel
 
 	BaseCost		6
-	
 }
 
 SkillWampirBloodPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2
-	
-	MinCharLevel	4
-	
+
+	Power		2 // bal 1
+
+	MinCharLevel	4 // bal
 }
 
 SkillWampirBlood
@@ -364,8 +359,8 @@ SkillWampirBlood
 	AllEnemies	1
 	AlwaysWorks	1
 
-	Power		18
-	TotalTime	0.8
+	Power		18 // bal 10
+	TotalTime	0.8 // bal 1.25
 
 	AreaEffect	Models/Effects/smokeScreen.mdl
 	EffectTime	2.0
@@ -375,19 +370,17 @@ SkillWampirBlood
 	PerLevel	SkillWampirBloodPerLevel
 
 	BaseCost	8
-	
-	MinCharLevel	1
-	
+
+	MinCharLevel	1 // bal
 }
 
 SkillRampagePerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		2
-	
-	ReuseTime	1
-	
+
+	Power		2 // bal
+
+	ReuseTime	1 // bal
 }
 
 SkillRampage
@@ -401,8 +394,8 @@ SkillRampage
 
 	Animation	rampage
 
-	Power		25
-	ReuseTime	60
+	Power		25 // bal 0
+	ReuseTime	60 // bal 120
 
 	SaveForToughEnemies	1
 
@@ -413,7 +406,6 @@ SkillRampage
 	BaseCost		3
 
 	ShowSkillHint	1
-	
 }
 
 //
@@ -470,6 +462,7 @@ SkillBonusColdResistancePerSprWarden
 }
 
 
+// bal
 SkillManaGenWarden
 {
 	Base		BaseSkillBasic
@@ -515,10 +508,8 @@ SkillSpiritStrikePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.06
-	
-	Power		2
-	
+	DamageMultPhysical	0.06 // bal 0.15
+	Power		2 // bal 1
 }
 
 SkillSpiritStrike
@@ -538,11 +529,11 @@ SkillSpiritStrike
 	MinRange	0
 	MaxRange	100
 
-	Power		18
+	Power		18 // bal 5
 	TotalTime	1.5
 
-	ReuseTime	5	
-	
+	ReuseTime	5	// bal
+
 	DamageMultPhysical	0.15
 
 	StatusEffect		StatusEffectSkillSpiritStrike
@@ -550,17 +541,14 @@ SkillSpiritStrike
 	PerLevel	SkillSpiritStrikePerLevel
 
 	BaseCost		1
-
 }
 
 SkillShieldSweepPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.08
-	
-	Power		2
-	
+	DamageMultPhysical	0.08 // bal 0.1
+	Power		2 // bal 1
 }
 
 SkillShieldSweep
@@ -582,38 +570,37 @@ SkillShieldSweep
 
 	ExtraEnemies	4
 
-	Power		20
+	Power		20 // bal 10
 	TotalTime	1.5
-	ReuseTime	40	// bal: super skill
+	ReuseTime	40	// bal 20: super skill
 
-	DamageMultPhysical	-1.0
+	DamageMultPhysical	-1.0 // bal -0.6
 
 	Interrupt	1
 	RequiresShield	1
 
 	StatusEffect	StatusEffectBash
 
+	// bal StatusEffect	StatusEffectSkillShieldSweep
+
 	TargetEffect	Models/Effects/warriorSkillHit.mdl
 
 	PerLevel	SkillShieldSweepPerLevel
 
-	BaseCost		6
+	BaseCost		6 // bal 8
 
 	ShowSkillHint	1
-	
 }
 
 SkillShieldBlastPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.08
-	DynamicStatMultAttack	0.05
-	
-	Power	2
-	
-	ReuseTime	0.2
-	
+	DamageMultPhysical	0.08 // bal 0.25
+	DynamicStatMultAttack	0.05 // bal 0.1
+	Power	2 // bal 1
+
+	ReuseTime	0.2 // bal
 }
 
 SkillShieldBlast
@@ -627,9 +614,9 @@ SkillShieldBlast
 
 	Animation	shieldblast
 
-	Power		18
+	Power		18 // bal 5
 	TotalTime	1.0
-	ReuseTime	4.0
+	ReuseTime	4.0 // bal 10
 
 	Attack		1
 	CanAutoAttack	1
@@ -637,18 +624,18 @@ SkillShieldBlast
 	MinRange	0
 	MaxRange	100
 
-	DamageMultPhysical	0.2
-	DynamicStatMultAttack	0.05
+	DamageMultPhysical	0.2 // bal 0.25
+	DynamicStatMultAttack	0.05 // bal 0.1
 
 	Interrupt	1
 	RequiresShield	1
 
-	StatusEffect	StatusEffectSkillShieldBlast
+	StatusEffect	StatusEffectSkillShieldBlast // bal Sweep
 
 	PerLevel	SkillShieldBlastPerLevel
 
 	BaseCost		3
-	
+
 }
 
 SkillIceWardPerLevel
@@ -657,9 +644,7 @@ SkillIceWardPerLevel
 
 	MonsterLevel		1.0
 	MonsterTimeLimit	5.0
-	
-	Power	2
-	
+	Power	2 // bal 1
 }
 
 SkillIceWard
@@ -673,7 +658,7 @@ SkillIceWard
 
 	Animation	wardIce
 
-	Power		25
+	Power		25 // bal 10
 	TotalTime	1.0
 	Spell		1
 
@@ -695,7 +680,6 @@ SkillIceWard
 	BaseCost		4
 
 	ShowSkillHint	1
-	
 }
 
 SkillLightningWardPerLevel
@@ -704,9 +688,7 @@ SkillLightningWardPerLevel
 
 	MonsterLevel		1.0
 	MonsterTimeLimit	5.0
-	
-	Power	2
-	
+	Power	2 // bal 1
 }
 
 SkillLightningWard
@@ -720,7 +702,7 @@ SkillLightningWard
 
 	Animation	wardLightning
 
-	Power		25
+	Power		25 // bal 10
 	TotalTime	1.0
 	Spell		1
 
@@ -742,7 +724,6 @@ SkillLightningWard
 	ShowSkillHint	1
 
 	Linked		SkillIceWard
-	
 }
 
 SkillFireWardPerLevel
@@ -751,9 +732,7 @@ SkillFireWardPerLevel
 
 	MonsterLevel		1.0
 	MonsterTimeLimit	5.0
-	
-	Power	2
-	
+	Power	2 // bal 1
 }
 
 SkillFireWard
@@ -767,7 +746,7 @@ SkillFireWard
 
 	Animation	wardFire
 
-	Power		25
+	Power		25 // bal 10
 	TotalTime	1.0
 	Spell		1
 
@@ -789,7 +768,6 @@ SkillFireWard
 	ShowSkillHint	1
 
 	Linked		SkillIceWard
-	
 }
 
 SkillPoisonWardPerLevel
@@ -798,9 +776,7 @@ SkillPoisonWardPerLevel
 
 	MonsterLevel		1.0
 	MonsterTimeLimit	5.0
-	
-	Power	2
-	
+	Power	2 // bal 1
 }
 
 SkillPoisonWard
@@ -814,7 +790,7 @@ SkillPoisonWard
 
 	Animation	wardPoison
 
-	Power		25
+	Power		25 // bal 10
 	TotalTime	1.0
 	Spell		1
 
@@ -837,7 +813,6 @@ SkillPoisonWard
 
 	Linked		SkillIceWard
 	LinkedEnd	1
-	
 }
 
 SkillMagicalDeflectionPerLevel
@@ -868,9 +843,7 @@ SkillBanishPerLevel
 	Base		BaseSkillPerLevel
 
 	ReuseTime	-5.0
-	
-	Power	2
-	
+	Power	2 // bal 1
 }
 
 SkillBanish
@@ -893,26 +866,24 @@ SkillBanish
 	SkillType	Simple
 	Spell		1
 
-	Power		20
-	TotalTime	0.6
+	Power		20 // bal 10
+	TotalTime	0.6 // bal 1
 	ReuseTime	60.0
 
 	MaxSkillLevel		12
 
 	PerLevel	SkillBanishPerLevel
 
-	BaseCost	10
+	BaseCost	10 // bal 6
 
 	StandStillToCast	1
-	
 }
 
 SkillEnergyShieldPerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		7
-	
+
+	Power		7 // bal 1
 }
 
 SkillEnergyShield
@@ -926,7 +897,7 @@ SkillEnergyShield
 
 	Animation	energyshield
 
-	Power		40
+	Power		40 // bal 15
 	TotalTime	1.5
 	ReuseTime	45.0
 
@@ -937,7 +908,6 @@ SkillEnergyShield
 	BaseCost		3
 
 	ShowSkillHint	1
-	
 }
 
 //
@@ -955,15 +925,15 @@ SkillBonusPowerPerSprDemonologist
 {
 	Base		SkillBonusPowerPerSpr
 
-	StatChangePerAttributeChange	0.375	// 1.0
+	StatChangePerAttributeChange	0.375	// bal 1.0
 }
 
 SkillBonusPowerRegenPerSprDemonologist
 {
 	Base		SkillBonusPowerRegenPerSpr
 
-	StatChangePerAttributeChange	0.00375 // 0.01
-	DynamicStatChangePowerRegen		0.075
+	StatChangePerAttributeChange	0.00375 // bal 0.01
+	DynamicStatChangePowerRegen		0.075 // bal
 }
 
 SkillBonusFireResistancePerSprDemonologist
@@ -990,9 +960,9 @@ SkillImpalePerLevel
 {
 	Base		BaseSkillPerLevel
 
-	DamageMultPhysical	0.072
-	DynamicStatChangeCriticalHit	1.0 // 0.1
-	
+	DamageMultPhysical	0.072 // bal 0.18
+	DynamicStatChangeCriticalHit	1.0 // 0.1 mult
+
 	Power		1
 }
 
@@ -1013,13 +983,13 @@ SkillImpale
 	MinRange	0
 	MaxRange	100
 
-	Power		15
+	Power		15 // bal 8
 	TotalTime	1.5
 
-	ReuseTime	5	
-	
+	ReuseTime	5	// bal
+
 	DamageMultPhysical	0.18
-	DynamicStatChangeCriticalHit	2.5 // 0.1
+	DynamicStatChangeCriticalHit	2.5 // 0.1 mult
 
 	PerLevel	SkillImpalePerLevel
 
@@ -1027,7 +997,7 @@ SkillImpale
 
 	ShowSkillHint	1
 
-	// Only sword
+	// bal Only sword
 	WeaponType	WeaponDagger
 	WeaponType	WeaponSword
 	WeaponType	WeaponSwordTwoHanded
@@ -1037,9 +1007,9 @@ SkillPossessionPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	Power		2
-	
-	ReuseTime	-1
+	Power		2 // bal 10
+
+	ReuseTime	-1 // bal
 }
 
 SkillPossession
@@ -1053,7 +1023,7 @@ SkillPossession
 
 	Animation	possession
 
-	Power		25
+	Power		25 // bal 50
 	TotalTime	1.0
 	Spell		1
 
@@ -1089,8 +1059,8 @@ SkillInferno
 
 	Animation	inferno
 
-	Power		20
-	TotalTime	1.0
+	Power		20 // bal 10
+	TotalTime	1.0 // bal 2
 	Spell		1
 
 	ReuseTime	30
@@ -1111,7 +1081,7 @@ SkillDemonicRoarPerLevel
 	Base		BaseSkillPerLevel
 
 	MoraleChange	-2.5
-	Power		2
+	Power		2 // bal 1
 }
 
 SkillDemonicRoar
@@ -1125,7 +1095,7 @@ SkillDemonicRoar
 
 	Animation	demonicroar
 
-	Power		25
+	Power		25 // bal 10
 	TotalTime	1.0
 
 	ReuseTime	2.0
@@ -1158,8 +1128,8 @@ SkillDemonicRoar
 SkillBloodRagePerLevel
 {
 	Base		BaseSkillPerLevel
-	
-	Power		3	
+
+	Power		3	 // bal 1
 }
 
 SkillBloodRage
@@ -1173,8 +1143,8 @@ SkillBloodRage
 
 	Animation	bloodrage
 
-	Power		30
-	TotalTime	0.5
+	Power		30 // bal 10
+	TotalTime	0.5 // bal 1
 
 	ReuseTime	2.0
 
@@ -1194,6 +1164,7 @@ SkillBloodSacrificePerLevel
 	Base		BaseSkillPerLevel
 
 	SilentHateChange	10.0
+  Power 0 // bal 2
 }
 
 SkillBloodSacrifice
@@ -1207,7 +1178,7 @@ SkillBloodSacrifice
 
 	Animation	bloodsacrifice
 
-	Power		0
+	Power		0 // bal 10
 	TotalTime	0.5
 	Spell		1
 
@@ -1221,7 +1192,7 @@ SkillBloodSacrifice
 
 	BaseCost		4
 
-	// Sharp Weapon
+	// bal Sharp Weapon
 	WeaponType	WeaponDagger
 	WeaponType	WeaponSword
 	WeaponType	WeaponSwordTwoHanded
@@ -1235,8 +1206,7 @@ SkillCircleOfProtectionPerLevel
 
 	MonsterLevel		1.0
 	MonsterTimeLimit	5.0
-	
-	Power	2
+	Power	2 // bal 1
 }
 
 SkillCircleOfProtection
@@ -1250,7 +1220,7 @@ SkillCircleOfProtection
 
 	Animation	circleofprotection
 
-	Power		25
+	Power		25 // bal 10
 	TotalTime	1.0
 	Spell		1
 
@@ -1278,8 +1248,7 @@ SkillCircleOfPowerPerLevel
 
 	MonsterLevel		1.0
 	MonsterTimeLimit	5.0
-	
-	Power	2
+	Power	2 // bal 1
 }
 
 SkillCircleOfPower
@@ -1293,7 +1262,7 @@ SkillCircleOfPower
 
 	Animation	circleofpower
 
-	Power		25
+	Power		25 // bal 10
 	TotalTime	1.0
 	Spell		1
 
@@ -1322,7 +1291,7 @@ SkillDemonArmorPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	StatMultArmor		0.07
+	StatMultArmor		0.07 // bal 0.03
 	DefendingDynamicStatMultCriticalHit	-0.1
 	DefendingDynamicStatMultCrushingBlow	-0.1
 }
@@ -1336,7 +1305,7 @@ SkillDemonArmor
 
 	TextureName	Textures/Icons/Skills/DemonArmor.tga
 
-	StatMultArmor		0.07
+	StatMultArmor		0.07 // bal 0.03
 	DefendingDynamicStatMultCriticalHit		-0.1
 	DefendingDynamicStatMultCrushingBlow	-0.1
 
@@ -1348,7 +1317,7 @@ SkillDemonArmor
 SkillDemonicControlPerLevel
 {
 	Base		BaseSkillPerLevel
-	
+
 	Power		2
 }
 
@@ -1363,7 +1332,7 @@ SkillDemonicControl
 
 	Animation	demoniccontrol
 
-	Power		30
+	Power		30 // bal 20
 	TotalTime	2.0
 	Spell		1
 
