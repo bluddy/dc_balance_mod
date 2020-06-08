@@ -1,4 +1,3 @@
-// Balance mod
 
 StatusEffectStarving
 {
@@ -59,57 +58,14 @@ StatusEffectFog
 
 	StatMultAttack	-0.25
 	StatMultDefense	-0.25
-	DynamicStatMultEscapeNotice -1.0	// Balance mod
-}
-
-// Balance Mod
-// Create new effects for temporal flux
-// New status effect
-StatusEffectTemporalFluxBaseBalance
-{
-	Base		BaseStatusEffect
-
-	Name		$$TemporalFlux$$
-
-	TextureName	Textures/Icons/Effects/anti-magic.tga
-
-	EffectType	OnlyOne
-	GroupName	TemporalFlux
-
-	TotalTime	2.0
-	Forever		0
-	RemoveOnDeath	1
-}
-
-// New status effect
-// Slow-mo temporal flux
-StatusEffectTemporalFlux2Balance
-{
-	Base		StatusEffectTemporalFluxBaseBalance	
-
-	StatMultAttackSpeed		1.0
-	StatMultMovement		-1.0
-	DynamicStatMultCastTime	1.0
-}
-
-// New status effect: fast-mo temporal flux
-StatusEffectTemporalFlux3Balance
-{
-	Base		StatusEffectTemporalFluxBaseBalance	
-
-	StatMultAttackSpeed		-1.0
-	StatMultMovement		1.0
-	DynamicStatMultCastTime	-1.0
 }
 
 StatusEffectSkillChargePerLevel
 {
 	Base		BaseStatusEffectPerLevel
 
-	StatMultAttack		0.04 // bal 0.05
-	DamageMultPhysical	0.08 // bal 0.2
-	
-	TotalTime	0.3 // bal
+	StatMultAttack		0.05
+	DamageMultPhysical	0.2
 }
 
 StatusEffectSkillCharge
@@ -126,7 +82,7 @@ StatusEffectSkillCharge
 	TotalTime	3.0
 
 	StatMultMovement	1.0
-	StatMultAttack		0.04 // bal 0.05
+	StatMultAttack		0.05
 	DamageMultPhysical	0.2
 
 	EffectModelName	Models/Effects/StatusEffectSkillCharge.mdl
@@ -139,10 +95,8 @@ StatusEffectSkillTerrorizePerLevel
 {
 	Base		BaseStatusEffectPerLevel
 
-	StatMultDefense	-0.05 // bal -30 change
-	StatMultAttack	-0.03 // bal -30 change
-	
-	TotalTime	1.0 // bal
+	StatChangeDefense	-30
+	StatChangeAttack	-30
 }
 
 StatusEffectSkillTerrorize
@@ -156,10 +110,10 @@ StatusEffectSkillTerrorize
 	EffectType	OnlyOne
 	GroupName	Terrorize
 
-	TotalTime	8.0 // bal 15
+	TotalTime	15.0
 
-	StatMultDefense	-0.05 // bal -30 change
-	StatMultAttack	-0.03 // bal -30 change
+	StatChangeDefense	-30
+	StatChangeAttack	-30
 
 //	EntityState	DecentDistraction
 	EntityState	MinorDistraction
@@ -174,8 +128,8 @@ StatusEffectSkillWampirBloodPerLevel
 {
 	Base		BaseStatusEffectPerLevel
 
-	HealthChange	-1.6 // bal -1.5
-	HealthChangeInflation	0.2 // bal 0.05
+	HealthChange	-1.5
+	HealthChangeInflation	0.05
 }
 
 StatusEffectSkillWampirBlood
@@ -191,7 +145,7 @@ StatusEffectSkillWampirBlood
 
 	TickTime	1.0
 	TotalTime	10.0
-	HealthChange	-2.5 // bal -6
+	HealthChange	-6.0
 	DamageType	Poison
 
 	EffectModelName	Models/Effects/StatusEffectSkillWampirBlood.mdl
@@ -208,7 +162,7 @@ StatusEffectSkillRampagePerLevel
 
 	StatMultAttack		0.05
 	StatMultAttackSpeed	-0.05
-	DynamicStatChangeCriticalHit	1.0 // bal 0.1 mult
+	DynamicStatMultCriticalHit	0.1
 }
 
 StatusEffectSkillRampage
@@ -226,7 +180,7 @@ StatusEffectSkillRampage
 
 	StatMultAttack		0.05
 	StatMultAttackSpeed	-0.05
-	DynamicStatChangeCriticalHit	2.5 // bal 0.1 mult
+	DynamicStatMultCriticalHit	0.1
 
 	EffectModelName	Models/Effects/StatusEffectSkillRampage.mdl
 	EffectTagName	origin
@@ -251,10 +205,10 @@ StatusEffectSkillSpiritStrike
 	TextureName	Textures/Icons/Skills/SpiritStrike.tga
 
 	EffectType	MaxCount
-	GroupName	SpiritStrike // bal Terrorize
+	GroupName	Terrorize
 	MaxCount	5
 
-	TotalTime	5.0 // bal 10
+	TotalTime	10.0
 
 	StatChangeDefense	-10
 	StatChangeAttack	-10
@@ -265,16 +219,14 @@ StatusEffectSkillSpiritStrike
 	PerLevel	StatusEffectSkillSpiritStrikePerLevel
 }
 
-// bal: moved skill around to blast
-StatusEffectSkillShieldBlastPerLevel
+StatusEffectSkillShieldSweepPerLevel
 {
 	Base		BaseStatusEffectPerLevel
 
-	TotalTime	0.2 // bal
-  // StrengthTime 4 // bal
+	StrengthTime	4.0
 }
 
-StatusEffectSkillShieldBlast
+StatusEffectSkillShieldSweep
 {
 	Base		BaseStatusEffect
 
@@ -291,15 +243,15 @@ StatusEffectSkillShieldBlast
 	CantMove	1
 	DamageBreaks	1
 
-	TotalTime	2.0 // bal 4.5
-  // StrengthTime 4 // bal
+	TotalTime	4.5
+	StrengthTime	4.0
 
 	EntityState	MinorDistraction
 
 	EffectModelName	Models/Effects/StatusEffectSkillShieldSweep.mdl
 	EffectTagName	origin
 
-	PerLevel	StatusEffectSkillShieldBlastPerLevel
+	PerLevel	StatusEffectSkillShieldSweepPerLevel
 }
 
 StatusEffectSkillEnergyShieldPerLevel
@@ -309,7 +261,7 @@ StatusEffectSkillEnergyShieldPerLevel
 	StatChangeDefense	45
 	StatChangeBlock		45
 
-	DamageOnHitPercent	0.08 // bal 0.05
+	DamageOnHitPercent	0.05
 }
 
 StatusEffectSkillEnergyShield
@@ -328,7 +280,7 @@ StatusEffectSkillEnergyShield
 	StatChangeDefense	45
 	StatChangeBlock		45
 
-	DamageOnHitPercent	0.08 // bal 0.1
+	DamageOnHitPercent	0.1
 	DamageOnHitRange	100.0
 
 	EffectModelName	Models/Effects/StatusEffectSkillEnergyShield.mdl
@@ -341,9 +293,9 @@ StatusEffectSkillInfernoPerLevel
 {
 	Base		BaseStatusEffectPerLevel
 
-	StatChangeResistanceFire	5	// bal: StatMult 0.1	
-	HealthChange	-1.4 // bal -1
-	HealthChangeInflation	0.2 // bal 0.04
+	StatMultResistanceFire	0.1
+	HealthChange	-1.0
+	HealthChangeInflation	0.04
 	TotalTime	2.0
 }
 
@@ -359,11 +311,11 @@ StatusEffectSkillInferno
 	GroupName	Inferno
 
 	DamageOthersRange	75.0
-	HealthChange	-1.2 // bal -1
+	HealthChange	-1.0
 	DamageType	Fire
 	TickTime	1.0
 
-	StatChangeResistanceFire	30	// bal 0.1 mult
+	StatMultResistanceFire	0.1
 
 	EffectModelName	Models/Effects/StatusEffectSkillInferno.mdl
 	EffectTagName	origin
@@ -413,7 +365,7 @@ StatusEffectSkillBloodSacrificePerLevel
 
 	HealthChange	-1.5
 
-	DamageMultPhysical	0.12 // bal 0.12
+	DamageMultPhysical	0.1
 }
 
 StatusEffectSkillBloodSacrifice
@@ -424,16 +376,15 @@ StatusEffectSkillBloodSacrifice
 
 	TextureName	Textures/Icons/Skills/bloodSacrifice.tga
 
-	EffectType	Cancel // MaxCount
+	EffectType	MaxCount
 	GroupName	BloodSacrifice
-  // MaxCount 4 // bal
+	MaxCount	4
 
-	TickTime	1.0 // bal 1.5
-  // TotalTime 15.0 // bal
-	HealthChange	-1.5 // bal -2
-	Forever		1 // bal
+	TickTime	1.5
+	TotalTime	15.0
+	HealthChange	-2.0
 
-	DamageMultPhysical	0.3 // bal 0.1
+	DamageMultPhysical	0.1
 
 	EffectModelName	Models/Effects/StatusEffectSkillBloodSacrifice.mdl
 	EffectTagName	origin
@@ -445,7 +396,7 @@ StatusEffectSkillPossessionPerLevel
 {
 	Base		BaseStatusEffectPerLevel
 
-	DamageMultPhysical		0.1 // bal 0.25
+	DamageMultPhysical		0.25
 	DynamicStatMultStunningBlow	0.25
 }
 
@@ -541,8 +492,8 @@ StatusEffectLightningWardDefensePerLevel
 	Base		BaseStatusEffectPerLevel
 
 	StatMultResistanceLightning	0.1
-	DynamicStatChangeCriticalHit	0.7 // bal Mult 0.03
-	DynamicStatChangeMagicCriticalHit	0.7 // bal Mult 0.03
+	DynamicStatMultCriticalHit	0.03
+	DynamicStatMultMagicCriticalHit	0.03
 }
 
 StatusEffectLightningWardDefense
@@ -557,8 +508,8 @@ StatusEffectLightningWardDefense
 	TextureName	Textures/Icons/Skills/LightningWard.tga
 
 	StatMultResistanceLightning	0.1
-	DynamicStatChangeCriticalHit	1.75 // bal Mult 0.03
-	DynamicStatChangeMagicCriticalHit	1.75 // bal Mult 0.03
+	DynamicStatMultCriticalHit	0.03
+	DynamicStatMultMagicCriticalHit	0.03
 
 	TotalTime	2.2
 
@@ -655,13 +606,11 @@ StatusEffectPoisonWardDefense
 	PerLevel	StatusEffectPoisonWardDefensePerLevel
 }
 
-// bal XXX
 StatusEffectSkillDemonicControlPerLevel
 {
 	Base		BaseStatusEffectPerLevel
 
-	TotalTime	1.8 // bal
-  // StrenghTime 5.0 // bal
+	StrengthTime	5.0
 }
 
 StatusEffectSkillDemonicControl
@@ -683,8 +632,8 @@ StatusEffectSkillDemonicControl
 	DisallowsPlayerToAttack		1
 	Pet		1
 
-	TotalTime	5.0 // bal 5
-  // StrengthTime 5 // bal
+	TotalTime	15.0
+	StrengthTime	5.0
 
 	StatMultArmor		0.5
 	StatMultMinDamage	0.25
@@ -730,11 +679,11 @@ StatusEffectCircleOfPowerPerLevel
 {
 	Base		BaseStatusEffectPerLevel
 
-	DamageMultPhysical	0.06 // bal 0.15
-	DynamicStatChangeCriticalHit		1.0 // bal 0.1 mult
-	DynamicStatChangeCrushingBlow		1.0 // bal 0.1 mult
-	DynamicStatChangeMagicCriticalHit	1.0 // bal 0.1 mult
-	DynamicStatChangeMagicCrushingBlow	1.0 // bal 0.1 mult
+	DamageMultPhysical	0.15
+	DynamicStatMultCriticalHit		0.1
+	DynamicStatMultCrushingBlow		0.1
+	DynamicStatMultMagicCriticalHit		0.1
+	DynamicStatMultMagicCrushingBlow	0.1
 }
 
 StatusEffectCircleOfPower
@@ -749,10 +698,10 @@ StatusEffectCircleOfPower
 	TextureName	Textures/Icons/Skills/CircleofPower.tga
 
 	DamageMultPhysical	0.15
-	DynamicStatChangeCriticalHit		2.5 // bal 0.1 mult
-	DynamicStatChangeCrushingBlow		2.5 // bal 0.1 mult
-	DynamicStatChangeMagicCriticalHit	2.5 // bal 0.1 mult
-	DynamicStatChangeMagicCrushingBlow	2.5 // bal 0.1 mult
+	DynamicStatMultCriticalHit		0.1
+	DynamicStatMultCrushingBlow		0.1
+	DynamicStatMultMagicCriticalHit		0.1
+	DynamicStatMultMagicCrushingBlow	0.1
 
 	TotalTime	2.2
 
@@ -766,7 +715,7 @@ StatusEffectSkillBloodRagePerLevel
 {
 	Base		BaseStatusEffectPerLevel
 
-	DamageMultPhysical	0.032 // bal 0.05
+	DamageMultPhysical	0.05
 
 	TotalTime	0.5
 }
@@ -785,7 +734,7 @@ StatusEffectSkillBloodRage
 
 	TotalTime	10.0
 
-	DamageMultPhysical	0.08 // 0.05
+	DamageMultPhysical	0.05
 
 	EffectModelName	Models/Effects/StatusEffectSkillBloodRage.mdl
 	EffectTagName	origin
@@ -855,7 +804,7 @@ StatusEffectWet
 	StatChangeResistanceLightning	-20
 	StatMultResistanceLightning	-1.0
 
-	StatChangeResistanceFire	25		// bal 0.5 mult doesn't make sense to double
+	StatMultResistanceFire	0.5
 
 	StatMultAttack	-0.1
 	StatMultDefense	-0.1
@@ -1048,147 +997,3 @@ StatusEffectNoFights
 
 	Save		1
 }
-
-// Bal: Add status effects for NPC activities ---
-StatusEffectNpcActivityBaseBalance
-{
-	Base		BaseStatusEffect
-	Desc		"Blah blah"
-
-	TextureName	Textures/Icons/Effects/anti-magic.tga
-
-	EffectType	OnlyOneKeepOld
-	GroupName	ActivitiesBal
-
-	TotalTime	300.0
-
-	Save		1
-}
-
-StatusEffectNpcArgumentBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Argument$$
-	Desc	$$ArgumentDesc$$
-	Save		1
-}
-
-StatusEffectNpcConversationBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Conversation$$
-	Desc	$$ConversationDesc$$
-	Save		1
-}
-
-StatusEffectNpcGambleBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Gamble$$
-	Desc	$$GambleDesc$$
-	Save		1
-}
-
-StatusEffectNpcPrayBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Pray$$
-	Desc	$$PrayDesc$$
-	Save		1
-}
-
-StatusEffectNpcShoppingBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Shopping$$
-	Desc	$$ShoppingDesc$$
-	Save		1
-}
-
-StatusEffectNpcJobBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Work$$
-	Desc	$$WorkDesc$$
-	Save		1
-}
-
-StatusEffectNpcDonateBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Donate$$
-	Desc	$$DonateDesc$$
-	Save		1
-}
-
-StatusEffectNpcDwellOnMoneyBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$DwellOnMoney$$
-	Desc	$$DwellOnMoneyDesc$$
-	Save		1
-}
-
-StatusEffectNpcJealousBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Jealous$$
-	Desc	$$JealousDesc$$
-	Save		1
-}
-
-StatusEffectNpcGossipBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Gossip$$
-	Desc	$$GossipDesc$$
-	Save		1
-}
-
-StatusEffectNpcPraiseBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Praise$$
-	Desc	$$PraiseDesc$$
-	Save		1
-}
-
-StatusEffectNpcMarriageBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Marriage$$
-	Desc	$$MarriageDesc$$
-	Save		1
-}
-
-StatusEffectNpcDivorceBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Divorce$$
-	Desc	$$DivorceDesc$$
-	Save		1
-}
-
-StatusEffectNpcFlirtBalance
-{
-	Base StatusEffectNpcActivityBaseBalance
-
-	Name	$$Flirt$$
-	Desc	$$FlirtDesc$$
-	Save		1
-}
-
-// Bal NPC Activities end ---
