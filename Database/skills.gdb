@@ -42,6 +42,15 @@ BaseSkill
 	MaxUserRarity	Boss
 }
 
+//bal
+BaseSkillConst
+{
+	Base		BaseSkill
+  CostIncreasePerLevel 0 // bal
+
+	BaseOnly	1
+}
+
 BaseSkillOffense
 {
 	Base		BaseSkill
@@ -49,9 +58,27 @@ BaseSkillOffense
 	BaseOnly	1
 }
 
+
+//bal
+BaseSkillOffenseConst
+{
+	Base		BaseSkillConst
+	NeedsEnemy	1
+	BaseOnly	1
+}
+
 BaseSkillDefense
 {
 	Base		BaseSkill
+	NeedsEnemy	0
+	Self		1
+	BaseOnly	1
+}
+
+//bal
+BaseSkillDefenseConst
+{
+	Base		BaseSkillConst
 	NeedsEnemy	0
 	Self		1
 	BaseOnly	1
@@ -66,9 +93,27 @@ BaseSkillFriendDefense
 	MaxRange	250.0
 }
 
+//bal
+BaseSkillFriendDefenseConst
+{
+	Base		BaseSkillDefenseConst
+	BaseOnly	1
+	NeedsFriend	1
+
+	MaxRange	250.0
+}
+
 BaseSkillOffenseArea
 {
 	Base		BaseSkill
+	NeedsEnemy	0
+	BaseOnly	1
+}
+
+//bal
+BaseSkillOffenseAreaConst
+{
+	Base		BaseSkillConst
 	NeedsEnemy	0
 	BaseOnly	1
 }
@@ -79,14 +124,26 @@ BaseSkillPassive
 	NeedsEnemy	0
 	BaseOnly	1
 	Passive		1
+}
 
-	// Increase so passives don't flood the end game
-	CostIncreasePerLevel	2 // bal 0
+//bal
+BaseSkillPassiveConst
+{
+	Base		BaseSkillConst
+	NeedsEnemy	0
+	BaseOnly	1
+	Passive		1
 }
 
 BaseSkillPerLevel
 {
 	Base		BaseSkill
+}
+
+//bal
+BaseSkillPerLevelConst
+{
+	Base		BaseSkillConst
 }
 
 SkillAttackBase
@@ -1794,7 +1851,7 @@ SkillBlocking
 
 SkillParryPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	StatChangeParry		15
 	StatChangeDefense	15
@@ -1802,7 +1859,7 @@ SkillParryPerLevel
 
 SkillParry
 {
-	Base		BaseSkillPassive
+	Base		BaseSkillPassiveConst // bal
 
 	BaseName	$$ParrySkillName$$
 	Desc		$$ParrySkillDesc$$
@@ -2131,16 +2188,16 @@ SkillPreciseStrike
 
 SkillViperVenomPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
-	MinCharLevel	5 // bal
+	MinCharLevel	5 // bal XXX
 
 	Power		1
 }
 
 SkillViperVenom
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ViperVenom$$
 	Desc		$$ViperVenomDesc$$
@@ -2953,14 +3010,14 @@ SkillDisarmTrap
 
 SkillApplyPoisonPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 	Power		3 // bal
 	ReuseTime	1 // bal
 }
 
 SkillApplyPoison
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$ConcentrationPoison$$
 	Desc		$$ConcentrationPoisonDesc$$
@@ -3470,7 +3527,7 @@ SkillMailArmor
 
 SkillRegenerationPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 
@@ -3479,7 +3536,7 @@ SkillRegenerationPerLevel
 
 SkillRegeneration
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$RegenerationSkillName$$
 	Desc		$$RegenerationSkillDesc$$
@@ -3674,7 +3731,7 @@ SkillBonusPowerRegenPerSprHealer
 
 SkillHolyBoltPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5
 	ProjMaxDamage	15 // bal 13
@@ -3687,7 +3744,7 @@ SkillHolyBoltPerLevel
 
 SkillHolyBolt
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst
 
 	BaseName	$$Holybolt$$
 	Desc		$$HolyBoltDesc$$
@@ -3718,12 +3775,12 @@ SkillHolyBolt
 
 SkillPrayerPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 }
 
 SkillPrayer
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$Prayer$$
 	Desc		$$PrayerDesc$$
@@ -3742,7 +3799,7 @@ SkillPrayer
 
 SkillLesserHealPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	Heal		25 // bal 16
 	Power		4
@@ -3750,7 +3807,7 @@ SkillLesserHealPerLevel
 
 SkillLesserHeal
 {
-	Base		BaseSkillFriendDefense
+	Base		BaseSkillFriendDefenseConst // bal
 
 	BaseName	$$LesserHeal$$
 	Desc		$$LesserHealDesc$$
@@ -3851,7 +3908,7 @@ SkillPriestPrecision
 
 SkillAreaHealPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	Heal		20
 
@@ -3860,7 +3917,7 @@ SkillAreaHealPerLevel
 
 SkillAreaHeal
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$AreaHeal$$
 	Desc		$$AreaHealDesc$$
@@ -3896,7 +3953,7 @@ SkillAreaHeal
 
 SkillGreaterHealPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	Heal		100 // bal 28
 	Power		5
@@ -3904,7 +3961,7 @@ SkillGreaterHealPerLevel
 
 SkillGreaterHeal
 {
-	Base		BaseSkillFriendDefense
+	Base		BaseSkillFriendDefenseConst // bal
 
 	BaseName	$$GreaterHeal$$
 	Desc		$$GreaterHealDesc$$
@@ -3940,7 +3997,7 @@ SkillGreaterHeal
 
 SkillHolyStrikePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5
 	ProjMaxDamage	15
@@ -3952,7 +4009,7 @@ SkillHolyStrikePerLevel
 
 SkillHolyStrike
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$HolyStrike$$
 	Desc		$$HolyStrikeDesc$$
@@ -3982,7 +4039,7 @@ SkillHolyStrike
 
 SkillHolySymbolPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	MinDamage	6 // bal 5
 	MaxDamage	14 // bal 10
@@ -3995,7 +4052,7 @@ SkillHolySymbolPerLevel
 
 SkillHolySymbol
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$HolySymbol$$
 	Desc		$$HolySymbolDesc$$
@@ -4036,7 +4093,7 @@ SkillHolySymbol
 
 SkillHolyShieldPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 	Power	8 // bal 3
@@ -4046,7 +4103,7 @@ SkillHolyShieldPerLevel
 
 SkillHolyShield
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$HolyShield$$
 	Desc		$$HolyShieldDesc$$
@@ -4112,7 +4169,7 @@ SkillBonusPowerRegenPerSprShaman
 
 SkillLifeburnPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	2
 	ProjMaxDamage	6
@@ -4125,7 +4182,7 @@ SkillLifeburnPerLevel
 
 SkillLifeburn
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$Lifeburn$$
 	Desc		$$LifeburnDesc$$
@@ -4161,7 +4218,7 @@ SkillLifeburn
 
 SkillHardinessPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 	Power		6 // bal 5
@@ -4171,7 +4228,7 @@ SkillHardinessPerLevel
 
 SkillHardiness
 {
-	Base		BaseSkillFriendDefense
+	Base		BaseSkillFriendDefenseConst // bal
 
 	BaseName	$$HardinessBlessing$$
 	Desc		$$HardinessBlessingDesc$$
@@ -4245,7 +4302,7 @@ SkillTrueAim
 
 SkillHolyFirePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjRadiusMinDamage	5 // bal 4
 	ProjRadiusMaxDamage	19 // bal 10
@@ -4258,7 +4315,7 @@ SkillHolyFirePerLevel
 
 SkillHolyFire
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$HolyFire$$
 	Desc		$$HolyFireDesc$$
@@ -4293,7 +4350,7 @@ SkillHolyFire
 
 SkillProtectionFirePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 	Power		5
@@ -4301,7 +4358,7 @@ SkillProtectionFirePerLevel
 
 SkillProtectionFire
 {
-	Base		BaseSkillFriendDefense
+	Base		BaseSkillFriendDefenseConst // bal
 
 	BaseName	$$FireResistanceProtection$$
 	Desc		$$FireResistanceProtectionDesc$$
@@ -4332,7 +4389,7 @@ SkillProtectionFire
 
 SkillProtectionLightningPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 	Power		5
@@ -4340,7 +4397,7 @@ SkillProtectionLightningPerLevel
 
 SkillProtectionLightning
 {
-	Base		BaseSkillFriendDefense
+	Base		BaseSkillFriendDefenseConst // bal
 
 	BaseName	$$LightningResistanceProtection$$
 	Desc		$$LightningResistanceProtectionDesc$$
@@ -4373,7 +4430,7 @@ SkillProtectionLightning
 
 SkillProtectionPoisonPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 	Power		5
@@ -4381,7 +4438,7 @@ SkillProtectionPoisonPerLevel
 
 SkillProtectionPoison
 {
-	Base		BaseSkillFriendDefense
+	Base		BaseSkillFriendDefenseConst // bal
 
 	BaseName	$$PoisonResistanceProtection$$
 	Desc		$$PoisonResistanceProtectionDesc$$
@@ -4414,7 +4471,7 @@ SkillProtectionPoison
 
 SkillProtectionColdPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 	Power		5
@@ -4422,7 +4479,7 @@ SkillProtectionColdPerLevel
 
 SkillProtectionCold
 {
-	Base		BaseSkillFriendDefense
+	Base		BaseSkillFriendDefenseConst // bal
 
 	BaseName	$$ColdResistanceProtection$$
 	Desc		$$ColdResistanceProtectionDesc$$
@@ -4633,7 +4690,7 @@ SkillPenaltyFireResistancePerSprFireMageBalance
 
 SkillFieryBlastPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	4 // bal 5
 	ProjMaxDamage	15
@@ -4646,7 +4703,7 @@ SkillFieryBlastPerLevel
 
 SkillFieryBlast
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$FieryBlast$$
 	Desc		$$FieryBlastDesc$$
@@ -4678,7 +4735,7 @@ SkillFieryBlast
 
 SkillFireBallPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjRadiusMinDamage	5
 	ProjRadiusMaxDamage	19 // bal 10
@@ -4691,7 +4748,7 @@ SkillFireBallPerLevel
 
 SkillFireBall
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$Fireball$$
 	Desc		$$FireballDesc$$
@@ -4727,7 +4784,7 @@ SkillFireBall
 
 SkillSweepingFlamesPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5 // bal 1
 	ProjMaxDamage	14 // bal 5
@@ -4740,7 +4797,7 @@ SkillSweepingFlamesPerLevel
 
 SkillSweepingFlames
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$SweepingFlames$$
 	Desc		$$SweepingFlamesDesc$$
@@ -4773,7 +4830,7 @@ SkillSweepingFlames
 
 SkillImmolationPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 	Power		3 // bal 4
 
 	MinCharLevel	5 // bal
@@ -4781,7 +4838,7 @@ SkillImmolationPerLevel
 
 SkillImmolation
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ImmolationSkillName$$
 	Desc		$$ImmolationSkillDesc$$
@@ -4818,7 +4875,7 @@ SkillImmolation
 
 SkillShieldOfFirePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 	Power		6 // bal 3
@@ -4828,7 +4885,7 @@ SkillShieldOfFirePerLevel
 
 SkillShieldOfFire
 {
-	Base		BaseSkillFriendDefense
+	Base		BaseSkillFriendDefenseConst // bal
 
 	BaseName	$$ShieldofFireSkillName$$
 	Desc		$$ShieldofFireSkillDesc$$
@@ -4948,7 +5005,7 @@ SkillFireElemental
 
 SkillVolcanoPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	8 // bal 9
 	ProjMaxDamage	18 // bal 25
@@ -4961,7 +5018,7 @@ SkillVolcanoPerLevel
 
 SkillVolcano
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$VolcanoSkillName$$
 	Desc		$$VolcanoSkillDesc$$
@@ -4998,7 +5055,7 @@ SkillVolcano
 
 SkillMaelstromPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	8 // bal 9
 	ProjMaxDamage	18 // bal 25
@@ -5011,7 +5068,7 @@ SkillMaelstromPerLevel
 
 SkillMaelstrom
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$MaelstromSkillName$$
 	Desc		$$MaelstromSkillDesc$$
@@ -5160,7 +5217,7 @@ SkillPenaltyColdResistancePerSprIceMageBalance
 
 SkillArticShardPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5 // bal 4
 	ProjMaxDamage	13 // bal 12
@@ -5173,7 +5230,7 @@ SkillArticShardPerLevel
 
 SkillArticShard
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ArcticShard$$
 	Desc		$$ArcticShardDesc$$
@@ -5209,7 +5266,7 @@ SkillArticShard
 
 SkillFrostNovaPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5 // bal 3
 	ProjMaxDamage	12 // bal 9
@@ -5222,7 +5279,7 @@ SkillFrostNovaPerLevel
 
 SkillFrostNova
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$FrostNova$$
 	Desc		$$FrostNovaDesc$$
@@ -5262,7 +5319,7 @@ SkillFrostNova
 
 SkillIceStormPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5
 	ProjMaxDamage	14 // bal 15
@@ -5275,7 +5332,7 @@ SkillIceStormPerLevel
 
 SkillIceStorm
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$IceStorm$$
 	Desc		$$IceStormDesc$$
@@ -5336,7 +5393,7 @@ SkillConcentration
 
 SkillIceArmorPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	Power		7 // bal 10
 	ReuseTime	2 // bal
@@ -5346,7 +5403,7 @@ SkillIceArmorPerLevel
 
 SkillIceArmor
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$IceArmorSkillName$$
 	Desc		$$IceArmorSkillDesc$$
@@ -5377,13 +5434,13 @@ SkillIceArmor
 
 SkillFrostBitePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 	Power 		5 // bal 3
 }
 
 SkillFrostBite
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$FrostBiteSkillName$$
 	Desc		$$FrostBiteSkillDesc$$
@@ -5485,7 +5542,7 @@ SkillPermafrost
 
 SkillShatterPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	MinDamage	6 // bal 5
 	MaxDamage	14 // bal 15
@@ -5502,7 +5559,7 @@ SkillShatterPerLevel
 
 SkillShatter
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ShatterSkillName$$
 	Desc		$$ShatterSkillDesc$$
@@ -5679,7 +5736,7 @@ SkillBlindingFlash
 
 SkillArmorMeltPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	Power		4 // bal 3
 
@@ -5688,7 +5745,7 @@ SkillArmorMeltPerLevel
 
 SkillArmorMelt
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ArmorMelt$$
 	Desc		$$ArmorMeltDesc$$
@@ -5716,7 +5773,7 @@ SkillArmorMelt
 
 SkillMagicShieldPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	Power		7 // bal 3
 
@@ -5725,7 +5782,7 @@ SkillMagicShieldPerLevel
 
 SkillMagicShield
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$MagicShield$$
 	Desc		$$MagicShieldDesc$$
@@ -5781,7 +5838,7 @@ SkillDeepThought
 
 SkillMageEvasionPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	StatChangeEvade		20
 	StatChangeDefense	20
@@ -5789,7 +5846,7 @@ SkillMageEvasionPerLevel
 
 SkillMageEvasion
 {
-	Base		BaseSkillPassive
+	Base		BaseSkillPassiveConst // bal
 
 	BaseName	$$Evasion$$
 	Desc		$$EvasionDesc$$
@@ -5846,8 +5903,8 @@ SkillTeleportPerLevel
 {
 	Base		BaseSkillPerLevel
 
-	ReuseTime	-1.2 // bal -10
-	Power		20 // bal 3
+	ReuseTime	-5 // bal -10
+	Power		10 // bal 3
 }
 
 SkillTeleport
@@ -5859,11 +5916,11 @@ SkillTeleport
 
 	TextureName	Textures/Icons/Skills/teleport01.tga
 
-	Power		40 // bal 10
+	Power		20 // bal 10
 	TotalTime	0.5
 	Spell		1
 
-	ReuseTime	6.0 // bal 60
+	ReuseTime	30.0 // bal 60 (goes down to 0)
 
 	Teleport	1
 
@@ -5874,11 +5931,9 @@ SkillTeleport
 
 	TargetEffect	Models/Effects/teleport.mdl
 
-	BaseCost	10 // bal 4
+	BaseCost	4
 
 	StatusEffect	StatusEffectTeleportStealth // bal
-
-	CostIncreasePerLevel	4 // bal
 
 	MaxSkillLevel	6
 
@@ -5887,7 +5942,7 @@ SkillTeleport
 
 SkillArcaneBlastPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	6 // bal 3
 	ProjMaxDamage	16 // bal 10
@@ -5900,7 +5955,7 @@ SkillArcaneBlastPerLevel
 
 SkillArcaneBlast
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ArcaneBlastSkillName$$
 	Desc		$$ArcaneBlastSkillDesc$$
@@ -5930,7 +5985,7 @@ SkillArcaneBlast
 
 SkillArcaneSwarmPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5 // bal 3
 	ProjMaxDamage	16 // bal 8
@@ -5943,7 +5998,7 @@ SkillArcaneSwarmPerLevel
 
 SkillArcaneSwarm
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ArcaneSwarmSkillName$$
 	Desc		$$ArcaneSwarmSkillDesc$$
@@ -5974,7 +6029,7 @@ SkillArcaneSwarm
 
 SkillArcaneDrainPerLevel
 {
-	Base	BaseSkillPerLevel
+	Base	BaseSkillPerLevelConst // bal
 	Power	3
 
 	MinCharLevel	5 // bal
@@ -5982,7 +6037,7 @@ SkillArcaneDrainPerLevel
 
 SkillArcaneDrain
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ArcaneDrainSkillName$$
 	Desc		$$ArcaneDrainSkillDesc$$
@@ -6193,8 +6248,6 @@ SkillPoisonArrow
 	StandStillToCast	1
 }
 
-// bal Shock bolt is a regular arrow with stun (XXX why?)
-//
 SkillShockBoltPerLevel
 {
 	Base		BaseSkillPerLevel
@@ -6219,7 +6272,7 @@ SkillShockBolt
 	ShowSkillHint	1
 
 	Projectile	ProjShockBolt
-	//ProjDamageType	Lightning // bal
+	ProjDamageType	Lightning
 	ProjNormalAttack	1	// is needed?
 
 	ProjectileDamage	1
@@ -6325,7 +6378,7 @@ SkillBowMastery
 
 SkillExplodingArrowPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjRadiusMinDamage	5
 	ProjRadiusMaxDamage	17 // bal 10
@@ -6337,7 +6390,7 @@ SkillExplodingArrowPerLevel
 
 SkillExplodingArrow
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ExplodingArrowSkillName$$
 	Desc		$$ExplodingArrowSkillDesc$$
@@ -6374,7 +6427,7 @@ SkillExplodingArrow
 
 SkillDodgeArcherPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	StatChangeDodge		25
 	StatChangeDefense	25
@@ -6382,7 +6435,7 @@ SkillDodgeArcherPerLevel
 
 SkillDodgeArcher
 {
-	Base		BaseSkillPassive
+	Base		BaseSkillPassiveConst // bal
 
 	BaseName	$$Dodge$$
 	Desc		$$DodgeDesc$$
@@ -6570,7 +6623,7 @@ SkillSerratedArrow
 
 SkillImmolationTrapPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjRadiusMinDamage	6 // bal 5
 	ProjRadiusMaxDamage	14 // bal 15
@@ -6582,7 +6635,7 @@ SkillImmolationTrapPerLevel
 
 SkillImmolationTrap
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$ImmolationTrapSkillName$$
 	Desc		$$ImmolationTrapSkillDesc$$
@@ -6616,7 +6669,7 @@ SkillImmolationTrap
 
 SkillFreezingTrapPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjRadiusMinDamage	5 // bal 3
 	ProjRadiusMaxDamage	12 // bal 8
@@ -6628,7 +6681,7 @@ SkillFreezingTrapPerLevel
 
 SkillFreezingTrap
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$FreezingTrapSkillName$$
 	Desc		$$FreezingTrapSkillDesc$$
@@ -6712,7 +6765,7 @@ SkillNetTrap
 
 SkillInfusedEnergyPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	Stamina			20
 	PowerAdded		20 // bal 40
@@ -6720,7 +6773,7 @@ SkillInfusedEnergyPerLevel
 
 SkillInfusedEnergy
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$InfusedEnergySkillName$$
 	Desc		$$InfusedEnergySkillDesc$$
@@ -6749,12 +6802,12 @@ SkillInfusedEnergy
 
 SkillLightTouchPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 }
 
 SkillLightTouch
 {
-	Base		BaseSkillPassive
+	Base		BaseSkillPassiveConst // bal
 
 	BaseName	$$LightTouchSkillName$$
 	Desc		$$LightTouchSkillDesc$$
@@ -6838,7 +6891,7 @@ SkillTrapMastery
 
 SkillCookingPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SuccessChance	0.04 // bal 0.05
 	Power		4 // bal 1
@@ -6849,7 +6902,7 @@ SkillCookingPerLevel
 
 SkillCooking
 {
-	Base		BaseSkill
+	Base		BaseSkillConst // bal
 
 	BaseName	$$CookingSkillName$$
 	Desc		$$CookingSkillDesc$$
@@ -6879,7 +6932,7 @@ SkillCooking
 
 SkillLurePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	MonsterLevel		4.0
 	Power	2 // bal 1
@@ -6887,7 +6940,7 @@ SkillLurePerLevel
 
 SkillLure
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$LureSkillName$$
 	Desc		$$LureSkillDesc$$
@@ -6983,7 +7036,7 @@ SkillWeakness
 
 SkillBarkskinPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 
@@ -6994,7 +7047,7 @@ SkillBarkskinPerLevel
 
 SkillBarkskin
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$BarkskinSkillName$$
 	Desc		$$BarkskinSkillDesc$$
@@ -7027,7 +7080,7 @@ SkillBarkskin
 
 SkillEarthquakePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	MinDamage	6 // bal 4
 	MaxDamage	14 // bal 8
@@ -7040,7 +7093,7 @@ SkillEarthquakePerLevel
 
 SkillEarthquake
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$Earthquake$$
 	Desc		$$EarthquakeDesc$$
@@ -7122,7 +7175,7 @@ SkillManaRegen
 
 SkillStrengthOfStonePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	SilentHateChange	10.0
 
@@ -7135,7 +7188,7 @@ SkillStrengthOfStonePerLevel
 
 SkillStrengthOfStone
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$StrengthOfStoneSkillName$$
 	Desc		$$StrengthOfStoneSkillDesc$$
@@ -7193,7 +7246,7 @@ SkillEarthLink
 
 SkillNaturesRevengePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 	Power		2 // bal 3
 
 	MinCharLevel	5 // bal
@@ -7201,7 +7254,7 @@ SkillNaturesRevengePerLevel
 
 SkillNaturesRevenge
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$NaturesRevengeSkillName$$
 	Desc		$$NaturesRevengeSkillDesc$$
@@ -7404,7 +7457,7 @@ SkillBonusPowerRegenPerIntWarlock
 
 SkillShadowBoltPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5
 	ProjMaxDamage	13 // bal 15
@@ -7417,7 +7470,7 @@ SkillShadowBoltPerLevel
 
 SkillShadowBolt
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ShadowBoltSkillName$$
 	Desc		$$ShadowBoltSkillDesc$$
@@ -7654,7 +7707,7 @@ SkillCurseOfEnfeeblement
 
 SkillCurseOfPainPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 	Power		5 // bal 3
 
 	MinCharLevel	5 // bal
@@ -7662,7 +7715,7 @@ SkillCurseOfPainPerLevel
 
 SkillCurseOfPain
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$CurseOfPainSkillName$$
 	Desc		$$CurseOfPainSkillDesc$$
@@ -7772,7 +7825,7 @@ SkillCurseOfStammer
 
 SkillDarkSacrificePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	PowerAdded		30 // bal 50
 
@@ -7784,7 +7837,7 @@ SkillDarkSacrificePerLevel
 
 SkillDarkSacrifice
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$DarkSacrificeSkillName$$
 	Desc		$$DarkSacrificeSkillDesc$$
@@ -7852,7 +7905,7 @@ SkillManaGenNecromancer
 
 SkillBoltOfGloomPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5
 	ProjMaxDamage	13 // bal 15
@@ -7865,7 +7918,7 @@ SkillBoltOfGloomPerLevel
 
 SkillBoltOfGloom
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$BoltOfGloomSkillName$$
 	Desc		$$BoltOfGloomSkillDesc$$
@@ -7898,7 +7951,7 @@ SkillBoltOfGloom
 
 SkillBoneShatterPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	MinDamage	5
 	MaxDamage	17 // bal 15
@@ -7914,7 +7967,7 @@ SkillBoneShatterPerLevel
 
 SkillBoneShatter
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$BoneShatterSkillName$$
 	Desc		$$BoneShatterSkillDesc$$
@@ -8032,7 +8085,7 @@ SkillDespair
 
 SkillBlightPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	Power		5 // bal 3
 
@@ -8041,7 +8094,7 @@ SkillBlightPerLevel
 
 SkillBlight
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$BlightSkillName$$
 	Desc		$$BlightSkillDesc$$
@@ -8321,7 +8374,7 @@ SkillPenaltyLightningResistancePerSprSorcererBalance
 
 SkillLightningPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	MinDamage	5
 	MaxDamage	13 // bal 12
@@ -8334,7 +8387,7 @@ SkillLightningPerLevel
 
 SkillLightning
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$LightningBlast$$
 	Desc		$$LightningBlastDesc$$
@@ -8372,7 +8425,7 @@ SkillLightning
 
 SkillChainLightningPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	5 // bal 3
 	ProjMaxDamage	15 // bal 10
@@ -8385,7 +8438,7 @@ SkillChainLightningPerLevel
 
 SkillChainLightning
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ChainLightning$$
 	Desc		$$ChainLightningDesc$$
@@ -8424,7 +8477,7 @@ SkillChainLightning
 
 SkillBallLightningPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	8 // bal 25
 	ProjMaxDamage	19 // bal 35
@@ -8437,7 +8490,7 @@ SkillBallLightningPerLevel
 
 SkillBallLightning
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$BallLightning$$
 	Desc		$$BallLightningDesc$$
@@ -8477,7 +8530,7 @@ SkillBallLightning
 // bal REMOVED. Too similar to lightning
 SkillThunderboltPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	MinDamage	3 // bal 4
 	MaxDamage	11 // bal 9
@@ -8491,7 +8544,7 @@ SkillThunderboltPerLevel
 // bal REMOVED
 SkillThunderbolt
 {
-	Base		BaseSkillOffense
+	Base		BaseSkillOffenseConst // bal
 
 	BaseName	$$ThunderboltSkillName$$
 	Desc		$$ThunderboltSkillDesc$$
@@ -8529,7 +8582,7 @@ SkillThunderbolt
 // bal: Added
 SkillMagneticDeflectionPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	StatChangeDeflection	20
 	StatChangeDefense	20
@@ -8538,7 +8591,7 @@ SkillMagneticDeflectionPerLevel
 // bal: Added
 SkillMagneticDeflection
 {
-	Base		BaseSkillPassive
+	Base		BaseSkillPassiveConst // bal
 
 	BaseName	$$MagneticDeflection$$
 	Desc		$$MagneticDeflectionDesc$$
@@ -8555,7 +8608,7 @@ SkillMagneticDeflection
 
 SkillLightningSwarmPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	7 // bal 5
 	ProjMaxDamage	21 // bal 15
@@ -8570,7 +8623,7 @@ SkillLightningSwarmPerLevel
 
 SkillLightningSwarm
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$LightningSwarmSkillName$$
 	Desc		$$LightningSwarmSkillDesc$$
@@ -8611,7 +8664,7 @@ SkillLightningSwarm
 
 SkillShockWavePerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	6 // bal 3
 	ProjMaxDamage	12 // bal 9
@@ -8624,7 +8677,7 @@ SkillShockWavePerLevel
 
 SkillShockWave
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$ShockWaveSkillName$$
 	Desc		$$ShockWaveSkillDesc$$
@@ -8669,7 +8722,7 @@ SkillShockWave
 
 SkillTornadoPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	ProjMinDamage	8 // bal 9
 	ProjMaxDamage	18 // bal 25
@@ -8682,7 +8735,7 @@ SkillTornadoPerLevel
 
 SkillTornado
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$TornadoSkillName$$
 	Desc		$$TornadoSkillDesc$$
@@ -8766,14 +8819,14 @@ SkillGaseousForm
 
 SkillStoredLightningPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 //	Power		12
 }
 
 SkillStoredLightning
 {
-	Base		BaseSkillDefense
+	Base		BaseSkillDefenseConst // bal
 
 	BaseName	$$StoredLightningSkillName$$
 	Desc		$$StoredLightningSkillDesc$$

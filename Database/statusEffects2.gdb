@@ -651,6 +651,7 @@ StatusEffectPoisonWardDefense
 	PerLevel	StatusEffectPoisonWardDefensePerLevel
 }
 
+// bal XXX
 StatusEffectSkillDemonicControlPerLevel
 {
 	Base		BaseStatusEffectPerLevel

@@ -189,7 +189,7 @@ SkillFireStrike
 
 SkillBreechPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	StatChangeArmorPiercing		20 // bal 10
 	DynamicStatChangeDeepWounds	0.4 // bal 0.1 mult
@@ -197,7 +197,7 @@ SkillBreechPerLevel
 
 SkillBreech
 {
-	Base		BaseSkillPassive
+	Base		BaseSkillPassiveConst // bal
 
 	BaseName	$$BreechSkill$$
 	Desc		$$BreechDesc$$
@@ -335,7 +335,7 @@ SkillTerrorize
 
 SkillWampirBloodPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	Power		2 // bal 1
 
@@ -344,7 +344,7 @@ SkillWampirBloodPerLevel
 
 SkillWampirBlood
 {
-	Base		BaseSkillOffenseArea
+	Base		BaseSkillOffenseAreaConst // bal
 
 	BaseName	$$WampirBloodSkill$$
 	Desc		$$WampirBloodDesc$$
@@ -817,14 +817,14 @@ SkillPoisonWard
 
 SkillMagicalDeflectionPerLevel
 {
-	Base		BaseSkillPerLevel
+	Base		BaseSkillPerLevelConst // bal
 
 	StatChangeDefense	30
 }
 
 SkillMagicalDeflection
 {
-	Base		BaseSkillPassive
+	Base		BaseSkillPassiveConst // bal
 
 	BaseName	$$MagicalDeflectionSkill$$
 	Desc		$$MagicalDeflectionDesc$$
@@ -874,7 +874,7 @@ SkillBanish
 
 	PerLevel	SkillBanishPerLevel
 
-	BaseCost	10 // bal 6
+	BaseCost	6
 
 	StandStillToCast	1
 }
