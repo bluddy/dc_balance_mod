@@ -380,7 +380,6 @@ SkillTreeFireMage
 	Skill		SkillMaelstrom
 	Skill		SkillFireMastery
 
-	Skill		SkillPenaltyFireResistancePerSprFireMageBalance // bal: cancel out SPR resistance bonus
 }
 
 SkillTreeIceMage
@@ -410,7 +409,6 @@ SkillTreeIceMage
 	Skill		SkillShatter
 	Skill		SkillColdMastery
 
-	Skill		SkillPenaltyColdResistancePerSprIceMageBalance // bal: cancel out SPR resistance bonus
 }
 
 SkillTreeMagician
@@ -633,5 +631,4 @@ SkillTreeSorcerer
 	Skill		SkillStoredLightning
 	Skill		SkillLightningMastery
 
-	Skill		SkillPenaltyLightningResistancePerSprSorcererBalance // bal: cancel out SPR resistance bonus
 }

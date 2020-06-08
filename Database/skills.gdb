@@ -4673,21 +4673,6 @@ SkillManaGenFireMage
 	DynamicStatMultItemPowerGainMult	0.5 // 0.3 bal
 }
 
-// bal: make resistance not come from SPR (XXX for fire resistance -> magic system)
-SkillPenaltyFireResistancePerSprFireMageBalance
-{
-	Base		BaseSkillBasic
-
-	BaseName	$$FireResistancePenalty$$
-	Desc		$$FireResistancePenaltyDesc$$
-
-	TextureName	Textures/Icons/Skills/protectionFire.tga
-
-	StatChangePerAttributeStat	ResistanceFire
-	StatChangePerAttributeAttribute	Spirit
-	StatChangePerAttributeChange	-0.4 // bal: cancels out bonus from SPR
-}
-
 SkillFieryBlastPerLevel
 {
 	Base		BaseSkillPerLevelConst // bal
@@ -5109,15 +5094,12 @@ SkillMaelstrom
 	MinCharLevel	0 // bal
 }
 
-// bal: make based on resistance XXX
 SkillFireMasteryPerLevel
 {
 	Base		BaseSkillPerLevel
 
 	DynamicStatMultSkillDamage      0.05 // bal 0.1
-	//StatChangeResistanceFire		20 bal XXX
-
-	PointsReq	30 // bal XXX
+	StatChangeResistanceFire		20 // bal 4
 }
 
 SkillFireMastery
@@ -5129,12 +5111,8 @@ SkillFireMastery
 
 	TextureName	Textures/Icons/Skills/fireMastery01.tga
 
-	StatReq		ResistanceFire // bal XXX
-	PointsReq	30
-	MaxLevel	30	// bal: prevent insane boosts
-
-    DynamicStatMultSkillDamage	0.05
-	//StatChangeResistanceFire	20
+  DynamicStatMultSkillDamage	0.05
+	StatChangeResistanceFire	20 // bal 4
 
 	Skill		SkillFieryBlast
 	Skill		SkillFireBall
@@ -5198,21 +5176,6 @@ SkillManaGenIceMage
 	TextureName	Textures/Icons/Items/potions_mana_flask.tga
 
 	DynamicStatMultItemPowerGainMult	0.5 // 0.3 bal mult
-}
-
-// bal: make resistance not come from SPR XXX
-SkillPenaltyColdResistancePerSprIceMageBalance
-{
-	Base		BaseSkillBasic
-
-	BaseName	$$ColdResistancePenalty$$
-	Desc		$$ColdResistancePenaltyDesc$$
-
-	TextureName	Textures/Icons/Skills/protectionCold.tga
-
-	StatChangePerAttributeStat	ResistanceCold
-	StatChangePerAttributeAttribute	Spirit
-	StatChangePerAttributeChange	-0.4 // bal: cancels out bonus from SPR
 }
 
 SkillArticShardPerLevel
@@ -5597,17 +5560,13 @@ SkillShatter
 	MinCharLevel	0 // bal
 }
 
-// bal: switch to using resistance XXX
 SkillColdMasteryPerLevel
 {
 	Base		BaseSkillPerLevel
 
 	DynamicStatMultSkillDamage	0.04 // bal 0.075
 	DynamicStatMultTotalTime	0.03 // bal 0.04
-
-	//StatChangeResistanceCold	20 // bal 4
-
-	PointsReq	30 // bal
+	StatChangeResistanceCold	20 // bal 4
 }
 
 SkillColdMastery
@@ -5621,11 +5580,7 @@ SkillColdMastery
 
 	DynamicStatMultSkillDamage	0.04 // bal 0.075
 	DynamicStatMultTotalTime	0.03 // bal 0.04
-	//StatChangeResistanceCold	20 // bal 4
-
-	StatReq		ResistanceCold // bal XXX
-	PointsReq	30
-	MaxLevel	30	// bal: prevent insane boosts
+	StatChangeResistanceCold	20 // bal 4
 
 	EnhanceStatusEffect	StatusEffectFrost
 	EnhanceStatusEffect	StatusEffectIcePrison
@@ -7366,7 +7321,7 @@ SkillEarthMasteryPerLevel
 	Base		BaseSkillPerLevel
 
 	DynamicStatMultSkillDamage	0.04 // bal 0.1
-	// bal XXX DynamicStatMultPowerNeeded	-0.08
+	// bal DynamicStatMultPowerNeeded	-0.08
 	DynamicStatMultTotalTime	0.03 // bal
   StatChangeResistancePoison	15 // bal
 }
@@ -7381,7 +7336,7 @@ SkillEarthMastery
 	TextureName	Textures/Icons/Skills/earthMastery01.tga
 
 	DynamicStatMultSkillDamage	0.04 // bal 0.1
-	// bal XXX DynamicStatMultPowerNeeded	-0.08
+	// bal DynamicStatMultPowerNeeded	-0.08 // Not a good bonus for mostly passives
 	DynamicStatMultTotalTime	0.03 // bal
 	StatChangeResistancePoison	15 // bal
 
@@ -8357,21 +8312,6 @@ SkillBonusPowerRegenPerIntSorcerer
 	DynamicStatChangePowerRegen		0.16875	// bal: offset for power regen
 }
 
-// bal: make resistance not come from SPR XXX
-SkillPenaltyLightningResistancePerSprSorcererBalance
-{
-	Base		BaseSkillBasic
-
-	BaseName	$$LightningResistancePenalty$$
-	Desc		$$LightningResistancePenaltyDesc$$
-
-	TextureName	Textures/Icons/Skills/protectionLightning.tga
-
-	StatChangePerAttributeStat	ResistanceLightning
-	StatChangePerAttributeAttribute	Spirit
-	StatChangePerAttributeChange	-0.4 // bal: cancels out bonus from SPR
-}
-
 SkillLightningPerLevel
 {
 	Base		BaseSkillPerLevelConst // bal
@@ -8854,18 +8794,15 @@ SkillStoredLightning
 	ShowSkillHint	1
 }
 
-// bal: switch to using resistance XXX
 SkillLightningMasteryPerLevel
 {
 	Base		BaseSkillPerLevel
 
 	DynamicStatMultSkillDamage	0.035 // bal 0.05
 	DynamicStatMultPowerNeeded	-0.03 // bal
+  StatChangeResistanceLightning	20 // bal 4
 
-	//bal DynamicStatMultCriticalHit	0.1
-	//StatChangeResistanceLightning	20 // bal 4
-
-	PointsReq	30 // bal XXX
+	//l DynamicStatMultCriticalHit	0.1 // bal
 }
 
 SkillLightningMastery
@@ -8877,13 +8814,10 @@ SkillLightningMastery
 
 	TextureName	Textures/Icons/Skills/lightningMastery01.tga
 
-	StatReq		ResistanceLightning // bal XXX
-	PointsReq	30
-	MaxLevel	30	// bal: prevent insane boosts
-
 	DynamicStatMultSkillDamage	0.035 // bal 0.05
 	DynamicStatMultPowerNeeded	-0.03 // bal
-	//StatChangeResistanceLightning	20 // bal 4
+	//DynamicStatMultCriticalHit	0.1 // bal
+	StatChangeResistanceLightning	20 // bal 4
 
 	Skill		SkillLightning
 	Skill		SkillChainLightning
