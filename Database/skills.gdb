@@ -1781,7 +1781,7 @@ SkillGutPerLevel
 	Base		BaseSkillPerLevel
 
 	Power		2 // bal 1
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 
 }
 
@@ -2190,7 +2190,7 @@ SkillViperVenomPerLevel
 {
 	Base		BaseSkillPerLevelConst // bal
 
-	MinCharLevel	5 // bal XXX
+	MinCharLevel	1 // bal XXX
 
 	Power		1
 }
@@ -2269,7 +2269,7 @@ SkillDeathBlowPerLevel
 	ProjMaxDamage	20
 	ProjDamageInflation	0.2 // bal 0.05
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 
 	Power	2 // bal
 }
@@ -2382,7 +2382,7 @@ SkillChargedStrikePerLevel
 	ProjDamageInflation		0.1 // bal 0.04
 	Power	  2 // bal 1
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillChargedStrike
@@ -3613,7 +3613,7 @@ SkillSmitePerLevel
 
 	DamageMultPhysical	0.048 // bal 0.1
 
-	MinCharLevel	4 // bal
+	MinCharLevel	1 // bal
 
 	Power		1
 }
@@ -3739,7 +3739,7 @@ SkillHolyBoltPerLevel
 
 	Power		3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillHolyBolt
@@ -4004,7 +4004,7 @@ SkillHolyStrikePerLevel
 	ProjDamageInflation	0.1 // bal 0.04
 	Power	5 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillHolyStrike
@@ -4047,7 +4047,7 @@ SkillHolySymbolPerLevel
 
 	Power		6 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillHolySymbol
@@ -4098,7 +4098,7 @@ SkillHolyShieldPerLevel
 	SilentHateChange	10.0
 	Power	8 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillHolyShield
@@ -4177,7 +4177,7 @@ SkillLifeburnPerLevel
 
 	Power		4
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillLifeburn
@@ -4222,7 +4222,7 @@ SkillHardinessPerLevel
 
 	SilentHateChange	10.0
 	Power		6 // bal 5
-	MinCharLevel	3 // bal
+	MinCharLevel	1 // bal
 
 }
 
@@ -4249,12 +4249,12 @@ SkillHardiness
 
 	PerLevel	SkillHardinessPerLevel
 
-	BaseCost		6 // bal 1
+	BaseCost		1
 
 	CastingAnimation	startHardiness
 	Animation		castHardiness
 
-	MinCharLevel	4 // bal
+	MinCharLevel	0 // bal
 
 	TargetEffect	Models/Effects/buff.mdl
 }
@@ -4310,7 +4310,7 @@ SkillHolyFirePerLevel
 
 	Power	6 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillHolyFire
@@ -4683,7 +4683,7 @@ SkillFieryBlastPerLevel
 
 	Power		3 // bal 2
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillFieryBlast
@@ -4726,7 +4726,7 @@ SkillFireBallPerLevel
 	ProjRadiusMaxDamage	19 // bal 10
 	ProjRadiusDamageInflation 0.1 // bal 0.02
 
-	MinCharLevel	5 // bal
+	MinCharLevel 1 // bal
 
 	Power	6 // bal 3
 }
@@ -4777,7 +4777,7 @@ SkillSweepingFlamesPerLevel
 
 	Power	5 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel 1 // bal
 }
 
 SkillSweepingFlames
@@ -4818,7 +4818,7 @@ SkillImmolationPerLevel
 	Base		BaseSkillPerLevelConst // bal
 	Power		3 // bal 4
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillImmolation
@@ -4865,7 +4865,7 @@ SkillShieldOfFirePerLevel
 	SilentHateChange	10.0
 	Power		6 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillShieldOfFire
@@ -4998,7 +4998,7 @@ SkillVolcanoPerLevel
 
 	Power	7 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillVolcano
@@ -5048,7 +5048,7 @@ SkillMaelstromPerLevel
 
 	Power	7 // 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillMaelstrom
@@ -5188,7 +5188,7 @@ SkillArticShardPerLevel
 
 	Power		3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillArticShard
@@ -5237,7 +5237,7 @@ SkillFrostNovaPerLevel
 
 	Power	6 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillFrostNova
@@ -5290,7 +5290,7 @@ SkillIceStormPerLevel
 
 	Power	6 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillIceStorm
@@ -5361,7 +5361,7 @@ SkillIceArmorPerLevel
 	Power		7 // bal 10
 	ReuseTime	2 // bal
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillIceArmor
@@ -5517,7 +5517,7 @@ SkillShatterPerLevel
 
 	Power		4 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillShatter
@@ -5695,7 +5695,7 @@ SkillArmorMeltPerLevel
 
 	Power		4 // bal 3
 
-	MinCharLevel	4 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillArmorMelt
@@ -5732,7 +5732,7 @@ SkillMagicShieldPerLevel
 
 	Power		7 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillMagicShield
@@ -5905,7 +5905,7 @@ SkillArcaneBlastPerLevel
 
 	Power		3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillArcaneBlast
@@ -5948,7 +5948,7 @@ SkillArcaneSwarmPerLevel
 
 	Power		6 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillArcaneSwarm
@@ -5987,7 +5987,7 @@ SkillArcaneDrainPerLevel
 	Base	BaseSkillPerLevelConst // bal
 	Power	3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillArcaneDrain
@@ -6340,7 +6340,7 @@ SkillExplodingArrowPerLevel
 	ProjRadiusDamageInflation	0.1 // bal 0.04
 	Power	2 // bal 1
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillExplodingArrow
@@ -6585,7 +6585,7 @@ SkillImmolationTrapPerLevel
 	ProjRadiusDamageInflation	0.2 // bal 0.04
 	Power 	2 // bal 1
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillImmolationTrap
@@ -6631,7 +6631,7 @@ SkillFreezingTrapPerLevel
 	ProjRadiusDamageInflation	0.2 // bal 0.04
 	Power	2 // bal 1
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillFreezingTrap
@@ -6997,7 +6997,7 @@ SkillBarkskinPerLevel
 
 	Power		6 // bal 5
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillBarkskin
@@ -7043,7 +7043,7 @@ SkillEarthquakePerLevel
 
 	Power		6 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillEarthquake
@@ -7136,7 +7136,7 @@ SkillStrengthOfStonePerLevel
 
 	Power		6 // bal 10
 
-	MinCharLevel	3 // bal
+	MinCharLevel	1 // bal
 
 	ReuseTime	1.5 // bal
 }
@@ -7167,7 +7167,7 @@ SkillStrengthOfStone
 
 	PerLevel	SkillStrengthOfStonePerLevel
 
-	MinCharLevel	3 // bal
+	MinCharLevel	0 // bal
 
 	BaseCost		4
 
@@ -7204,7 +7204,7 @@ SkillNaturesRevengePerLevel
 	Base		BaseSkillPerLevelConst // bal
 	Power		2 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillNaturesRevenge
@@ -7420,7 +7420,7 @@ SkillShadowBoltPerLevel
 
 	Power		3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillShadowBolt
@@ -7665,7 +7665,7 @@ SkillCurseOfPainPerLevel
 	Base		BaseSkillPerLevelConst // bal
 	Power		5 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillCurseOfPain
@@ -7868,7 +7868,7 @@ SkillBoltOfGloomPerLevel
 
 	Power	3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillBoltOfGloom
@@ -7917,7 +7917,7 @@ SkillBoneShatterPerLevel
 	ProjDamageInflation	0.2 // bal 0.05
 	Power 	5 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillBoneShatter
@@ -8044,7 +8044,7 @@ SkillBlightPerLevel
 
 	Power		5 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillBlight
@@ -8322,7 +8322,7 @@ SkillLightningPerLevel
 
 	Power		3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillLightning
@@ -8373,7 +8373,7 @@ SkillChainLightningPerLevel
 
 	Power		4 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillChainLightning
@@ -8425,7 +8425,7 @@ SkillBallLightningPerLevel
 
 	Power		6 // bal 4
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillBallLightning
@@ -8478,7 +8478,7 @@ SkillThunderboltPerLevel
 
 	Power		10 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 // bal REMOVED
@@ -8558,7 +8558,7 @@ SkillLightningSwarmPerLevel
 
 	Power	5 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillLightningSwarm
@@ -8612,7 +8612,7 @@ SkillShockWavePerLevel
 
 	Power	6 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillShockWave
@@ -8670,7 +8670,7 @@ SkillTornadoPerLevel
 
 	Power	6 // bal 3
 
-	MinCharLevel	5 // bal
+	MinCharLevel	1 // bal
 }
 
 SkillTornado
