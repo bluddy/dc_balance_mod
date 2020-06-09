@@ -196,7 +196,7 @@ GameSystemBalance overrides GameSystem
   ValueEachPointCriticalHit   100.0
   ValueEachPointCrushingBlow    100.0
 
-  PlayerBaseLightIntensity  40 // 60.0  // bal: player light reduction
+  PlayerBaseLightIntensity  50 // 60.0  // bal: player light reduction
 
   // bal: this may be taxing the CPU too much
   // Monster spawning
