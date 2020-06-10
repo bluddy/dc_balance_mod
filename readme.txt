@@ -13,9 +13,15 @@ makes one sweeping change: you only get 2 skill points per level. This means
 this mod is *incompatible* with character created in the vanilla game. I believe
 the vanilla game gives out too many points (around 1000), with the vast majority
 of them given after level 50, making it extremely difficult to balance. Reducing
-the total to 200 points makes it much easier to predict character trajectories.
+the total to 200 points makes it much easier to balance character trajectories.
 
-Below are the old notes of the original mod.o
+In order to balance linear (non-scaling) and non-linear (percentage-based)
+skills, linear skills do not go up in cost, while scaling skills go up by 1
+just as they always did. This means it's much harder to keep investing in
+scaling skills, given the limited max number of skill points. Effectively,
+this provides for a diminishing returns effect.
+
+Below are the old notes of the original mod.
 
 ---
 
