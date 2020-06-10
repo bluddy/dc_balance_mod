@@ -3144,7 +3144,7 @@ StatusEffectGaseousFormPerLevel
 	StatChangeResistanceCold	30 // bal 50
 	StatChangeResistanceLightning	30 // bal 50
 	StatChangeResistancePoison	30 // bal 50
-	StatChangeResistanceMagic	30 // bal 50
+	//StatChangeResistanceMagic	50 // bal
 
 	TotalTime	2 // bal 1
 
@@ -3173,6 +3173,7 @@ StatusEffectGaseousForm
 	StatChangeResistanceCold	30 // bal 50
 	StatChangeResistanceLightning	30 // bal 50
 	StatChangeResistancePoison	30 // bal 50
+	//StatChangeResistanceMagic	50 // bal
 
 	//StaminaChange		10.0 bal
 	StatMultDefense 0.2		// bal
