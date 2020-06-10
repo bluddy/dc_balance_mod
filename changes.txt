@@ -1,5 +1,13 @@
 Bluddy's Balance Mod
 
+ver 0.900 (Reboot)
+- Major change: 2 skill points per level (200 total)
+- Major change: linear skills don't go up in cost, other skills remain normal
+- Revert connection of elemental resistance to magic power
+- Linear skills currently limited to +1/user level
+- Revert Shock Bolt to lightning damage
+- Increase base light intensity to 50 (was too dark at 40)
+
 ver 0.802
 - Adjusted for patch 1.025
 - Removed extraneous mod files for drinks and foods.
@@ -16,7 +24,7 @@ ver 0.801
 - Moved some attackPerDex bonus points from thief and trickster to assassin.
 - Decreased passive special hit boosts.
 - Changed basic weapon skills to multiply percentages of special hits.
-- Fixed missing override in BaseQuestSuperBoss. 
+- Fixed missing override in BaseQuestSuperBoss.
 - Changed Gaseous Form to end when you use a skill, so you have complete control.
 - Increased Gaseous Form time per level.
 - Reduced attack speed increase from stalker.
@@ -38,7 +46,7 @@ ver 0.800
 - Made ranges for weapons closer to 2.5x between min and max.
 - Reduced amount of damage boost for all passive damage masteries.
 - Reduced regeneration slightly again.
-- Changed the way potions work so they use individual status effects for different levels. 
+- Changed the way potions work so they use individual status effects for different levels.
 
 ver 0.79
 - Increase regen rate for mages and priests.
@@ -90,11 +98,11 @@ ver 0.75
 - Restored price of magic and item find stuff (desophos)
 - Switched treasure finding potions to 50 levels instead of 75.
 - Fixed treasure finding potions: they couldn't handle fractions (desophos).
-- Reduced percentage of monster sprinting (Castruccio). 
+- Reduced percentage of monster sprinting (Castruccio).
 - Increased frost slowdown to -0.33 after adjustment again (Castruccio)
 - Increased base magic chance for simple chests.
 - Increased amount of money from advanced gold chests now that money is more under control.
-- Raised magic drop numbers slightly due to reports of too few magical items spawning. 
+- Raised magic drop numbers slightly due to reports of too few magical items spawning.
 - Made ball lightning brighter and changed light color to white rather than blue.
 - Changed monsterskills2Bal.gdb for monsterSkills.gdb
 - Decreased usage of rylor head butt some more.
@@ -116,7 +124,7 @@ ver 0.74
 - Added summon minion spells and animations for saurian mage, lich, orc shaman and torva shaman.
 - Orc shaman and torva shaman bosses now can melee as well.
 - Added casting component to quickness enhancement.
-- Made regeneration more reasonable by making it a set amount of health per second. This was a big problem with bosses, where every percentage was too much health/sec. 
+- Made regeneration more reasonable by making it a set amount of health per second. This was a big problem with bosses, where every percentage was too much health/sec.
 - Made extra strength enhancement affect all damage types so it's useful for all monsters.
 - Tried to make ice elemental a little transparent.
 - Made skeleton archer, imp archer attack animations linked to attack speed.
@@ -204,9 +212,9 @@ ver 0.69
 - Reduce money drop per level to reduce needed price inflation.
 - Reduced price inflation.
 - Incorporated changes from extra mod:
-	- Chest balancing
-	- Reduced treasure map spawning
-	- Reduced items from mobs
+        - Chest balancing
+        - Reduced treasure map spawning
+        - Reduced items from mobs
 - Adjusted item prices per modifier as per all changes until now.
 - Made dark ritual much stronger but for a short period of time.
 - Increased reuse time for strong attack spells like maelstrom so they're more tactical.
@@ -233,7 +241,7 @@ ver 0.67
 - Creatures now have armor that more closely mirrors their looks.
 - Dog types are now immune to blinding attacks.
 - Elementals now react to being hit by different elements.
-- Live creatures are usually vulnerable to poison. 
+- Live creatures are usually vulnerable to poison.
 - Mages and priests have very high magic resistance.
 - Undead are now highly resistant to poison but sensitive to magic.
 - Guardian now hates all big creatures in the dungeon. (An automaton gone awry)
@@ -249,7 +257,7 @@ ver 0.67
 
 ver 0.66
 - Stopped making elemental auras apply only to friends. Monsters weren't getting aura effects from totems.
-- Added more faction hatreds. 
+- Added more faction hatreds.
 - Split demon faction in expansion back to component factions so they can fight.
 - Split elemental factions so fire and ice hate each other.
 - Made fire aura of torva shaman not affect enemies, while keeping the regular effect of fire aura.
@@ -409,7 +417,7 @@ ver 0.50
 - Reduced armor and damage multipliers on unique items
 - Modified armor formula to match new armor values
 - Modified many skills (mostly buffs).
-	
+
 ver 0.49
 - Reduced effect of mana regen item modifier
 - Reduced damage from single target non-scaling spells.
@@ -448,11 +456,11 @@ ver 0.45
 
 ver 0.44
 - Modified Archer skills:
-	- Poison Arrow, Flaming Arrow: changed to short buffs
-	- Shock Bolt: changed to physical damage
-	- Multishot: changed to physical bolts 
+        - Poison Arrow, Flaming Arrow: changed to short buffs
+        - Shock Bolt: changed to physical damage
+        - Multishot: changed to physical bolts
 - Reduced mana costs of all scaling skills.
-- Made shuriken stand still to cast. 
+- Made shuriken stand still to cast.
 - Reduced elite and legendary difficulties' mob health multiplier.
 - Reduced DEX requirement for bows.
 - Reduced time to use Rupture Armor.
@@ -468,8 +476,8 @@ ver 0.42
 ver 0.41
 - Moved XP changes from Extra Balance mod to this mod.
 - Reduced sprint of many mobs.
-- Made multishot even weaker, and labelled it as a spell. 
-- Reduced the initial strength of the archer's other elemental arrow skills, since monsters are much more sensitive to elemental damage. 
+- Made multishot even weaker, and labelled it as a spell.
+- Reduced the initial strength of the archer's other elemental arrow skills, since monsters are much more sensitive to elemental damage.
 
 ver 0.40
 - Reverted stamina drain to 20
@@ -547,7 +555,7 @@ ver 0.27
 - Adjusted passive mana abilities as they were too strong.
 
 ver 0.26
-- Increased all passive mana abilities. 
+- Increased all passive mana abilities.
 - Added an 'on hit' mana ability to all fighting classes. Other abilities are a bonus.
 
 ver 0.25
@@ -600,13 +608,13 @@ ver 0.16
 - Linked demons together. This was the only way of making this skill really worthwhile, since demons
   can't co-exist. Otherwise you're trying to convince players to throw points away.
 - Re-did all mana costs. I'm really happy with this idea (though I have to test it):
-	- Scalable skills can be left at low levels. Therefore their mana costs should shoot up the more levels you buy.
-	  You can expect to use those skills less as you level them.
-	- Non-scalable skills must be taken to the maximum. Therefore their mana costs should rise in such a way
-	  that you can use those skills as much or more at higher levels.
-- Made dark sacrifice's cooldown shorter, and also used damage inflation(deflation) to decrease health cost per level. 
-	This means that you can either use it several times to get a bigger mana boost, or invest more in it to get a better deal.
-	  
+        - Scalable skills can be left at low levels. Therefore their mana costs should shoot up the more levels you buy.
+          You can expect to use those skills less as you level them.
+        - Non-scalable skills must be taken to the maximum. Therefore their mana costs should rise in such a way
+          that you can use those skills as much or more at higher levels.
+- Made dark sacrifice's cooldown shorter, and also used damage inflation(deflation) to decrease health cost per level.
+        This means that you can either use it several times to get a bigger mana boost, or invest more in it to get a better deal.
+
 ver 0.15
 - Balanced necromancer
 - Tweaked all single target offensive spells to be stronger in the end game
@@ -620,7 +628,7 @@ ver 0.14
 - Changed mana regen rate in combat to 50% instead of 25%. 25% was killing regen rates completely.
   I'm trying 50% for now. May change it to 75% or more.
 - There's a problem with the arcane drain's weakness aura. I hope to fix it soon.
-  
+
 ver 0.13
 - Balanced magician skills
 - Added shrink chance to arcane blast -- magic should have cool effects.
