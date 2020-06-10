@@ -113,11 +113,7 @@ hit gets a boost, which is not the way it's supposed to be -- these boosts are
 supposed to be quite rare.
 
 For this reason, I changed the increases for these boosts from 0.1% per
-STR/INT/DEX to 0.04%. Unfortunately I can't change the base values, which are 5%
-for crits and 2% for crushes and bleeds. I think these starting values are too
-high, but there's no way to mod them. But I at least reduced it so that even at
-250 STR, you only have 12% crushing blows. This is a reasonable value, as it
-means 1 out of 8 blows will be crushing blows.
+STR/INT/DEX to 0.04%. 
 
 I may reduce these values some more at some point, but for now this should do.
 
@@ -328,7 +324,7 @@ Similar to potions, enchantments are temporary
 powerups. However, they're very rare, since they require meeting the Enchanter.
 There are 2 problems with the Enchanter: he can stock only 2-4 enchantments,
 making him of limited utility, and only one enchantment can be active at a time.
-- I changed it so many more enchantments are stocke.
+- I changed it so many more enchantments are stocked.
 - I also made it so you can have as many enchantments active at once as you
 	want. It allows you to really overpower your character, but the Enchanter is
 	rare enough that I don't see it as a problem.
@@ -341,9 +337,9 @@ making him of limited utility, and only one enchantment can be active at a time.
 	means that a player could invest in a skill, then advance a level and have the
 	skill barely stun. This is unexpected and not what the player would want.
 
-a. Non-Scaling Skills
+a. Linear Skills
 ----------------------
-- All non-scaling skills were adjusted damage-wise. The base damage was left the
+- All non-scaling (linear) skills were adjusted damage-wise. The base damage was left the
 	same as the vanilla game for the most part. The only exceptions were some
 	skills whose base damage was too strong for the early game, making it
 	unnecessary to upgrade them until too late in the game.  The part that was
@@ -453,7 +449,7 @@ b. Scaling Skills
 - Long-lasting temporary buffs are difficult to balance. They're almost like
 	passive abilities, but they're often more powerful. Also, mana costs aren't an
 	issue: you can always fire them off and forget about their cost since they
-	last too long. One can take too approaches: either weaken them and allow them
+	last too long. One can take two approaches: either weaken them and allow them
 	to last a long time, much like passive abilities, or keep them strong but
 	lessen their time significantly.
 
@@ -591,7 +587,7 @@ b. Scaling Skills
 	- Reduced to 40 seconds to be more strategic.
 	- Added cooldown of 60 seconds + 2/level to prevent spamming.
 - Prayer:
-	- Gives too much mana + there's no impact to disturbed prayers. Changed to 12
+	- Gives too much mana + there's no impact to disturb prayers. Changed to 12
 		mana per 4 seconds per level. This way getting disturbed before you finish
 		your 4 second prayer has impact.
 	- Since you're getting a free resource, you need a penalty too. Prayer now
@@ -1113,7 +1109,7 @@ on). I may do that in a future version.
 e. Masteries 
 -------------
 Masteries in the vanilla game provide a big chunk of
-the damage of non-scaling skills. This means that without a mastery, those
+the damage of linear skills. This means that without a mastery, those
 skills are useless. Now that I made non-scaling skills very powerful, there's no
 need to add great damage with a mastery. Masteries are now optional, giving
 mostly resistance and a small boost to all skills of the same kind.
