@@ -9,7 +9,7 @@ ClassBaseBalance overrides ClassBase
 ClassPriestBaseBalance overrides ClassPriestBase
 {
 	// Half so we have higher resolution
-	HealthPerVit	2.0 // 4.0. 
+	HealthPerVit	2.0 // 4.0.
 	DefensePerDex	3.5 // 3.5
 }
 
@@ -38,14 +38,14 @@ ClassPlayerBaseBalance overrides ClassPlayerBase
 	MagicCrushingBlowPerDex	0.04 // 0.1
 	CriticalPerInt		0.04 // 0.1
 
-	// Better mana and mana regen balance
+	// bal: Better mana and mana regen balance
 	PowerPerInt		    1.25	// 3
-	PowerRegenPerInt	0.01 // 0.02
-	PowerPerSpr			1.0 // 1
-	PowerRegenPerSpr	0.01 // 0.02
+	PowerRegenPerInt	0.0125 // 0.02
+	PowerPerSpr			0.8 // 1 less than Int
+	PowerRegenPerSpr	0.0125 // 0.02
 
 	// Base mana regen redone
-	BasePowerRegen		0.6 // 0.5
+	BasePowerRegen		0.7 // 0.5
 
 	// Much better to do away with regen slowdown due to combat
 	CombatPowerRegenMultiplier	1.0 // 0.25
@@ -80,7 +80,7 @@ ClassRogueBal overrides ClassRogue
 	SkillTree	SkillTreeThief
 	SkillTree	SkillTreeGlobalBal
 	SkillTree	SkillTreeRogueHiddenBalance
-}			
+}
 
 ClassPriestBal overrides ClassPriest
 {

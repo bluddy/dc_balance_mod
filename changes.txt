@@ -1,5 +1,9 @@
 Bluddy's Balance Mod
 
+ver 0.0901
+- Remove odd mana gen per skill level skill
+- Adjust mana regen base, for int and for spr to feel better
+
 ver 0.900 (Reboot)
 - Major change: 2 skill points per level (200 total)
 - Major change: linear skills don't go up in cost, other skills remain normal
