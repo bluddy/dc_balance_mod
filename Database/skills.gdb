@@ -4140,7 +4140,7 @@ SkillBonusPowerRegenPerSprShaman
 {
   Base    SkillBonusPowerRegenPerSpr
 
-  StatChangePerAttributeChange  0.0075  // bal 0.01
+  StatChangePerAttributeChange  0.00375  // bal 0.01
   DynamicStatChangePowerRegen   0.16875 // bal offset for regen
 }
 
@@ -4588,7 +4588,7 @@ SkillPowerRegenPerIntReduceWizardBalance
   Base    SkillBonusPowerRegenPerInt
 
   // Reduce the bonuses from 3 to 2
-  StatChangePerAttributeChange  -0.0075
+  StatChangePerAttributeChange  -0.00375
   DynamicStatChangePowerRegen   -0.16875
 }
 
@@ -4634,7 +4634,7 @@ SkillBonusPowerRegenPerIntFireMage
 {
   Base    SkillBonusPowerRegenPerInt
 
-  StatChangePerAttributeChange  0.0075 // bal 0.01
+  StatChangePerAttributeChange  0.00375 // bal 0.01
   DynamicStatChangePowerRegen   0.16875 // bal: Create offset for power regen
 }
 
@@ -5139,7 +5139,7 @@ SkillBonusPowerRegenPerIntIceMage
 {
   Base    SkillBonusPowerRegenPerInt
 
-  StatChangePerAttributeChange  0.0075 // bal 0.01
+  StatChangePerAttributeChange  0.00375 // bal 0.01
   DynamicStatChangePowerRegen   0.16875 // bal Create offset for power regen
 }
 
@@ -5601,7 +5601,7 @@ SkillBonusPowerRegenPerIntMagician
 {
   Base    SkillBonusPowerRegenPerInt
 
-  StatChangePerAttributeChange  0.0075 // bal 0.01
+  StatChangePerAttributeChange  0.00375 // bal 0.01
   DynamicStatChangePowerRegen   0.16875 // bal Create offset for power regen
 }
 
@@ -7350,7 +7350,7 @@ SkillPowerRegenPerIntReduceConjurerBalance
   Base    SkillBonusPowerRegenPerInt
 
   // Reduce the bonuses from 3 to 2
-  StatChangePerAttributeChange  -0.0075
+  StatChangePerAttributeChange  -0.00375
   DynamicStatChangePowerRegen   -0.16875
 }
 
@@ -7383,7 +7383,7 @@ SkillBonusPowerRegenPerIntWarlock
 {
   Base    SkillBonusPowerRegenPerInt
 
-  StatChangePerAttributeChange  0.0075 // bal 0.01
+  StatChangePerAttributeChange  0.00375 // bal 0.01
   DynamicStatChangePowerRegen   0.16875 // bal: new base regen
 }
 
@@ -7819,7 +7819,7 @@ SkillBonusPowerRegenPerIntNecromancer
 {
   Base    SkillBonusPowerRegenPerInt
 
-  StatChangePerAttributeChange  0.0075  // bal 0.01
+  StatChangePerAttributeChange  0.00375  // bal 0.01
   DynamicStatChangePowerRegen   0.16875 // bal: offset for power regen
 }
 

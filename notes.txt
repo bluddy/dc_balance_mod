@@ -1,0 +1,12 @@
+- Power: XXX fix
+  2.0 base power regen
+  ~100 base power
+  1.25 power/int
+  0.0125 power regen/int
+
+  fire mage:
+  +0.16875 power regen
+  +0.00375 power regen per int
+  +0.375 power per int
+  -0.0075, -0.16876 for all 3
+  same for ice and electric mage, -0.375 for all 3
