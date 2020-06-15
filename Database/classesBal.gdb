@@ -33,30 +33,30 @@ ClassPlayerBaseBalance overrides ClassPlayerBase
 	DamageMultPerStr	0.4	// 	0.6
 
 	// Crushing Blows, Bleeds, Crits occur too often in vanilla
-	CrushingBlowPerStr	0.04	
-	DeepWoundsPerDex	0.04
-	MagicCrushingBlowPerDex	0.04
-	CriticalPerInt		0.04
+	CrushingBlowPerStr	0.04	// 0.1
+	DeepWoundsPerDex	0.04 // 0.1
+	MagicCrushingBlowPerDex	0.04 // 0.1
+	CriticalPerInt		0.04 // 0.1
 
 	// Better mana and mana regen balance
-	PowerPerInt		    1.25	
-	PowerRegenPerInt	0.01
-	PowerPerSpr			1.0
-	PowerRegenPerSpr	0.01
+	PowerPerInt		    1.25	// 3
+	PowerRegenPerInt	0.01 // 0.02
+	PowerPerSpr			1.0 // 1
+	PowerRegenPerSpr	0.01 // 0.02
 
 	// Base mana regen redone
-	BasePowerRegen		0.6
+	BasePowerRegen		0.6 // 0.5
 
 	// Much better to do away with regen slowdown due to combat
-	CombatPowerRegenMultiplier	1.0
+	CombatPowerRegenMultiplier	1.0 // 0.25
 
 	// Make stamina more rare so it's more precious
 	StaminaBase			60 // 100
 
 	// Regen should be slower than drain to make it strategic
 	StaminaDrain		20.0	// I like 12, but the archer abuses it right now
-	StaminaRegen		5.0
-	StaminaPauseTime	0.5		// We don't really want a pause
+	StaminaRegen		5.0   // 20
+	StaminaPauseTime	0.5		// 2 We don't really want a pause
 	// Make stamina go up slowly so it's still a factor by the end of the game
 	StaminaPerVit		0.5 // 1.0
 }
