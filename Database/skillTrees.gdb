@@ -19,7 +19,6 @@ SkillTreeGlobalBal
 	Base		BaseSkillTree
 
 	Skill		BaseSkillBasicStatsBal
-	Skill		SkillPowerGainBonusBal
 
 	// Weapon specific starting bonuses
 	Skill		BaseSkillAxeStatsBal

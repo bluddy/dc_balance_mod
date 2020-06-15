@@ -210,7 +210,7 @@ BaseSkillBasic
   BasicSkill    1
 }
 
-// Balance Mod: change beginning stats
+// Balance Mod: change beginning stats for all chars
 BaseSkillBasicStatsBal
 {
   Base    BaseSkillBasic
@@ -222,13 +222,14 @@ BaseSkillBasicStatsBal
   StatChangeAttack  30
   StatChangeDefense 50
 
-  // Base special stats are 2,2,0
+  // Adjust base special stats from 2,2,0
   DynamicStatChangeCrushingBlow -1 // 1%
   DynamicStatChangeCriticalHit -4 // 1%
   DynamicStatChangeMagicCriticalHit -4 // 1%
   DynamicStatChangeDeepWounds -1  // 1%
 }
 
+// Balance mod: adjust all weapon stats a little for all characters
 // Axe
 BaseSkillAxeStatsBal
 {
@@ -320,30 +321,6 @@ BaseSkillShieldStatsBal
   DynamicStatChangeStunningBlow 0.5
 
   RequiresShield  1
-}
-
-// Balance Mod: skill that increases power gain with mana
-SkillPowerGainBonusPerLevelBal
-{
-  Base  BaseSkillPerLevel
-
-  DynamicStatMultPowerGainMult  0.05
-
-  PointsReq 5
-}
-
-SkillPowerGainBonusBal
-{
-  Base  BaseSkillPassive
-
-  StatReq   MaxPower
-  PointsReq 105
-
-  DynamicStatMultPowerGainMult  0.05
-
-  MaxSkillLevel 40 // Stop for 200 power to prevent mages feeding off of this
-
-  PerLevel  SkillPowerGainBonusPerLevelBal
 }
 
 SkillBasicClothArmor
