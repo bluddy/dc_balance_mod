@@ -39,14 +39,14 @@ ClassPlayerBaseBalance overrides ClassPlayerBase
   CriticalPerInt    0.04 // 0.1
 
   // bal: Better mana and mana regen balance
-  // Generally just keep it mostly linear
+  // For now just keep it mostly linear
   PowerPerInt       1.25  // 3
   PowerRegenPerInt  0.0125 // 0.02
   PowerPerSpr     0.8 // 1 less than Int
   PowerRegenPerSpr  0.0125 // 0.02
 
   // Base mana regen redone
-  // Want fast, visible regen
+  // Want fast, visible regen (at least for wizards)
   BasePowerRegen    3.0 // 0.5
 
   // Much better to do away with regen slowdown due to combat

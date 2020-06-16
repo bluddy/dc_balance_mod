@@ -1,12 +1,22 @@
-- Power: XXX fix
-  2.0 base power regen
-  ~100 base power
+-  XXX fix
+  0.4 base dmg/STR
+  3.0 base power regen
+  ~100 base power for all
   1.25 power/int
-  0.0125 power regen/int
+  0.0125 power regen/int (linear)
 
   fire mage:
-  +0.16875 power regen
+  +0.5 power regen
   +0.00375 power regen per int
   +0.375 power per int
-  -0.0075, -0.16876 for all 3
+  -0.0075, -0.5 for all 3
   same for ice and electric mage, -0.375 for all 3
+
+- Most of int/spr/str stats should come from class, not from base!
+  - Current rate good for wizards (see visible quick progress)
+  - Priests should have most mana come from SPR
+  - Warriors should have < 1 mana/INT
+  - Wizards should have < 0.5%dmg/STR
+
+- weaponmaster: 0.001 dmg/STR
+  0.15 atk/DEX
