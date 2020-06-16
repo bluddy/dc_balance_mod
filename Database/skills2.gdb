@@ -22,7 +22,7 @@ SkillBonusDamageMultPerStrReaver
 {
 	Base		SkillBonusDamageMultPerStr
 
-	StatChangePerAttributeChange	0.001 // bal 0.002
+	StatChangePerAttributeChange	0.1 // bal 0.002
 }
 
 SkillManaGenReaver
