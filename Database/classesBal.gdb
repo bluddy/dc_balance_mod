@@ -49,8 +49,13 @@ ClassPlayerBaseBalance overrides ClassPlayerBase
   // Want fast, visible regen (at least for wizards)
   BasePowerRegen    3.0 // 0.5
 
-  // Much better to do away with regen slowdown due to combat
-  CombatPowerRegenMultiplier  1.0 // 0.25
+  DefensePerDex   3.5
+  AttackPerDex    3.0
+
+  HealthPerVit    3.5
+  HealthRegenPerVit 1.2 // Divided by 100 internally
+
+  ResistancePerSpr  0.4
 
   // Make stamina more rare so it's more precious
   StaminaBase     60 // 100
@@ -61,6 +66,9 @@ ClassPlayerBaseBalance overrides ClassPlayerBase
   StaminaPauseTime  0.5   // 2 We don't really want a pause
   // Make stamina go up slowly so it's still a factor by the end of the game
   StaminaPerVit   0.5 // 1.0
+
+  // Much better to do away with regen slowdown due to combat
+  CombatPowerRegenMultiplier  1.0 // 0.25
 }
 
 // Add extra global tree to all classes
