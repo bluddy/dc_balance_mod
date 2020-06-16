@@ -679,30 +679,7 @@ SkillBonusPowerRegenPerInt
 //
 // Warrior
 //
-// Balance Mod: hidden skills to balance out the bonuses
-SkillManaGenReduceWarriorBalance
-{
-  Base    BaseSkillBasic
 
-  BaseName  $$ManaGenWeaponMaster$$
-  Desc    $$ManaGenWeaponMasterDesc$$
-
-  TextureName Textures/Icons/Skills/manaGenOnHit.tga
-
-  // Balance out the complete warrior class
-  PowerGainOnHit    -1
-  PowerGainWhenHit  -0.5
-  PowerGainOnBlock  -0.5
-  PowerGainOnParry  -0.5
-}
-
-SkillDamageMultPerStrReduceWarriorBalance
-{
-  Base    SkillBonusDamageMultPerStr
-
-  // Reduce from 3 bonuses to only 2
-  StatChangePerAttributeChange  -0.1 // 0.002
-}
 
 //
 // WeaponMaster
@@ -1946,28 +1923,6 @@ SkillShieldMastery
 //
 // Rogue
 //
-// Balance Mod: hidden skills to balance out the bonuses
-SkillManaGenReduceRogueBalance
-{
-  Base    BaseSkillBasic
-
-  BaseName  $$ManaGenAssassin$$
-  Desc    $$ManaGenAssassinDesc$$
-
-  TextureName Textures/Icons/Skills/manaGenOnHit.tga
-
-  // Balance out the complete rogue class
-  PowerGainOnHit    -0.5
-  PowerGainOnKill   -6.0
-}
-
-SkillAttackPerDexReduceRogueBalance
-{
-  Base    SkillBonusAttackPerDex
-
-  // Reduce the bonus from 3 to 2
-  StatChangePerAttributeChange  -1.0
-}
 
 //
 // Assassin
@@ -3265,8 +3220,6 @@ SkillTreasureHunter
 //
 // Priest
 //
-// Balance Mod: hidden skills to balance out the bonuses
-// Nothing to reduce
 
 //
 // Paladin
@@ -4573,37 +4526,6 @@ SkillChampion
 //
 // Wizard
 //
-// Balance Mod: hidden skills to balance out the bonuses
-
-SkillPowerPerIntReduceWizardBalance
-{
-  Base    SkillBonusPowerPerInt
-
-  // Reduce the bonuses from 3 to 2
-  StatChangePerAttributeChange  -0.375
-}
-
-SkillPowerRegenPerIntReduceWizardBalance
-{
-  Base    SkillBonusPowerRegenPerInt
-
-  // Reduce the bonuses from 3 to 2
-  StatChangePerAttributeChange  -0.00375
-  DynamicStatChangePowerRegen   -0.5
-}
-
-SkillManaGenReduceWizardBalance
-{
-  Base    BaseSkillBasic
-
-  BaseName  $$ManaGenIceMage$$
-  Desc    $$ManaGenIceMageDesc$$
-
-  TextureName Textures/Icons/Items/potions_mana_flask.tga
-
-  // Reduce bonuses from 3 to 2
-  DynamicStatMultItemPowerGainMult  -0.5
-}
 
 //
 // Fire mage
@@ -6002,8 +5924,6 @@ SkillArcaneDrain
 //
 // Ranger
 //
-// Balance Mod: hidden skills to balance out the bonuses
-// Nothing to reduce here
 
 //
 // Archer
@@ -7335,24 +7255,6 @@ SkillEarthMastery
 //
 // Conjurer
 //
-// Balance Mod: hidden skills to balance out the bonuses
-
-SkillPowerPerIntReduceConjurerBalance
-{
-  Base    SkillBonusPowerPerInt
-
-  // Reduce the bonuses from 3 to 2
-  StatChangePerAttributeChange  -0.375
-}
-
-SkillPowerRegenPerIntReduceConjurerBalance
-{
-  Base    SkillBonusPowerRegenPerInt
-
-  // Reduce the bonuses from 3 to 2
-  StatChangePerAttributeChange  -0.00375
-  DynamicStatChangePowerRegen   -0.5
-}
 
 //
 // Warlock

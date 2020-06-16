@@ -6,6 +6,5 @@ ClassDemonHunterBal overrides ClassDemonHunter
 	SkillTree	SkillTreeReaver
 	SkillTree	SkillTreeWarden
 	SkillTree	SkillTreeDemonologist
-	SkillTree	SkillTreeDemonHunterHiddenBalance
 	SkillTree	SkillTreeGlobalBal
 }

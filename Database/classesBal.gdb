@@ -80,7 +80,6 @@ ClassWarriorBal overrides ClassWarrior
   SkillTree SkillTreeGladiator
   SkillTree SkillTreeDefender
   SkillTree SkillTreeGlobalBal
-  SkillTree SkillTreeWarriorHiddenBalance
 }
 
 ClassRogueBal overrides ClassRogue
@@ -89,7 +88,6 @@ ClassRogueBal overrides ClassRogue
   SkillTree SkillTreeTrickster
   SkillTree SkillTreeThief
   SkillTree SkillTreeGlobalBal
-  SkillTree SkillTreeRogueHiddenBalance
 }
 
 ClassPriestBal overrides ClassPriest
@@ -98,7 +96,6 @@ ClassPriestBal overrides ClassPriest
   SkillTree SkillTreeHealer
   SkillTree SkillTreeShaman
   SkillTree SkillTreeGlobalBal
-  SkillTree SkillTreePriestHiddenBalance
 }
 
 ClassWizardBal overrides ClassWizard
@@ -107,7 +104,6 @@ ClassWizardBal overrides ClassWizard
   SkillTree SkillTreeIceMage
   SkillTree SkillTreeMagician
   SkillTree SkillTreeGlobalBal
-  SkillTree SkillTreeWizardHiddenBalance
 }
 
 ClassRangerBal overrides ClassRanger
@@ -116,7 +112,6 @@ ClassRangerBal overrides ClassRanger
   SkillTree SkillTreeHunter
   SkillTree SkillTreeDruid
   SkillTree SkillTreeGlobalBal
-  SkillTree SkillTreeRangerHiddenBalance
 }
 
 ClassConjurerBal overrides ClassConjurer
@@ -125,7 +120,6 @@ ClassConjurerBal overrides ClassConjurer
   SkillTree SkillTreeNecromancer
   SkillTree SkillTreeSorcerer
   SkillTree SkillTreeGlobalBal
-  SkillTree SkillTreeConjurerHiddenBalance
 }
 
 // The hybrid class gets no specific tree since we can't predict what classes it'll have, but it does get

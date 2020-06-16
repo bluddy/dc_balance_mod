@@ -3,13 +3,6 @@
 // Demon Hunter
 //
 
-SkillTreeDemonHunterHiddenBalance
-{
-	Base		BaseSkillTree
-
-	// Currently nothing to balance
-}
-
 SkillTreeReaver
 {
 	Base		BaseSkillTree

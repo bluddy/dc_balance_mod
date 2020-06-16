@@ -35,15 +35,6 @@ SkillTreeGlobalBal
 // Warrior
 //
 
-// Hidden tree used only by this class
-SkillTreeWarriorHiddenBalance
-{
-	Base		BaseSkillTree
-
-	Skill		SkillManaGenReduceWarriorBalance
-	Skill		SkillDamageMultPerStrReduceWarriorBalance
-}
-
 SkillTreeWeaponMaster
 {
 	Base		BaseSkillTree
@@ -144,15 +135,6 @@ SkillTreeDefender
 // Rogue
 //
 
-// Hidden tree used only by this class
-SkillTreeRogueHiddenBalance
-{
-	Base		BaseSkillTree
-
-	Skill		SkillManaGenReduceRogueBalance
-	Skill		SkillAttackPerDexReduceRogueBalance
-}
-
 SkillTreeAssassin
 {
 	Base		BaseSkillTree
@@ -244,14 +226,6 @@ SkillTreeThief
 // Priest
 //
 
-// Hidden tree used only by this class
-SkillTreePriestHiddenBalance
-{
-	Base		BaseSkillTree
-
-	// nothing to reduce
-}
-
 SkillTreePaladin
 {
 	Base		BaseSkillTree
@@ -342,16 +316,6 @@ SkillTreeShaman
 // Wizard
 //
 
-// Hidden tree used only by this class
-SkillTreeWizardHiddenBalance
-{
-	Base		BaseSkillTree
-
-	Skill		SkillPowerPerIntReduceWizardBalance
-	Skill		SkillPowerRegenPerIntReduceWizardBalance
-	Skill		SkillManaGenReduceWizardBalance
-}
-
 SkillTreeFireMage
 {
 	Base		BaseSkillTree
@@ -440,14 +404,6 @@ SkillTreeMagician
 //
 // Ranger
 //
-
-// Hidden tree used only by this class
-SkillTreeRangerHiddenBalance
-{
-	Base		BaseSkillTree
-
-	// Nothing to reduce right now
-}
 
 SkillTreeArcher
 {
@@ -541,15 +497,6 @@ SkillTreeDruid
 // Conjurer
 //
 
-// Hidden tree used only by this class
-SkillTreeConjurerHiddenBalance
-{
-	Base		BaseSkillTree
-
-	Skill		SkillPowerPerIntReduceConjurerBalance
-	Skill		SkillPowerRegenPerIntReduceConjurerBalance
-}
-
 SkillTreeWarlock
 {
 	Base		BaseSkillTree
@@ -629,5 +576,4 @@ SkillTreeSorcerer
 	Skill		SkillGaseousForm
 	Skill		SkillStoredLightning
 	Skill		SkillLightningMastery
-
 }
