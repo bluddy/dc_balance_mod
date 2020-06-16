@@ -20,3 +20,14 @@
 
 - weaponmaster: 0.001 dmg/STR
   0.15 atk/DEX
+
+  0.4 dmg/str
+  3.5 def/dex base
+  3.0 atk/dex
+  1.25 power/int
+  0.0125 pregen/int
+  0.8 power/spr
+  0.0125 pregen/spr
+
+  3.0 base power regen
+  (bonus 0.5 power regen)

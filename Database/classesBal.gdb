@@ -47,7 +47,7 @@ ClassPlayerBaseBalance overrides ClassPlayerBase
 
   // Base mana regen redone
   // Want fast, visible regen (at least for wizards)
-  BasePowerRegen    3.0 // 0.5
+  BasePowerRegen    2.0 // 0.5
 
   DefensePerDex   3.5
   AttackPerDex    3.0

@@ -3254,7 +3254,7 @@ SkillBonusDamageMultPerStrPaladin
   StatChangePerAttributeChange  0.1 // bal 0.001
 }
 
-// Cancel skill
+// bal Cancel skill
 SkillBonusPowerRegenPerSprPaladin
 {
   Base    SkillBonusPowerRegenPerSpr
@@ -3651,7 +3651,7 @@ SkillBonusPowerPerSprHealer
 }
 
 // Supposed to get extra regen from prayer
-// Cancel bonus
+// bal Cancel bonus
 SkillBonusPowerRegenPerSprHealer
 {
   Base    SkillBonusPowerRegenPerSpr
@@ -4557,7 +4557,7 @@ SkillBonusPowerRegenPerIntFireMage
   Base    SkillBonusPowerRegenPerInt
 
   StatChangePerAttributeChange  0.00375 // bal 0.01
-  DynamicStatChangePowerRegen   0.5 // bal: Create offset for power regen
+  DynamicStatChangePowerRegen   1.0 // bal: Create offset for power regen
 }
 
 SkillManaGenFireMage
@@ -5062,7 +5062,7 @@ SkillBonusPowerRegenPerIntIceMage
   Base    SkillBonusPowerRegenPerInt
 
   StatChangePerAttributeChange  0.00375 // bal 0.01
-  DynamicStatChangePowerRegen   0.5 // bal Create offset for power regen
+  DynamicStatChangePowerRegen   1.0 // bal Create offset for power regen
 }
 
 SkillManaGenIceMage
@@ -5524,7 +5524,7 @@ SkillBonusPowerRegenPerIntMagician
   Base    SkillBonusPowerRegenPerInt
 
   StatChangePerAttributeChange  0.00375 // bal 0.01
-  DynamicStatChangePowerRegen   0.5 // bal Create offset for power regen
+  DynamicStatChangePowerRegen   1.0 // bal Create offset for power regen
 }
 
 SkillManaGenMagician
@@ -6846,7 +6846,7 @@ SkillBonusPowerRegenPerSprDruid
   Base    SkillBonusPowerRegenPerSpr
 
   StatChangePerAttributeChange  0.005 // bal 0.01
-  DynamicStatChangePowerRegen   0.4 // bal base adjust
+  DynamicStatChangePowerRegen   1.0 // bal base adjust
 }
 
 SkillWeaknessPerLevel
@@ -7286,7 +7286,7 @@ SkillBonusPowerRegenPerIntWarlock
   Base    SkillBonusPowerRegenPerInt
 
   StatChangePerAttributeChange  0.00375 // bal 0.01
-  DynamicStatChangePowerRegen   0.5 // bal: new base regen
+  DynamicStatChangePowerRegen   1.0 // bal: new base regen
 }
 
 SkillShadowBoltPerLevel
@@ -7722,7 +7722,7 @@ SkillBonusPowerRegenPerIntNecromancer
   Base    SkillBonusPowerRegenPerInt
 
   StatChangePerAttributeChange  0.00375  // bal 0.01
-  DynamicStatChangePowerRegen   0.5 // bal: offset for power regen
+  DynamicStatChangePowerRegen   1.0 // bal: offset for power regen
 }
 
 SkillManaGenNecromancer
@@ -8188,7 +8188,7 @@ SkillBonusPowerRegenPerIntSorcerer
   Base    SkillBonusPowerRegenPerInt
 
   StatChangePerAttributeChange  0.00375  // bal 0.01
-  DynamicStatChangePowerRegen   0.5 // bal: offset for power regen
+  DynamicStatChangePowerRegen   1.0 // bal: offset for power regen
 }
 
 SkillLightningPerLevel
