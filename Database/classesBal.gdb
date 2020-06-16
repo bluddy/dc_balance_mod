@@ -40,10 +40,10 @@ ClassPlayerBaseBalance overrides ClassPlayerBase
 
   // bal: Better mana and mana regen balance
   // For now just keep it mostly linear
-  PowerPerInt       1.25  // 3
-  PowerRegenPerInt  0.0125 // 0.02
-  PowerPerSpr     0.8 // 1 less than Int
-  PowerRegenPerSpr  0.0125 // 0.02
+  PowerPerInt       0.6  // 3
+  PowerRegenPerInt  0.06 // 0.02
+  PowerPerSpr     0.3 // bal 1 less than Int
+  PowerRegenPerSpr  0.06 // 0.02
 
   // Base mana regen redone
   // Want fast, visible regen (at least for wizards)
@@ -57,7 +57,7 @@ ClassPlayerBaseBalance overrides ClassPlayerBase
 
   ResistancePerSpr  0.4
 
-  // Make stamina more rare so it's more precious
+  // bal: Make stamina more rare so it's more precious
   StaminaBase     60 // 100
 
   // Regen should be slower than drain to make it strategic

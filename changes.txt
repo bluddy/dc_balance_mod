@@ -5,6 +5,7 @@ ver 0.0902
 - Dmg bonuses are either 0.1 or 0.05
 - Remove bonus trees that reduce bonuses. Let the bonuses play out naturally.
 - Reduce base mana regen to 2, increase most wizard bonuses to 1
+- Reduced base mana/int/spr. Add to individual class bonuses
 
 ver 0.0901
 - Remove odd mana gen per skill level skill

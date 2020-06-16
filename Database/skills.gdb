@@ -3647,7 +3647,7 @@ SkillBonusPowerPerSprHealer
 {
   Base    SkillBonusPowerPerSpr
 
-  StatChangePerAttributeChange  0.375 // bal 0.2
+  StatChangePerAttributeChange  0.8 // bal fix spr for healer 0.2
 }
 
 // Supposed to get extra regen from prayer
@@ -4086,7 +4086,7 @@ SkillBonusPowerPerSprShaman
 {
   Base    SkillBonusPowerPerSpr
 
-  StatChangePerAttributeChange  0.375 // bal 0.2
+  StatChangePerAttributeChange  0.8 // bal fix spr for shaman 0.2
 }
 
 SkillBonusPowerRegenPerSprShaman
@@ -4549,7 +4549,7 @@ SkillBonusPowerPerIntFireMage
 {
   Base    SkillBonusPowerPerInt
 
-  StatChangePerAttributeChange  0.375 // bal 0.5
+  StatChangePerAttributeChange  0.5 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntFireMage
@@ -5054,7 +5054,7 @@ SkillBonusPowerPerIntIceMage
 {
   Base    SkillBonusPowerPerInt
 
-  StatChangePerAttributeChange  0.375 // bal 0.5
+  StatChangePerAttributeChange  0.5 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntIceMage
@@ -5516,7 +5516,7 @@ SkillBonusPowerPerIntMagician
 {
   Base    SkillBonusPowerPerInt
 
-  StatChangePerAttributeChange  0.375 // bal 1.0
+  StatChangePerAttributeChange  0.5 // bal 1.0
 }
 
 SkillBonusPowerRegenPerIntMagician
@@ -6838,7 +6838,7 @@ SkillBonusPowerPerSprDruid
 {
   Base    SkillBonusPowerPerSpr
 
-  StatChangePerAttributeChange  0.4  // bal higher than normal 2.0
+  StatChangePerAttributeChange  0.8  // bal fix spr for druid 2.0
 }
 
 SkillBonusPowerRegenPerSprDruid
@@ -7278,7 +7278,7 @@ SkillBonusPowerPerIntWarlock
 {
   Base    SkillBonusPowerPerInt
 
-  StatChangePerAttributeChange  0.375 // bal 0.5
+  StatChangePerAttributeChange  0.5 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntWarlock
@@ -7714,7 +7714,7 @@ SkillBonusPowerPerIntNecromancer
 {
   Base    SkillBonusPowerPerInt
 
-  StatChangePerAttributeChange  0.375 // bal 0.5
+  StatChangePerAttributeChange  0.5 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntNecromancer
@@ -8180,7 +8180,7 @@ SkillBonusPowerPerIntSorcerer
 {
   Base    SkillBonusPowerPerInt
 
-  StatChangePerAttributeChange  0.375 // bal 0.5
+  StatChangePerAttributeChange  0.5 // bal 0.5
 }
 
 SkillBonusPowerRegenPerIntSorcerer

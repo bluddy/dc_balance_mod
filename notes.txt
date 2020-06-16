@@ -31,3 +31,6 @@
 
   3.0 base power regen
   (bonus 0.5 power regen)
+
+  1.25 power/int
+  0.375 bonus power/int
