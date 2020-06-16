@@ -30,7 +30,7 @@ ClassGenericBaseBalance overrides ClassGenericBase
 ClassPlayerBaseBalance overrides ClassPlayerBase
 {
   // Damage reduced per STR to match reduced skill values
-  DamageMultPerStr  0.4 //  0.6
+  DamageMultPerStr  0.2 //  0.6
 
   // Crushing Blows, Bleeds, Crits occur too often in vanilla
   CrushingBlowPerStr  0.04  // 0.1

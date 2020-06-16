@@ -1,5 +1,9 @@
 Bluddy's Balance Mod
 
+ver 0.0902
+- Change base dmg boost to be 0.2
+- Dmg bonuses are either 0.1 or 0.05
+
 ver 0.0901
 - Remove odd mana gen per skill level skill
 - Adjust mana regen base, for int and for spr to feel better

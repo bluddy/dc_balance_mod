@@ -701,7 +701,7 @@ SkillDamageMultPerStrReduceWarriorBalance
   Base    SkillBonusDamageMultPerStr
 
   // Reduce from 3 bonuses to only 2
-  StatChangePerAttributeChange  -0.001 // 0.002
+  StatChangePerAttributeChange  -0.1 // 0.002
 }
 
 //
@@ -726,7 +726,7 @@ SkillBonusDamageMultPerStrWeaponMaster
 {
   Base    SkillBonusDamageMultPerStr
 
-  StatChangePerAttributeChange  0.001 // bal 0.002
+  StatChangePerAttributeChange  0.1 // bal 0.002
 }
 
 SkillManaGenWeaponMaster
@@ -1145,7 +1145,7 @@ SkillBonusDamageMultPerStrGladiator
 {
   Base    SkillBonusDamageMultPerStr
 
-  StatChangePerAttributeChange  0.001 // bal 0.002
+  StatChangePerAttributeChange  0.1 // bal 0.002
 }
 
 SkillManaGenGladiator
@@ -1546,7 +1546,7 @@ SkillBonusDamageMultPerStrDefender
 {
   Base    SkillBonusDamageMultPerStr
 
-  StatChangePerAttributeChange  0.001 // bal 0.002
+  StatChangePerAttributeChange  0.1 // bal 0.002
 }
 
 SkillManaGenDefender
@@ -1998,7 +1998,7 @@ SkillBonusDamageMultPerStrAssassin
 {
   Base    SkillBonusDamageMultPerStr
 
-  StatChangePerAttributeChange  0.0006 // bal 0.002
+  StatChangePerAttributeChange  0.1 // bal 0.002
 }
 
 SkillManaGenAssassin
@@ -2901,7 +2901,7 @@ SkillBonusDamageMultPerStrThief
 {
   Base    SkillBonusDamageMultPerStr
 
-  StatChangePerAttributeChange  0.0004 // bal 0.001
+  StatChangePerAttributeChange  0.05 // bal 0.001
 }
 
 SkillManaGenThief
@@ -3298,7 +3298,7 @@ SkillBonusDamageMultPerStrPaladin
 {
   Base    SkillBonusDamageMultPerStr
 
-  StatChangePerAttributeChange  0.001
+  StatChangePerAttributeChange  0.1 // bal 0.001
 }
 
 // Cancel skill
@@ -6041,7 +6041,7 @@ SkillBonusDamageMultPerStrArcher
 {
   Base    SkillBonusDamageMultPerStr
 
-  StatChangePerAttributeChange  0.0005 // bal 0.001
+  StatChangePerAttributeChange  0.05 // bal 0.001
 }
 
 SkillManaGenArcher
@@ -6489,7 +6489,7 @@ SkillBonusDamageMultPerStrHunter
 {
   Base    SkillBonusDamageMultPerStr
 
-  StatChangePerAttributeChange  0.0005 // bal 0.001
+  StatChangePerAttributeChange  0.05 // bal 0.001
 }
 
 // bal Low mana regen because he has Infused Energy
