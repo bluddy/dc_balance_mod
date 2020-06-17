@@ -238,9 +238,9 @@ SkillTreePaladin
 	Skill		SkillBasicShield
 	Skill		SkillBasicMaceBoth
 	Skill		SkillBonusHealthPerVitPaladin
-	Skill		SkillBonusPowerPerSprPaladin
+	//Skill		SkillBonusPowerPerSprPaladin // bal remove
 	Skill		SkillBonusDamageMultPerStrPaladin
-	Skill		SkillBonusPowerRegenPerSprPaladin
+	//Skill		SkillBonusPowerRegenPerSprPaladin // bal remove
 	Skill		SkillManaGenPaladin
 
 	Skill		SkillZeal
@@ -270,7 +270,7 @@ SkillTreeHealer
 	Skill		SkillBasicStaff // Only blunt weapons, because healer not a killer
 	Skill		SkillBasicMaceBoth
 	Skill		SkillBonusPowerPerSprHealer
-	Skill		SkillBonusPowerRegenPerSprHealer
+	//Skill		SkillBonusPowerRegenPerSprHealer // bal remove: has prayer
 
 	Skill		SkillHolyBolt
 	Skill		SkillPrayer
